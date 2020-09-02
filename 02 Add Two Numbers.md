@@ -90,7 +90,7 @@ public:
 
 ```
 
-Time : 28ms
+Time : 28ms  
 Memory : 9.4MB
 
 ## Solution 2
@@ -141,5 +141,5 @@ public:
 };
 
 ```
-Time : 32ms
+Time : 32ms  
 Memory: 9.3MB
