@@ -21,7 +21,7 @@ Explanation: The answer is "wke", with the length of 3.
 
 什么是滑动窗口？
 
-其实就是一个队列,比如例题中的 ```abcabcbb```，进入这个队列**（窗口）**为 ```abc``` 满足题目要求，当再进入 ```a```，队列变成了 ```abca```，这时候不满足要求。所以，我们要移动这个队列！
+其实就是一个队列,比如例题中的 ```abcabcbb```，进入这个队列 **（窗口）** 为 ```abc``` 满足题目要求，当再进入 ```a```，队列变成了 ```abca```，这时候不满足要求。所以，我们要移动这个队列！
 
 如何移动？
 
@@ -55,7 +55,7 @@ class Solution:
 
         return max_len
 ```
-Time : 68ms
+Time : 68ms  
 Memory : 13.8MB
 
 Attention:
@@ -87,5 +87,5 @@ public:
 };
 
 ```
-Time : 72ms
+Time : 72ms  
 Memory : 11MB
