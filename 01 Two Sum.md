@@ -3,7 +3,7 @@
 - nums.index(num2)，查找 num2 的索引
 
 ### 方法一 
-```
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
@@ -24,7 +24,7 @@ Time : 1140ms
 ### 方法二
 优化: 对j的寻找在nums[i]的后面进行即可,不必在nums整个数组中进行
 
-```
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
@@ -44,7 +44,8 @@ Time : 856 ms
 
 ## Hashmap
 使用字典模拟哈希表
-```
+
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashmap = {}

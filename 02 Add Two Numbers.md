@@ -16,7 +16,7 @@ Learned:
 - ListNode* FuncName(ListNode* l1, ListNode* l2)
 - new ListNode(0)
 
-```
+```c++
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -96,7 +96,7 @@ Memory : 9.4MB
 ## Solution 2
 不对齐补零
 
-```
+```c++
 /**
  * Definition for singly-linked list.
  * struct ListNode {
