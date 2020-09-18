@@ -87,13 +87,102 @@ class Solution(object):
 ```
 
 #### 复杂度分析
-时间复杂度：\mathcal{O}(n\cdot\sqrt{n})O(n⋅ n)，在主步骤中，我们有一个嵌套循环，其中外部循环是 n 次迭代，而内部循环最多需要 \sqrt{n} 迭代。
-空间复杂度：\mathcal{O}(n)O(n)，使用了一个一维数组 dp。
+时间复杂度：O(n⋅ sqrt(n))，在主步骤中，我们有一个嵌套循环，其中外部循环是 n 次迭代，而内部循环最多需要 sqrt{n} 迭代。  
+空间复杂度：O(n)，使用了一个一维数组 dp。
 
 #### 提交
-执行用时：5780 ms, 在所有 Python3 提交中击败了17.56%的用户
+执行用时：5780 ms, 在所有 Python3 提交中击败了17.56%的用户  
 内存消耗：13.4 MB, 在所有 Python3 提交中击败了76.21%的用户
 
+### 方法三：贪心枚举
+
+递归解决方法为我们理解问题提供了简洁直观的方法。我们仍然可以用递归解决这个问题。为了改进上述暴力枚举解决方案，我们可以在递归中加入贪心。我们可以将枚举重新格式化如下：
+
+从一个数字到多个数字的组合开始，一旦我们找到一个可以组合成给定数字 n 的组合，那么我们可以说我们找到了最小的组合，因为我们贪心的从小到大的枚举组合。
+
+为了更好的解释，我们首先定义一个名为 ```is_divided_by(n, count)``` 的函数，该函数返回一个布尔值，表示数字 ```n``` 是否可以被一个数字 ```count``` 组合，而不是像前面函数 ```numSquares(n)``` 返回组合的确切大小。
+
+下面是一个关于函数 ```is_divided_by(n, count)``` 的例子，它对 输入 ```n=5`` 和 ```count=2``` 进行了分解。
+
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9ncmVlZHkucG5n?x-oss-process=image/format,png)
+
+```python
+class Solution:
+    def numSquares(self, n):
+        
+        def is_divided_by(n, count):
+            """
+                return: true if "n" can be decomposed into "count" number of perfect square numbers.
+                e.g. n=12, count=3:  true.
+                     n=12, count=2:  false
+            """
+            if count == 1:
+                return n in square_nums
+            
+            for k in square_nums:
+                if is_divided_by(n - k, count - 1):
+                    return True
+            return False
+
+        square_nums = set([i * i for i in range(1, int(n**0.5)+1)])
+    
+        for count in range(1, n+1):
+            if is_divided_by(n, count):
+                return count
+```
+
+#### 提交
+执行用时：76 ms, 在所有 Python3 提交中击败了94.27%的用户  
+内存消耗：13.9 MB, 在所有 Python3 提交中击败了32.41%的用户
+
 Attention:  
-- 
+- set相比于list可以降低时间复杂度
+
+### 方法四：贪心＋BFS
+
+正如上述贪心算法的复杂性分析种提到的，调用堆栈的轨迹形成一颗 N 元树，其中每个结点代表 ```is_divided_by(n, count)``` 函数的调用。基于上述想法，我们可以把原来的问题重新表述如下：
+
+给定一个 N 元树，其中每个节点表示数字 n 的余数减去一个完全平方数，我们的任务是在树中找到一个节点，该节点满足两个条件：
+
+(1) 节点的值（即余数）也是一个完全平方数。
+(2) 在满足条件（1）的所有节点中，节点和根之间的距离应该最小。
+
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9ncmVlZHlfdHJlZS5wbmc?x-oss-process=image/format,png)
+
+遍历的顺序是 BFS，而不是 DFS（深度优先搜索），这是因为在用尽固定数量的完全平方数分解数字 n 的所有可能性之前，我们不会探索任何需要更多元素的潜在组合。
+
+#### 算法
+
+- 首先，我们准备小于给定数字 ```n``` 的完全平方数列表（即 ```square_nums```）。
+- 然后创建 ```queue``` 遍历，该变量将保存所有剩余项在每个级别的枚举。
+- 在主循环中，我们迭代 ```queue``` 变量。在每次迭代中，我们检查余数是否是一个完全平方数。如果余数不是一个完全平方数，就用其中一个完全平方数减去它，得到一个新余数，然后将新余数添加到 ```next_queue``` 中，以进行下一级的迭代。一旦遇到一个完全平方数的余数，我们就会跳出循环，这也意味着我们找到了解。
+
+注意：在典型的 BFS 算法中，```queue``` 变量通常是数组或列表类型。但是，这里我们使用 ```set``` 类型，以消除同一级别中的剩余项的冗余。事实证明，这个小技巧甚至可以增加 5 倍的运行加速。
+
+```python
+class Solution:
+    def numSquares(self, n):
+
+        # list of square numbers that are less than `n`
+        square_nums = [i * i for i in range(1, int(n**0.5)+1)]
+    
+        level = 0
+        queue = {n}
+        while queue:
+            level += 1
+            #! Important: use set() instead of list() to eliminate the redundancy,
+            # which would even provide a 5-times speedup, 200ms vs. 1000ms.
+            next_queue = set()
+            # construct the queue for the next level
+            for remainder in queue:
+                for square_num in square_nums:    
+                    if remainder == square_num:
+                        return level  # find the node!
+                    elif remainder < square_num:
+                        break
+                    else:
+                        next_queue.add(remainder - square_num)
+            queue = next_queue
+        return level
+```
 
