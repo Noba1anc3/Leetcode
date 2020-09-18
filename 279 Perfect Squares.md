@@ -144,10 +144,10 @@ Attention:
 
 给定一个 N 元树，其中每个节点表示数字 n 的余数减去一个完全平方数，我们的任务是在树中找到一个节点，该节点满足两个条件：
 
-(1) 节点的值（即余数）也是一个完全平方数。
+(1) 节点的值（即余数）也是一个完全平方数。  
 (2) 在满足条件（1）的所有节点中，节点和根之间的距离应该最小。
 
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9ncmVlZHlfdHJlZS5wbmc?x-oss-process=image/format,png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9ncmVlZHlfdHJlZS5wbmc?x-oss-process=image/format.png)
 
 遍历的顺序是 BFS，而不是 DFS（深度优先搜索），这是因为在用尽固定数量的完全平方数分解数字 n 的所有可能性之前，我们不会探索任何需要更多元素的潜在组合。
 
