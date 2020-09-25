@@ -37,7 +37,7 @@
 
 ## Dynamic Programming
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-- [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%Target%Sum.md)
+- [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 
 # Questions
 - [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
