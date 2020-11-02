@@ -48,6 +48,7 @@
 ## Sort
 
 - [976. Largest Perimeter Triangle](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+- [剑指Offer 45. Min Num of Array Str]()
 
 # Brain Twister
 
