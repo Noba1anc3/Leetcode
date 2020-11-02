@@ -48,7 +48,8 @@
 ## Sort
 
 - [976. Largest Perimeter Triangle](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
-- [剑指Offer 45. Min Num of Array Str]()
+- [剑指Offer 45. Min Num of Array Str]([https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-45 MinNumofArrayStr.md))
+- [面试题 17.14. Smallest K LCCI]()
 
 # Brain Twister
 
@@ -77,3 +78,6 @@
 - [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 - [976. Largest Perimeter Triangle](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
 
+- [剑指Offer 45. Min Num of Array Str]([https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-45 MinNumofArrayStr.md))
+
+- [面试题 17.14. Smallest K LCCI]()
