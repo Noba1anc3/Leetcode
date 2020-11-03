@@ -26,7 +26,7 @@ Example 2:
 
 c++
 
-```python
+```c++
 class Solution {
 public:
     string minNumber(vector<int>& nums) {

@@ -47,9 +47,10 @@
 
 ## Sort
 
-- [976. Largest Perimeter Triangle](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
-- [剑指Offer 45. Min Num of Array Str]([https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-45 MinNumofArrayStr.md))
-- [面试题 17.14. Smallest K LCCI]()
+- [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+- [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆]()
+- [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆]([https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-45 MinNumofArrayStr.md))
+- [☆☆☆ 面试题 17.14. Smallest K LCCI ☆☆☆]([https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14.%20Smallest%20K%20LCCI.md](https://github.com/Noba1anc3/Leetcode/blob/master/面试题 17.14. Smallest K LCCI.md))
 
 # Brain Twister
 
@@ -76,8 +77,7 @@
 - [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 - [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
-- [976. Largest Perimeter Triangle](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
-
-- [剑指Offer 45. Min Num of Array Str]([https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-45 MinNumofArrayStr.md))
-
-- [面试题 17.14. Smallest K LCCI]()
+- [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+- [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆]()
+- [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆]([https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-45 MinNumofArrayStr.md))
+- [☆☆☆ 面试题 17.14. Smallest K LCCI ☆☆☆]([https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14.%20Smallest%20K%20LCCI.md](https://github.com/Noba1anc3/Leetcode/blob/master/面试题 17.14. Smallest K LCCI.md))
