@@ -19,6 +19,7 @@
 ## Hashmap
 - [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 
 # Algorithm
 ## BFS
@@ -49,6 +50,7 @@
 
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
@@ -75,6 +77,7 @@
 - [200. Number of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [463. Island Perimeter](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
 - [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
