@@ -19,7 +19,7 @@
 ## Hashmap
 - [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
-- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20valid%20anagram.md)
+- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 
 # Algorithm
@@ -51,7 +51,7 @@
 
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
-- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20valid%20anagram.md)
+- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
@@ -77,7 +77,7 @@
 - [150. Evaluate Reverse Polish Notation](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
 - [155. Min Stack](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
 - [200. Number of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
-- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20valid%20anagram.md)
+- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
