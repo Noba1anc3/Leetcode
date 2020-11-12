@@ -15,6 +15,7 @@
 
 ## Linked-List
 - [002. Add Two Numbers](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
+- [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 
 ## Hashmap
 - [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
@@ -52,6 +53,7 @@
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
+- [☆☆☆ 148. Sort List ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
@@ -77,6 +79,7 @@
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [144. Binary Tree Preorder Traversal]()
 - [145. Binary Tree Postorder Traversal]()
+- [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [150. Evaluate Reverse Polish Notation](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
 - [155. Min Stack](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
 - [200. Number of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
