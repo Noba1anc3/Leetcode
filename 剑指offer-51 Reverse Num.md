@@ -13,7 +13,7 @@ Examples:
 
 python
 
-```c++
+```python
 class Solution:
     def reversePairs(self, nums) -> int:
         totalReverse, _ = self.SortCount(nums)

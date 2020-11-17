@@ -41,11 +41,18 @@
 ## Recursive
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 
 ## Greedy
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
+## Divide & Conquer
+
+- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+
 ## Dynamic Programming
+
+- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 
@@ -75,6 +82,7 @@
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
