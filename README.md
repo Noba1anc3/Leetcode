@@ -69,6 +69,9 @@
 
 ## Sort
 
+- [QuickSort Partition - 01](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [QuickSort Partition - 02](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14.%20Smallest%20K%20LCCI.md)
+
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
@@ -82,7 +85,7 @@
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆ (Quick Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
-- [☆☆☆ 面试题 17.14. Smallest K LCCI ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14.%20Smallest%20K%20LCCI.md)
+- [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (Quick Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14.%20Smallest%20K%20LCCI.md)
 
 # Brain Twister
 
