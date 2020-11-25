@@ -72,8 +72,8 @@
 
 ## Sort
 
-- [Non Recursive QuickSort](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [Recursive QuickSort](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
+- [Recursive QuickSort](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [Non Recursive QuickSort](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
 
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
