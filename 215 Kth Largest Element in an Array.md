@@ -30,6 +30,10 @@ public:
 };
 ```
 
+执行用时：24 ms, 在所有 C++ 提交中击败了57.93%的用户
+
+内存消耗：9.7 MB, 在所有 C++ 提交中击败了59.41%的用户
+
 ### Non-Recursive QuickSort
 
 #### Non-Randomized
