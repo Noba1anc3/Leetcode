@@ -25,6 +25,50 @@ Explanation: The array cannot be partitioned into equal sum subsets.
 
 ## Idea - Phase I
 
+第一步，要明确两点，[状态]和[选择]。
+
+状态有三个， [背包对1的容量]、[背包对0的容量]和 [可选择的字符串]；选择就是把字符串[装进背包]或者[不装进背包]。
+
+明白了状态和选择，只要往这个框架套就完事儿了：
+
+
+for 状态1 in 状态1的所有取值：
+    for 状态2 in 状态2的所有取值：
+        for ...
+            dp[状态1][状态2][...] = 计算(选择1，选择2...)
+第二步，要明确dp数组的定义：
+
+首先，[状态]有三个，所以需要一个三维的dp数组。
+
+dp[i][j][k]的定义如下：
+
+若只使用前i个物品，当背包容量为j个0，k个1时，能够容纳的最多字符串数。
+
+经过以上的定义，可以得到：
+
+base case为dp[0][..][..] = 0, dp[..][0][0] = 0。因为如果不使用任何一个字符串，则背包能装的字符串数就为0；如果背包对0，1的容量都为0，它能装的字符串数也为0。
+
+我们最终想得到的答案就是dp[N][zeroNums][oneNums]，其中N为字符串的的数量。
+
+第三步，根据选择，思考状态转移的逻辑：
+
+注意，这是一个0-1背包问题，每个字符串只有一个选择机会，要么选择装，要么选择不装。
+
+如果你不能把这第 i 个物品装入背包（等同于容量不足，装不下去），也就是说你不使用strs[i]这一个字符串，那么当前的字符串数dp[i][j][k]应该等于dp[i - 1][j][k],继承之前的结果。
+
+如果你可以把这第 i 个物品装入了背包(此时背包容量是充足的，因此要选择装或者不装)，也就是说你能使用 strs[i] 这个字符串，那么 dp[i][j] 应该等于 Max(dp[i - 1][j][k], dp[i - 1][j - cnt[0]][k - cnt[1]] + 1)。 Max函数里的两个式子，分别是装和不装strs[i的字符串数量。(cnt 是根据strs[i]计算出来的。)
+
+比如说，如果你想把一个cnt = [1,2]的字符串装进背包(在容量足够的前提下)，只需要找到容量为
+
+[j - 1][k - 2]时候的字符串数再加上1，就可以得到装入后的字符串数了。
+
+由于我们求的是最大值，所以我们要求的是装和不装中能容纳的字符串总数更大的那一个
+
+作者：dong-men
+链接：https://leetcode-cn.com/problems/ones-and-zeroes/solution/dong-tai-gui-hua-0-1bei-bao-wen-ti-labuladongdong-/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 ### Thinking
 
 这道题可以换一种表述：给定一个只包含正整数的非空数组 `nums`，判断是否可以从数组中选出一些数字，使得这些数字的和等于整个数组的元素和的一半。因此这个问题可以转换成「0-1背包问题」。这道题与传统的「0-1背包问题」的区别在于，传统的「0-1背包问题」要求选取的物品的重量之和**不能超过**背包的总容量，这道题则要求选取的数字的和**恰好等于**整个数组的元素和的一半。类似于传统的「0-1背包问题」，可以使用动态规划求解.
@@ -70,44 +114,46 @@ c++
 ```c++
 class Solution {
 public:
-    bool judge(int size, int target, int maxElement){
-        if (target % 2 == 1 or 2*maxElement > target or size == 1)
-            return true;
-        return false;
+
+    vector<int> num_zero_one(string str){
+        vector<int> zero_one(2,0);
+
+        for(auto& ch : str){
+            if (ch == '0')
+                zero_one[0] += 1;
+            else
+                zero_one[1] += 1;
+        }
+
+        return zero_one;
     }
 
-    bool canPartition(vector<int>& nums) {
-        int size = nums.size();
-        int target = accumulate(nums.begin(), nums.end(), 0);
-        int maxElement = *max_element(nums.begin(), nums.end());
-
-        if (judge(size, target, maxElement))
-            return false;
-
-        target /= 2;
-        vector<vector<bool>> dp(size, vector<bool>(target+1, false));
-
-        for (int i = 0; i < size; i++){
-            dp[i][0] = true;
+    int findMaxForm(vector<string>& strs, int m, int n) {
+        int dp[strs.size()+1][m+1][n+1];
+        for (int i = 0; i <= m; i++){
+            for (int j = 0; j <= n; j++){
+                dp[0][i][j] = 0;
+            }
         }
-        dp[0][nums[0]] = true;
+        for (int i = 0; i <= strs.size(); i++){
+            dp[i][0][0] = 0;
+        }
         
-        for (int i = 1; i < size; i++){
-            int num = nums[i];
-            for (int j = 1; j <= target; j++){
-                if (j >= num){
-                    dp[i][j] = dp[i-1][j] | dp[i-1][j - num];
-                }
-                else{
-                    dp[i][j] = dp[i-1][j];
+        for (int i = 1; i <= strs.size(); i++){
+            string str = strs[i-1];
+            vector<int> zero_one = num_zero_one(str);
+
+            for(int j = 0; j <= m; j++){
+                for (int k = 0; k <= n; k++){
+                    if (zero_one[0] > j or zero_one[1] > k)
+                        dp[i][j][k] = dp[i-1][j][k];
+                    else
+                        dp[i][j][k] = max(dp[i-1][j][k], 1 + dp[i-1][j-zero_one[0]][k-zero_one[1]]);  
                 }
             }
-            // 自上向下的传递性
-            if (dp[i][target] == true)
-                return true
         }
 
-        return dp[size-1][target];
+        return dp[strs.size()][m][n];
     }
 };
 ```
