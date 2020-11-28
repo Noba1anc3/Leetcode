@@ -1,73 +1,49 @@
-Given a **non-empty** array `nums` containing **only positive integers**, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+
 
 
 
 Examples:
 
 ```
-Example 1:
 
-Input: nums = [1,5,11,5]
-Output: true
-Explanation: The array can be partitioned as [1, 5, 5] and [11].
-
-Example 2:
-
-Input: nums = [1,2,3,5]
-Output: false
-Explanation: The array cannot be partitioned into equal sum subsets.
 ```
-
-**Constraints:**
-
-- `1 <= nums.length <= 200`
-- `1 <= nums[i] <= 100`
 
 ## Idea - Phase I
 
-第一步，要明确两点，[状态]和[选择]。
+#### 第一步，要明确两点，[状态]和[选择]。
 
 状态有三个， [背包对1的容量]、[背包对0的容量]和 [可选择的字符串]；选择就是把字符串[装进背包]或者[不装进背包]。
 
-明白了状态和选择，只要往这个框架套就完事儿了：
+明白了状态和选择，只要往这个框架套就完事儿了:
 
-
+```c
 for 状态1 in 状态1的所有取值：
     for 状态2 in 状态2的所有取值：
         for ...
             dp[状态1][状态2][...] = 计算(选择1，选择2...)
-第二步，要明确dp数组的定义：
+```
+
+#### 第二步，要明确dp数组的定义：
 
 首先，[状态]有三个，所以需要一个三维的dp数组。
 
-dp[i][j][k]的定义如下：
+`dp[i][j][k]`的定义如下:
 
-若只使用前i个物品，当背包容量为j个0，k个1时，能够容纳的最多字符串数。
+若只使用前`i`个物品，当背包容量为`j`个0，`k`个1时，能够容纳的最多字符串数。
 
-经过以上的定义，可以得到：
+经过以上的定义，可以得到:
 
-base case为dp[0][..][..] = 0, dp[..][0][0] = 0。因为如果不使用任何一个字符串，则背包能装的字符串数就为0；如果背包对0，1的容量都为0，它能装的字符串数也为0。
+base case为`dp[0][..][..] = 0`, `dp[..][0][0] = 0`。因为如果不使用任何一个字符串，则背包能装的字符串数就为0；如果背包对0，1的容量都为0，它能装的字符串数也为0。
 
-我们最终想得到的答案就是dp[N][zeroNums][oneNums]，其中N为字符串的的数量。
+我们最终想得到的答案就是`dp[N][zeroNums][oneNums]`，其中N为字符串的的数量。
 
-第三步，根据选择，思考状态转移的逻辑：
+#### 第三步，根据选择，思考状态转移的逻辑:
 
 注意，这是一个0-1背包问题，每个字符串只有一个选择机会，要么选择装，要么选择不装。
 
-如果你不能把这第 i 个物品装入背包（等同于容量不足，装不下去），也就是说你不使用strs[i]这一个字符串，那么当前的字符串数dp[i][j][k]应该等于dp[i - 1][j][k],继承之前的结果。
+如果你**不能**把这第 `i` 个物品装入背包（等同于容量不足，装不下去），也就是说你不使用`strs[i]`这一个字符串，那么当前的字符串数`dp[i][j][k]`应该等于`dp[i - 1][j][k]`,继承之前的结果。
 
-如果你可以把这第 i 个物品装入了背包(此时背包容量是充足的，因此要选择装或者不装)，也就是说你能使用 strs[i] 这个字符串，那么 dp[i][j] 应该等于 Max(dp[i - 1][j][k], dp[i - 1][j - cnt[0]][k - cnt[1]] + 1)。 Max函数里的两个式子，分别是装和不装strs[i的字符串数量。(cnt 是根据strs[i]计算出来的。)
-
-比如说，如果你想把一个cnt = [1,2]的字符串装进背包(在容量足够的前提下)，只需要找到容量为
-
-[j - 1][k - 2]时候的字符串数再加上1，就可以得到装入后的字符串数了。
-
-由于我们求的是最大值，所以我们要求的是装和不装中能容纳的字符串总数更大的那一个
-
-作者：dong-men
-链接：https://leetcode-cn.com/problems/ones-and-zeroes/solution/dong-tai-gui-hua-0-1bei-bao-wen-ti-labuladongdong-/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+如果你**可以**把这第 `i` 个物品装入了背包(此时背包容量是充足的，因此要选择装或者不装)，也就是说你能使用 `strs[i]` 这个字符串， `dp[i][j] = max(dp[i - 1][j][k], dp[i - 1][j - cnt[0]][k - cnt[1]] + 1)`. max函数里的两个式子，分别是装和不装`strs[i]`的字符串数量。(`cnt` 是根据`strs[i]`计算出来的)
 
 ### Thinking
 
@@ -158,75 +134,13 @@ public:
 };
 ```
 
-传递性优化前:
-
-- 执行用时：972 ms, 在所有 C++ 提交中击败了10.68%的用户
-
-- 内存消耗：11.9 MB, 在所有 C++ 提交中击败了30.89%的用户
-
-传递性优化后:
-
-- 执行用时：584 ms, 在所有 C++ 提交中击败了39.69%的用户
-
-- 内存消耗：12.1 MB, 在所有 C++ 提交中击败了25.28%的用户
-
-Attention:
-- accumulate(nums.begin(), nums.end(), 0);
-- *max_element(nums.begin(), nums.end());
-
-- vector<vector<bool>> dp(size, vector<bool>(target+1, false));
-
 ## Idea - Phase II
 
-上述代码的空间复杂度是 `O(n×target)`。但是可以发现在计算 `dp` 的过程中，每一行的 `dp` 值都只与上一行的 `dp` 值有关，因此只需要一个一维数组即可将空间复杂度降到 `O(target)`。此时的转移方程为:
 
-`dp[j] = dp[j] ∣ dp[j−nums[i]]`
-
-且需要注意的是第二层的循环我们需要**从大到小**计算，因为如果我们从小到大更新 `dp` 值，那么在计算 `dp[j]` 值的时候，`dp[j−nums[i]]` 已经是被更新过的状态，不再是上一行的 `dp` 值.
 
 ## Solution - Phase II
 
 ```c++
-class Solution {
-public:
-    bool judge(int size, int target, int maxElement){
-        if (target % 2 == 1 or 2*maxElement > target or size == 1)
-            return true;
-        return false;
-    }
 
-    bool canPartition(vector<int>& nums) {
-        int size = nums.size();
-        int target = accumulate(nums.begin(), nums.end(), 0);
-        int maxElement = *max_element(nums.begin(), nums.end());
-
-        if (judge(size, target, maxElement))
-            return false;
-
-        target /= 2;
-        vector<bool> dp(target + 1, false);
-
-        dp[0] = true;
-        for (int i = 0; i < size; i++) {
-            int num = nums[i];
-            for (int j = target; j >= num; j--) {
-                dp[j] |= dp[j - num];
-            }
-        }
-
-        return dp[target];
-
-    }
-};
 ```
-
-执行用时：96 ms, 在所有 C++ 提交中击败了85.31%的用户
-
-内存消耗：10 MB, 在所有 C++ 提交中击败了52.08%的用户
-
-**复杂度**
-
-- 时间复杂度：`O(n×target)`，其中 `n` 是数组的长度，`target` 是整个数组的元素和的一半。需要计算出所有的状态，每个状态在进行转移时的时间复杂度为 O(1).
-
-- 空间复杂度：`O(target)`， `target` 是整个数组的元素和的一半。空间复杂度取决于 `dp` 数组，在不进行空间优化的情况下，空间复杂度是 `O(n×target)`，进行空间优化的情况下，空间复杂度可以降到 `O(target)`.
 
