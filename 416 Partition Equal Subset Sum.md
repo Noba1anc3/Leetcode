@@ -165,7 +165,15 @@ public:
             int num = nums[i];
             for (int j = target; j >= num; j--) {
                 dp[j] |= dp[j - num];
-            }
+            // before optimize
+            // for (int j = target; j > 0; j--){
+            //     if (j >= num){
+            //         dp[j] = dp[j] | dp[j - num];
+            //     }
+            //     else{
+            //         dp[j] = dp[j];
+            //     }
+            // }
         }
 
         return dp[target];
