@@ -70,3 +70,34 @@ Attention:
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEJsCHKY1iEhfQKAr9fXM1PmVCetFcNCstJLcGHTD07rPaneWwT4enQlMcslUqLHcp.pGFS*Txpdm2exiuJR8EjQ!/r)
 
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrELQQF0HdGbsd0E8oAa9Q*iU4UdUrGCdFBQKZ1ArI9S6Q90LqJwMbWMWHyPGyuQ4P3oyn9R6ToJ6kM5tUTHJcne4!/r)
+
+## Extended Idea
+
+如果我们把问题泛化，不再是固定的1,2，而是任意给定台阶数，例如1,2,5呢？
+
+我们只需要修改我们的DP方程DP[i] = DP[i-1] + DP[i-2] + DP[i-5], 也就是DP[i] = DP[i] + DP[i-j] ,j =1,2,5
+
+在原来的基础上，我们的代码可以做这样子修改
+
+```c++
+class Solution {
+public:
+    int climbStairs(int n) {
+        int steps[2] = {1,2}, DP[n+1];
+        memset(DP, 0, sizeof(DP));
+        DP[0] = 1;
+		int stepLen = sizeof(steps) / sizeof(int);
+        
+        for (int i = 1; i <= n; i++){
+            for (int j = 0; j < stepLen; j++){
+                int step = steps[j];
+                if ( i < step ) continue; // 台阶少于跨越的步数
+                DP[i] += DP[i-step];
+            }
+        }
+
+        return DP[n];
+    }
+};
+```
+
