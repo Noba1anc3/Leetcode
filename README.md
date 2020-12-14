@@ -73,6 +73,7 @@
 - [☆☆☆ 474. Ones and Zeroes ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
 - [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 - [☆☆ 518. Coin Change 2 ☆☆ (0-1 Complete Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
+- [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 
 ## Sort
@@ -138,6 +139,7 @@
 - [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+- [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
