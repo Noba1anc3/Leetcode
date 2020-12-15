@@ -65,6 +65,8 @@
 
 ## Dynamic Programming
 
+- [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
+
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 070. Climbing Stairs ☆☆](070%20Climbing%20Stairs.md)
 - [☆☆☆ 072. Edit Distance ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
@@ -108,6 +110,8 @@
 - [002. Add Two Numbers](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
+- [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
+- [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)

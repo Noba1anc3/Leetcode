@@ -21,20 +21,16 @@ c++
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        string prefix;
-        strs.empty() ? prefix = "" : prefix = strs[0];
-        for (string str : strs){
-            while (str.find(prefix) != 0){
-                prefix = prefix.substr(0, prefix.size()-1);
-            }
-        }
+        string prefix = strs.empty() ? "" : strs[0];
+        for (string str : strs)
+            while (str.find(prefix) != 0) prefix = prefix.substr(0, prefix.size()-1);
         return prefix;
     }
 };
 ```
-执行用时：8 ms, 在所有 C++ 提交中击败了47.42%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了92.93%的用户
 
-内存消耗：9.7 MB, 在所有 C++ 提交中击败了10.98%的用户
+内存消耗：9.7 MB, 在所有 C++ 提交中击败了11.07%的用户
 
 Attention
 
