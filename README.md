@@ -71,6 +71,7 @@
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 070. Climbing Stairs ☆☆](070%20Climbing%20Stairs.md)
 - [☆☆☆ 072. Edit Distance ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
+- [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 322. Coin Change ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
