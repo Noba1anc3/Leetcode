@@ -29,11 +29,10 @@ int Rod_Cutting(vector<int> p, int n){
 
 int main()
 {
-	vector<int> p = {1, 5, 8, 9, 10, 17, 17, 20, 24, 26};
+    vector<int> p = {1, 5, 8, 9, 10, 17, 17, 20, 24, 26};
     int n = 10;
     int maxRevenue = Rod_Cutting(p, n);
     cout<<maxRevenue;
     return 0;
 }
 ```
-
