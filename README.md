@@ -123,6 +123,7 @@
 - [☆☆☆ 072. Edit Distance ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [144. Binary Tree Preorder Traversal]()
 - [145. Binary Tree Postorder Traversal]()
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
