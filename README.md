@@ -72,7 +72,6 @@
 
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
-
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 070. Climbing Stairs ☆☆](070%20Climbing%20Stairs.md)
 - [☆☆☆ 072. Edit Distance ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
@@ -85,6 +84,7 @@
 - [☆☆ 518. Coin Change 2 ☆☆ (0-1 Complete Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
 - [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 
 ## Sort
 
@@ -160,6 +160,7 @@
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+- [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆☆ 面试题 03.02. Min Stack ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.02%20Min%20Stack.md)
 - [☆ 面试题 10.09. Sorted Matrix Search ☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
 - [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (同剑指offer-40)](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
