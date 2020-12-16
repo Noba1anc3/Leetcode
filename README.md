@@ -78,11 +78,13 @@
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 322. Coin Change ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
+- [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
 - [☆☆☆ 474. Ones and Zeroes ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
 - [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 - [☆☆ 518. Coin Change 2 ☆☆ (0-1 Complete Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
 - [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
+- [☆☆ 剑指Offer 14. Rope Cutting ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 47. Maximum Value of Presents ☆☆](%E5%89%91%E6%8C%87offer-47%20Maximum%20Value%20of%20Presents.md)
 - [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
@@ -111,6 +113,8 @@
 # Brain Twister
 
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
+- [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
+- [☆☆ 剑指Offer 14. Rope Cutting ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 
 # Questions
 
@@ -141,6 +145,7 @@
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 322. Coin Change ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
+- [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -157,6 +162,7 @@
 - [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
 - [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
+- [☆☆ 剑指Offer 14. Rope Cutting ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
