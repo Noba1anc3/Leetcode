@@ -65,6 +65,9 @@
 
 ## Dynamic Programming
 
+- [☆☆ 0-1 Knapsack ☆☆](DP%20-%2001%20Knapsack.md)
+- [☆☆ Rod Cutting ☆☆](DP%20-%20Rod%20Cutting.md)
+
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
 
