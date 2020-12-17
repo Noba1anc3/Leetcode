@@ -15,7 +15,7 @@
 
 ## Idea - I Mathematics + Greedy
 
-![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEMaKYGgFOh3O8Y3xGT.bwxh9E7OOsrwEm1T1o7A3suSmpRrBXGDxfc42QH2jrVUoHmkXbFMopR*.kwSH.458Dcc!/r))
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEMaKYGgFOh3O8Y3xGT.bwxh9E7OOsrwEm1T1o7A3suSmpRrBXGDxfc42QH2jrVUoHmkXbFMopR*.kwSH.458Dcc!/r)
 
 1. ① 当所有绳段长度相等时，乘积最大。② 最优的绳段长度为 3
 2. 因为绳子至少剪2段或以上，且绳子长度大于1，所以当n小于等于3（也就是等于2，3）时，最大乘积分别为1，2，也就是n减去1
