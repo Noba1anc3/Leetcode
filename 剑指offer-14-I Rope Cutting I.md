@@ -15,9 +15,7 @@
 
 ## Idea - I Mathematics
 
-**推论一：** 若拆分的数量 *a* 确定， 则 **各拆分数字相等时** ，乘积最大。
-
-**推论二：** 将数字 *n* 尽可能以因子 3 等分时，乘积最大。
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEMaKYGgFOh3O8Y3xGT.bwxh9E7OOsrwEm1T1o7A3suSmpRrBXGDxfc42QH2jrVUoHmkXbFMopR*.kwSH.458Dcc!/r))
 
 **拆分规则**
 
