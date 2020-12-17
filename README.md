@@ -89,6 +89,7 @@
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 47. Maximum Value of Presents ☆☆](%E5%89%91%E6%8C%87offer-47%20Maximum%20Value%20of%20Presents.md)
 - [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
+- [☆☆ 面试题 08.01. Three Steps Problem ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2008.01%20Three%20Steps%20Problem.md)
 
 ## Sort
 
@@ -173,5 +174,6 @@
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 - [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆☆ 面试题 03.02. Min Stack ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.02%20Min%20Stack.md)
+- [☆☆ 面试题 08.01. Three Steps Problem ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2008.01%20Three%20Steps%20Problem.md)
 - [☆ 面试题 10.09. Sorted Matrix Search ☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
 - [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (同剑指offer-40)](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)

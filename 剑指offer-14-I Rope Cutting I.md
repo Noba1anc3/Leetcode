@@ -15,6 +15,8 @@
 
 ## Idea - I Mathematics
 
+下面有图
+
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEMaKYGgFOh3O8Y3xGT.bwxh9E7OOsrwEm1T1o7A3suSmpRrBXGDxfc42QH2jrVUoHmkXbFMopR*.kwSH.458Dcc!/r)
 
 **拆分规则**
