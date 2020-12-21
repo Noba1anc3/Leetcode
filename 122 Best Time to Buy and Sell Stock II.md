@@ -31,11 +31,14 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ## Idea
 
+下面有图
+
 ![](http://r.photo.store.qq.com/psc?/fef49446-40e0-48c4-adcc-654c5015022c/TmEUgtj9EK6.7V8ajmQrEPHkpU34EX2.Cs1KpDwmc.NCqt.qeUzatthKxVzv7lLy.pFlFOw13yVFRss*1sA6.aGUhTh1e2y2KbaXoYNrQgI!/r)
 
 ## Solution
 
 c++
+
 ```c++
 class Solution {
 public:
