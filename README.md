@@ -71,6 +71,7 @@
 - [☆☆ Rod Cutting ☆☆](DP%20-%20Rod%20Cutting.md)
 - [☆☆ Matrix Multiplication ☆☆](DP%20-%20Matrix%20Multiplication.md)
 - [☆☆ Longest Common Substring ☆☆](DP%20-%20Longest%20Common%20Substring.md)
+- [☆☆ Optimal Binary Search Tree ☆☆](DP%20-%20Optimal%20BST.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
