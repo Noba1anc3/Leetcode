@@ -54,6 +54,9 @@
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Greedy
+
+- [☆☆ Fractional Knapsack ☆☆](Greedy%20-%20Fractional%20Knapsack.md)
+
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 
