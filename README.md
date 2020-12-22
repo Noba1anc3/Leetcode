@@ -57,6 +57,7 @@
 ## Greedy
 
 - [☆☆ Fractional Knapsack ☆☆](Greedy%20-%20Fractional%20Knapsack.md)
+- [☆☆ 045. Jump Game II ☆☆](045%20Jump%20Game%20II.md)
 - [☆☆ 055. Jump Game ☆☆](055%20Jump%20Game.md)
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
@@ -146,6 +147,7 @@
 - [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
+- [☆☆ 045. Jump Game II ☆☆](045%20Jump%20Game%20II.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 055. Jump Game ☆☆](055%20Jump%20Game.md)
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
