@@ -11,10 +11,6 @@ Input: intervals = [[7,10],[2,4]]
 Output: true
 ```
 
-## Idea
-
-活动选择问题
-
 ## Solution
 
 ```c++
@@ -24,23 +20,16 @@ public:
         if (intervals.empty())
             return true;
 
-        sort(intervals.begin(), intervals.end(), [](const vector<int> intA, const vector<int> intB){
-            return intA[1] < intB[1];
-        });
+        sort(intervals.begin(), intervals.end());
 
-        int endTime = intervals[0][1];
-
-        for (int i = 1; i < intervals.size(); i++){
-            if (intervals[i][0] < endTime)
+        for (int i = 1; i < intervals.size(); i++)
+            if (intervals[i][0] < intervals[i-1][1])
                 return false;
-            endTime = intervals[i][1];
-        }
-
         return true;
     }
 };
 ```
 
-执行用时：196 ms, 在所有 C++ 提交中击败了5.48%的用户
+执行用时：48 ms, 在所有 C++ 提交中击败了50.00%的用户
 
-内存消耗：27.2 MB, 在所有 C++ 提交中击败了5.17%的用户
+内存消耗：11.8 MB, 在所有 C++ 提交中击败了50.00%的用户
