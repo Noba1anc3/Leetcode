@@ -62,6 +62,7 @@
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆☆ 392. Is Subsequence ☆☆☆](392%20Is%20Subsequence.md)
+- [☆☆☆ 435. Non-overlapping Intervals ☆☆☆](435%20Non-overlapping%20Intervals.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆ (Huffman + Priority Queue)](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 
@@ -172,6 +173,7 @@
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
+- [☆☆☆ 435. Non-overlapping Intervals ☆☆☆](435%20Non-overlapping%20Intervals.md)
 - [463. Island Perimeter](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
 - [☆☆☆ 474. Ones and Zeroes ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
 - [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
