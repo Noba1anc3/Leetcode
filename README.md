@@ -3,6 +3,7 @@
 ## Queue
 
 - [Breadth First Search](Graph%20-%20BFS.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 
 - [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
@@ -37,7 +38,8 @@
 ## Graph
 
 - [Breadth First Search](Graph%20-%20BFS.md)
-- [Depth First Search](Graph%20-%20BFS.md)
+- [Depth First Search](Graph%20-%20DFS.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 
 # Algorithm
 ## BFS
@@ -45,6 +47,7 @@
 - [Breadth First Search](Graph%20-%20BFS.md)
 
 - [200. Number of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [463. Island Perimeter](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
@@ -53,7 +56,8 @@
 
 ## DFS
 
-- [Depth First Search](Graph%20-%20BFS.md)
+- [Depth First Search](Graph%20-%20DFS.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
@@ -65,6 +69,7 @@
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
@@ -190,6 +195,7 @@
 - [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 322. Coin Change ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)

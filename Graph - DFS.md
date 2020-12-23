@@ -1,3 +1,51 @@
+## Adjacent List
+
+```c++
+class Solution {
+public:
+    int WHITE = 0, GRAY = 1, BLACK = 2;
+
+    void DFSVisit(vector<vector<int>> &G, int vertex, int time, vector<int> &color, 
+                  vector<int> start, vector<int> finish, vector<int> pred){
+        
+        color[vertex] = GRAY;
+        start[vertex] = ++time;
+
+        for (auto adjVertex : G[vertex]){
+            if (color[adjVertex] == WHITE){
+                pred[adjVertex] = vertex;
+                DFSVisit(G, adjVertex, time, color, start, finish, pred);
+            }
+        }
+
+        color[vertex] = BLACK;
+        finish[vertex] = ++time;
+    }
+
+    bool validTree(int n, vector<vector<int>>& edges) {
+        
+        int root = 0, time = 0;
+
+        vector<int> color(n, WHITE);
+        vector<int> start(n, 0);
+        vector<int> finish(n, 0);
+        vector<int> pred(n, NULL);
+
+        vector<vector<int>> Graph(n, vector<int>());
+
+        for (auto edge : edges){
+            Graph[edge[0]].push_back(edge[1]);
+            Graph[edge[1]].push_back(edge[0]);
+        }
+
+        DFSVisit(Graph, root, time, color, start, finish, pred);
+
+    }
+};
+```
+
+## Adjacent Metrix
+
 ```c++
 #include <iostream>
 #include <algorithm>

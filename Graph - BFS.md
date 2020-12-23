@@ -1,3 +1,48 @@
+## Adjacent List
+
+```c++
+class Solution {
+public:
+    int WHITE = 0, GRAY = 1, BLACK = 2;
+
+    void BFSVisit(vector<vector<int>> G, int vertex, vector<int> &color){
+        color[vertex] = GRAY;
+        
+        queue<int> Q;
+        Q.push(vertex);
+        
+        while (!Q.empty()){
+            int curVertex = Q.front();
+            Q.pop();
+            
+            for (int adjVertex : G[curVertex]){
+                if (color[adjVertex] == WHITE){
+                    color[adjVertex] = GRAY;
+                    Q.push(adjVertex);
+                }
+            }
+            
+            color[curVertex] = BLACK;
+        }
+    }
+
+    void BFS(int n, vector<vector<int>>& edges) {
+        int start = 0;
+        vector<int> color(n, WHITE);
+        vector<vector<int>> Graph(n, vector<int>());
+        
+        for (vector<int> edge : edges){
+            Graph[edge[0]].push_back(edge[1]);
+            Graph[edge[1]].push_back(edge[0]);
+        }
+
+        BFSVisit(Graph, start, color);
+    }
+};
+```
+
+## Adjacent Metrix
+
 ```c++
 #include <iostream>
 #include <algorithm>
@@ -46,8 +91,6 @@ void BFSVisit(Graph G, int vertex, vector<int> &color, vector<int> &dist, vector
         
         color[curVertex] = BLACK;
     }
-    
-    color[vertex] = BLACK;
 }
 
 void BFS(Graph G)
