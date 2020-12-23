@@ -1,6 +1,9 @@
 # Data Structure
 
 ## Queue
+
+- [Breadth First Search](Graph%20-%20BFS.md)
+
 - [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 
@@ -31,8 +34,15 @@
 - [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 
+## Graph
+
+- [Breadth First Search](Graph%20-%20BFS.md)
+
 # Algorithm
 ## BFS
+
+- [Breadth First Search](Graph%20-%20BFS.md)
+
 - [200. Number of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [463. Island Perimeter](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
@@ -85,7 +95,7 @@
 - [☆☆ Matrix Multiplication ☆☆](DP%20-%20Matrix%20Multiplication.md)
 - [☆☆ Longest Common Substring ☆☆](DP%20-%20Longest%20Common%20Substring.md)
 - [☆☆ Optimal Binary Search Tree ☆☆](DP%20-%20Optimal%20BST.md)
-- [☆☆ Weighted Activity Selection ☆☆](DP%20-%20Weighted20Activity%20Selection.md)
+- [☆☆ Weighted Activity Selection ☆☆](DP%20-%20Weighted%20Activity%20Selection.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
