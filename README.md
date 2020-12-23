@@ -37,6 +37,7 @@
 ## Graph
 
 - [Breadth First Search](Graph%20-%20BFS.md)
+- [Depth First Search](Graph%20-%20BFS.md)
 
 # Algorithm
 ## BFS
@@ -49,6 +50,10 @@
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 - [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
+
+## DFS
+
+- [Depth First Search](Graph%20-%20BFS.md)
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)

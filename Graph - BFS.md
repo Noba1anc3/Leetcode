@@ -54,8 +54,13 @@ void BFS(Graph G)
 {
     vector<int> color(G.Vnum, WHITE), pred(G.Vnum, NULL), dist(G.Vnum, 0);
 
-    BFSVisit(G, 1, color, dist, pred); // start from vertex-2
+    // BFSVisit(G, 1, color, dist, pred);  start from vertex-2
 
+    for (int i = 0; i < G.Vnum; i++){
+        if (color[i] == WHITE)
+            BFSVisit(G, i, color, dist, pred);
+    }
+    
     cout<<"color: ";
     for(auto ele : color)
         cout<<ele<<' ';
