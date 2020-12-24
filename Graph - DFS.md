@@ -1,17 +1,24 @@
 ## Adjacent List
 
+### 连通图版本
+
 ```c++
 class Solution {
 private:
     int time = 0, root = 0;
     int WHITE = 0, GRAY = 1, BLACK = 2;
-    vector<int> start;
-    vector<int> finish;
-    vector<int> pred;
-    vector<int> color;
+    vector<int> start, finish, pred, color;
     vector<vector<int>> Graph;
 
 public:
+    void Init(int n){
+        pred.resize(n);
+		color.resize(n);
+        start.resize(n);
+        finish.resize(n);
+        Graph.resize(n);
+    }
+    
     void DFSVisit(int vertex){
 
         color[vertex] = GRAY;
@@ -29,16 +36,121 @@ public:
     }
 
     void DFS(int n, vector<vector<int>>& edges) {
+		Init(n);
+        
+        for (vector<int> edge : edges)
+            Graph[edge[0]].push_back(edge[1]);
+
+        DFSVisit(root);
+    }
+}
+```
+
+### 非连通图版本
+
+```c++
+class Solution {
+private:
+    int time = 0;
+    int WHITE = 0, GRAY = 1, BLACK = 2;
+    vector<int> start, finish, pred, color;
+    vector<vector<int>> Graph;
+
+public:
+    void Init(int n){
         pred.resize(n);
 		color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
+    }
+    
+    void DFSVisit(int vertex){
 
-        for (auto edge : edges)
+        color[vertex] = GRAY;
+        start[vertex] = ++time;
+
+        for (auto adjVertex : Graph[vertex]){
+            if (color[adjVertex] == WHITE){
+                pred[adjVertex] = vertex;
+                DFSVisit(adjVertex);
+            }
+        }
+
+        color[vertex] = BLACK;
+        finish[vertex] = ++time;
+    }
+
+    void DFS(int n, vector<vector<int>>& edges) {
+		Init(n);
+        
+        for (vector<int> edge : edges)
             Graph[edge[0]].push_back(edge[1]);
+		
+        for (int i = 0; i < n; i++){
+            if (color[i] == WHITE)
+                DFSVisit(i);
+        }
+    }
+}
+```
 
-        DFSVisit(root);
+### 环路测试版本
+
+```c++
+class Solution {
+private:
+    int time = 0;
+    int WHITE = 0, GRAY = 1, BLACK = 2;
+    vector<int> start, finish, pred, color;
+    vector<vector<int>> Graph;
+    bool acyclic = true;
+
+public:
+    void Init(int n){
+        pred.resize(n);
+		color.resize(n);
+        start.resize(n);
+        finish.resize(n);
+        Graph.resize(n);
+    }
+    
+    void DFSVisit(int vertex){
+
+        color[vertex] = GRAY;
+        start[vertex] = ++time;
+
+        for (auto adjVertex : Graph[vertex]){
+            if (color[adjVertex] == WHITE){
+                pred[adjVertex] = vertex;
+                DFSVisit(adjVertex);
+                if (!acyclic)
+                    return;
+            }
+            if (color[adjVertex] == GRAY){
+                acyclic = false;
+            	return;
+            }
+        }
+
+        color[vertex] = BLACK;
+        finish[vertex] = ++time;
+    }
+
+    bool DFS(int n, vector<vector<int>>& edges) {
+		Init(n);
+        
+        for (vector<int> edge : edges)
+            Graph[edge[0]].push_back(edge[1]);
+		
+        for (int i = 0; i < n; i++){
+            if (color[i] == WHITE)
+                DFSVisit(i);
+        }
+        
+        if (acyclic)
+            return true;
+        return false;
     }
 }
 ```
