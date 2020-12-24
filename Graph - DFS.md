@@ -22,7 +22,7 @@ public:
         finish[vertex] = ++time;
     }
 
-    bool validTree(int n, vector<vector<int>>& edges) {
+    void DFS(int n, vector<vector<int>>& edges) {
         
         int root = 0, time = 0;
 

@@ -3,19 +3,24 @@
 ## Queue
 
 - [Breadth First Search](Graph%20-%20BFS.md)
+- [Topological Sort](Graph%20-%20Topological%20Sort.md)
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
-- [☆☆ 210. Course Schedule II ☆☆](210%20Course%20Schedule%20II.md)
+- [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 
 ## Stack
+
+- [☆☆ Topological Sort ☆☆](Graph%20-%20Topological%20Sort.md)
+
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [144. Binary Tree Preorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [145. Binary Tree Postorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 - [150. Evaluate Reverse Polish Notation](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
 - [155. Min Stack](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
+- [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [☆☆☆ 面试题 03.02. Min Stack ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.02%20Min%20Stack.md)
 
@@ -40,8 +45,9 @@
 
 - [Breadth First Search](Graph%20-%20BFS.md)
 - [Depth First Search](Graph%20-%20DFS.md)
+- [Topological Sort](Graph%20-%20Topological%20Sort.md)
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
-- [☆☆ 210. Course Schedule II ☆☆](210%20Course%20Schedule%20II.md)
+- [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 
 # Algorithm
