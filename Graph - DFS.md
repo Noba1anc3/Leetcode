@@ -2,19 +2,25 @@
 
 ```c++
 class Solution {
-public:
+private:
+    int time = 0, root = 0;
     int WHITE = 0, GRAY = 1, BLACK = 2;
+    vector<int> start;
+    vector<int> finish;
+    vector<int> pred;
+    vector<int> color;
+    vector<vector<int>> Graph;
 
-    void DFSVisit(vector<vector<int>> &G, int vertex, int time, vector<int> &color, 
-                  vector<int> start, vector<int> finish, vector<int> pred){
-        
+public:
+    void DFSVisit(int vertex){
+
         color[vertex] = GRAY;
         start[vertex] = ++time;
 
-        for (auto adjVertex : G[vertex]){
+        for (auto adjVertex : Graph[vertex]){
             if (color[adjVertex] == WHITE){
                 pred[adjVertex] = vertex;
-                DFSVisit(G, adjVertex, time, color, start, finish, pred);
+                DFSVisit(adjVertex);
             }
         }
 
@@ -23,25 +29,18 @@ public:
     }
 
     void DFS(int n, vector<vector<int>>& edges) {
-        
-        int root = 0, time = 0;
+        pred.resize(n);
+		color.resize(n);
+        start.resize(n);
+        finish.resize(n);
+        Graph.resize(n);
 
-        vector<int> color(n, WHITE);
-        vector<int> start(n, 0);
-        vector<int> finish(n, 0);
-        vector<int> pred(n, NULL);
-
-        vector<vector<int>> Graph(n, vector<int>());
-
-        for (auto edge : edges){
+        for (auto edge : edges)
             Graph[edge[0]].push_back(edge[1]);
-            Graph[edge[1]].push_back(edge[0]);
-        }
 
-        DFSVisit(Graph, root, time, color, start, finish, pred);
-
+        DFSVisit(root);
     }
-};
+}
 ```
 
 ## Adjacent Metrix
