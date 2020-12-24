@@ -3,8 +3,9 @@
 ## Queue
 
 - [Breadth First Search](Graph%20-%20BFS.md)
+- [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
+- [☆☆ 210. Course Schedule II ☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
-
 - [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 
@@ -39,6 +40,8 @@
 
 - [Breadth First Search](Graph%20-%20BFS.md)
 - [Depth First Search](Graph%20-%20DFS.md)
+- [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
+- [☆☆ 210. Course Schedule II ☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 
 # Algorithm
@@ -144,6 +147,8 @@
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
 - [☆☆☆ 148. Sort List ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [☆ 207. Course Schedule ☆ (Topological Sort)](207%20Course%20Schedule.md)
+- [☆☆ 210. Course Schedule II ☆☆ (Topological Sort)](210%20Course%20Schedule%20II.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆ (Quick Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
@@ -191,6 +196,8 @@
 - [150. Evaluate Reverse Polish Notation](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
 - [155. Min Stack](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
 - [200. Number of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
+- [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
+- [☆☆ 210. Course Schedule II ☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
 - [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
