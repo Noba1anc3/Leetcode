@@ -49,6 +49,7 @@
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
+- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 
 # Algorithm
 ## BFS
@@ -67,6 +68,7 @@
 
 - [Depth First Search](Graph%20-%20DFS.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
+- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
@@ -79,6 +81,7 @@
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
+- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
@@ -124,6 +127,7 @@
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 322. Coin Change ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
+- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 - [☆☆☆ 392. Is Subsequence ☆☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -212,6 +216,7 @@
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 322. Coin Change ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
+- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14%20Rope%20Cutting.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
