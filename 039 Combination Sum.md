@@ -88,8 +88,10 @@ public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
         sort(candidates.begin(), candidates.end());
         backtrack(candidates, target);
+        
         sort(ans_list.begin(), ans_list.end());
         ans_list.erase(unique(ans_list.begin(), ans_list.end()), ans_list.end());
+        
         return ans_list;
     }
 };
