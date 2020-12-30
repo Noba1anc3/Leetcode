@@ -28,7 +28,7 @@ private:
     vector<vector<int>> ans;
 
 public:
-    void backtrack(vector<int> nums, int index){
+    void backtrack(vector<int>& nums, int index){
         if (index == nums.size())
             return;
         for (int i = index; i < nums.size(); i++){
@@ -47,9 +47,9 @@ public:
 };
 ```
 
-执行用时：24 ms, 在所有 C++ 提交中击败了74.71%的用户
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：10.3 MB, 在所有 C++ 提交中击败了35.04%的用户
+内存消耗：7.6 MB, 在所有 C++ 提交中击败了34.17%的用户
 
 Attention:
 
