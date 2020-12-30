@@ -75,6 +75,7 @@
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
+- [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 
@@ -93,6 +94,7 @@
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
+- [☆☆ 078. Subset ☆☆](078%20Subset.md)
 
 ## Recursive
 
@@ -105,6 +107,7 @@
 
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
+- [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
@@ -232,6 +235,7 @@
 - [☆☆☆ 072. Edit Distance ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
+- [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [144. Binary Tree Preorder Traversal]()
