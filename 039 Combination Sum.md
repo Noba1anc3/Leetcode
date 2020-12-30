@@ -130,7 +130,10 @@ public:
             return;
         }
 
-        for(int i = index; i < candidates.size(); i++){
+        for(int i = index; i < candidates.size(); i++){ // 不会错，只会多访问此前遍历时访问过的节点
+            // candidates = [2,3,5], target = 8
+            // i from 0 : [[2,2,2,2],[2,3,3],[3,2,3],[3,3,2],[3,5],[5,3]]
+            // i from index : [[2,2,2,2],[2,3,3],[3,5]]
             res.push_back(candidates[i]);
             backtracking(candidates, target - candidates[i], i);
             res.pop_back();
@@ -142,3 +145,6 @@ public:
 执行用时：8 ms, 在所有 C++ 提交中击败了92.50%的用户
 
 内存消耗：11.2 MB, 在所有 C++ 提交中击败了58.98%的用户
+
+
+
