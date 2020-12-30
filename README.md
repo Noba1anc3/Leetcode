@@ -74,6 +74,7 @@
 - [☆☆☆ 040. Combination Sum II ☆☆☆](040%20Combination%20Sum%20II.md)
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
+- [☆☆☆ 060. Permutation Sequence ☆☆☆](060%20Permutation%20Sequence.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
 - [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [☆☆☆ 090. Subset II ☆☆☆](090%20Subset%20II.md)
@@ -86,7 +87,7 @@
 ## Slide Window
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 
-## Back Track
+## Backtracking
 
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
@@ -94,6 +95,7 @@
 - [☆☆☆ 040. Combination Sum II ☆☆☆](040%20Combination%20Sum%20II.md)
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
+- [☆☆☆ 060. Permutation Sequence ☆☆☆](060%20Permutation%20Sequence.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
 - [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [☆☆☆ 090. Subset II ☆☆☆](090%20Subset%20II.md)
@@ -108,6 +110,7 @@
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
 
 - [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 060. Permutation Sequence ☆☆☆](060%20Permutation%20Sequence.md)
 - [☆☆ 077. Combination ☆☆](077%20Combination.md)
 - [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [☆☆☆ 090. Subset II ☆☆☆](090%20Subset%20II.md)
@@ -234,6 +237,7 @@
 - [☆☆ 055. Jump Game ☆☆](055%20Jump%20Game.md)
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
+- [☆☆☆ 060. Permutation Sequence ☆☆☆](060%20Permutation%20Sequence.md)
 - [☆☆ 070. Climbing Stairs ☆☆](070%20Climbing%20Stairs.md)
 - [☆☆☆ 072. Edit Distance ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
 - [☆☆ 075. Sort Colors ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
