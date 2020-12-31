@@ -81,6 +81,7 @@
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆ 784. Letter Case Permutation☆☆](784%20Letter%20Case%20Permutation.md)
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
@@ -101,6 +102,7 @@
 - [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [☆☆☆ 090. Subset II ☆☆☆](090%20Subset%20II.md)
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
+- [☆☆ 784. Letter Case Permutation☆☆](784%20Letter%20Case%20Permutation.md)
 
 ## Recursive
 
@@ -120,6 +122,7 @@
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆ 784. Letter Case Permutation☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
@@ -280,6 +283,7 @@
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+- [☆☆ 784. Letter Case Permutation☆☆](784%20Letter%20Case%20Permutation.md)
 - [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)

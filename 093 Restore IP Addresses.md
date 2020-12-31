@@ -43,7 +43,7 @@ private:
     vector<string> ips;
 
 public:
-    void backtrack(string s, int piece, int index){
+    void backtrack(string& s, int piece, int index){
         // ip串有四个组成部分或开头指示指针越界则返回，如果两部分同时满足则添加一个有效ip，注意去掉最后的'.'
         if (piece == 4 || index == s.size()){
             if (piece == 4 && index == s.size())
@@ -74,6 +74,6 @@ public:
 };
 ```
 
-执行用时：4 ms, 在所有 C++ 提交中击败了63.60%的用户
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：7.1 MB, 在所有 C++ 提交中击败了21.62%的用户
+内存消耗：6.7 MB, 在所有 C++ 提交中击败了90.16%的用户
