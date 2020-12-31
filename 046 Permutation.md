@@ -76,18 +76,15 @@ public:
     void backtrack(vector<int> &nums){
         if (nums.empty()){
             ans_list.push_back(ans);
+            return;
         }
-        else{
-            for (int i = 0; i < nums.size(); i++){
-                int num = nums[i];
-                ans.push_back(num);
-                vector<int> newlist;
-                newlist.insert(newlist.end(), nums.begin(), nums.begin() + i);
-                newlist.insert(newlist.end(), nums.begin() + i + 1, nums.end());
-                backtrack(newlist);
-                
-                ans.pop_back();
-            }
+        for (int i = 0; i < nums.size(); i++){
+            int num = nums[i];
+            ans.push_back(num);
+            vector<int> newlist = nums;
+            newlist.erase(newlist.begin() + i);
+            backtrack(newlist);
+            ans.pop_back();
         }
     }
 
@@ -98,9 +95,9 @@ public:
 };
 ```
 
-执行用时：8 ms, 在所有 C++ 提交中击败了49.10%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了49.28%的用户
 
-内存消耗：8.6 MB, 在所有 C++ 提交中击败了12.76%的用户
+内存消耗：8.5 MB, 在所有 C++ 提交中击败了15.03%的用户
 
 Attention
 

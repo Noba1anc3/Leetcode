@@ -125,7 +125,7 @@ public:
     string getPermutation(int n, int k) {
         int x = jiecheng(n-1);
         int a = (k - 1) / x + 1;
-        int b = k % x;
+        int b = k % x == 0 ? x : k % x;
         
         vector<int> nums;
         for (int i = 1; i < a; i++) nums.push_back(i);
@@ -156,3 +156,64 @@ Attention
   - 阶乘计算顺序调整为从小到大
 
   - new_num由insert改为erase
+
+## Solution - III 回溯剪枝
+
+该方法的思路不再是搜索到指定的个数就停止搜索，而是直接找到对应的树枝。通过判断当前子树的树枝数是否达到目前所要找的树枝树来做出选择，如果不够则直接跳过，如果够则进入该子树，递归判断，直至找到目标树叶。
+
+```c++
+class Solution {
+private:
+    vector<int> res;
+    vector<int> ans;
+
+public:
+    int jiecheng(int n){
+        int ans = 1;
+        for (int i = 1; i <= n; i++)
+            ans *= i;
+        return ans;
+    }
+
+    void backtrack(vector<int>& nums, int total){
+        if (nums.empty()){
+            ans = res;
+            return;
+        }
+        for (int i = 0; i < nums.size(); i++){
+            if (total > jiecheng(nums.size() - 1)){
+                total -= jiecheng(nums.size() - 1);
+                continue;
+            }
+            res.push_back(nums[i]);
+            vector<int> new_nums = nums;
+            new_nums.erase(new_nums.begin() + i);
+            backtrack(new_nums, total);
+            if (!ans.empty())
+                return;
+            res.pop_back();
+        }
+    }
+
+    string getPermutation(int n, int k) {
+        int x = jiecheng(n-1);
+        int a = (k - 1) / x + 1;
+        int b = k % x == 0 ? x : k % x;
+
+        vector<int> nums;
+        for (int i = 1; i < a; i++) nums.push_back(i);
+        for (int i = a + 1; i <= n; i++) nums.push_back(i);
+
+        backtrack(nums, b);
+
+        string permutation = to_string(a);
+        for(int i : ans) permutation += to_string(i);
+        
+        return permutation;
+    }
+};
+```
+
+执行用时：4 ms, 在所有 C++ 提交中击败了49.93%的用户
+
+内存消耗：6.5 MB, 在所有 C++ 提交中击败了5.10%的用

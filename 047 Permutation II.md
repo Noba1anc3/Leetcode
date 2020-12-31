@@ -34,18 +34,15 @@ public:
     void backtrack(vector<int> &nums){
         if (nums.empty()){
             ans_list.push_back(ans);
+            return;
         }
-        else{
-            for (int i = 0; i < nums.size(); i++){
-                int num = nums[i];
-                ans.push_back(num);
-                vector<int> newlist;
-                newlist.insert(newlist.end(), nums.begin(), nums.begin() + i);
-                newlist.insert(newlist.end(), nums.begin() + i + 1, nums.end());
-                backtrack(newlist);
-                
-                ans.pop_back();
-            }
+        for (int i = 0; i < nums.size(); i++){
+            int num = nums[i];
+            ans.push_back(num);
+            vector<int> newlist = nums;
+            newlist.erase(newlist.begin() + i);
+            backtrack(newlist);
+            ans.pop_back();
         }
     }
 
@@ -59,9 +56,9 @@ public:
 };
 ```
 
-执行用时：1220 ms, 在所有 C++ 提交中击败了5.04%的用户
+执行用时：956 ms, 在所有 C++ 提交中击败了5.05%的用户
 
-内存消耗：48.9 MB, 在所有 C++ 提交中击败了5.00%的用户
+内存消耗：54.5 MB, 在所有 C++ 提交中击败了5.02%的用户
 
 Attention
 
@@ -84,22 +81,21 @@ private:
     vector<vector<int>> ans_list;
 public:
     void backtrack(vector<int> &nums){
-        if (nums.empty())
+        if (nums.empty()){
             ans_list.push_back(ans);
-        else{
-            for (int i = 0; i < nums.size(); i++){
-                if (i > 0 && nums[i] == nums[i-1])
-                    continue;
+            return;
+        }
+        for (int i = 0; i < nums.size(); i++){
+            if (i > 0 && nums[i] == nums[i-1])
+                continue;
 
-                int num = nums[i];
-                vector<int> newlist;
-                newlist.insert(newlist.end(), nums.begin(), nums.begin() + i);
-                newlist.insert(newlist.end(), nums.begin() + i + 1, nums.end());
+            int num = nums[i];
+            vector<int> newlist = nums;
+            newlist.erase(newlist.begin() + i);
 
-                ans.push_back(num);
-                backtrack(newlist);
-                ans.pop_back();
-            }
+            ans.push_back(num);
+            backtrack(newlist);
+            ans.pop_back();
         }
     }
 
@@ -111,6 +107,6 @@ public:
 };
 ```
 
-执行用时：20 ms, 在所有 C++ 提交中击败了33.74%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了47.34%的用户
 
-内存消耗：9.9 MB, 在所有 C++ 提交中击败了19.91%的用户
+内存消耗：9.9 MB, 在所有 C++ 提交中击败了20.52%的用户
