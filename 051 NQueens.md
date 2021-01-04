@@ -136,6 +136,7 @@ public:
     vector<vector<string>> solveNQueens(int n) {
         N = n;
         chess.resize(n, (vector<int>(n, 0)));
+        
         backtrack(0);
 
         vector<vector<string>> result;
