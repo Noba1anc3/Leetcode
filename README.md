@@ -47,6 +47,7 @@
 - [Breadth First Search](Graph%20-%20BFS.md)
 - [Depth First Search](Graph%20-%20DFS.md)
 - [Topological Sort](Graph%20-%20Topological%20Sort.md)
+- [Strongly Connected Components](Graph%20-%20SCC.md)
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
@@ -68,6 +69,7 @@
 ## DFS
 
 - [Depth First Search](Graph%20-%20DFS.md)
+- [Strongly Connected Components](Graph%20-%20SCC.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
 - [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
