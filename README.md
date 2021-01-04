@@ -70,6 +70,7 @@
 - [Depth First Search](Graph%20-%20DFS.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
+- [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
 - [☆☆ 039. Combination Sum ☆☆](039%20Combination%20Sum.md)
 - [☆☆☆ 040. Combination Sum II ☆☆☆](040%20Combination%20Sum%20II.md)
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
@@ -94,6 +95,7 @@
 
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
+- [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
 - [☆☆ 039. Combination Sum ☆☆](039%20Combination%20Sum.md)
 - [☆☆☆ 040. Combination Sum II ☆☆☆](040%20Combination%20Sum%20II.md)
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
@@ -110,6 +112,7 @@
 
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
+- [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
 - [☆☆ 039. Combination Sum ☆☆](039%20Combination%20Sum.md)
 - [☆☆☆ 040. Combination Sum II ☆☆☆](040%20Combination%20Sum%20II.md)
 - [☆☆ 046. Permutation ☆☆](046%20Permutation.md)
@@ -236,6 +239,7 @@
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
+- [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
 - [☆☆ 039. Combination Sum ☆☆](039%20Combination%20Sum.md)
 - [☆☆☆ 040. Combination Sum II ☆☆☆](040%20Combination%20Sum%20II.md)
 - [☆☆ 045. Jump Game II ☆☆](045%20Jump%20Game%20II.md)
