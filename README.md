@@ -42,7 +42,11 @@
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
-- [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
+
+## Union-Find Set
+
+- [Kruskal Algorithm for MST](Graph%20-%20Kruskal.md)
 
 ## Graph
 
@@ -51,6 +55,7 @@
 - [Topological Sort](Graph%20-%20Topological%20Sort.md)
 - [Strongly Connected Components](Graph%20-%20SCC.md)
 - [Prim Algorithm for MST](Graph%20-%20Prim.md)
+- [Kruskal Algorithm for MST](Graph%20-%20Kruskal.md)
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
