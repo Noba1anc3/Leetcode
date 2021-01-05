@@ -26,7 +26,7 @@
 
 ## Heap
 
-- [Prim Algorithm for MST](Graph%20-%20MST.md)
+- [Prim Algorithm for MST](Graph%20-%20Prim.md)
 
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
@@ -50,7 +50,7 @@
 - [Depth First Search](Graph%20-%20DFS.md)
 - [Topological Sort](Graph%20-%20Topological%20Sort.md)
 - [Strongly Connected Components](Graph%20-%20SCC.md)
-- [Prim Algorithm for MST](Graph%20-%20MST.md)
+- [Prim Algorithm for MST](Graph%20-%20Prim.md)
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
@@ -145,7 +145,7 @@
 
 ## Greedy
 
-- [Prim Algorithm for MST](Graph%20-%20MST.md)
+- [Prim Algorithm for MST](Graph%20-%20Prim.md)
 
 - [☆☆ Fractional Knapsack ☆☆](Greedy%20-%20Fractional%20Knapsack.md)
 - [☆☆ 045. Jump Game II ☆☆](045%20Jump%20Game%20II.md)
