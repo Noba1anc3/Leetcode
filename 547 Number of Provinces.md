@@ -184,3 +184,94 @@ public:
 执行用时：52 ms, 在所有 C++ 提交中击败了91.55%的用户
 
 内存消耗：15.6 MB, 在所有 C++ 提交中击败了5.01%的用户
+
+## Solution - III Union-Find Set
+
+```c++
+class Solution {
+private:
+    int num = 0;
+    vector<int> height;
+    vector<int> parent;
+    vector<int> created;
+    vector<int> keys;
+
+public:
+    void Create_Set(int key){
+        parent[key] = key;
+        height[key] = 1;
+        created[key] = 1;
+    }
+
+    int Find_Set(int key){
+        while(parent[key] != key)
+            key = parent[key];
+        
+        return key;
+    }
+
+    void Union(int key1, int key2){
+        if (key1 == key2)
+            return;
+
+        int ROOT1 = Find_Set(key1);
+        int ROOT2 = Find_Set(key2);
+
+        if (ROOT1 == ROOT2)
+            return;
+
+        if (height[ROOT1] <= height[ROOT2]){
+            if (height[ROOT1] == height[ROOT2]){
+                height[ROOT2]++;
+            }
+            parent[ROOT2] = ROOT1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+        }
+    }
+
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        parent.resize(isConnected.size()+1);
+        height.resize(isConnected.size()+1);
+        created.resize(isConnected.size()+1);
+
+        for (int i = 0; i < isConnected.size(); i++){
+            for (int j = 0; j < isConnected.size(); j++){
+                if (isConnected[i][j]){
+                    if (created[i+1] == 0){
+                        Create_Set(i+1);
+                    }
+                    if (created[j+1] == 0){
+                        Create_Set(j+1);
+                    }
+                    Union(i+1, j+1);
+                }
+            }
+        }
+
+        for (int key : parent){
+            key = Find_Set(key);
+            if (key != 0){
+                vector<int>::iterator it = find(keys.begin(), keys.end(), key);
+                if (it == keys.end()){
+                    num++;
+                    keys.push_back(key);
+                }
+            }
+        }
+
+        return num;
+    }
+};
+```
+
+执行用时：56 ms, 在所有 C++ 提交中击败了76.24%的用户
+
+内存消耗：13.9 MB, 在所有 C++ 提交中击败了40.50%的用户
+
+Attention
+
+- union的时候如果key一样或setID一样则return
+- keyID避免用0，使用i+1作为keyID
+- 查看有集合集合的时候要推到集合id

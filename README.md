@@ -47,7 +47,9 @@
 ## Union-Find Set
 
 - [Kruskal Algorithm for MST](Graph%20-%20Kruskal.md)
+- [☆☆ 130. Surrounded Regions ☆☆](130%20Surrounded%20Regions.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
+- [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 
 ## Graph
 
@@ -277,6 +279,7 @@
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
+- [☆☆ 130. Surrounded Regions ☆☆](130%20Surrounded%20Regions.md)
 - [144. Binary Tree Preorder Traversal]()
 - [145. Binary Tree Postorder Traversal]()
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
