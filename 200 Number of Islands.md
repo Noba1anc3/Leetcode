@@ -10,7 +10,6 @@ Input: grid = [
 ]
 Output: 1
 
-
 Input: grid = [
   ["1","1","0","0","0"],
   ["1","1","0","0","0"],
@@ -18,10 +17,9 @@ Input: grid = [
   ["0","0","0","1","1"]
 ]
 Output: 3
-
 ```
 
-## Solution
+## Solution - I DFS
 
 ### DFS 的基本结构
 网格结构要比二叉树结构稍微复杂一些，它其实是一种简化版的图结构。要写好网格上的 DFS 遍历，我们首先要理解二叉树上的 DFS 遍历方法，再类比写出网格结构上的 DFS 遍历。我们写的二叉树 DFS 遍历一般是这样的：
@@ -36,7 +34,6 @@ void traverse(TreeNode root) {
     traverse(root.left);
     traverse(root.right);
 }
-
 ```
 
 可以看到，二叉树的 DFS 有两个要素：**「访问相邻结点」**和**「判断 base case」**。
@@ -52,7 +49,7 @@ void traverse(TreeNode root) {
 ![](https://pic.leetcode-cn.com/63f5803e9452ccecf92fa64f54c887ed0e4e4c3434b9fb246bf2b410e4424555.jpg)
 
 
-其次，网格 DFS 中的 base case 是什么？从二叉树的 base case 对应过来，应该是网格中不需要继续遍历、grid[r][c] 会出现数组下标越界异常的格子，也就是那些超出网格范围的格子。
+其次，网格 DFS 中的 base case 是什么？从二叉树的 base case 对应过来，应该是网格中不需要继续遍历、`grid[r][c]` 会出现数组下标越界异常的格子，也就是那些超出网格范围的格子。
 
 ![](https://pic.leetcode-cn.com/5a91ec351bcbe8e631e7e3e44e062794d6e53af95f6a5c778de369365b9d994e.jpg)
 
@@ -77,8 +74,6 @@ boolean inArea(int[][] grid, int r, int c) {
     return 0 <= r && r < grid.length 
         	&& 0 <= c && c < grid[0].length;
 }
-
-
 ```
 
 ### 如何避免重复遍历
@@ -113,8 +108,6 @@ boolean inArea(int[][] grid, int r, int c) {
     return 0 <= r && r < grid.length 
         	&& 0 <= c && c < grid[0].length;
 }
-
-
 ```
 
 ### 岛屿问题的解法
@@ -157,7 +150,6 @@ boolean inArea(int[][] grid, int r, int c) {
     return 0 <= r && r < grid.length 
         	&& 0 <= c && c < grid[0].length;
 }
-
 ```
 
 #### 例题 2：填海造陆问题
@@ -195,7 +187,7 @@ LeetCode 463. Island Perimeter （Easy）
 当我们的 dfs 函数因为「坐标 (r, c) 超出网格范围」返回的时候，实际上就经过了一条黄色的边；而当函数因为「当前格子是海洋格子」返回的时候，实际上就经过了一条蓝色的边。这样，我们就把岛屿的周长跟 DFS 遍历联系起来了。
 
 
-```
+```python
 public int islandPerimeter(int[][] grid) {
     for (int r = 0; r < grid.length; r++) {
         for (int c = 0; c < grid[0].length; c++) {
@@ -233,10 +225,11 @@ boolean inArea(int[][] grid, int r, int c) {
     return 0 <= r && r < grid.length 
         	&& 0 <= c && c < grid[0].length;
 }
-
 ```
 
 #### 本题：岛屿的个数
+
+##### python
 
 ```python
 class Solution:
@@ -271,10 +264,152 @@ class Solution:
         return num
 ```
 
-Time : 88ms
-Memory : 14.5MB
+执行用时：84 ms, 在所有 Python3 提交中击败了44.62%的用户
+
+内存消耗：18.7 MB, 在所有 Python3 提交中击败了9.17%的用户
 
 Attention:
 - 递归函数返回的情况
 
+##### c++
 
+```c++
+class Solution {
+private:
+    int num = 0;
+
+public:
+    bool InArea(vector<vector<char>>& grid, int i, int j){
+        return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size();
+    }
+
+    void dfs(vector<vector<char>>& grid, int i, int j){       
+        if (!InArea(grid, i, j))
+            return;
+
+        if (grid[i][j] != '1')
+            return;
+       
+        grid[i][j] = '2';
+
+        dfs(grid, i, j-1);
+        dfs(grid, i, j+1);
+        dfs(grid, i-1, j);
+        dfs(grid, i+1, j);
+    }
+
+    int numIslands(vector<vector<char>>& grid) {
+        for (int i = 0; i < grid.size(); i++){
+            for(int j = 0; j < grid[0].size(); j++){
+                if (grid[i][j] == '1'){
+                    dfs(grid, i, j);
+                    num++;
+                }
+            }
+        }
+
+        return num;
+    }
+};
+```
+
+执行用时：32 ms, 在所有 C++ 提交中击败了62.89%的用户
+
+内存消耗：9.7 MB, 在所有 C++ 提交中击败了63.57%的用户
+
+## Solution - II Union-Find Set
+
+c++
+
+```c++
+class Solution {
+private:
+    vector<int> parent, height, keys;
+    int num = 0;
+    int gridSize;
+
+public:
+    bool InArea(vector<vector<char>>& grid, int i, int j){
+        return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size() && grid[i][j] == '1';
+    }
+
+    int Find_Set(int key){
+        while (parent[key] != key){
+            key = parent[key];
+        }
+        return key;
+    }
+
+    void Union(int i, int j, int m, int n){
+        int key1 = i*gridSize + j;
+        int key2 = m*gridSize + n;
+
+        int ROOT1 = Find_Set(key1);
+        int ROOT2 = Find_Set(key2);
+
+        if (height[ROOT1] <= height[ROOT2]){
+            if (height[ROOT1] == height[ROOT2]){
+                height[ROOT2]++;
+            }
+            parent[ROOT2] = ROOT1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+        }
+    }
+
+    void Create_Set(int i, int j){
+        int key = i*gridSize + j;
+        parent[key] = key; 
+        height[key] = 1;
+    }
+
+    int numIslands(vector<vector<char>>& grid) {
+        parent.resize(grid.size() * grid[0].size());
+        height.resize(grid.size() * grid[0].size());
+        gridSize = grid[0].size();
+
+        for (int i = 0; i < grid.size(); i++)
+            for(int j = 0; j < grid[0].size(); j++)
+                if (grid[i][j] == '1')
+                    Create_Set(i, j);
+
+        for (int i = 0; i < grid.size(); i++)
+            for(int j = 0; j < grid[0].size(); j++)
+                if (grid[i][j] == '1'){
+                    if (InArea(grid, i-1, j))
+                        Union(i, j, i-1, j);
+                    if (InArea(grid, i+1, j))
+                        Union(i, j, i+1, j);
+                    if (InArea(grid, i, j-1))
+                        Union(i, j, i, j-1);
+                    if (InArea(grid, i, j+1))
+                        Union(i, j, i, j+1);
+                }
+
+        for (int i = 0; i < grid.size(); i++)
+            for(int j = 0; j < grid[0].size(); j++)
+                if (grid[i][j] == '1'){
+                    int key = Find_Set(i*gridSize + j);
+                    vector<int>::iterator it = find(keys.begin(), keys.end(), key);
+                    if (it == keys.end()){
+                        keys.push_back(key);
+                        num++;
+                    }
+                }
+
+        return num;
+    }
+};
+```
+
+Attention
+
+```c++
+cector<int>::iterator it = find(keys.begin(), keys.end(), key)
+if (it == keys.end()) // not found
+```
+
+执行用时：156 ms, 在所有 C++ 提交中击败了5.14%的用户
+
+内存消耗：10.2 MB, 在所有 C++ 提交中击败了26.41%的用户
