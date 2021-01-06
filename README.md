@@ -41,7 +41,8 @@
 - [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
-- [☆☆ 242. Valid Anagram ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
+- [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
+- [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
 
 ## Union-Find Set
@@ -279,6 +280,7 @@
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
+- [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 130. Surrounded Regions ☆☆](130%20Surrounded%20Regions.md)
 - [144. Binary Tree Preorder Traversal]()
 - [145. Binary Tree Postorder Traversal]()
