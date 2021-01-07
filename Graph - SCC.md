@@ -9,17 +9,18 @@ class Solution {
 private:
     int WHITE = 0, GRAY = 1, BLACK = 2;
 public:
-    vector<vector<int>> GraphConstruction(int n, vector<vector<int>> edges){
+    vector<vector<int>> GraphConstruction(int n, vector<vector<int>>& edges){
         vector<vector<int>> Graph(n+1, vector<int>());
 
         for(vector<int> edge : edges){
             Graph[edge[0]].push_back(edge[1]);
+            Graph[edge[1]].push_back(edge[0]);
         }
 
         return Graph;
     }
 
-    vector<vector<int>> ReverseGraph(vector<vector<int>> Graph){
+    vector<vector<int>> ReverseGraph(vector<vector<int>>& Graph){
         int n = Graph.size();
         vector<vector<int>> GraphR(n, vector<int>());
 
@@ -33,7 +34,7 @@ public:
         return GraphR;
     }
 
-    void DFS(vector<vector<int>> Graph, int root, vector<int>& color, vector<int>& DFS_Sequence){
+    void DFS(vector<vector<int>>& Graph, int root, vector<int>& color, vector<int>& DFS_Sequence){
         color[root] = GRAY;
 
         for (auto node : Graph[root])
@@ -44,7 +45,7 @@ public:
         DFS_Sequence.push_back(root);
     }
 
-    vector<int> DFSVisit(vector<vector<int>> Graph){
+    vector<int> DFSVisit(vector<vector<int>>& Graph){
         int n = Graph.size();
         vector<int> color(n, WHITE);
         vector<int> DFS_Sequence;
@@ -56,7 +57,7 @@ public:
         return DFS_Sequence;
     }
 
-    vector<vector<int>> getSCCs(vector<vector<int>> Graph, vector<int> Sequence){
+    vector<vector<int>> getSCCs(vector<vector<int>>& Graph, vector<int>& Sequence){
         int n = Graph.size();
         vector<int> color(n, WHITE);
         vector<vector<int>> SCCs;
@@ -73,7 +74,7 @@ public:
         return SCCs;
     }
 
-    vector<vector<int>> SCC(int n, vector<vector<int>> edges) {
+    vector<vector<int>> SCC(int n, vector<vector<int>>& edges) {
         vector<vector<int>> Graph, GraphR, SCCs;
         vector<int> Sequence;
 
