@@ -162,7 +162,6 @@ public:
         for (vector<int>& edge : edges)
             Union(edge[0] + 1, edge[1] + 1);
 
-
         for (int& key : parent)
             if (key != 0 && find(keys.begin(), keys.end(), Find_Set(key)) == keys.end())
                 keys.push_back(Find_Set(key));

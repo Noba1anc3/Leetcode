@@ -52,6 +52,8 @@
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
+- [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
+- [☆☆ 721. Accounts Merge ☆☆☆](721%20Accounts%20Merge.md)
 
 ## Graph
 
@@ -67,6 +69,7 @@
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
+- [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 
 # Algorithm
 ## BFS
@@ -314,7 +317,9 @@
 - [☆☆ 518. Coin Change 2 ☆☆](518%20Coin%20Change%202.md)
 - [537. Complex Number Multiplication](537%20Complex%20Number%20Multiplication.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
+- [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
+- [☆☆ 721. Accounts Merge ☆☆☆](721%20Accounts%20Merge.md)
 - [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
