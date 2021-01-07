@@ -53,7 +53,9 @@
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
-- [☆☆ 721. Accounts Merge ☆☆☆](721%20Accounts%20Merge.md)
+- [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
+
+- [☆☆☆ 990. Satisfiability of Equality Equations ☆☆☆](990%20Satisfiability%20of%20Equality%20Equations.md)
 
 ## Graph
 
@@ -319,13 +321,14 @@
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
-- [☆☆ 721. Accounts Merge ☆☆☆](721%20Accounts%20Merge.md)
+- [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
 - [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
-- [☆ 976. Largest Perimeter Triangle ☆](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+- [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
+- [☆☆☆ 990. Satisfiability of Equality Equations ☆☆☆](990%20Satisfiability%20of%20Equality%20Equations.md)
 - [☆☆☆ 1094. Car Pooling ☆☆☆](1094%20Car%20Pooling.md)
 - [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
