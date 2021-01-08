@@ -77,3 +77,72 @@ int main()
 }
 ```
 
+## Priority Queue
+
+```c++
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+class Solution {
+private:
+    int WHITE = 0, BLACK = 1;
+
+public:
+    vector<vector<int>> GraphConstruction(int n, vector<vector<int>>& edges){
+        vector<vector<int>> Graph(n+1, vector<int>());
+
+        for(const vector<int>& edge : edges)
+            Graph[edge[0]].push_back(edge[1]);
+
+        return Graph;
+    }
+
+    bool Dijkstra(int n, vector<vector<int>>& edges, vector<vector<int>>& weight, int root) {
+        vector<vector<int>> Graph;
+        vector<int> color(n+1, WHITE), dist(n+1, INT_MAX), pred(n+1, NULL);
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
+        
+        Q.push(pair<int, int> (0, root));
+        dist[root] = 0;
+        
+        Graph = GraphConstruction(n, edges);
+
+        while (!Q.empty()){
+            int curVertex = Q.top().second; Q.pop();
+            for (const int& adjVertex : Graph[curVertex]){;
+                if (color[adjVertex] == WHITE &&
+                    dist[curVertex] + weight[curVertex][adjVertex] < dist[adjVertex]){
+                    dist[adjVertex] = dist[curVertex] + weight[curVertex][adjVertex];
+                    pred[adjVertex] = curVertex;
+                    Q.push(pair<int, int> (dist[adjVertex],adjVertex));
+                }
+            }
+            color[curVertex] = BLACK;
+        }
+        
+        return true;
+    }
+};
+
+int main()
+{
+    int n = 5;
+    vector<vector<int>> edges = {{1,3},{1,2},{2,3},{3,2},{3,4},
+                                 {2,4},{2,5},{4,5},{5,4}};
+    vector<vector<int>> weight(n+1, vector<int>(n+1, INT_MAX));
+
+    weight[1][2] = 2, weight[1][3] = 7, weight[2][3] = 3,
+    weight[3][4] = 1, weight[3][2] = 2, weight[2][4] = 8,
+    weight[2][5] = 5, weight[4][5] = 4, weight[5][4] = 5;
+
+    Solution slt = Solution();
+    slt.Dijkstra(n, edges, weight, 1);
+
+    return 0;
+}
+```
+

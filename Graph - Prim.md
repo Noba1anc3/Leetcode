@@ -26,35 +26,26 @@ public:
         return Graph;
     }
 
-    int findMin(vector<int> key, vector<int> color){
-        int minKey = INT_MAX, minIndex = -1;
-        for (int i = 1; i < key.size(); i++){
-            if (key[i] < minKey && color[i] == WHITE){
-                minIndex = i;
-                minKey = key[i];
-            }
-        }
-        return minIndex;
-    }
-
     int Prim(int n, vector<vector<int>> edges, vector<vector<int>> weight, int root) {
-        int vertices = 0, MSTValue = 0;
+        int MSTValue = 0;
         vector<vector<int>> Graph;
         vector<int> color(n+1, WHITE), key(n+1, INT_MAX), pred(n+1, NULL);
-
+		priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
+        Q.push(pair<int, int> (0, root));
         key[root] = 0;
+        
         Graph = GraphConstruction(n, edges);
 
-        while (vertices != n){
-            int curVertex = findMin(key, color);
+        while (!Q.empty()){
+            int curVertex = Q.top().second; Q.pop();
             for (int adjVertex : Graph[curVertex]){;
                 if (color[adjVertex] == WHITE && (weight[curVertex][adjVertex] < key[adjVertex]
                 || weight[adjVertex][curVertex] < key[adjVertex])){
                     key[adjVertex] = min(weight[adjVertex][curVertex], weight[curVertex][adjVertex]);
                     pred[adjVertex] = curVertex;
+                    Q.push(pair<int, int> (key[adjVertex], adjVertex));
                 }
             }
-            vertices++;
             color[curVertex] = BLACK;
         }
 
