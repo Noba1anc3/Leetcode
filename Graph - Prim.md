@@ -28,7 +28,7 @@ public:
 
     int findMin(vector<int> key, vector<int> color){
         int minKey = INT_MAX, minIndex = -1;
-        for (int i = 0; i < key.size(); i++){
+        for (int i = 1; i < key.size(); i++){
             if (key[i] < minKey && color[i] == WHITE){
                 minIndex = i;
                 minKey = key[i];
@@ -38,10 +38,10 @@ public:
     }
 
     int Prim(int n, vector<vector<int>> edges, vector<vector<int>> weight, int root) {
+        int vertices = 0, MSTValue = 0;
         vector<vector<int>> Graph;
         vector<int> color(n+1, WHITE), key(n+1, INT_MAX), pred(n+1, NULL);
-        int vertices = 0, MSTValue = 0;
-        
+
         key[root] = 0;
         Graph = GraphConstruction(n, edges);
 
@@ -62,7 +62,6 @@ public:
             MSTValue += key[i];
 
         return MSTValue;
-
     }
 };
 
