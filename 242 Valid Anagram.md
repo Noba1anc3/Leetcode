@@ -48,19 +48,15 @@ c++
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if (s.size() != t.size()){
+        if (s.size() != t.size())
             return false;
-        }
-        
+  
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());
 
-        if (s == t){
+        if (s == t)
             return true;
-        }
-        else{
-            return false;
-        }
+        return false;
     }
 };
 ```
@@ -90,29 +86,27 @@ c++
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+		if (s.size() != t.size())
+            return false;
+        
         int alphabet[26] = {0};
 
         for(int i = 0; i < s.size(); i++){
             alphabet[int(s[i]) - 97] += 1;
+			alphabet[int(t[i]) - 97] -= 1;
         }
 
-        for (int i = 0; i < t.size(); i++){
-            alphabet[int(t[i]) - 97] -= 1;
-        }
-
-        for (int i = 0; i < 26; i++){
-            if (alphabet[i] != 0){
+        for (int i = 0; i < 26; i++)
+            if (alphabet[i] != 0)
                 return false;
-            }
-        }
         return true;
     }
 };
 ```
 
-执行用时：4 ms, 在所有 C++ 提交中击败了98.99%的用户  
+执行用时：4 ms, 在所有 C++ 提交中击败了98.18%的用户
 
-内存消耗：7.4 MB, 在所有 C++ 提交中击败了23.39%的用户
+内存消耗：7.1 MB, 在所有 C++ 提交中击败了99.28%的用户
 
 python
 

@@ -1,5 +1,3 @@
-Given the root of a binary tree, return the preorder traversal of its nodes' values.
-
 ## Solution
 
 ### Brute-Force Algorithm - O(n3)
@@ -66,18 +64,17 @@ public:
     int maxSubArray(vector<int>& nums) {
         if (nums.size() == 1)
             return nums[0];
-        else{
-            int mid = nums.size() / 2;
+        
+        int mid = nums.size() / 2;
 
-            vector<int> Left(nums.begin(), nums.begin() + mid);
-            vector<int> Right(nums.begin() + mid, nums.end());
+        vector<int> Left(nums.begin(), nums.begin() + mid);
+        vector<int> Right(nums.begin() + mid, nums.end());
 
-            int LeftMax = maxSubArray(Left);
-            int RightMax = maxSubArray(Right);
-            int GapMax = maxGapArray(nums);
+        int LeftMax = maxSubArray(Left);
+        int RightMax = maxSubArray(Right);
+        int GapMax = maxGapArray(nums);
 
-            return max(max(LeftMax, RightMax), GapMax);
-        }
+        return max(max(LeftMax, RightMax), GapMax);
     }
 
     int maxGapArray(vector<int> nums){

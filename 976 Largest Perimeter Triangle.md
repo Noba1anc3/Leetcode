@@ -2,6 +2,8 @@ Given an array `A` of positive lengths, return the largest perimeter of a triang
 
 If it is impossible to form any triangle of non-zero area, return `0`.
 
+
+
 Examples:
 
 ```
@@ -9,14 +11,17 @@ Example 1:
 
 Input: [2,1,2]
 Output: 5
+
 Example 2:
 
 Input: [1,2,1]
 Output: 0
+
 Example 3:
 
 Input: [3,2,3,4]
 Output: 10
+
 Example 4:
 
 Input: [3,6,2,3]
@@ -31,18 +36,17 @@ c++
 
 class Solution {
 public:
-
     static bool compare(int a, int b){
         return a > b;
     }
 
     int largestPerimeter(vector<int>& A) {
         sort(A.begin(), A.end(), compare);
-        for(int i = 0; i < A.size() - 2; i++){
-            if (A[i] < A[i+1] + A[i+2]){
+        
+        for(int i = 0; i < A.size() - 2; i++)
+            if (A[i] < A[i+1] + A[i+2])
                 return A[i] + A[i+1] + A[i+2];
-            }
-        }
+
         return 0;
     }
 };

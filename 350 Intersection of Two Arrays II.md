@@ -51,13 +51,10 @@ public:
 
         vector<int> interSection;
         while (index1 < len1 && index2 < len2){
-
-            if (nums1[index1] < nums2[index2]){
+            if (nums1[index1] < nums2[index2])
                 index1 += 1;
-            }
-            else if (nums1[index1] > nums2[index2]){
+            else if (nums1[index1] > nums2[index2])
                 index2 += 1;
-            }
             else{
                 interSection.push_back(nums1[index1]);
                 index1 += 1;

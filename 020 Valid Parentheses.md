@@ -56,6 +56,7 @@ class Solution:
             "]": "[",
             "}": "{",
         }
+        
         stack = list()
         for ch in s:
             if ch in pairs:
@@ -75,4 +76,36 @@ Attention:
 - 字典的使用（哈希）
 - list() = []
 
+### c++
 
+```c++
+class Solution {
+private:
+    unordered_map<char, char> kuohao = {
+        {')', '('},
+        {']', '['},
+        {'}', '{'}
+    };
+    stack<char> Q;
+
+public:
+    bool isValid(string s) {
+        for (const auto& ch : s){
+            if (kuohao.find(ch) != kuohao.end()){
+                if (Q.empty() || Q.top() != kuohao.at(ch))
+                    return false;
+				Q.pop();
+            }
+            else{
+                Q.push(ch);
+            }
+        }
+
+        return Q.empty();
+    }
+};
+```
+
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
+
+内存消耗：6.3 MB, 在所有 C++ 提交中击败了87.10%的用户

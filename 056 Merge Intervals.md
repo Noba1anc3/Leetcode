@@ -35,22 +35,17 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 class Solution {
 public:
-
     // 可以不用这个比较函数
     static bool compare(vector<int> lista, vector<int> listb){
         if (lista[0] < listb[0]){
             return true;
-        }
-        else{
-            return false;
-        }
+        return false;
     }
 
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         // 边界条件
-        if (intervals.empty()){
+        if (intervals.empty())
             return intervals;
-        }
 
         sort(intervals.begin(), intervals.end(), compare);
 
@@ -59,9 +54,8 @@ public:
 
         for (int i = 1; i < intervals.size(); i++){
             vector<int> cur_interval = intervals[i];
-            if (cur_interval[0] <= cur_max_interval[1]){
+            if (cur_interval[0] <= cur_max_interval[1])
                 cur_max_interval[1] = max(cur_interval[1], cur_max_interval[1]);
-            }
             else{
                 sorted.push_back(cur_max_interval);
                 cur_max_interval = cur_interval;

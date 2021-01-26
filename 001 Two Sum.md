@@ -43,6 +43,9 @@ class Solution:
 Time : 856 ms
 
 ## Hashmap
+
+### python
+
 使用字典模拟哈希表
 
 ```python
@@ -58,4 +61,41 @@ class Solution:
 ```
 Time : 44ms
 
+### c++
 
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> dict;
+        vector<int> ans;
+
+        for (int i = 0; i < nums.size(); i++)
+            dict[nums[i]] = i;
+
+        for (int i = 0; i < nums.size(); i++){
+            unordered_map<int,int>::iterator it;
+            it = dict.find(target - nums[i]);
+            if (it != dict.end() && i != it->second){
+                ans.push_back(i);
+                ans.push_back(it->second);
+                break;
+            }
+        }
+
+        return ans;
+    }
+};
+```
+
+执行用时：8 ms, 在所有 C++ 提交中击败了90.24%的用户
+
+内存消耗：9.9 MB, 在所有 C++ 提交中击败了24.04%的用户
+
+Attention:
+
+- unordered_map<int, int> map
+- map[key] = value
+- unordered_map<int, int>::iterator it = map.find(key)
+- it != map.end()
+- it->second

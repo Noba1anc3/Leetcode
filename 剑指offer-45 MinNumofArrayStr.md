@@ -53,22 +53,23 @@ public:
     }
 
     string minNumber(vector<int>& nums) {
-        vector<string>strs;
+        vector<string> strs;
         string ans;
-        for(int i = 0; i < nums.size(); i++){
+        
+        for(int i = 0; i < nums.size(); i++)
             strs.push_back(to_string(nums[i]));
-        }
+
         sort(strs.begin(), strs.end(), compare);
+        
         for(int i = 0; i < strs.size(); i++)
             ans += strs[i];
+        
         return ans;
     }
 };
 ```
 
-
-
-执行用时：8 ms, 在所有 C++ 提交中击败了98.29%的用户  
+执行用时：8 ms, 在所有 C++ 提交中击败了98.29%的用户
 内存消耗：11.5 MB, 在所有 C++ 提交中击败了17.52%的用户
 
 Attention:

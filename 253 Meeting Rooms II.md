@@ -43,16 +43,16 @@ public:
             
         sort(intervals.begin(), intervals.end());
 
-        priority_queue<int> Q;
-        Q.push(-1*intervals[0][1]);
+        priority_queue<int, vector<int>, greater<int>> Q;
+        Q.push(intervals[0][1]);
 
         for (int i = 1; i < intervals.size(); i++){
             vector<int> interval = intervals[i];
-            int top = -1 * Q.top();
+            int top = Q.top();
             
             if (interval[0] >= top)
                 Q.pop();
-            Q.push(-1*interval[1]);
+            Q.push(interval[1]);
         }
 
         return Q.size();

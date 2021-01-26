@@ -30,9 +30,9 @@ Output: ["a","b","c"]
 按照题目要求2=“abc"，所以结果应该是["a","b","c"]
 先不用想着怎么去写递归，只思考下怎么打印出这个结果。
 
-```
+```python
 result = List()
-for(i=0;i<len("abc");i++) {
+for(i=0; i<len("abc"); i++) {
     tmp = i
     result.add(tmp)
 }
@@ -41,7 +41,7 @@ return result
 
 如果输入的是23，应该怎么做呢？23的结果是`["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]`，我们仍然不考虑怎么去写递归，只是考虑怎么把这个结果给弄出来。代码如下：
 
-```
+```python
 result = List()
 for(i=0;i<len("abc");i++) {
     for(j=0;j<len("def");j++)
