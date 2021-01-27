@@ -38,10 +38,10 @@ public:
 
         while (!Q.empty()){
             int curVertex = Q.top().second; Q.pop();
-            for (int adjVertex : Graph[curVertex]){;
-                if (color[adjVertex] == WHITE && (weight[curVertex][adjVertex] < key[adjVertex]
-                || weight[adjVertex][curVertex] < key[adjVertex])){
-                    key[adjVertex] = min(weight[adjVertex][curVertex], weight[curVertex][adjVertex]);
+            for (int adjVertex : Graph[curVertex]){
+                if (color[adjVertex] == WHITE && (weight[curVertex][adjVertex] < 		    			 key[adjVertex] || weight[adjVertex][curVertex] < key[adjVertex])){
+                    key[adjVertex] = 
+                        min(weight[adjVertex][curVertex], weight[curVertex][adjVertex]);
                     pred[adjVertex] = curVertex;
                     Q.push(pair<int, int> (key[adjVertex], adjVertex));
                 }

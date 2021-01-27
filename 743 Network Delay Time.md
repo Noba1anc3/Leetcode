@@ -128,7 +128,7 @@ public:
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
                 
         dist[root] = 0;
-        Q.push(pair<int, int> (0, root));
+        Q.push(pair<int, int>(0, root));
 
         while (!Q.empty()){
             int curVertex = Q.top().second; Q.pop();
@@ -136,7 +136,7 @@ public:
                 if (color[adjVertex] == WHITE &&
                     dist[curVertex] + weight[curVertex][adjVertex] < dist[adjVertex]){
                     dist[adjVertex] = dist[curVertex] + weight[curVertex][adjVertex];
-                    Q.push(pair<int, int> (dist[adjVertex],adjVertex));
+                    Q.push(pair<int, int>(dist[adjVertex], adjVertex));
                 }
             }
             color[curVertex] = BLACK;

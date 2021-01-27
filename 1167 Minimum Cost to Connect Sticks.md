@@ -42,10 +42,10 @@ class Solution {
 public:
     int connectSticks(vector<int>& sticks) {
         int num = 0, leaf_sum = 0;
-        priority_queue<int> Q;
+        priority_queue<int, vector<int>, greater<int>> Q;
         
         for (auto stick : sticks)
-            Q.push(-1*stick);
+            Q.push(stick);
 
         while (true){
             if (Q.size() == 1)
@@ -56,8 +56,7 @@ public:
             Q.push(leaf_sum);
             leaf_sum = 0;
         }
-
-        num *= -1;
+        
         return num;
     }
 };

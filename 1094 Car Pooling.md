@@ -39,41 +39,30 @@ Output: true
 ```c++
 class Solution {
 public:
+    static bool cmp(vector<int> tripA, vector<int> tripB){
+        return tripA[1] < tripB[1];
+    }
+    
     bool carPooling(vector<vector<int>>& trips, int capacity) {
         if (trips.empty())
             return true;
-        if (trips[0][0] > capacity)
-            return false;
 
-        sort(trips.begin(), trips.end(), [](const vector<int> tripA, const vector<int> tripB){
-            return tripA[1] < tripB[1];
-        });
+        sort(trips.begin(), trips.end(), cmp);
 
-        priority_queue<pair<int, int>> Q;
-        pair<int, int> FirstTrip(-1*trips[0][2], trips[0][0]);
-        capacity -= trips[0][0];
-        Q.push(FirstTrip);
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
 
-        for (int i = 1; i < trips.size(); i++){
-            pair<int, int> trip(-1*trips[i][2], trips[i][0]);
-            
-            if (trips[i][1] >= -1*Q.top().first){
-                while (!Q.empty() && trips[i][1] >= -1*Q.top().first){
-                    capacity += Q.top().second;
-                    Q.pop();
-                }
-                capacity -= trip.second;
-                if (capacity < 0)
-                    return false;
-                Q.push(trip);
+        for (const vector<int>& trip : trips){
+            while (!Q.empty() && trip[1] >= Q.top().first){  // 下客
+                capacity += Q.top().second;
+                Q.pop();
             }
-            else if (capacity >= trip.second){
-                capacity -= trip.second;
-                Q.push(trip);
-            }
-            else{
+
+            capacity -= trip[0];
+            if (capacity < 0)
                 return false;
-            }
+            
+            pair<int, int> curTrip(trip[2], trip[0]);
+            Q.push(curTrip);
         }
 
         return true;
@@ -81,9 +70,9 @@ public:
 };
 ```
 
-执行用时：76 ms, 在所有 C++ 提交中击败了9.54%的用户
+执行用时：44 ms, 在所有 C++ 提交中击败了18.41%的用户
 
-内存消耗：15.5 MB, 在所有 C++ 提交中击败了5.04%的用户
+内存消耗：15.1 MB, 在所有 C++ 提交中击败了5.05%的用户
 
 Attention
 

@@ -44,13 +44,9 @@ public:
         sort(intervals.begin(), intervals.end());
 
         priority_queue<int, vector<int>, greater<int>> Q;
-        Q.push(intervals[0][1]);
 
-        for (int i = 1; i < intervals.size(); i++){
-            vector<int> interval = intervals[i];
-            int top = Q.top();
-            
-            if (interval[0] >= top)
+        for (const vector<int>& interval : intervals){
+            if (!Q.empty() && interval[0] >= Q.top())
                 Q.pop();
             Q.push(interval[1]);
         }
