@@ -37,24 +37,22 @@ c++
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
-        int Max = amount + 1;
-        vector<int> dp(amount + 1, Max);
+        vector<int> dp(amount + 1, amount + 1);
         dp[0] = 0;
-        for (int i = 1; i <= amount; i++) {
-            for (int j = 0; j < coins.size(); j++) {
-                if (coins[j] <= i) {
-                    dp[i] = min(dp[i], dp[i - coins[j]] + 1);
-                }
-            }
-        }
-        return dp[amount] > amount ? -1 : dp[amount];
+        
+        for (int i = 1; i <= amount; i++)
+            for (const int& coin : coins)
+                if (coin <= i)
+                    dp[i] = min(dp[i], dp[i - coin] + 1);
+
+        return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
 };
 ```
 
-执行用时：144 ms, 在所有 C++ 提交中击败了48.94%的用户
+执行用时：72 ms, 在所有 C++ 提交中击败了90.01%的用户
 
-内存消耗：14.2 MB, 在所有 C++ 提交中击败了17.77%的用户
+内存消耗：13.6 MB, 在所有 C++ 提交中击败了82.66%的用户
 
 
 
@@ -64,28 +62,25 @@ Change Vector to List can speed up time and cost lower space
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
-        int Max = amount + 1;
         int dp[amount + 1];
-        
+    
         dp[0] = 0;
         for (int i = 1; i <= amount; i++)
-            dp[i] = Max;
+            dp[i] = amount + 1;
             
-        for (int i = 1; i <= amount; i++) {
-            for (int j = 0; j < coins.size(); j++) {
-                if (coins[j] <= i) {
-                    dp[i] = min(dp[i], dp[i - coins[j]] + 1);
-                }
-            }
-        }
+        for (int i = 1; i <= amount; i++)
+            for (const int& coin : coins)
+                if (coin <= i)
+                    dp[i] = min(dp[i], dp[i - coin] + 1);
+
         return dp[amount] > amount ? -1 : dp[amount];
     }
 };
 ```
 
-执行用时：128 ms, 在所有 C++ 提交中击败了66.96%的用户
+执行用时：44 ms, 在所有 C++ 提交中击败了92.44%的用户
 
-内存消耗：10.1 MB, 在所有 C++ 提交中击败了88.76%的用户
+内存消耗：9.7 MB, 在所有 C++ 提交中击败了98.67%的用户
 
 **复杂度分析**
 

@@ -39,18 +39,18 @@ public:
         int minPrice = prices[0];
         int maxProfit = 0;
 
-        for (int price : prices){
-            maxProfit = max(maxProfit, price - minPrice);
+        for (const int& price : prices){
             minPrice = min(minPrice, price);
+            maxProfit = max(maxProfit, price - minPrice);
         }
 
         return maxProfit;
     }
 };
 ```
-执行用时：8 ms, 在所有 C++ 提交中击败了94.70%的用户
+执行用时：112 ms, 在所有 C++ 提交中击败了19.51%的用户
 
-内存消耗：12.9 MB, 在所有 C++ 提交中击败了42.13%的用户
+内存消耗：91.1 MB, 在所有 C++ 提交中击败了11.63%的用户
 
 ### java
 
