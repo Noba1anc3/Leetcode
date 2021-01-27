@@ -28,7 +28,7 @@
 
 - [Prim Algorithm for MST](Graph%20-%20Prim.md)
 - [Dijkstra Algorithm for SSSP](Graph%20-%20Dijkstra.md)
-- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
 - [☆☆☆ 1094. Car Pooling ☆☆☆](1094%20Car%20Pooling.md)
@@ -43,8 +43,8 @@
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆ (unordered_map)](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 020. Valid Parentheses ☆☆ (unordered_map)](020%20Valid%20Parentheses.md)
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆ (unordered_set)](128%20Longest%20Consecutive%20Sequence.md)
-- [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
-- [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
+- [☆☆ 242. Valid Anagram ☆☆ (unordered_set)](242%20Valid%20Anagram.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆ (unordered_set)](349%20Intersection%20of%20Two%20Arrays.md)
 
 ## Union-Find Set
 
