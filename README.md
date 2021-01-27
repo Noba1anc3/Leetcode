@@ -81,13 +81,9 @@
 
 - [Breadth First Search](Graph%20-%20BFS.md)
 
-- [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-- [463. Island Perimeter](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
-- [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
-- [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 
 ## DFS
 
@@ -106,10 +102,14 @@
 - [☆☆ 078. Subset ☆☆](078%20Subset.md)
 - [☆☆☆ 090. Subset II ☆☆☆](090%20Subset%20II.md)
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
+- [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [463. Island Perimeter](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
+- [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
+- [827. Making A Large Island](827%20Making%20A%20Large%20Island.md)
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)

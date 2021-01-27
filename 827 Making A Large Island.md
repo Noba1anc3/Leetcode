@@ -61,3 +61,72 @@ Memory : 16.2MB
 Attention:  
 - 在递归时使用```1 +```来计算面积
 
+### c++
+
+```c++
+class Solution {
+public:
+    bool inarea(vector<vector<int>>& grid, int i, int j){
+        return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size();
+    }
+
+    int dfs(vector<vector<int>>& grid, int i, int j, int index){
+        if (!inarea(grid, i, j) || grid[i][j] != 1)
+            return 0;
+        
+        grid[i][j] = index;
+
+        return 1 + dfs(grid, i-1, j, index) 
+                 + dfs(grid, i+1, j, index) 
+                 + dfs(grid, i, j-1, index)
+                 + dfs(grid, i, j+1, index);
+    }
+
+    int largestIsland(vector<vector<int>>& grid) {
+        int ans = 0;
+        int index = 2; // 降低空间复杂度
+        vector<int> area = {0, 0};
+
+        for (int i = 0; i < grid.size(); i++){
+            for (int j = 0; j < grid[0].size(); j++){
+                if (grid[i][j] == 1){
+                    int size = dfs(grid, i, j, index++);
+                    area.push_back(size);
+                }
+            }
+        }
+
+        for (const int& a : area)
+            ans = max(ans, a); // 可能没有填海造陆的空间
+
+        for (int i = 0; i < grid.size(); i++){
+            for (int j = 0; j < grid[0].size(); j++){
+                if (grid[i][j] == 0){
+                    unordered_set<int> neighbors; // 避免重复
+                    int neighbors_area = 0;
+
+                    if (inarea(grid, i, j-1) && grid[i][j-1] > 1)
+                        neighbors.insert(grid[i][j-1]);
+                    if (inarea(grid, i, j+1) && grid[i][j+1] > 1)
+                        neighbors.insert(grid[i][j+1]);
+                    if (inarea(grid, i-1, j) && grid[i-1][j] > 1)
+                        neighbors.insert(grid[i-1][j]);
+                    if (inarea(grid, i+1, j) && grid[i+1][j] > 1)
+                        neighbors.insert(grid[i+1][j]);
+
+                    for (const int& neighbor : neighbors)
+                        neighbors_area += area[neighbor];
+
+                    ans = max(ans, 1 + neighbors_area);
+                }
+            }
+        }
+
+        return ans;
+    }
+};
+```
+
+执行用时：28 ms, 在所有 C++ 提交中击败了87.64%的用户
+
+内存消耗：12.9 MB, 在所有 C++ 提交中击败了49.25%的用户
