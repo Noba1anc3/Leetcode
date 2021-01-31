@@ -40,14 +40,16 @@
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 
 ## Hash
-- [☆☆ 001. Two Sum ☆☆ (unordered_map)](001%20Two%20Sum.md)
-- [☆☆ 017. Letter Combination of a Phone Number ☆☆ (unordered_map)](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-- [☆☆ 020. Valid Parentheses ☆☆ (unordered_map)](020%20Valid%20Parentheses.md)
-- [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆ (unordered_set)](128%20Longest%20Consecutive%20Sequence.md)
-- [☆☆ 242. Valid Anagram ☆☆ (unordered_set)](242%20Valid%20Anagram.md)
-- [☆☆ 349. Intersection of Two Arrays ☆☆ (unordered_set)](349%20Intersection%20of%20Two%20Arrays.md)
-- [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
-- [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
+- [☆☆ 001. Two Sum ☆☆ (map)](001%20Two%20Sum.md)
+- [☆☆ 017. Letter Combination of a Phone Number ☆☆ (map)](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+- [☆☆ 020. Valid Parentheses ☆☆ (map)](020%20Valid%20Parentheses.md)
+- [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆ (set)](128%20Longest%20Consecutive%20Sequence.md)
+- [☆☆ 169. Majority Element ☆☆ (map) (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+- [☆☆ 242. Valid Anagram ☆☆ (set)](242%20Valid%20Anagram.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆ (set)](349%20Intersection%20of%20Two%20Arrays.md)
+- [☆ 剑指Offer 03. Duplicate Num in Array ☆ (set)](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
+- [☆☆ 剑指Offer 39. Majority Element (map) ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+- [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆ (set)](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 
 ## Union-Find Set
 
@@ -269,6 +271,10 @@
 
 ## Mathematics
 
+- [136. Single Number](136%20Single%20Number.md)
+- [☆☆ 169. Majority Element ☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+- [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+
 - [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 
 # Questions
@@ -306,11 +312,13 @@
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 130. Surrounded Regions ☆☆](130%20Surrounded%20Regions.md)
+- [136. Single Number](136%20Single%20Number.md)
 - [144. Binary Tree Preorder Traversal]()
 - [145. Binary Tree Postorder Traversal]()
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [150. Evaluate Reverse Polish Notation](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
 - [155. Min Stack](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
+- [☆☆ 169. Majority Element ☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
@@ -355,6 +363,7 @@
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
+- [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
