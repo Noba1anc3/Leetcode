@@ -41,14 +41,14 @@ c++
 ```c++
 class Solution {
 public:
-    int climbStairs(int n) {
-        int p = 0, q = 0, r = 1;
-        for (int i = 1; i <= n; ++i) {
-            p = q; 
-            q = r; 
-            r = p + q;
+    int numWays(int n) {
+        int a = 1, b = 1, tmp;
+        for (int i = 2; i <= n; i++){
+            tmp = (a + b) % int(1e9+7);
+            a = b;
+            b = tmp;
         }
-        return r;
+        return b;
     }
 };
 ```

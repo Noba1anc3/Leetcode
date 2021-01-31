@@ -123,6 +123,8 @@
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
+- [☆☆ 153 Find Minimum in Rotated Sorted Array ☆☆](153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
+- [☆☆☆ 154 Find Minimum in Rotated Sorted Array II ☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 
 ## Slide Window
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
@@ -225,6 +227,7 @@
 - [☆☆ 518. Coin Change 2 ☆☆ (0-1 Complete Knapsack)](518%20Coin%20Change%202.md)
 - [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](1143%20Longest%20Common%20Subsequence.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
+- [☆☆ 剑指Offer 10 - II. Frog Jump Stairs ☆☆ (同070)](070%20Climbing%20Stairs.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
@@ -318,6 +321,8 @@
 - [145. Binary Tree Postorder Traversal]()
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [150. Evaluate Reverse Polish Notation](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
+- [☆☆ 153 Find Minimum in Rotated Sorted Array ☆☆](153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
+- [☆☆☆ 154 Find Minimum in Rotated Sorted Array II ☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 - [155. Min Stack](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
 - [☆☆ 169. Majority Element ☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
@@ -363,6 +368,7 @@
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
 - [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
+- [☆☆ 剑指Offer 10 - II. Frog Jump Stairs ☆☆ (同070)](070%20Climbing%20Stairs.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 - [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
