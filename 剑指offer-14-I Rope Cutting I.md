@@ -35,7 +35,8 @@
 
 ## Solution - I Mathematics
 
-java
+### java
+
 ```python
 class Solution {
     public int integerBreak(int n) {
@@ -53,12 +54,54 @@ class Solution {
 
 内存消耗：35 MB, 在所有 Java 提交中击败了89.32%的用户
 
+### c++
+
+```c++
+class Solution {
+public:
+    int cuttingRope(int n) {
+        if (n <= 3) return n - 1;
+        
+        int a = n / 3, b = n % 3;
+        
+        if (b == 0) return pow(3, a);
+        if (b == 1) return pow(3, a-1)*4;
+        return pow(3, a)*2;
+    }
+};
+```
+
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
+
+内存消耗：6.1 MB, 在所有 C++ 提交中击败了78.85%的用户
+
 **复杂度分析**
 
 - 时间复杂度 O(1) ： 仅有求整、求余、次方运算。
   - 求整和求余运算：查阅资料，提到不超过机器数的整数可以看作是 O(1)；
   - 幂运算：查阅资料，提到浮点取幂为 O(1)。
 - 空间复杂度 O(1) ： a 和 b 使用常数大小额外空间。
+
+或写为：
+
+```c++
+class Solution {
+public:
+    int cuttingRope(int n) {
+        if (n <= 3) return n - 1;
+        
+        int result  = 1;
+
+        while (n > 4){
+            result *= 3;
+            n -= 3;
+        }
+        result *= n;
+
+        return result;
+    }
+};
+```
 
 ## Idea - II DP
 
@@ -72,7 +115,7 @@ class Solution {
 
 ## Solution - II DP
 
-c++
+### c++
 
 ```c++
 class Solution {
@@ -85,11 +128,9 @@ public:
         for (int i = 0; i <= n; i++)
             dp[i] = i;
         
-        for (int i = 4; i <= n; i++){
-            for (int j = 2; j <= (int)i/2; j++){
+        for (int i = 4; i <= n; i++)
+            for (int j = 2; j <= (int)i/2; j++)
                 dp[i] = max(dp[i], dp[j]*dp[i-j]);
-            }
-        }
 
         return dp[n];
     }
@@ -98,4 +139,4 @@ public:
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：6.2 MB, 在所有 C++ 提交中击败了44.28%的用户
+内存消耗：5.8 MB, 在所有 C++ 提交中击败了97.55%的用户
