@@ -33,7 +33,7 @@ public:
         int pivot = nums[q];
 
         for (int j = p; j < q; j++){
-            if (nums[j] <= pivot){
+            if (nums[j] < pivot){
                 i += 1;
                 swap(nums[i], nums[j]);
             }
