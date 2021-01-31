@@ -38,7 +38,9 @@
 
 ## Linked-List
 - [002. Add Two Numbers](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
+- [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
 
 ## Hash
 - [☆☆ 001. Two Sum ☆☆ (map)](001%20Two%20Sum.md)
@@ -253,6 +255,7 @@
 - [Non Recursive QuickSort](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
 - [Count Sort](Sort%20-%20Count%20Sort.md)
 - [Sort Dict by Value](Sort%20dict%20by%20value.md)
+- [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 056. Merge Intervals ☆☆](056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](057%20Insert%20Interval.md)
 - [☆☆ 075. Sort Colors ☆☆ (Quick Sort)](075%20Sort%20Colors.md)
@@ -268,6 +271,7 @@
 - [☆☆☆ 912. Sort an Array ☆☆☆ (Quick Sort)](912%20Sort%20an%20Array.md)
 - [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
+- [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆ (Quick Sort)](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
@@ -282,7 +286,7 @@
 - [☆☆ 136. Single Number ☆☆](136%20Single%20Number.md)
 - [☆☆ 169. Majority Element ☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 343. Integer Break ☆☆☆ (同剑指offer 14)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
-- [☆☆ 剑指Offer 14-I. Cutting Rope I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
+- [☆☆☆ 剑指Offer 14-I. Cutting Rope I ☆☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14-II. Cutting Rope II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 - [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 
@@ -298,6 +302,7 @@
 - [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+- [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
 - [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
@@ -381,6 +386,7 @@
 - [☆☆☆ 剑指Offer 11. Find Minimum in Rotated Sorted Array ☆☆☆ (同154)](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
+- [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
