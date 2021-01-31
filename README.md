@@ -46,6 +46,7 @@
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆ (unordered_set)](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 242. Valid Anagram ☆☆ (unordered_set)](242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆ (unordered_set)](349%20Intersection%20of%20Two%20Arrays.md)
+- [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
 
 ## Union-Find Set
 
