@@ -47,6 +47,7 @@
 - [☆☆ 242. Valid Anagram ☆☆ (unordered_set)](242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆ (unordered_set)](349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
+- [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 
 ## Union-Find Set
 
@@ -266,6 +267,10 @@
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 
+## Mathematics
+
+- [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
+
 # Questions
 
 - [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
@@ -346,6 +351,7 @@
 - [☆☆☆ 1143. Longest Common Subsequence ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
+- [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
@@ -354,6 +360,7 @@
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
 - [☆☆ 剑指Offer 47. Maximum Value of Presents ☆☆](%E5%89%91%E6%8C%87offer-47%20Maximum%20Value%20of%20Presents.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+- [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 - [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆ 面试题 01.05. One Way ☆☆](%E9%9D%A2%E8%AF%95%E9%A2%98%2001.05%20One%20Way.md)
 - [☆☆☆ 面试题 03.02. Min Stack ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.02%20Min%20Stack.md)
