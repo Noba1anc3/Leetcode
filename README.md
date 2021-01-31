@@ -237,7 +237,7 @@
 - [Recursive QuickSort](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [Non Recursive QuickSort](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
 - [Count Sort](Sort%20-%20Count%20Sort.md)
-- [Sort Dict by Value](Sort dict by value.md)
+- [Sort Dict by Value](Sort%20dict%20by%20value.md)
 - [☆☆ 056. Merge Intervals ☆☆](056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](057%20Insert%20Interval.md)
 - [☆☆ 075. Sort Colors ☆☆ (Quick Sort)](075%20Sort%20Colors.md)
