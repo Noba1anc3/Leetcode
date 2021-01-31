@@ -36,12 +36,6 @@
 - [☆☆☆ 1094. Car Pooling ☆☆☆](1094%20Car%20Pooling.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 
-## Linked-List
-- [002. Add Two Numbers](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
-- [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
-- [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-- [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
-
 ## Hash
 - [☆☆ 001. Two Sum ☆☆ (map)](001%20Two%20Sum.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆ (map)](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
@@ -65,8 +59,15 @@
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
-
 - [☆☆☆ 990. Satisfiability of Equality Equations ☆☆☆](990%20Satisfiability%20of%20Equality%20Equations.md)
+
+## Linked-List
+
+- [002. Add Two Numbers](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
+- [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
+- [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [☆ 剑指Offer 18. Delete Element in LinkList ☆](018%20Delete%20element%20in%20LinkList.md)
+- [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
 
 ## Tree
 
@@ -386,6 +387,7 @@
 - [☆☆☆ 剑指Offer 11. Find Minimum in Rotated Sorted Array ☆☆☆ (同154)](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
+- [☆ 剑指Offer 18. Delete Element in LinkList ☆](018%20Delete%20element%20in%20LinkList.md)
 - [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
