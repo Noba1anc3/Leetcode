@@ -10,11 +10,11 @@
 - [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 662 Maximum Width of Binary Tree ☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+- [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
 
 ## Stack
 
 - [☆☆ Topological Sort ☆☆](Graph%20-%20Topological%20Sort.md)
-
 - [☆ 020. Valid Parentheses ☆](020%20Valid%20Parentheses.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [144. Binary Tree Preorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
@@ -24,6 +24,7 @@
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [☆☆☆ 面试题 03.02. Min Stack ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2003.02%20Min%20Stack.md)
+- [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
 
 ## Heap
 
@@ -271,7 +272,7 @@
 
 ## Mathematics
 
-- [136. Single Number](136%20Single%20Number.md)
+- [☆☆ 136. Single Number ☆☆](136%20Single%20Number.md)
 - [☆☆ 169. Majority Element ☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 剑指Offer 39. Majority Element ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 
@@ -312,7 +313,7 @@
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 130. Surrounded Regions ☆☆](130%20Surrounded%20Regions.md)
-- [136. Single Number](136%20Single%20Number.md)
+- [☆☆ 136. Single Number ☆☆](136%20Single%20Number.md)
 - [144. Binary Tree Preorder Traversal]()
 - [145. Binary Tree Postorder Traversal]()
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
@@ -360,6 +361,7 @@
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
+- [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
