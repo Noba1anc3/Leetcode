@@ -29,16 +29,16 @@ private:
 
 public:
     void backtrack(vector<int>& nums, int index){
-        if (index == nums.size())
-            return;
-        for (int i = index; i < nums.size(); i++){
-            int ele = nums[i];
-            res.push_back(ele);
-            ans.push_back(res);
-            backtrack(nums, i+1);
-            res.pop_back();
-        }
+        if (index != nums.size())
+            for (int i = index; i < nums.size(); i++){
+                int ele = nums[i];
+                res.push_back(ele);
+                ans.push_back(res);
+                backtrack(nums, i+1);
+                res.pop_back();
+            }
     }
+
     vector<vector<int>> subsets(vector<int>& nums) {
         backtrack(nums, 0);
         ans.push_back({});
