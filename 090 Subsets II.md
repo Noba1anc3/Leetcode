@@ -2,8 +2,6 @@ Given a collection of integers that might contain duplicates, `nums`, return all
 
 **Note**: The solution set must not contain duplicate subsets.
 
-
-
 **Example:**
 
 ```
@@ -30,15 +28,14 @@ private:
 
 public:
     void backtrack(vector<int> nums, int index){
-        if (index == nums.size())
-            return;
-        for (int i = index; i < nums.size(); i++){
-            int ele = nums[i];
-            res.push_back(ele);
-            ans.push_back(res);
-            backtrack(nums, i+1);
-            res.pop_back();
-        }
+        if (index != nums.size())
+            for (int i = index; i < nums.size(); i++){
+                int ele = nums[i];
+                res.push_back(ele);
+                ans.push_back(res);
+                backtrack(nums, i+1);
+                res.pop_back();
+            }
     }
 
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
@@ -46,6 +43,7 @@ public:
         backtrack(nums, 0);
         
         ans.push_back({});
+
         sort(ans.begin(), ans.end());
         ans.erase(unique(ans.begin(), ans.end()), ans.end());
         
