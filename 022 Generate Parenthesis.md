@@ -46,12 +46,9 @@ public:
     bool check(std::string& ans){
         int balance = 0;
         for (char c : ans){
-            if (c == '(')
-                balance++;
-            else
-                balance--;
-            if (balance < 0)
-                return false;
+            if (c == '(') balance++;
+            else balance--;
+            if (balance < 0) return false;
         }
         return balance == 0;
     }
