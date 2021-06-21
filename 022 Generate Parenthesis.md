@@ -30,15 +30,20 @@ c++
 
 
 ```c++
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
 class Solution {
 private:
-    vector<char> brackets = {'(', ')'};
-    string slt;
-    vector<string> tmp_ans;
-    vector<string> ans;
+    std::vector<char> brackets = {'(', ')'};
+    std::string tmp_ans;
+    std::vector<string> ans;
 
 public:
-    bool check(string &ans){
+    bool check(std::string &ans){
         int balance = 0;
         for (char c : ans){
             if (c == '(')
@@ -50,31 +55,41 @@ public:
         }
         return balance == 0;
     }
-    
+
     void parenthesis(int length){
-        if (slt.size() == 2*length){
-            if (check(slt))
-                ans.push_back(slt);
+        if (tmp_ans.size() == 2*length) {
+            if (check(tmp_ans))
+                ans.push_back(tmp_ans);
         }
         else{
             for (char bracket : brackets){
-                slt.push_back(bracket);
+                tmp_ans.push_back(bracket);
                 parenthesis(length);
-                slt.pop_back();
+                tmp_ans.pop_back();
             }
         }
     }
 
-    vector<string> generateParenthesis(int n) {
+    std::vector<string> generateParenthesis(int n) {
         parenthesis(n);
         return ans;
     }
 };
+
+
+int main()
+{
+    Solution slt = Solution();
+    std::vector<string> ans_vector = slt.generateParenthesis(2);
+    for (std::string ans : ans_vector){
+        std::cout << ans <<'\n';
+    }
+    return 0;
+}
 ```
 
-执行用时：16 ms, 在所有 C++ 提交中击败了10.99%的用户
-
-内存消耗：7.4 MB, 在所有 C++ 提交中击败了97.65%的用户
+执行用时：12 ms, 在所有 C++ 提交中击败了14.22%的用户
+内存消耗：7.1 MB, 在所有 C++ 提交中击败了96.92%的用户
 
 **复杂度分析**
 
