@@ -23,7 +23,6 @@ Output: [["Q"]]
 
 c++
 
-
 ```c++
 class Solution {
 private:
@@ -36,7 +35,6 @@ public:
     bool putCheck(int row, int col){
         if (chess[row][col] != 0)
             return false;
-
         for(int i = 0; i < N; i++)
             if (chess[i][col] == 1 || chess[row][i] == 1)
                 return false;
@@ -52,47 +50,23 @@ public:
         for(int i = row, j = col; i < N && j >= 0; i++, j--)
             if (chess[i][j] == 1)
                 return false;
-    
         return true;
     }
 
-    void chessIn(int row, int col){
+    void chessIO(int row, int col, int value){
         for(int i = 0; i < N; i++){
-            chess[i][col] = -1;
-            chess[row][i] = -1;
+            chess[i][col] = value;
+            chess[row][i] = value;
         }
         for(int i = row + 1, j = col + 1; i < N && j < N; i++, j++)
-            chess[i][j] = -1;
+            chess[i][j] = value;
         for(int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
-            chess[i][j] = -1;
+            chess[i][j] = value;
         for(int i = row - 1, j = col + 1; i >= 0 && j < N; i--, j++)
-            chess[i][j] = -1;
+            chess[i][j] = value;
         for(int i = row + 1, j = col - 1; i < N && j >= 0; i++, j--)
-            chess[i][j] = -1;   
-
-        chess[row][col] = 1;   
-    }
-
-    void chessOut(int row){
-        int col = 0;
-        for (int i = 0; i < N; i++)
-            if (chess[row][i] == 1)
-                col = i;
-                
-        for(int i = 0; i < N; i++){
-            chess[i][col] = 0;
-            chess[row][i] = 0;
-        }
-        for(int i = row + 1, j = col + 1; i < N && j < N; i++, j++)
-            chess[i][j] = 0;
-        for(int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
-            chess[i][j] = 0;
-        for(int i = row - 1, j = col + 1; i >= 0 && j < N; i--, j++)
-            chess[i][j] = 0;
-        for(int i = row + 1, j = col - 1; i < N && j >= 0; i++, j--)
-            chess[i][j] = 0;   
-
-        chess[row][col] = 0;   
+            chess[i][j] = value;   
+        chess[row][col] = -1 * value;   
     }
 
     void backtrack(int row){
@@ -100,21 +74,21 @@ public:
             ans.push_back(res);
             return;
         }
-        for (int i = 0; i < N; i++){
-            if (putCheck(row, i)){
-                res.push_back(to_string(row) + to_string(i));
-                chessIn(row, i);
-                backtrack(row+1);
+
+        for (int col = 0; col < N; col++){
+            if (putCheck(row, col)){
+                res.push_back(to_string(row) + to_string(col));
+                chessIO(row, col, -1);
+                backtrack(row + 1);
                 res.pop_back();
-                chessOut(row);
+                chessIO(row, col, 0);
             }
         }
-
     }
 
     vector<vector<string>> ansProcess(){
         vector<vector<string>> results;
-        for (vector<string> res: ans){
+        for (vector<string> res : ans){
             vector<string> result;
             for(string point : res){
                 string str = "";
