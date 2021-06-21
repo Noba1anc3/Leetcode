@@ -45,36 +45,32 @@ Constraints:
 ```c++
 class Solution {
 private:
+    int K;
     vector<int> ans;
-    vector<vector<int>> ans_list;
 
 public:
-    void backtrack(vector<int> &nums){
-        if (nums.empty()){
-            ans_list.push_back(ans);
-        }
-        else{
+    void backtrack(vector<int>& nums){
+        if (nums.empty()) K--;
+        else
             for (int i = 0; i < nums.size(); i++){
-                int num = nums[i];
-                ans.push_back(num);
-                vector<int> newlist;
-                newlist.insert(newlist.end(), nums.begin(), nums.begin() + i);
-                newlist.insert(newlist.end(), nums.begin() + i + 1, nums.end());
+                ans.push_back(nums[i]);
+                vector<int> newlist = nums;
+                newlist.erase(newlist.begin() + i);
                 backtrack(newlist);
-
+                if (0 == K) return;
                 ans.pop_back();
             }
-        }
     }
 
     string getPermutation(int n, int k) {
+        K = k;
         vector<int> nums;
         for (int i = 1; i <= n; i++)
             nums.push_back(i);
         backtrack(nums);
 
         string permutation;
-        for(int i : ans_list[k-1]){
+        for(int i : ans){
             permutation += to_string(i);
         }
         return permutation;
@@ -82,7 +78,7 @@ public:
 };
 ```
 
-**48 / 200** 个通过测试用例
+**121 / 200** 个通过测试用例
 
 ## Solution - II 回溯剪枝
 
