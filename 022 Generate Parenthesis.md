@@ -43,7 +43,7 @@ private:
     std::vector<string> ans;
 
 public:
-    bool check(std::string &ans){
+    bool check(std::string& ans){
         int balance = 0;
         for (char c : ans){
             if (c == '(')
@@ -89,6 +89,7 @@ int main()
 ```
 
 执行用时：12 ms, 在所有 C++ 提交中击败了14.22%的用户
+
 内存消耗：7.1 MB, 在所有 C++ 提交中击败了96.92%的用户
 
 **复杂度分析**
