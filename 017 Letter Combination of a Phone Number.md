@@ -61,11 +61,17 @@ return result
 ## Solution
 
 ```c++
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
 class Solution {
 private:
-    vector<string> ans;
-    string combination;
-    unordered_map<char, string> mapping = {
+    std::vector<string> ans;
+    std::string combination;
+    std::unordered_map<char, string> mapping = {
         {'2', "abc"},
         {'3', "def"},
         {'4', "ghi"},
@@ -77,17 +83,17 @@ private:
     };
 
 public:
-    vector<string> letterCombinations(string digits) {
+    std::vector<string> letterCombinations(std::string digits) {
         if (!digits.empty())
         	backtrack(digits, 0);
         return ans;
     }
 
-    void backtrack(string digits, int start){
+    void backtrack(std::string digits, int start){
         if (start == digits.length())
             ans.push_back(combination);
         else{
-            string letters = mapping.at(digits[start]);
+            std::string letters = mapping.at(digits[start]);
             for (char letter : letters){
                 combination.push_back(letter);
                 backtrack(digits, start + 1);
@@ -97,6 +103,17 @@ public:
     }
 
 };
+
+int main()
+{
+    Solution slt = Solution();
+    std::vector<string> ans_vector = slt.letterCombinations("23");
+    for (std::string ans : ans_vector){
+        std::cout << ans <<'\n';
+    }
+    return 0;
+}
+
 ```
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
