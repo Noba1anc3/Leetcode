@@ -112,52 +112,63 @@ Attention
 ## Solution - II
 
 ```c++
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
 class Solution {
 private:
-    string slt;
-    vector<string> tmp_ans;
+    string tmp_ans;
     vector<string> ans;
 
 public:
-    bool check(string &ans){
+    bool check(string& ans){
         int balance = 0;
         for (char c : ans){
-            if (c == '(')
-                balance++;
-            else
-                balance--;
-            if (balance < 0)
-                return false;
+            if (c == '(') balance++;
+            else balance--;
+            if (balance < 0) return false;
         }
         return balance == 0;
     }
-    
+
     void parenthesis(int length, int left, int right){
-        if (slt.size() == 2*length){
-            if (check(slt))
-                ans.push_back(slt);
-        }
+        if (tmp_ans.size() == 2*length)
+            ans.push_back(tmp_ans);
         else{
             if (left < length){
                 char bracket = '(';
-                slt.push_back(bracket);
+                tmp_ans.push_back(bracket);
                 parenthesis(length, left+1, right);
-                slt.pop_back();
+                tmp_ans.pop_back();
             }
             if (right < left){
                 char bracket = ')';
-                slt.push_back(bracket);
+                tmp_ans.push_back(bracket);
                 parenthesis(length, left, right+1);
-                slt.pop_back();            
+                tmp_ans.pop_back();
             }
         }
     }
 
-    vector<string> generateParenthesis(int n) {
+    std::vector<string> generateParenthesis(int n) {
         parenthesis(n, 0, 0);
         return ans;
     }
 };
+
+
+int main()
+{
+    Solution slt = Solution();
+    std::vector<string> ans_vector = slt.generateParenthesis(2);
+    for (std::string ans : ans_vector){
+        std::cout << ans <<'\n';
+    }
+    return 0;
+}
 ```
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
