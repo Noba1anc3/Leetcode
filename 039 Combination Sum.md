@@ -55,51 +55,48 @@ Output: [[1,1]]
 ## Solution
 
 自己写的
-
-
 ```c++
 class Solution {
 private:
-    vector<int> ans;
-    vector<vector<int>> ans_list;
+    std::vector<int> tmp_ans;
+    std::vector<std::vector<int>> ans;
 
 public:
-    void backtrack(vector<int>& candidates, int target){
-        for(int i = 0; i < candidates.size(); i++){
-            int candidate = candidates[i];
-            if (candidate > target){
+    void backtrack(std::vector<int>& candidates, int target){
+        for (int candidate : candidates){
+            if (candidate > target)
                 break;
-            }
+
             if (candidate == target){
-                ans.push_back(candidate);
-                auto new_ans = ans;
+                tmp_ans.push_back(candidate);
+                auto new_ans = tmp_ans;
                 sort(new_ans.begin(), new_ans.end());
-                ans_list.push_back(new_ans);
-                ans.pop_back();
+                ans.push_back(new_ans);
+                tmp_ans.pop_back();
             }
             else{
-                ans.push_back(candidate);
+                tmp_ans.push_back(candidate);
                 backtrack(candidates, target - candidate);
-                ans.pop_back();
+                tmp_ans.pop_back();
             }
         }
     }
 
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+    std::vector<std::vector<int>> combinationSum(std::vector<int>& candidates, int target) {
         sort(candidates.begin(), candidates.end());
         backtrack(candidates, target);
         
-        sort(ans_list.begin(), ans_list.end());
-        ans_list.erase(unique(ans_list.begin(), ans_list.end()), ans_list.end());
+        sort(ans.begin(), ans.end());
+        ans.erase(unique(ans.begin(), ans.end()), ans.end());
         
-        return ans_list;
+        return ans;
     }
 };
 ```
 
-执行用时：192 ms, 在所有 C++ 提交中击败了5.65%的用户
+执行用时：84 ms, 在所有 C++ 提交中击败了10.56%的用户
 
-内存消耗：20.6 MB, 在所有 C++ 提交中击败了12.99%的用户
+内存消耗：19.8 MB, 在所有 C++ 提交中击败了13.08%的用户
 
 Attention
 
