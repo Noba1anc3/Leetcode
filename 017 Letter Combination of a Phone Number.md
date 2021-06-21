@@ -83,13 +83,13 @@ private:
     };
 
 public:
-    std::vector<string> letterCombinations(std::string digits) {
+    std::vector<string> letterCombinations(std::string& digits) {
         if (!digits.empty())
         	backtrack(digits, 0);
         return ans;
     }
 
-    void backtrack(std::string digits, int start){
+    void backtrack(std::string& digits, int start){
         if (start == digits.length())
             ans.push_back(combination);
         else{
@@ -103,6 +103,7 @@ public:
     }
 
 };
+
 
 int main()
 {
