@@ -88,7 +88,7 @@ public:
 ```c++
 class Solution {
 private:
-    int ans_num;
+    int b;
     vector<int> res;
     vector<int> ans;
 
@@ -100,34 +100,34 @@ public:
         return ans;
     }
 
-    void backtrack(vector<int>& nums, int total){
-        if (nums.empty()){
-            ans = res;
-            ans_num++;
-            return;
-        }
-        for (int i = 0; i < nums.size(); i++){
-            int num = nums[i];
-            res.push_back(num);
-            vector<int> new_nums = nums;
-            new_nums.erase(new_nums.begin() + i);
-            backtrack(new_nums, total);
-            if (ans_num == total)
-                return;
-            res.pop_back();
-        }
+    void backtrack(vector<int>& nums){
+        if (nums.empty())
+            b--;
+        else
+            for (int i = 0; i < nums.size(); i++){
+                int num = nums[i];
+                res.push_back(num);
+                vector<int> new_nums = nums;
+                new_nums.erase(new_nums.begin() + i);
+                backtrack(new_nums);
+                if (b == 0) {
+                    ans = res;
+                    return;
+                }
+                res.pop_back();
+            }
     }
 
     string getPermutation(int n, int k) {
         int x = jiecheng(n-1);
         int a = (k - 1) / x + 1;
-        int b = k % x == 0 ? x : k % x;
+        b = k % x == 0 ? x : k % x;
         
         vector<int> nums;
         for (int i = 1; i < a; i++) nums.push_back(i);
         for (int i = a + 1; i <= n; i++) nums.push_back(i);
 
-        backtrack(nums, b);
+        backtrack(nums);
 
         string permutation = to_string(a);
         for(int i : ans) permutation += to_string(i);
@@ -137,7 +137,7 @@ public:
 };
 ```
 
-执行用时：1984 ms, 在所有 C++ 提交中击败了5.12%的用户
+执行用时： 884 ms, 在所有 C++ 提交中击败了8.27%的用户
 
 内存消耗：116.4 MB, 在所有 C++ 提交中击败了5.12%的用户
 
