@@ -88,15 +88,15 @@ public:
 
     vector<vector<string>> ansProcess(){
         vector<vector<string>> results;
-        for (vector<string> res : ans){
+        for (vector<string> res : ans) {
             vector<string> result;
-            for(string point : res){
+            for (string point : res) {
                 string str = "";
                 for (int i = 0; i < point[1] - '0'; i++){
                     str += ".";
                 }
                 str += "Q";
-                for (int i = 0; i <  N - 1 - (point[1] - '0'); i++){
+                for (int i = 0; i < N - 1 - (point[1] - '0'); i++) {
                     str += ".";
                 }
                 result.push_back(str);
