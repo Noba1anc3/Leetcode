@@ -31,37 +31,33 @@ Constraints:
 ## Solution
 
 c++
-
-
 ```c++
 class Solution {
 private:
     int unfill = 0;
 
 public:
-    void fillCount(vector<vector<char>>& board){
+    void fillCount(std::vector<std::vector<char>>& board){
         for (int i = 0; i < 9; i++)
             for (int j = 0; j < 9; j++)
                 if (board[i][j] == '.')
                     unfill++;
     }
 
-    bool check(vector<vector<char>>& board, int row, int col, int num){
+    bool check(std::vector<std::vector<char>>& board, int row, int col, int num){
         for (int i = 0; i < 9; i++)
             if (board[i][col] - '0' == num || board[row][i] - '0' == num)
                 return false;
 
-        int rowBlock = row / 3;
-        int colBlock = col / 3;
+        int rowBlock = row / 3, colBlock = col / 3;
         for (int i = rowBlock * 3; i < (rowBlock + 1) * 3; i++)
             for (int j = colBlock * 3; j < (colBlock + 1) * 3; j++)
-                if (board[i][j] - '0' == num)
-                    return false;
+                if (board[i][j] - '0' == num) return false;
 
         return true;
     }
 
-    void backtrack(vector<vector<char>>& board){
+    void backtrack(std::vector<std::vector<char>>& board){
         for (int i = 0; i < 9; i++){
             for (int j = 0; j < 9; j++){
                 if (board[i][j] == '.'){
@@ -73,16 +69,14 @@ public:
                             // 进入下一层
                             backtrack(board);
                             // 退出递归的条件
-                            if (unfill == 0)
-                                return;
+                            if (unfill == 0) return;
                             // 恢复现场
                             board[i][j] = '.';
                             unfill++;
                         }
                     }
                     // 提前返回，进行回溯
-                    if (board[i][j] == '.')
-                        return;
+                    if (board[i][j] == '.') return;
                 }
             }
         }
