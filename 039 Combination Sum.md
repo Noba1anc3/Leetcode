@@ -112,30 +112,27 @@ Attention
 ```c++
 class Solution {
 private:
-    vector<int> res;
-    vector<vector<int>> ans;
+    std::vector<int> tmp_ans;
+    std::vector<std::vector<int>> ans;
 
 public:
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+    std::vector<std::vector<int>> combinationSum(std::vector<int>& candidates, int target) {
         backtracking(candidates, target, 0);
         return ans;
     }
 
-    void backtracking(vector<int>& candidates, int target, int index){
+    void backtracking(std::vector<int>& candidates, int target, int index){
         if(target < 0) return;
 
         if(target == 0){
-            ans.push_back(res);
+            ans.push_back(tmp_ans);
             return;
         }
 
-        for(int i = index; i < candidates.size(); i++){ // 不会错，只会多访问此前遍历时访问过的节点
-            // candidates = [2,3,5], target = 8
-            // i from 0 : [[2,2,2,2],[2,3,3],[3,2,3],[3,3,2],[3,5],[5,3]]
-            // i from index : [[2,2,2,2],[2,3,3],[3,5]]
-            res.push_back(candidates[i]);
+        for(int i = index; i < candidates.size(); i++){
+            tmp_ans.push_back(candidates[i]);
             backtracking(candidates, target - candidates[i], i);
-            res.pop_back();
+            tmp_ans.pop_back();
         }
     }
 };
