@@ -37,17 +37,14 @@ private:
 
 public:
     void backtrack(int max, int cur, int width){
-        if (width == 0){
+        if (width == 0) 
             ans.push_back(res);
-            return;
-        }
-
-        for (int i = cur; i <= max - width + 1; i++){
-            res.push_back(i);
-            backtrack(max, i + 1, width - 1);
-            res.pop_back();
-        }
-
+        else
+            for (int i = cur; i <= max - width + 1; i++){
+                res.push_back(i);
+                backtrack(max, i + 1, width - 1);
+                res.pop_back();
+            }
     }
 
     vector<vector<int>> combine(int n, int k) {
@@ -57,6 +54,6 @@ public:
 };
 ```
 
-执行用时：24 ms, 在所有 C++ 提交中击败了74.71%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了99.781%的用户
 
-内存消耗：10.3 MB, 在所有 C++ 提交中击败了35.04%的用户
+内存消耗：9.9 MB, 在所有 C++ 提交中击败了37.51%的用户
