@@ -116,39 +116,38 @@ boolean inArea(int[][] grid, int r, int c) {
 
 LeetCode 695. Max Area of Island （Medium）
 
-```java
-public int maxAreaOfIsland(int[][] grid) {
+```c++
+class Solution {
+private:
+    int row, col;
     int max_area = 0;
-    for (int r = 0; r < grid.length; r++) {
-        for (int c = 0; c < grid[0].length; c++) {
-            if (grid[r][c] == 1) {
-                int a = area(grid, r, c);
-                max_area = Math.max(max_area, a);
+
+public:
+    bool inArea(std::vector<std::vector<int>>& grid, int i, int j) {
+        if (0 <= i && i < row && 0 <= j && j < col) return true;
+        return false;
+    }
+
+    int get_area(std::vector<std::vector<int>>& grid, int i, int j) {
+        if (!inArea(grid, i, j)) return 0;
+        if (grid[i][j] != 1) return 0;
+        grid[i][j] = 2;
+        return 1 + get_area(grid, i, j-1) + get_area(grid, i, j+1) + get_area(grid, i-1, j) + get_area(grid, i+1, j);
+    }
+
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        row = grid.size(), col = grid[0].size();
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == 1) {
+                    int area = get_area(grid, i, j);
+                    max_area = max(max_area, area);
+                }
             }
         }
+        return max_area;
     }
-    return max_area;
-}
-
-int area(int[][] grid, int r, int c) {
-    if (!inArea(grid, r, c)) {
-        return 0;
-    }
-    if (grid[r][c] != 1) {
-        return 0;
-    }
-    grid[r][c] = 2;
-    
-    return 1 
-        + area(grid, r - 1, c)
-        + area(grid, r + 1, c)
-        + area(grid, r, c - 1)
-        + area(grid, r, c + 1);
-}
-
-boolean inArea(int[][] grid, int r, int c) {
-    return 0 <= r && r < grid.length 
-        	&& 0 <= c && c < grid[0].length;
+};
 }
 ```
 
