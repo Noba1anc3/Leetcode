@@ -39,17 +39,18 @@ Output: ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
 ```c++
 class Solution {
 private:
-    string ip;
-    vector<string> ips;
+    std::string ip;
+    std::vector<std::string> ips;
 
 public:
-    void backtrack(string& s, int piece, int index){
+    void backtrack(std::string& s, int piece, int index) {
         // ip串有四个组成部分或开头指示指针越界则返回，如果两部分同时满足则添加一个有效ip，注意去掉最后的'.'
-        if (piece == 4 || index == s.size()){
+        if (piece == 4 || index == s.size()) {
             if (piece == 4 && index == s.size())
                 ips.push_back(ip.substr(0, ip.size() - 1));
             return;
         }
+
         // 可能一位，两位，三位
         for (int i = 1; i <= 3; i++){
             // 如果当前指针加当前长度超过长度限制则返回
@@ -59,7 +60,7 @@ public:
             // 如果有三位并且大于255则返回
             if (i == 3 && s.substr(index, i) > "255") return;
             ip += s.substr(index, i);
-            ip.push_back('.');
+            ip += '.';
             // 段数加一，指针后移
             backtrack(s, piece + 1, index + i);
             // 回溯时去掉新加的数字和小数点
@@ -67,7 +68,7 @@ public:
         }
     }
 
-    vector<string> restoreIpAddresses(string s) {
+    std::vector<string> restoreIpAddresses(std::string s) {
         backtrack(s, 0, 0);
         return ips;
     }
