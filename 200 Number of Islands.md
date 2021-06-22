@@ -280,7 +280,7 @@ private:
     int num = 0;
 
 public:
-    bool InArea(vector<vector<char>>& grid, int i, int j){
+    bool InArea(std::vector<std::vector<char>>& grid, int i, int j){
         return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size();
     }
 
@@ -296,15 +296,13 @@ public:
         dfs(grid, i+1, j);
     }
 
-    int numIslands(vector<vector<char>>& grid) {
-        for (int i = 0; i < grid.size(); i++){
-            for(int j = 0; j < grid[0].size(); j++){
-                if (grid[i][j] == '1'){
+    int numIslands(std::vector<std::vector<char>>& grid) {
+        for (int i = 0; i < grid.size(); i++)
+            for(int j = 0; j < grid[0].size(); j++)
+                if (grid[i][j] == '1') {
                     dfs(grid, i, j);
                     num++;
                 }
-            }
-        }
 
         return num;
     }
@@ -322,81 +320,79 @@ c++
 ```c++
 class Solution {
 private:
-    vector<int> parent, height, keys;
-    int num = 0;
-    int gridSize;
+    vector<int> parent, height;
+    std::set<int> keys;
+    int row, col;
 
 public:
-    bool InArea(vector<vector<char>>& grid, int i, int j){
-        return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size() && grid[i][j] == '1';
+    bool InArea(int i, int j) {
+        return i >= 0 && i < row && j >= 0 && j < col;
     }
 
-    int Find_Set(int key){
-        while (parent[key] != key){
-            key = parent[key];
-        }
-        return key;
+    int Find_Set(int x) {
+        while (parent[x] != x)
+            x = parent[x];
+        return x;
     }
 
     void Union(int i, int j, int m, int n){
-        int key1 = i*gridSize + j;
-        int key2 = m*gridSize + n;
+        int key1 = i*col + j;
+        int key2 = m*col + n;
 
         int ROOT1 = Find_Set(key1);
         int ROOT2 = Find_Set(key2);
 
-        if (height[ROOT1] <= height[ROOT2]){
-            if (height[ROOT1] == height[ROOT2]){
-                height[ROOT2]++;
-            }
+        if (height[ROOT1] <= height[ROOT2]) {
             parent[ROOT2] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            parent[key2] = ROOT1;
+            height[key2] = height[ROOT1] + 1;
         }
-        else{
+        else {
             parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[key1] = ROOT2;
+            height[key1] = height[ROOT2] + 1;
         }
     }
 
-    void Create_Set(int i, int j){
-        int key = i*gridSize + j;
+    void Create_Set(int i, int j) {
+        int key = i*col + j;
+        if (parent[key] != 0) return;
         parent[key] = key; 
         height[key] = 1;
     }
 
-    int numIslands(vector<vector<char>>& grid) {
-        parent.resize(grid.size() * grid[0].size());
-        height.resize(grid.size() * grid[0].size());
-        gridSize = grid[0].size();
+    int numIslands(std::vector<std::vector<char>>& grid) {
+        row = grid.size();
+        col = grid[0].size();
+        parent.resize(row * col);
+        height.resize(row * col);
+        
+        for (int i = 0; i < row; i++)
+            for(int j = 0; j < col; j++)
+                if (grid[i][j] == '1') Create_Set(i, j);
 
-        for (int i = 0; i < grid.size(); i++)
-            for(int j = 0; j < grid[0].size(); j++)
-                if (grid[i][j] == '1')
-                    Create_Set(i, j);
-
-        for (int i = 0; i < grid.size(); i++)
-            for(int j = 0; j < grid[0].size(); j++)
-                if (grid[i][j] == '1'){
-                    if (InArea(grid, i-1, j))
+        for (int i = 0; i < row; i++)
+            for(int j = 0; j < col; j++)
+                if (grid[i][j] == '1') {
+                    if (InArea(i-1, j) && grid[i-1][j] == '1')
                         Union(i, j, i-1, j);
-                    if (InArea(grid, i+1, j))
-                        Union(i, j, i+1, j);
-                    if (InArea(grid, i, j-1))
+                    if (InArea(i+1, j) && grid[i+1][j] == '1') 
+                        Union(i, j, i+1, j);                  
+                    if (InArea(i, j-1) && grid[i][j-1] == '1') 
                         Union(i, j, i, j-1);
-                    if (InArea(grid, i, j+1))
+                    if (InArea(i, j+1) && grid[i][j+1] == '1') 
                         Union(i, j, i, j+1);
                 }
 
-        for (int i = 0; i < grid.size(); i++)
-            for(int j = 0; j < grid[0].size(); j++)
-                if (grid[i][j] == '1'){
-                    int key = Find_Set(i*gridSize + j);
-                    vector<int>::iterator it = find(keys.begin(), keys.end(), key);
-                    if (it == keys.end()){
-                        keys.push_back(key);
-                        num++;
-                    }
-                }
+        for (int i = 0; i < row; i++)
+            for(int j = 0; j < col; j++)
+                if (grid[i][j] == '1')
+                    if (keys.find(Find_Set(i*col + j)) == keys.end())
+                        keys.insert(Find_Set(i*col + j));
 
-        return num;
+        return keys.size();
     }
 };
 ```
@@ -404,10 +400,10 @@ public:
 Attention
 
 ```c++
-cector<int>::iterator it = find(keys.begin(), keys.end(), key)
+vector<int>::iterator it = find(keys.begin(), keys.end(), key)
 if (it == keys.end()) // not found
 ```
 
-执行用时：156 ms, 在所有 C++ 提交中击败了5.14%的用户
+执行用时：40 ms, 在所有 C++ 提交中击败了5.20%的用户
 
 内存消耗：10.2 MB, 在所有 C++ 提交中击败了26.41%的用户
