@@ -52,6 +52,7 @@ public:
                 backtrack(S, i + 1);
                 res = res.substr(0, res.size() - 1);
             }
+            // 前面对字母大小写进行修改，当回溯结束退回该位时，重新对原字母进行回溯
             res += S[i];
             backtrack(S, i + 1);
             res = res.substr(0, res.size() - 1);
