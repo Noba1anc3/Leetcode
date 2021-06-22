@@ -32,21 +32,22 @@ Surrounded regions shouldn’t be on the border, which means that any `'O'` on t
 ```c++
 class Solution {
 private:
-    int row, col;
-    vector<int> parent;
-    vector<int> keys;
+    int row, col, key;
+    std::vector<int> parent;
+    std::vector<int> height;
+    std::vector<int> keys;
 
 public:
     void Create_Set(int x){
         if (parent[x] != 0)
             return;
         parent[x] = x;
+        height[x] = 1;
     }
 
     int Find_Set(int x){
         while (parent[x] != x)
             x = parent[x];
-        
         return x;
     }
 
@@ -57,12 +58,21 @@ public:
         if (ROOT1 == ROOT2)
             return;
 
-        parent[ROOT2] = ROOT1; // 反过来慢很多
-        parent[y] = ROOT1;
-        parent[x] = ROOT1;
+        if (height[ROOT1] <= height[ROOT2]) {
+            parent[ROOT2] = ROOT1;
+            parent[y] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else {
+            parent[ROOT1] = ROOT2;
+            parent[x] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            height[x] = height[ROOT2] + 1;
+        }
     }
 
-    void solve(vector<vector<char>>& board) {
+    void solve(std::vector<std::vector<char>>& board) {
         if (board.empty())
             return;
 
@@ -70,72 +80,63 @@ public:
         col = board[0].size();
 
         parent.resize(row * col);
+        height.resize(row * col);
         
-        for (int i = 0; i < row; i++){
-            for (int j = 0; j < col; j++){
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++)
                 if (board[i][j] == 'O'){
                     Create_Set(i*col + j);
                     if (i > 0 && board[i - 1][j] == 'O'){
-                        Create_Set(i*col - col + j);
-                        Union(i*col + j, i*col - col + j);
+                        Create_Set((i-1)*col + j);
+                        Union(i*col + j, (i-1)*col + j);
                     }
                     if (i < row - 1 && board[i + 1][j] == 'O'){
-                        Create_Set(i*col + col + j);
-                        Union(i*col + j, i*col + col + j);
+                        Create_Set((i+1)*col + j);
+                        Union(i*col + j, (i+1)*col + j);
                     }
                     if (j > 0 && board[i][j - 1] == 'O'){
-                        Create_Set(i*col - 1 + j);
-                        Union(i*col + j, i*col - 1 + j);
+                        Create_Set(i*col + j - 1);
+                        Union(i*col + j, i*col + j - 1);
                     }
                     if (j < col - 1 && board[i][j + 1] == 'O'){
-                        Create_Set(i*col + 1 + j);
-                        Union(i*col + j, i*col + 1 + j);
+                        Create_Set(i*col + j + 1);
+                        Union(i*col + j, i*col + j + 1);
                     }
                 }
+
+        for (int i = 0; i < col; i++) {
+            if (board[0][i] == 'O') {
+                key = Find_Set(i);
+                if (find(keys.begin(), keys.end(), key) == keys.end())
+                	keys.push_back(key);
+            }
+            if (board[row - 1][i] == 'O') {
+                key = Find_Set((row-1)*col + i);
+                if (find(keys.begin(), keys.end(), key) == keys.end())
+                	keys.push_back(key);
             }
         }
 
-        int key;
-        vector<int>::iterator it;
-        for (int i = 0; i < col; i++){
-            if (board[0][i] == 'O'){
-                key = Find_Set(i);
-                it = find(keys.begin(), keys.end(), key);
-                if (it == keys.end())
-                	keys.push_back(key);
-            }
-            if (board[row - 1][i] == 'O'){
-                key = Find_Set((row-1)*col + i);
-                it = find(keys.begin(), keys.end(), key);
-                if (it == keys.end())
-                	keys.push_back(key);
-            }
-        }
-        for (int i = 0; i < row; i++){
-            if (board[i][0] == 'O'){
+        for (int i = 0; i < row; i++) {
+            if (board[i][0] == 'O') {
                 key = Find_Set(i*col);
-                it = find(keys.begin(), keys.end(), key);
-                if (it == keys.end())
+                if (find(keys.begin(), keys.end(), key) == keys.end())
                 	keys.push_back(key);
             }
             if (board[i][col - 1] == 'O'){
                 key = Find_Set(i*col + col - 1);
-                it = find(keys.begin(), keys.end(), key);
-                if (it == keys.end())
+                if (find(keys.begin(), keys.end(), key) == keys.end())
                 	keys.push_back(key);
             }
         }
 
-        for (int i = 1; i < row - 1; i++){
-            for (int j = 1; j < col - 1; j++){
-                key = Find_Set(i*col + j);
-                if (board[i][j] == 'O'){
-                    it = find(keys.begin(), keys.end(), key);
-                    if (it == keys.end())
+        for (int i = 1; i < row - 1; i++)
+            for (int j = 1; j < col - 1; j++)
+                if (board[i][j] == 'O') {
+                    key = Find_Set(i*col + j);
+                    if (find(keys.begin(), keys.end(), key) == keys.end())
                         board[i][j] = 'X';
                 }
-            }
-        }
     }
 };
 ```
