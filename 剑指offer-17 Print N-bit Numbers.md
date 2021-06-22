@@ -55,31 +55,29 @@ public:
 ```c++
 class Solution {
 private:
-    vector<string> ans;
-    string res;
+    std::vector<string> ans;
+    std::string res;
 
 public:
     void backtrack(int width){
-        if (width == 0){
+        if (width == 0)
             ans.push_back(res);
-            return;
-        }
-
-        for (int i = 0; i < 10; i++){
-            res += to_string(i);
-            backtrack(width - 1);
-            res = res.substr(0, res.size() - 1);
-        }
+        else
+            for (int i = 0; i < 10; i++) {
+                res += to_string(i);
+                backtrack(width - 1);
+                res = res.substr(0, res.size() - 1);
+            }
     }
 
-    vector<int> printNumbers(int n) {
+    std::vector<int> printNumbers(int n) {
         backtrack(n);
         
-		vector<int> ret_ans;
+		std::vector<int> ret_ans;
         for (string num : ans)
             ret_ans.push_back(atoi(num.c_str()));
 
-        vector<int> new_ans(ret_ans.begin() + 1, ret_ans.end());
+        std::vector<int> new_ans(ret_ans.begin() + 1, ret_ans.end());
         return new_ans;
     }       
 };
