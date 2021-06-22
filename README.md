@@ -158,7 +158,7 @@
 - [☆☆☆ 090. Subsets II ☆☆☆](090%20Subsets%20II.md)
 - [☆☆☆ 093. Restore IP Addresses ☆☆☆](093%20Restore%20IP%20Addresses.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
-- [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers)
+- [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 
 ## Recursive
 
@@ -187,7 +187,7 @@
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆☆☆ 剑指Offer 07. Construct Binary Tree from Preorder and Inorder ☆☆☆ (同105)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
-- [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers)
+- [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
@@ -397,7 +397,7 @@
 - [☆☆☆ 剑指Offer 11. Find Minimum in Rotated Sorted Array ☆☆☆ (同154)](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
-- [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers)
+- [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 - [☆ 剑指Offer 18. Delete Element in LinkList ☆](%E5%89%91%E6%8C%87offer-18%20Delete%20element%20in%20linkList.md)
 - [☆☆☆ 剑指Offer 24. Reverse LinkList ☆☆☆](%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 - [☆☆ 剑指Offer 25. Merge Two Sorted Lists ☆☆ (同021)](021%20Merge%20Two%20Sorted%20Lists.md)
