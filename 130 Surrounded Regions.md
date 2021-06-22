@@ -35,7 +35,7 @@ private:
     int row, col, key;
     std::vector<int> parent;
     std::vector<int> height;
-    std::vector<int> keys;
+    std::set<int> keys;
 
 public:
     void Create_Set(int x){
@@ -105,45 +105,33 @@ public:
                 }
 
         for (int i = 0; i < col; i++) {
-            if (board[0][i] == 'O') {
-                key = Find_Set(i);
-                if (find(keys.begin(), keys.end(), key) == keys.end())
-                	keys.push_back(key);
-            }
-            if (board[row - 1][i] == 'O') {
-                key = Find_Set((row-1)*col + i);
-                if (find(keys.begin(), keys.end(), key) == keys.end())
-                	keys.push_back(key);
-            }
+            if (board[0][i] == 'O') 
+            	keys.insert(Find_Set(i));
+            if (board[row - 1][i] == 'O') 
+            	keys.insert(Find_Set((row-1)*col + i));
         }
 
         for (int i = 0; i < row; i++) {
-            if (board[i][0] == 'O') {
-                key = Find_Set(i*col);
-                if (find(keys.begin(), keys.end(), key) == keys.end())
-                	keys.push_back(key);
-            }
-            if (board[i][col - 1] == 'O'){
-                key = Find_Set(i*col + col - 1);
-                if (find(keys.begin(), keys.end(), key) == keys.end())
-                	keys.push_back(key);
-            }
+            if (board[i][0] == 'O') 
+            	keys.insert(Find_Set(i*col));
+            if (board[i][col - 1] == 'O')
+            	keys.insert(Find_Set(i*col + col - 1));
         }
 
         for (int i = 1; i < row - 1; i++)
             for (int j = 1; j < col - 1; j++)
                 if (board[i][j] == 'O') {
                     key = Find_Set(i*col + j);
-                    if (find(keys.begin(), keys.end(), key) == keys.end())
+                    if (keys.find(key) == keys.end())
                         board[i][j] = 'X';
                 }
     }
 };
 ```
 
-执行用时：28 ms, 在所有 C++ 提交中击败了54.30%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了32.31%的用户
 
-内存消耗：10.3 MB, 在所有 C++ 提交中击败了41.66%的用户
+内存消耗：10.2 MB, 在所有 C++ 提交中击败了18.99%的用户
 
 Attention:
 
