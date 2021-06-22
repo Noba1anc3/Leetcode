@@ -34,30 +34,31 @@ Output: ["0"]
 ```c++
 class Solution {
 private:
-    string res;
-    vector<string> ans;
+    std::string res;
+    std::vector<string> ans;
 
 public:
     void backtrack(string& S, int i){
-        if (i == S.size()){
+        if (i == S.size())
             ans.push_back(res);
-            return;
-        }
-        res += S[i];
-        backtrack(S, i + 1);
-        res = res.substr(0, res.size() - 1);
-        if (S[i] >= 'A' && S[i] <= 'Z'){
-            res += S[i] - 'A' + 'a';
-            backtrack(S, i + 1);
-            res = res.substr(0, res.size() - 1);
-        }
-        if (S[i] >= 'a' && S[i] <= 'z'){
-            res += S[i] - 'a' + 'A';
+        else {
+            if (S[i] >= 'A' && S[i] <= 'Z'){
+                res += S[i] - 'A' + 'a';
+                backtrack(S, i + 1);
+                res = res.substr(0, res.size() - 1);
+            }
+            if (S[i] >= 'a' && S[i] <= 'z'){
+                res += S[i] - 'a' + 'A';
+                backtrack(S, i + 1);
+                res = res.substr(0, res.size() - 1);
+            }
+            res += S[i];
             backtrack(S, i + 1);
             res = res.substr(0, res.size() - 1);
         }
     }
-    vector<string> letterCasePermutation(string S) {
+
+    std::vector<string> letterCasePermutation(std::string S) {
         backtrack(S, 0);
         return ans;
     }
