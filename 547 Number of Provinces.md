@@ -186,70 +186,60 @@ public:
 class Solution {
 private:
     int num = 0;
-    vector<int> height;
-    vector<int> parent;
-    vector<int> created;
-    vector<int> keys;
+    vector<int> height, parent, keys;
 
 public:
-    void Create_Set(int key){
-        parent[key] = key;
-        height[key] = 1;
-        created[key] = 1;
+    void Create_Set(int x){
+        if (parent[x] != 0) return;
+        parent[x] = x;
+        height[x] = 1;
     }
 
-    int Find_Set(int key){
-        while(parent[key] != key)
-            key = parent[key];
-        
-        return key;
+    int Find_Set(int x){
+        while(parent[x] != x)
+            x = parent[x];
+        return x;
     }
 
-    void Union(int key1, int key2){
-        if (key1 == key2)
-            return;
-
-        int ROOT1 = Find_Set(key1);
-        int ROOT2 = Find_Set(key2);
+    void Union(int x, int y){
+        int ROOT1 = Find_Set(x);
+        int ROOT2 = Find_Set(y);
 
         if (ROOT1 == ROOT2)
             return;
 
         if (height[ROOT1] <= height[ROOT2]){
-            if (height[ROOT1] == height[ROOT2]){
-                height[ROOT2]++;
-            }
             parent[ROOT2] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            parent[y] = ROOT1;
+            height[y] = height[ROOT1] + 1;
         }
         else{
             parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[x] = ROOT2;
+            height[x] = height[ROOT2] + 1;
         }
     }
 
     int findCircleNum(vector<vector<int>>& isConnected) {
         parent.resize(isConnected.size()+1);
         height.resize(isConnected.size()+1);
-        created.resize(isConnected.size()+1);
 
         for (int i = 0; i < isConnected.size(); i++){
             for (int j = 0; j < isConnected.size(); j++){
                 if (isConnected[i][j]){
-                    if (created[i+1] == 0){
-                        Create_Set(i+1);
-                    }
-                    if (created[j+1] == 0){
-                        Create_Set(j+1);
-                    }
+                    Create_Set(i+1);
+                    Create_Set(j+1);
                     Union(i+1, j+1);
                 }
             }
         }
 
-        for (int key : parent){
-            key = Find_Set(key);
-            if (key != 0){
-                vector<int>::iterator it = find(keys.begin(), keys.end(), key);
-                if (it == keys.end()){
+        for (const int& x : parent) {
+            int key = Find_Set(x);
+            if (key != 0) {
+                if (find(keys.begin(), keys.end(), key) == keys.end()) {
                     num++;
                     keys.push_back(key);
                 }
@@ -261,9 +251,9 @@ public:
 };
 ```
 
-执行用时：56 ms, 在所有 C++ 提交中击败了76.24%的用户
+执行用时：24 ms, 在所有 C++ 提交中击败了81.93%的用户
 
-内存消耗：13.9 MB, 在所有 C++ 提交中击败了40.50%的用户
+内存消耗：13.4 MB, 在所有 C++ 提交中击败了42.50%的用户
 
 Attention
 
