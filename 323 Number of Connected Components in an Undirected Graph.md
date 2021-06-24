@@ -39,10 +39,10 @@ private:
     int WHITE = 0, GRAY = 1, BLACK = 2;
 
 public:
-    vector<vector<int>> GraphConstruction(int n, vector<vector<int>>& edges){
-        vector<vector<int>> Graph(n+1, vector<int>());
+    std::vector<std::vector<int>> GraphConstruction(int n, std::vector<std::vector<int>>& edges){
+        std::vector<std::vector<int>> Graph(n+1, std::vector<int>());
 
-        for(vector<int>& edge : edges){
+        for(const vector<int>& edge : edges) {
             Graph[edge[0]+1].push_back(edge[1]+1);
             Graph[edge[1]+1].push_back(edge[0]+1);
         }
@@ -50,24 +50,23 @@ public:
         return Graph;
     }
 
-    vector<vector<int>> ReverseGraph(vector<vector<int>>& Graph){
+    std::vector<std::vector<int>> ReverseGraph(std::vector<std::vector<int>>& Graph){
         int n = Graph.size();
-        vector<vector<int>> GraphR(n, vector<int>());
+        std::vector<std::vector<int>> GraphR(n, std::vector<int>());
 
         for(int src = 1; src < n; src++){
-            vector<int> vertex = Graph[src];
-            for (int& dst : vertex){
+            std::vector<int> vertex = Graph[src];
+            for (const int& dst : vertex)
                 GraphR[dst].push_back(src);
-            }
         }
 
         return GraphR;
     }
 
-    void DFS(vector<vector<int>>& Graph, int root, vector<int>& color, vector<int>& DFS_Sequence){
+    void DFS(std::vector<std::vector<int>>& Graph, int root, std::vector<int>& color, std::vector<int>& DFS_Sequence){
         color[root] = GRAY;
 
-        for (auto& node : Graph[root])
+        for (const auto& node : Graph[root])
             if (color[node] == WHITE)
                 DFS(Graph, node, color, DFS_Sequence);
 
@@ -75,27 +74,27 @@ public:
         DFS_Sequence.push_back(root);
     }
 
-    vector<int> DFSVisit(vector<vector<int>>& Graph){
+    std::vector<int> DFSVisit(std::vector<std::vector<int>>& Graph){
         int n = Graph.size();
-        vector<int> color(n, WHITE);
-        vector<int> DFS_Sequence;
+        std::vector<int> color(n, WHITE);
+        std::vector<int> DFS_Sequence;
 
-        for (int i = 1; i < Graph.size(); i++)
+        for (int i = 1; i < n; i++)
             if (color[i] == WHITE)
                 DFS(Graph, i, color, DFS_Sequence);
 
         return DFS_Sequence;
     }
 
-    vector<vector<int>> getSCCs(vector<vector<int>>& Graph, vector<int>& Sequence){
+    std::vector<std::vector<int>> getSCCs(std::vector<std::vector<int>>& Graph, std::vector<int>& Sequence){
         int n = Graph.size();
-        vector<int> color(n, WHITE);
-        vector<vector<int>> SCCs;
+        std::vector<int> color(n, WHITE);
+        std::vector<std::vector<int>> SCCs;
 
         for (int i = 1; i < n; i++){
             int vertex = Sequence[i-1];
             if (color[vertex] == WHITE){
-                vector<int> DFS_Sequence;
+                std::vector<int> DFS_Sequence;
                 DFS(Graph, vertex, color, DFS_Sequence);
                 SCCs.push_back(DFS_Sequence);
             }
@@ -104,9 +103,9 @@ public:
         return SCCs;
     }
 
-    int countComponents(int n, vector<vector<int>>& edges) {
-        vector<vector<int>> Graph, GraphR, SCCs;
-        vector<int> Sequence;
+    int countComponents(int n, std::vector<std::vector<int>>& edges) {
+        std::vector<vector<int>> Graph, GraphR, SCCs;
+        std::vector<int> Sequence;
 
         Graph = GraphConstruction(n, edges);
         GraphR = ReverseGraph(Graph);
