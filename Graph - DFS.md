@@ -13,7 +13,7 @@ private:
 public:
     void Init(int n){
         pred.resize(n);
-		color.resize(n);
+	color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
@@ -36,7 +36,7 @@ public:
     }
 
     void DFS(int n, vector<vector<int>>& edges) {
-		Init(n);
+	Init(n);
         
         for (vector<int> edge : edges)
             Graph[edge[0]].push_back(edge[1]);
@@ -59,7 +59,7 @@ private:
 public:
     void Init(int n){
         pred.resize(n);
-		color.resize(n);
+	color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
@@ -82,7 +82,7 @@ public:
     }
 
     void DFS(int n, vector<vector<int>>& edges) {
-		Init(n);
+	Init(n);
         
         for (vector<int> edge : edges)
             Graph[edge[0]].push_back(edge[1]);
@@ -109,7 +109,7 @@ private:
 public:
     void Init(int n){
         pred.resize(n);
-		color.resize(n);
+	color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
@@ -138,7 +138,7 @@ public:
     }
 
     bool DFS(int n, vector<vector<int>>& edges) {
-		Init(n);
+	Init(n);
         
         for (vector<int> edge : edges)
             Graph[edge[0]].push_back(edge[1]);
