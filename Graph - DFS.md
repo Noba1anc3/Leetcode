@@ -90,62 +90,58 @@ public:
 }
 ```
 
-### 环路测试版本
+### 环路测试
 
 ```c++
 class Solution {
 private:
     int time = 0;
     int WHITE = 0, GRAY = 1, BLACK = 2;
-    vector<int> start, finish, pred, color;
-    vector<vector<int>> Graph;
+    std::vector<std::vector<int>> Graph;
+    std::vector<int> start, finish, pred, color;
     bool acyclic = true;
 
 public:
-    void Init(int n){
+    void init(int n){
         pred.resize(n);
-	color.resize(n);
+        color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
     }
-    
-    void DFSVisit(int vertex){
 
+    void DFSVisit(int vertex){
         color[vertex] = GRAY;
         start[vertex] = ++time;
 
-        for (auto adjVertex : Graph[vertex]){
-            if (color[adjVertex] == WHITE){
+        for (const int& adjVertex : Graph[vertex]) {
+            if (color[adjVertex] == GRAY) {
+                acyclic = false;
+                return;
+            }
+            
+            if (color[adjVertex] == WHITE) {
                 pred[adjVertex] = vertex;
                 DFSVisit(adjVertex);
-                if (!acyclic)
-                    return;
-            }
-            if (color[adjVertex] == GRAY){
-                acyclic = false;
-            	return;
+                if (!acyclic) return;
             }
         }
-
+        
         color[vertex] = BLACK;
         finish[vertex] = ++time;
     }
 
-    bool DFS(int n, vector<vector<int>>& edges) {
-	Init(n);
-        
-        for (vector<int> edge : edges)
+    bool DFS(int n, std::vector<std::vector<int>>& edges) {
+        init(n);
+
+        for (const std::vector<int>& edge : edges)
             Graph[edge[0]].push_back(edge[1]);
-		
-        for (int i = 0; i < n; i++){
+
+        for (int i = 0; i < n; i++)
             if (color[i] == WHITE)
                 DFSVisit(i);
-        }
         
-        if (acyclic)
-            return true;
-        return false;
+        return acyclic;
     }
 }
 ```
