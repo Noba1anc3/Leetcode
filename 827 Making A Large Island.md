@@ -66,7 +66,7 @@ Attention:
 ```c++
 class Solution {
 public:
-    bool inarea(vector<vector<int>>& grid, int i, int j){
+    bool inarea(vector<vector<int>>& grid, int i, int j) {
         return i >= 0 && i < grid.size() && j >= 0 && j < grid[0].size();
     }
 
@@ -87,21 +87,17 @@ public:
         int index = 2; // 降低空间复杂度
         vector<int> area = {0, 0};
 
-        for (int i = 0; i < grid.size(); i++){
-            for (int j = 0; j < grid[0].size(); j++){
+        for (int i = 0; i < grid.size(); i++) 
+            for (int j = 0; j < grid[0].size(); j++) 
                 if (grid[i][j] == 1){
                     int size = dfs(grid, i, j, index++);
+                    ans = max(ans, size);
                     area.push_back(size);
                 }
-            }
-        }
 
-        for (const int& a : area)
-            ans = max(ans, a); // 可能没有填海造陆的空间
-
-        for (int i = 0; i < grid.size(); i++){
-            for (int j = 0; j < grid[0].size(); j++){
-                if (grid[i][j] == 0){
+        for (int i = 0; i < grid.size(); i++)
+            for (int j = 0; j < grid[0].size(); j++)
+                if (grid[i][j] == 0) {
                     unordered_set<int> neighbors; // 避免重复
                     int neighbors_area = 0;
 
@@ -119,8 +115,6 @@ public:
 
                     ans = max(ans, 1 + neighbors_area);
                 }
-            }
-        }
 
         return ans;
     }
