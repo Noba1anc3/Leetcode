@@ -11,7 +11,7 @@ private:
     std::vector<int> start, finish, pred, color;
 
 public:
-    void Init(int n){
+    void init(int n){
         pred.resize(n);
         color.resize(n);
         start.resize(n);
@@ -23,19 +23,18 @@ public:
         color[vertex] = GRAY;
         start[vertex] = ++time;
 
-        for (const int& adjVertex : Graph[vertex]){
-            if (color[adjVertex] == WHITE){
+        for (const int& adjVertex : Graph[vertex])
+            if (color[adjVertex] == WHITE) {
                 pred[adjVertex] = vertex;
                 DFSVisit(adjVertex);
             }
-        }
-
+	    
         color[vertex] = BLACK;
         finish[vertex] = ++time;
     }
 
     void DFS(int n, std::vector<std::vector<int>>& edges) {
-        Init(n);
+        init(n);
 
         for (const std::vector<int>& edge : edges)
             Graph[edge[0]].push_back(edge[1]);
