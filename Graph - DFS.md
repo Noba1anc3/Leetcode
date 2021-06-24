@@ -7,24 +7,23 @@ class Solution {
 private:
     int time = 0, root = 0;
     int WHITE = 0, GRAY = 1, BLACK = 2;
-    vector<int> start, finish, pred, color;
-    vector<vector<int>> Graph;
+    std::vector<std::vector<int>> Graph;
+    std::vector<int> start, finish, pred, color;
 
 public:
     void Init(int n){
         pred.resize(n);
-	color.resize(n);
+        color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
     }
-    
-    void DFSVisit(int vertex){
 
+    void DFSVisit(int vertex){
         color[vertex] = GRAY;
         start[vertex] = ++time;
 
-        for (auto adjVertex : Graph[vertex]){
+        for (const int& adjVertex : Graph[vertex]){
             if (color[adjVertex] == WHITE){
                 pred[adjVertex] = vertex;
                 DFSVisit(adjVertex);
@@ -35,10 +34,10 @@ public:
         finish[vertex] = ++time;
     }
 
-    void DFS(int n, vector<vector<int>>& edges) {
-	Init(n);
-        
-        for (vector<int> edge : edges)
+    void DFS(int n, std::vector<std::vector<int>>& edges) {
+        Init(n);
+
+        for (const std::vector<int>& edge : edges)
             Graph[edge[0]].push_back(edge[1]);
 
         DFSVisit(root);
