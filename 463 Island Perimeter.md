@@ -22,6 +22,8 @@ Output: 4
 
 ## Solution
 
+### java
+
 ```java
 public int islandPerimeter(int[][] grid) {
     for (int r = 0; r < grid.length; r++) {
@@ -65,5 +67,51 @@ boolean inArea(int[][] grid, int r, int c) {
 
 Time : 11ms  
 Memory : 39.9MB  
+
+### c++
+```c++
+class Solution {
+private:
+    int row, col;
+
+public:
+    bool inArea(int i, int j, std::vector<std::vector<int>>& grid) {
+        if (0 <= i && i < row && 0 <= j && j < col)
+            return true;
+        return false;
+    }
+
+    int getPerimeter(int i, int j, std::vector<std::vector<int>>& grid) {
+        if (!inArea(i, j, grid))
+            return 1;
+        if (grid[i][j] == 0)
+            return 1;
+        if (grid[i][j] == 2)
+            return 0;
+            
+        grid[i][j] = 2;
+
+        return getPerimeter(i, j-1, grid) + getPerimeter(i, j+1, grid) + getPerimeter(i-1, j, grid) + getPerimeter(i+1, j, grid);
+    }
+
+    int islandPerimeter(vector<vector<int>>& grid) {
+        row = grid.size();
+        col = grid[0].size();
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == 1)
+                    return getPerimeter(i, j, grid);
+            }
+        }
+
+        return 0;
+    }
+};
+```
+
+执行用时：136 ms, 在所有 C++ 提交中击败了40.40%的用户
+
+内存消耗：94 MB, 在所有 C++ 提交中击败了26.20%的用户
 
 
