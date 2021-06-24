@@ -131,7 +131,7 @@
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
-- [827. Making A Large Island](827%20Making%20A%20Large%20Island.md)
+- [☆☆☆ 827. Making A Large Island ☆☆☆](827%20Making%20A%20Large%20Island.md)
 
 ## Half-Search
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
@@ -381,7 +381,7 @@
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
 - [752. Open the Lock](752%20Open%20the%20Lock.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
-- [827. Making A Large Island](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
+- [☆☆☆ 827. Making A Large Island ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
 - [☆☆☆ 990. Satisfiability of Equality Equations ☆☆☆](990%20Satisfiability%20of%20Equality%20Equations.md)
