@@ -8,6 +8,7 @@ using namespace std;
 class Solution {
 private:
     int WHITE = 0, GRAY = 1, BLACK = 2;
+    
 public:
     std::vector<std::vector<int>> GraphConstruction(int n, std::vector<std::vector<int>>& edges){
         std::vector<std::vector<int>> Graph(n+1, std::vector<int>());
