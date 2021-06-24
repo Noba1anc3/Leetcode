@@ -1,6 +1,6 @@
 ## Adjacent List
 
-### 连通图版本
+### 连通图
 
 ```c++
 class Solution {
@@ -44,51 +44,48 @@ public:
 }
 ```
 
-### 非连通图版本
+### 非连通图
 
 ```c++
 class Solution {
 private:
     int time = 0;
     int WHITE = 0, GRAY = 1, BLACK = 2;
-    vector<int> start, finish, pred, color;
-    vector<vector<int>> Graph;
+    std::vector<std::vector<int>> Graph;
+    std::vector<int> start, finish, pred, color;
 
 public:
-    void Init(int n){
+    void init(int n){
         pred.resize(n);
-	color.resize(n);
+        color.resize(n);
         start.resize(n);
         finish.resize(n);
         Graph.resize(n);
     }
-    
-    void DFSVisit(int vertex){
 
+    void DFSVisit(int vertex){
         color[vertex] = GRAY;
         start[vertex] = ++time;
 
-        for (auto adjVertex : Graph[vertex]){
-            if (color[adjVertex] == WHITE){
+        for (const int& adjVertex : Graph[vertex])
+            if (color[adjVertex] == WHITE) {
                 pred[adjVertex] = vertex;
                 DFSVisit(adjVertex);
             }
-        }
 
         color[vertex] = BLACK;
         finish[vertex] = ++time;
     }
 
-    void DFS(int n, vector<vector<int>>& edges) {
-	Init(n);
-        
-        for (vector<int> edge : edges)
+    void DFS(int n, std::vector<std::vector<int>>& edges) {
+        init(n);
+
+        for (const std::vector<int>& edge : edges)
             Graph[edge[0]].push_back(edge[1]);
-		
-        for (int i = 0; i < n; i++){
+
+        for (int i = 0; i < n; i++)
             if (color[i] == WHITE)
                 DFSVisit(i);
-        }
     }
 }
 ```
