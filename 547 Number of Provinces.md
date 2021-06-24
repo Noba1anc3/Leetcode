@@ -136,7 +136,7 @@ public:
     vector<vector<int>> GraphConstruction(vector<vector<int>>& edges){
         vector<vector<int>> Graph(edges.size()+1, vector<int>());
 
-        for(int i = 0; i < edges.size(); i++){
+        for(int i = 0; i < edges.size(); i++) {
             vector<int> vertex = edges[i];
             for (int j = 0; j < vertex.size(); j++)
                 if (i != j && vertex[j] == 1)
@@ -149,7 +149,7 @@ public:
     void DFS(vector<vector<int>>& Graph, int root, vector<int>& color){
         color[root] = GRAY;
 
-        for (auto node : Graph[root])
+        for (const int& node : Graph[root])
             if (color[node] == WHITE)
                 DFS(Graph, node, color);
 
@@ -160,7 +160,7 @@ public:
         int num = 0, n = Graph.size();
         vector<int> color(n, WHITE);
 
-        for (int i = 1; i < Graph.size(); i++)
+        for (int i = 1; i < n; i++)
             if (color[i] == WHITE){
                 num++;
                 DFS(Graph, i, color);
@@ -170,18 +170,13 @@ public:
     }
 
     int findCircleNum(vector<vector<int>>& isConnected) {
-        vector<vector<int>> Graph;
-        int num;
-
-        Graph = GraphConstruction(isConnected);
-        num = DFSVisit(Graph);
-
-        return num;
+        vector<vector<int>> Graph = GraphConstruction(isConnected);
+        return DFSVisit(Graph);
     }
 };
 ```
 
-执行用时：52 ms, 在所有 C++ 提交中击败了91.55%的用户
+执行用时：24 ms, 在所有 C++ 提交中击败了81.93%的用户
 
 内存消耗：15.6 MB, 在所有 C++ 提交中击败了5.01%的用户
 
