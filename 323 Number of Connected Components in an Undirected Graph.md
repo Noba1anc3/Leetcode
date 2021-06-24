@@ -132,37 +132,47 @@ c++
 ```c++
 class Solution {
 private:
-    vector<int> parent, keys;
+    vector<int> parent, height, keys;
 
 public:
     int Find_Set(int x){
         while (parent[x] != x)
             x = parent[x];
-        
         return x;
     }
 
     void Union(int x, int y){
         int ROOT1 = Find_Set(x), ROOT2 = Find_Set(y);
 
-        if (ROOT1 == ROOT2)
-            return;
+        if (ROOT1 == ROOT2) return;
         
-        parent[ROOT2] = ROOT1;
-        parent[x] = ROOT1;
-        parent[y] = ROOT1;
+        if (height[ROOT1] <= height[ROOT2]){
+            parent[ROOT2] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            parent[y] = ROOT1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[x] = ROOT2;
+            height[x] = height[ROOT2] + 1;
+        }
     }
 
     int countComponents(int n, vector<vector<int>>& edges) {
         parent.resize(n+1);
+        height.resize(n+1);
 
-        for (int i = 1; i < n+1; i++)
+        for (int i = 1; i < n+1; i++) {
             parent[i] = i;
+            height[i] = 1;
+        }
 
-        for (vector<int>& edge : edges)
+        for (const vector<int>& edge : edges)
             Union(edge[0] + 1, edge[1] + 1);
 
-        for (int& key : parent)
+        for (const int& key : parent)
             if (key != 0 && find(keys.begin(), keys.end(), Find_Set(key)) == keys.end())
                 keys.push_back(Find_Set(key));
 
@@ -171,9 +181,9 @@ public:
 };
 ```
 
-执行用时：28 ms, 在所有 C++ 提交中击败了94.42%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了91.56%的用户
 
-内存消耗：10.7 MB, 在所有 C++ 提交中击败了88.36%的用户
+内存消耗：11.8 MB, 在所有 C++ 提交中击败了74.67%的用户
 
 Attention
 
