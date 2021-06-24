@@ -56,7 +56,7 @@ public:
 
         for(int src = 1; src < n; src++){
             vector<int> vertex = Graph[src];
-            for (int dst : vertex){
+            for (const int& dst : vertex){
                 GraphR[dst].push_back(src);
             }
         }
@@ -67,7 +67,7 @@ public:
     void DFS(vector<vector<int>>& Graph, int root, vector<int>& color, vector<int>& DFS_Sequence){
         color[root] = GRAY;
 
-        for (auto node : Graph[root])
+        for (const auto& node : Graph[root])
             if (color[node] == WHITE)
                 DFS(Graph, node, color, DFS_Sequence);
 
@@ -121,7 +121,7 @@ public:
 };
 ```
 
-执行用时：68 ms, 在所有 C++ 提交中击败了32.60%的用户
+执行用时：24 ms, 在所有 C++ 提交中击败了81.93%的用户
 
 内存消耗：17.3 MB, 在所有 C++ 提交中击败了5.01%的用户
 
