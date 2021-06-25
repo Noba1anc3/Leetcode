@@ -109,6 +109,7 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> 
 ```c++
 INT_MAX
 max(integer a, integer b)
+NULL
 ```
 
 ## Graph
