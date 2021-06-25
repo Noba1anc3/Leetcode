@@ -107,19 +107,41 @@ std::pair.second
 
 ### priority_queue
 
+c++
+
 ```c++
-std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> Q;
+std::priority_queue // default: big root heap
+std::priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
 std::priority_queue.top()
 std::priority_queue.pop()
 std::priority_queue.push()
+std::priority_queue.size()
+std::priority_queue.empty()
 ```
 
+python
+
+```python
+heapq.heappush(list, element)
+heapq.heappop(list)
+```
+
+
+
 ### other
+
+c++
 
 ```c++
 INT_MAX
 max(integer a, integer b)
 NULL
+```
+
+python
+
+```python
+list.sort(key = lambda x : x[0])
 ```
 
 ## Graph
@@ -149,6 +171,45 @@ NULL
   - 队顶元素改为黑色
 
 ### Kruskal
+
+
+
+### Dijkstra
+
+[Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+
+- 基于pair<dist, vertex>构建最小堆（优先队列）
+- 只要队列不空
+  - 弹出队顶
+  - 对其每个白色邻接点，如果边权重加队顶元素距离小于邻接点的距离，则修改邻接点的距离
+  - 将邻接点的pair推进队列
+  - 队顶元素改为黑色
+
+## Heap
+
+### Questions
+
+- [最小生成树 - Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
+- [单源最短路径 - Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+- [最小的k个数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [需要几间会议室](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
+  - 按开始时间排序
+  - 遍历会议，按结束时间进入最小堆
+    - 开始时间晚于堆顶结束时间则弹出堆顶
+    - 无论是否弹出，将当前会议加入堆中
+  - 返回堆的大小
+- [出租车能否坐下所有乘客](https://github.com/Noba1anc3/Leetcode/edit/master/1094%20Car%20Pooling.md)
+  - 简单方法
+    - 乘客个数变化只发生在上下车时间
+    - 遍历所有路程中间点，如果容量为负，则不能坐下
+  - 最小堆
+    - 按上客地点排序
+    - 遍历行程，按下客地点进入最小堆
+      - 上客地点远于堆顶下客地点则弹出堆顶，恢复容量
+      - 容量减去当前行程的人数，如果为负，则不能坐下
+      - 无论是否弹出，将当前行程加入堆中
+- [拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
+  - 基于最小堆的哈夫曼树
 
 ## DFS
 
@@ -359,4 +420,3 @@ bool check(std::string& ans){
     return balance == 0;
 }
 ```
-
