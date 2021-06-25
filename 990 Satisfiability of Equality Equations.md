@@ -114,13 +114,12 @@ Attention
 ```c++
 class Solution {
 private:
-    vector<int> parent;
+    vector<int> parent, height;
 
 public:
     int Find_Set(int x){
         while (parent[x] != x)
             x = parent[x];
-
         return x;
     }
 
@@ -130,14 +129,25 @@ public:
         if (ROOT1 == ROOT2)
             return;
         
-        parent[ROOT2] = ROOT1;
-        parent[x] = ROOT1;
-        parent[y] = ROOT1;
+        if (height[ROOT1] <= height[ROOT2]) {
+            parent[ROOT2] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            parent[y] = ROOT1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[x] = ROOT2;
+            height[x] = height[ROOT2] + 1;
+        }
     }
 
     bool equationsPossible(vector<string>& equations) {
         parent.resize(26);
-        for (int i = 0; i < 26; i++)
+        height.resize(26);
+        
+        for (int i = 0; i < 26; i++) 
             parent[i] = i;
 
         for (const string& equation : equations){
@@ -161,6 +171,6 @@ public:
 };
 ```
 
-执行用时：4 ms, 在所有 C++ 提交中击败了96.88%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了88.71%的用户
 
-内存消耗：11.2 MB, 在所有 C++ 提交中击败了33.70%的用户
+内存消耗：11.2 MB, 在所有 C++ 提交中击败了11.70%的用户
