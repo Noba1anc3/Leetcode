@@ -61,8 +61,9 @@ std::vector.size()
 std::vector.resize(integer)
     
 // vector初始化
-std::vector<std::vector<type>> vector(n, std::vector<type>(n, INT_MAX))
 std::vector<type> vector2(vector1.begin(), vector1.end())
+std::vector<std::vector<type>> vector(n, std::vector<type>())
+std::vector<std::vector<type>> vector(n, std::vector<type>(n, INT_MAX))
     
 // vector反转
 reverse(std::vector.begin(), std::vector.end())
