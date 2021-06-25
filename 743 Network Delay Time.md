@@ -106,29 +106,19 @@ private:
     int WHITE = 0, BLACK = 1;
 
 public:
-    vector<vector<vector<int>>> GraphConstruction(int n, vector<vector<int>>& edges){
-        vector<vector<int>> Graph(n+1, vector<int>());
-        vector<vector<int>> weight(n+1, vector<int>(n+1, INT_MAX));
-
-        vector<vector<vector<int>>> ans;
-
+    void GraphConstruction(int n, vector<vector<int>>& edges, vector<vector<int>>& Graph, vector<vector<int>>& weight){
         for(const vector<int>& edge : edges){
             Graph[edge[0]].push_back(edge[1]);
             weight[edge[0]][edge[1]] = edge[2];
         }
-
-        ans.push_back(Graph);
-        ans.push_back(weight);
-
-        return ans;
     }
 
     vector<int> Dijkstra(int n, vector<vector<int>>& Graph, vector<vector<int>>& weight, int root) {
         vector<int> color(n+1, WHITE), dist(n+1, INT_MAX);
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
-                
+
         dist[root] = 0;
-        Q.push(pair<int, int>(0, root));
+        Q.push(pair<int, int>(dist[root], root));
 
         while (!Q.empty()){
             int curVertex = Q.top().second; Q.pop();
@@ -145,23 +135,21 @@ public:
         return dist;
     }
 
-    int networkDelayTime(vector<vector<int>>& times, int N, int K) {
-        vector<vector<vector<int>>> ret = GraphConstruction(N, times);
-        vector<vector<int>> Graph = ret[0];
-        vector<vector<int>> weight = ret[1];
-        
-        vector<int> dist = Dijkstra(N, Graph, weight, K);
-        int maxDist = -1;
+    int networkDelayTime(vector<vector<int>>& times, int n, int K) {
+        vector<vector<int>> Graph(n+1, vector<int>()), weight(n+1, vector<int>(n+1, INT_MAX));
+        GraphConstruction(n, times, Graph, weight);
 
-        for (int i = 1; i < N + 1; i++)
-            if (maxDist < dist[i])
-                maxDist = dist[i];
+        vector<int> dist = Dijkstra(n, Graph, weight, K);
+        
+        int maxDist = -1;
+        for (int i = 1; i < n + 1; i++)
+            maxDist = max(maxDist, dist[i]);
 
         return maxDist == INT_MAX ? -1 : maxDist;
     }
 };
 ```
 
-执行用时：164 ms, 在所有 C++ 提交中击败了80.08%的用户
+执行用时：132 ms, 在所有 C++ 提交中击败了71.91%的用户
 
-内存消耗：30.2 MB, 在所有 C++ 提交中击败了21.84%的用户
+内存消耗：30.2 MB, 在所有 C++ 提交中击败了53.84%的用户
