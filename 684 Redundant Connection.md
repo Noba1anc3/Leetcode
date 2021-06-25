@@ -109,44 +109,53 @@ public:
 ```c++
 class Solution {
 private:
-    vector<int> parent;
-    
+    vector<int> parent, height;
+
 public:
     int Find_Set(int x){
         while (parent[x] != x)
             x = parent[x];
-
         return x;
     }
 
-    void Union(int x, int y){
+    bool Union(int x, int y){
         int ROOT1 = Find_Set(x), ROOT2 = Find_Set(y);
 
         if (ROOT1 == ROOT2)
-            return;
+            return true;
         
-        parent[ROOT2] = ROOT1;
-        parent[x] = ROOT1;
-        parent[y] = ROOT1;
+        if (height[ROOT1] <= height[ROOT2]){
+            parent[ROOT2] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            parent[y] = ROOT1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[x] = ROOT2;
+            height[x] = height[ROOT2] + 1;
+        }
+        return false;
     }
 
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
         int n = edges.size();
-        parent.resize(n);
+        parent.resize(n+1);
+        height.resize(n+1);
 
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i <= n; i++)
             parent[i] = i;
 
-        for (vector<int>& edge : edges){
-            if (Find_Set(edge[0] - 1) == Find_Set(edge[1] - 1))
+        for (const vector<int>& edge : edges)
+            if (Union(edge[0], edge[1])) 
                 return edge;
-            Union(edge[0] - 1, edge[1] - 1);
-        }
+
         return {0};
     }
 };
 ```
 
-执行用时：8 ms, 在所有 C++ 提交中击败了95.33%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了95.95%的用户
 
-内存消耗：8.5 MB, 在所有 C++ 提交中击败了46.60%的用户
+内存消耗：8.6 MB, 在所有 C++ 提交中击败了26.62%的用户
