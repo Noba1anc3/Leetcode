@@ -1,12 +1,5 @@
 ## C++
 
-### other
-
-```c++
-INT_MAX
-max(integer a, integer b)
-```
-
 ### struct
 
 ```c++
@@ -17,13 +10,11 @@ struct Edge{
 };
 ```
 
-### map & unordered_map
+### char
 
-```c++
-std::unordered_map<char, string> mapping = {
-	{'2', "abc"}, {}, {}
-}
-std::unordered_map.at(key)
+```
+'c' + 3 = 'f'
+'c' - 'a' = 2
 ```
 
 ### string
@@ -40,13 +31,6 @@ std::string -> int
     
 int -> std::string
    	std::string s = to_string(integer)
-```
-
-### char
-
-```
-'c' + 3 = 'f'
-'c' - 'a' = 2
 ```
 
 ### vector
@@ -102,6 +86,28 @@ for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
 // 查找set
 if (std::set.find(element) == std::set.end())
 if (std::set.count(element))
+```
+
+### map & unordered_map
+
+```c++
+std::unordered_map<char, string> mapping = {
+	{'2', "abc"}, {}, {}
+}
+std::unordered_map.at(key)
+```
+
+### priority_queue
+
+```c++
+priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
+```
+
+### other
+
+```c++
+INT_MAX
+max(integer a, integer b)
 ```
 
 ## Graph
