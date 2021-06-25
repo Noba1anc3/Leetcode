@@ -61,27 +61,21 @@ public:
 ```python
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
-        if not intervals:
-            return 0
-
-        # Sort the meetings in increasing order of their start time.
         intervals.sort(key = lambda x : x[0])
         
-        # The heap initialization
         free_rooms = []
-        heapq.heappush(free_rooms, intervals[0][1])
 
-        for i in intervals[1:]:
-            if free_rooms[0] <= i[0]:
+        for i in intervals:
+            if len(free_rooms) > 0 and free_rooms[0] <= i[0]:
                 heapq.heappop(free_rooms)
             heapq.heappush(free_rooms, i[1])
 
         return len(free_rooms)
 ```
 
-执行用时：52 ms, 在所有 Python3 提交中击败了63.84%的用户
+执行用时：56 ms, 在所有 Python3 提交中击败了34.84%的用户
 
-内存消耗：16.3 MB, 在所有 Python3 提交中击败了26.24%的用户
+内存消耗：16.3 MB, 在所有 Python3 提交中击败了50.24%的用户
 
 Attention
 
