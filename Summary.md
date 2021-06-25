@@ -98,10 +98,19 @@ std::unordered_map<char, string> mapping = {
 std::unordered_map.at(key)
 ```
 
+### pair
+
+```c++
+std::pair.first
+std::pair.second
+```
+
 ### priority_queue
 
 ```c++
 std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> Q;
+std::priority_queue.top()
+std::priority_queue.pop()
 ```
 
 ### other
