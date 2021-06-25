@@ -37,7 +37,7 @@ c++
 ```c++
 class Solution {
 private:
-    vector<int> parent;
+    vector<int> parent, height;
     unordered_set<string> mailSet;
     unordered_map<string, int> mailUserMap;
 
@@ -45,29 +45,39 @@ public:
     int Find_Set(int x){
         while (parent[x] != x)
             x = parent[x];
-
         return x;
     }
 
     void Union(int x, int y){
         int ROOT1 = Find_Set(x), ROOT2 = Find_Set(y);
 
-        if (ROOT1 != ROOT2){
+        if (ROOT1 == ROOT2) return;
+        
+        if (height[ROOT1] <= height[ROOT2]){
             parent[ROOT2] = ROOT1;
-            parent[x] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
             parent[y] = ROOT1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[x] = ROOT2;
+            height[x] = height[ROOT2] + 1;
         }
     }
 
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         parent.resize(accounts.size());
+        height.resize(accounts.size());
+
         for(int i = 0; i < parent.size(); i++) 
             parent[i] = i;
 
-        for (int i = 0; i < accounts.size(); i++) {
+        for(int i = 0; i < accounts.size(); i++) {
             for(int j = 1; j < accounts[i].size(); j++) {
                 string mail = accounts[i][j];
-                if (!mailSet.count(mail)) {
+                if (!mailSet.count(mail)){
                     mailSet.insert(mail);
                     mailUserMap[mail] = i;
                 }
@@ -90,27 +100,27 @@ public:
 
         // 遍历accMail，其中每一项为<人名位置， 该人名下所有的邮箱>
         // 将其转化为题目需要的返回格式
-        vector<vector<string>> res;
+        vector<vector<string>> rsp;
         
-        for(auto& acc: accMail)
+        for(const auto& acc : accMail)
         {
             vector<string> ans;
             ans.push_back(accounts[acc.first][0]);
             
-            for(auto& mail: acc.second) 
+            for(const string& mail : acc.second) 
                 ans.push_back(mail);
 
-            res.push_back(ans);
+            rsp.push_back(ans);
         }
 
-        return res;
+        return rsp;
     }
 };
 ```
 
-执行用时：168 ms, 在所有 C++ 提交中击败了85.61%的用户
+执行用时：132 ms, 在所有 C++ 提交中击败了55.61%的用户
 
-内存消耗：31.2 MB, 在所有 C++ 提交中击败了62.59%的用户
+内存消耗：37.1 MB, 在所有 C++ 提交中击败了49.59%的用户
 
 Attention
 
