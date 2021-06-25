@@ -39,13 +39,13 @@ public:
                 if (color[adjVertex] == WHITE && weight[curVertex][adjVertex] < key[adjVertex]){
                     key[adjVertex] = weight[curVertex][adjVertex];
                     // pred[adjVertex] = curVertex;
-                    Q.push(pair<int, int> (key[adjVertex], adjVertex));
+                    Q.push(pair<int, int>(key[adjVertex], adjVertex));
                 }
             }
             color[curVertex] = BLACK;
         }
 
-        for(int i = 1; i < n+1; i++)
+        for(int i = 1; i <= n; i++)
             MSTValue += key[i];
 
         return MSTValue;
