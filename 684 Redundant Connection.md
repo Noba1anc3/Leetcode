@@ -43,13 +43,12 @@ c++
 ```c++
 class Solution {
 private:
-    vector<int> parent;
+    vector<int> parent, height;
 
 public:
     int Find_Set(int x){
         while (parent[x] != x)
             x = parent[x];
-
         return x;
     }
 
@@ -59,41 +58,51 @@ public:
         if (ROOT1 == ROOT2)
             return;
         
-        parent[ROOT2] = ROOT1;
-        parent[x] = ROOT1;
-        parent[y] = ROOT1;
+        if (height[ROOT1] <= height[ROOT2]){
+            parent[ROOT2] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            parent[y] = ROOT1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            parent[x] = ROOT2;
+            height[x] = height[ROOT2] + 1;
+        }
     }
 
     int calKey(){
-        vector<int> keys;
-        for(int& key : parent){
-            key = Find_Set(key);
-            if (find(keys.begin(), keys.end(), key) == keys.end())
-                keys.push_back(key);
-        }
+        set<int> keys;
+        for(const int& key : parent)
+            keys.insert(Find_Set(key));
 
         return keys.size();
     }
 
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
         int n = edges.size();
-        parent.resize(n);
+        parent.resize(n+1);
+        height.resize(n+1);
 
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i <= n; i++)
             parent[i] = i;
-        
-        int keyNum = n;
-        for (vector<int>& edge : edges){
-            Union(edge[0] - 1, edge[1] - 1);
+
+        for (const vector<int>& edge : edges){
+            Union(edge[0], edge[1]);
             int curKey = calKey();
-            if (keyNum == curKey)
+            if (n+1 == curKey)
                 return edge;
-            keyNum = curKey;
+            n--;
         }
         return {0};
     }
 };
 ```
+
+执行用时：1008 ms, 在所有 C++ 提交中击败了5.14%的用户
+
+内存消耗：171.7 MB, 在所有 C++ 提交中击败了5.01%的用户
 
 ### Thinking Phase - II
 
