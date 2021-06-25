@@ -1,7 +1,3 @@
-c++
-
-因c++的优先队列不支持修改元素，在此将优先队列替换为普通列表，通过上色的方式标注其已加入MST元素集合当中
-
 ```c++
 #include <iostream>
 #include <algorithm>
@@ -36,7 +32,8 @@ public:
         while (!Q.empty()){
             int curVertex = Q.top().second; Q.pop();
             for (int adjVertex : Graph[curVertex]){
-                if (color[adjVertex] == WHITE && (weight[curVertex][adjVertex] < key[adjVertex] || weight[adjVertex][curVertex] < key[adjVertex])){
+                if (color[adjVertex] == WHITE && 
+                    (weight[curVertex][adjVertex] < key[adjVertex] || weight[adjVertex][curVertex] < key[adjVertex])){
                     key[adjVertex] = min(weight[adjVertex][curVertex], weight[curVertex][adjVertex]);
                     pred[adjVertex] = curVertex;
                     Q.push(pair<int, int> (key[adjVertex], adjVertex));
@@ -71,4 +68,3 @@ int main()
     return 0;
 }
 ```
-
