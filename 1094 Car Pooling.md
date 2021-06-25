@@ -88,7 +88,7 @@ public:
     bool carPooling(vector<vector<int>>& trips, int capacity) {
         vector<int> location(1001, 0);
 
-        for (auto trip : trips){
+        for (const vector<int>& trip : trips){
             for (int i = trip[1]; i < trip[2]; i++){
                 location[i] += trip[0];
                 if (location[i] > capacity)
@@ -101,9 +101,9 @@ public:
 };
 ```
 
-执行用时：52 ms, 在所有 C++ 提交中击败了14.50%的用户
+执行用时：32 ms, 在所有 C++ 提交中击败了13.50%的用户
 
-内存消耗：9.5 MB, 在所有 C++ 提交中击败了18.55%的用户
+内存消耗：9.5 MB, 在所有 C++ 提交中击败了9.9%的用户
 
 ## Solution - III Time Deduced Brute Force
 
@@ -131,6 +131,6 @@ public:
 };
 ```
 
-执行用时：16 ms, 在所有 C++ 提交中击败了73.64%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了85.64%的用户
 
-内存消耗：9.5 MB, 在所有 C++ 提交中击败了17.95%的用户
+内存消耗：9.5 MB, 在所有 C++ 提交中击败了9.9%的用户
