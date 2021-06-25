@@ -41,20 +41,18 @@ c++
 class Solution {
 public:
     int connectSticks(vector<int>& sticks) {
-        int num = 0, leaf_sum = 0;
+        int num = 0;
         priority_queue<int, vector<int>, greater<int>> Q;
         
-        for (auto stick : sticks)
+        for (const int& stick : sticks)
             Q.push(stick);
 
-        while (true){
-            if (Q.size() == 1)
-                break;
+        while (Q.size() != 1){
+            int leaf_sum = 0;
             leaf_sum += Q.top(); Q.pop();
             leaf_sum += Q.top(); Q.pop();
             num += leaf_sum;
             Q.push(leaf_sum);
-            leaf_sum = 0;
         }
         
         return num;
@@ -62,9 +60,9 @@ public:
 };
 ```
 
-执行用时：396 ms, 在所有 C++ 提交中击败了66.67%的用户
+执行用时：108 ms, 在所有 C++ 提交中击败了11.54%的用户
 
-内存消耗：23.9 MB, 在所有 C++ 提交中击败了50.00%的用户
+内存消耗：23.7 MB, 在所有 C++ 提交中击败了17.31%的用户
 
 Attention
 
