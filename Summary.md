@@ -101,7 +101,7 @@ std::unordered_map.at(key)
 ### priority_queue
 
 ```c++
-priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
+std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> Q;
 ```
 
 ### other
