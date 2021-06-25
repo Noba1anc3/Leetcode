@@ -38,12 +38,8 @@ Output: 1
 class Solution {
 public:
     int minMeetingRooms(vector<vector<int>>& intervals) {
-        if (intervals.empty())
-            return 0;
-            
         sort(intervals.begin(), intervals.end());
-
-        priority_queue<int, vector<int>, greater<int>> Q;
+        std::priority_queue<int, vector<int>, greater<int>> Q;
 
         for (const vector<int>& interval : intervals){
             if (!Q.empty() && interval[0] >= Q.top())
