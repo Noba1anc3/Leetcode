@@ -45,32 +45,31 @@ c++
 class Solution {
 public:
     vector<int> getLeastNumbers(vector<int>& arr, int k) {
-        vector<int> leastK(k, 0);
-        priority_queue<int> Q;
+        std::vector<int> rsp;
+        std::priority_queue<int> Q;
 
-        if (k == 0)
-            return leastK;
-
+        if (k == 0) return rsp;
+        
         for (int i = 0; i < k; i++)
             Q.push(arr[i]);
         
         for (int i = k; i < arr.size(); i++)
-            if (Q.top() > arr[i]) {
+            if (arr[i] < Q.top()){
                 Q.pop();
                 Q.push(arr[i]);
             }
-
-        for (int i = 0; i < k; i++) {
-            leastK[i] = Q.top();
+        
+        while(!Q.empty()){
+            rsp.push_back(Q.top());
             Q.pop();
         }
 
-        return leastK;
+        return rsp;
     }
 };
 ```
 
-执行用时：116 ms, 在所有 C++ 提交中击败了34.41%的用户
+执行用时：40 ms, 在所有 C++ 提交中击败了39.83%的用户
 
 内存消耗：19.5 MB, 在所有 C++ 提交中击败了23.26%的用户
 
