@@ -74,37 +74,39 @@ c++
 ```c++
 class Solution {
 public:
-    vector<string> neighbors(string& cur){
-        vector<string> neis;
+    std::vector<string> neighbors(string& cur){
+        std::vector<string> neighbors;
         for (int i = 0; i < 4; i++){
             for (const int& d : {-1, 1}){
                 string nei_left = cur.substr(0, i);
                 string nei_right = cur.substr(i+1, 3-i);
                 int nei_mid = (cur[i] - '0' + d) % 10;
                 if (nei_mid < 0) nei_mid += 10;
-                string nei = nei_left + to_string(nei_mid) + nei_right;
-                neis.push_back(nei);
+                string neighbor = nei_left + to_string(nei_mid) + nei_right;
+                neighbors.push_back(neighbor);
             }
         }
-        return neis;
+        return neighbors;
     }
 
-    int openLock(vector<string>& deadends, string target) {
-        set<string> seen = {"0000"};
-        queue<pair<string, int>> Q;
-        Q.push(pair<string, int>("0000", 0));
+    int openLock(std::vector<string>& deadends, string target) {
+        std::set<string> seen = {"0000"};
+        std::queue<std::pair<string, int>> Q;
+        Q.push(std::pair<string, int>("0000", 0));
 
         while (!Q.empty()){
             string cur = Q.front().first;
             int step = Q.front().second;
             Q.pop();
-            if (cur == target) return step;
-            if (find(deadends.begin(), deadends.end(), cur) != deadends.end()) continue;
-            vector<string> neis = neighbors(cur);
+            if (cur == target) 
+                return step;
+            if (find(deadends.begin(), deadends.end(), cur) != deadends.end()) 
+                continue;
+            std::vector<string> neis = neighbors(cur);
             for (const string& nei : neis){
                 if (seen.find(nei) == seen.end()){
                     seen.insert(nei);
-                    Q.push(pair<string, int>(nei, step + 1));
+                    Q.push(std::pair<string, int>(nei, step + 1));
                 }
             }
         }
