@@ -260,6 +260,10 @@ class Solution:
         return level
 ```
 
+执行用时：160 ms, 在所有 Python3 提交中击败了88.13%的用户
+
+内存消耗：15.8 MB, 在所有 Python3 提交中击败了15.46%的用户
+
 c++
 
 ```c++
