@@ -47,14 +47,14 @@ private:
     int WHITE = 0, GRAY = 1, BLACK = 2;
     bool acyclic = true;
 
-    vector<int> order;
-    vector<int> color;
-    vector<vector<int>> Graph;
+    std::vector<int> order;
+    std::vector<int> color;
+    std::vector<vector<int>> Graph;
 
 public:
     void DFSVisit(int vertex){
         color[vertex] = GRAY;
-        for (auto adjVertex : Graph[vertex]){
+        for (const int& adjVertex : Graph[vertex]){
             if (color[adjVertex] == WHITE){
                 DFSVisit(adjVertex);
                 if (!acyclic)
@@ -69,14 +69,14 @@ public:
         color[vertex] = BLACK;
     }
 
-    vector<int> Topological_Sort(int vertices, vector<vector<int>>& edges) {
-        color.resize(vertices);
-        Graph.resize(vertices);
+    vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
+        color.resize(n);
+        Graph.resize(n);
 
-        for (vector<int> edge : edges)
+        for (const vector<int>& edge : edges)
             Graph[edge[0]].push_back(edge[1]);
-        
-        for (int root = 0; root < vertices && acyclic; root++)
+
+        for (int root = 0; root < n && acyclic; root++)
             if (color[root] == WHITE)
                 DFSVisit(root);
 
