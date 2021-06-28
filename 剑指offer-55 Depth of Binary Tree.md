@@ -60,40 +60,29 @@ public:
     int maxDepth(TreeNode* T) {
         if (T == NULL) return 0;
         
-        int height = 1;
+        int curHeight = 1;
         queue<pair<TreeNode*, int>> Q;
-        pair<TreeNode*, int> node_height(T, height);
-
-        Q.push(node_height);
+        Q.push(pair<TreeNode*, int>(T, 1));
         
         while (!Q.empty()){
             TreeNode* node = Q.front().first;
-            int curHeight = Q.front().second;
+            curHeight = Q.front().second;
             Q.pop();
-                        
-            if (curHeight > height)
-                height = curHeight;
             
-            if (node->left != NULL){
-                TreeNode* lchild = node->left;
-                pair<TreeNode*, int> lchild_height(lchild, curHeight+1);
-                Q.push(lchild_height);
-            }
-            if (node->right != NULL){
-                TreeNode* rchild = node->right;
-                pair<TreeNode*, int> rchild_height(rchild, curHeight+1);
-                Q.push(rchild_height);
-            }
+            if (node->left != NULL)
+                Q.push(pair<TreeNode*, int>(node->left, curHeight+1));
+            if (node->right != NULL)
+                Q.push(pair<TreeNode*, int>(node->right, curHeight+1));
         }
         
-        return height;
+        return curHeight;
     }
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了75.31%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了97.31%的用户
 
-内存消耗：18.5 MB, 在所有 C++ 提交中击败了82.96%的用户
+内存消耗：18.5 MB, 在所有 C++ 提交中击败了5.19%的用户
 
 ### Non-recursive Vector
 
