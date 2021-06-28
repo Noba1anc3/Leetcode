@@ -33,7 +33,7 @@ Output: -1
 ```
 
 ## Solution
-我们可以将 ```0000``` 到 ```9999``` 这 10000 状态看成图上的 10000 个节点，两个节点之间存在一条边，当且仅当这两个节点对应的状态只有 1 位不同，且不同的那位相差 1（包括 0 和 9 也相差 1 的情况），并且这两个节点均不在数组 ```deadends``` 中。那么最终的答案即为 0000 到 target 的最短路径。
+我们可以将 ```0000``` 到 ```9999``` 这 10000 状态看成图上的 10000 个节点，两个节点之间存在一条边，当且仅当这两个节点对应的状态只有 1 位不同，且不同的那位相差 1（包括 0 和 9 也相差 1 的情况），并且这两个节点均不在数组 ```deadends``` 中。最终的答案即为 0000 到 target 的最短路径。
 
 我们用广度优先搜索来找到最短路径，从 ```0000``` 开始搜索。对于每一个状态，它可以扩展到最多 8 个状态，即将它的第 i = 0, 1, 2, 3 位增加 1 或减少 1，将这些状态中没有搜索过并且不在 ```deadends``` 中的状态全部加入到队列中，并继续进行搜索。注意 ```0000``` 本身有可能也在 ```deadends``` 中。
 
@@ -61,11 +61,59 @@ class Solution(object):
         return -1
 ```
 
-Time : 712ms  
-Memory : 14.3MB  
+执行用时：664 ms, 在所有 Python3 提交中击败了51.34%的用户
+
+内存消耗：16.1 MB, 在所有 Python3 提交中击败了42.43%的用户
 
 Attention:  
 - 表盘问题使用广度优先搜索
 - yield in python
 - node, depth = queue.popleft()
 
+c++
+```c++
+class Solution {
+public:
+    vector<string> neighbors(string& cur){
+        vector<string> neis;
+        for (int i = 0; i < 4; i++){
+            for (const int& d : {-1, 1}){
+                string nei_left = cur.substr(0, i);
+                string nei_right = cur.substr(i+1, 3-i);
+                int nei_mid = (cur[i] - '0' + d) % 10;
+                if (nei_mid < 0) nei_mid += 10;
+                string nei = nei_left + to_string(nei_mid) + nei_right;
+                neis.push_back(nei);
+            }
+        }
+        return neis;
+    }
+
+    int openLock(vector<string>& deadends, string target) {
+        set<string> seen = {"0000"};
+        queue<pair<string, int>> Q;
+        Q.push(pair<string, int>("0000", 0));
+
+        while (!Q.empty()){
+            string cur = Q.front().first;
+            int step = Q.front().second;
+            Q.pop();
+            if (cur == target) return step;
+            if (find(deadends.begin(), deadends.end(), cur) != deadends.end()) continue;
+            vector<string> neis = neighbors(cur);
+            for (const string& nei : neis){
+                if (seen.find(nei) == seen.end()){
+                    seen.insert(nei);
+                    Q.push(pair<string, int>(nei, step + 1));
+                }
+            }
+        }
+
+        return -1;
+    }
+};
+```
+
+执行用时：1064 ms, 在所有 C++ 提交中击败了5.11%的用户
+
+内存消耗：138.7 MB, 在所有 C++ 提交中击败了5.05%的用户
