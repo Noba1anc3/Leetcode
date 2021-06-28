@@ -4,6 +4,15 @@
 
 ## C++
 
+### int
+
+```c++
+// c++中对负数求余数不会是正数，需要加上余数
+
+// int -> string
+to_string(integer)
+```
+
 ### struct
 
 ```c++
@@ -16,9 +25,10 @@ struct Edge{
 
 ### char
 
-```
+```c++
 'c' + 3 = 'f'
 'c' - 'a' = 2
+'2' - '0' = 2  // 不能用int('2')  会变成ascii码
 ```
 
 ### string
@@ -91,6 +101,9 @@ for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
 // 查找set
 if (std::set.find(element) == std::set.end())
 if (std::set.count(element))
+
+// vector转set
+std::set(std::vector.begin(), std::vector.end())
 ```
 
 ### map & unordered_map
@@ -147,13 +160,16 @@ c++
 ```c++
 INT_MAX
 max(integer a, integer b)
+pow(integer, 2)
 NULL
+unsigned long long
 ```
 
 python
 
 ```python
 list.sort(key = lambda x : x[0])
+maximum: float('inf')
 ```
 
 # Data Structure
@@ -175,6 +191,11 @@ list.sort(key = lambda x : x[0])
     - 遍历所有指向该节点的源节点
       - 入度减一
       - 如果入度变为0，压入队列
+- [绕过不可走的位置，解开转盘锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+  - 将初始状态压入队列，进行BFS搜索，只要队列不空
+    - 取出队首，如果是结果，返回步数
+    - 如果在不可走位置列表中，continue
+    - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
 
 ## Stack
 
@@ -184,6 +205,13 @@ list.sort(key = lambda x : x[0])
   - 基于DFS算法
   - 在完成对邻接点的遍历后将节点压入栈
   - 栈顶到栈底的序列即为拓扑排序
+- [用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
+  - 入队压入1号栈
+  - 出队
+    - 2号栈不空，弹出2号栈顶
+    - 2号栈空，将1号栈逐一弹出并压入2号栈
+    - 2号栈不空，弹出2号栈顶
+    - 2号栈空，返回错误
 
 ## Heap
 
@@ -275,6 +303,28 @@ void Union(int x, int y) {
     }
 }
 ```
+
+## Tree
+
+### Questions
+
+- [求二叉树宽度](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
+
+  - ```c++
+    pair<TreeNode*, pair<int, unsigned long long>> ROOT(root, level_id)
+    ```
+
+  - 若左右儿子不空，则将左右儿子压入队列，高度+1，id分别为 2* id, 2* id + 1
+
+  - 每次进入下一层的时候，更新left的id
+
+- [求二叉树深度](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
+
+  - ```c++
+    pair<TreeNode*, int>(T, 1)
+    ```
+
+  - 若左右儿子不空，则将左右儿子压入队列，高度+1
 
 ## Graph
 
@@ -517,6 +567,16 @@ public:
 
 # Algorithm
 
+## BFS
+
+### Questions
+
+- [绕过不可走的位置，解开转盘锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+  - 将初始状态压入队列，进行BFS搜索，只要队列不空
+    - 取出队首，如果是结果，返回步数
+    - 如果在不可走位置列表中，continue
+    - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
+
 ## DFS
 
 ### Questions
@@ -646,6 +706,39 @@ string 存每次回溯之前的临时结果
 回溯法讲究还原场景，无论是否得到一个tmp_ans，都需要在加入到ans之后还原现场
 
 无论是非法结果还是得到了一个答案，都需要return
+
+## Dynamic Programming
+
+### Questions
+
+- [求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+
+  - 外层遍历数字，内层遍历平方数列表
+
+  - ```c++
+    dp[i] = min(dp[i], dp[i - square] + 1)
+    ```
+
+## Greedy
+
+### Questions
+
+- [求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+
+  - DFS Based
+
+    - 对组成数字的完全平方数由小到大进行贪心
+
+    - 递归函数的返回条件为需要一个数时，该数在完全平方数列表中
+
+    - ```c++
+      canDivide(n, count) -> canDivide(n - square, count - 1);
+      ```
+
+  - BFS Based
+
+    - 根据贪心算法的思想，先遍历完同级元素后再遍历下一节是更合理的做法
+    - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层迭代
 
 # Useful method
 
