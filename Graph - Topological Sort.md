@@ -49,7 +49,7 @@ private:
 
     std::vector<int> order;
     std::vector<int> color;
-    std::vector<vector<int>> Graph;
+    std::vector<std::vector<int>> Graph;
 
 public:
     void DFSVisit(int vertex){
@@ -69,11 +69,11 @@ public:
         color[vertex] = BLACK;
     }
 
-    vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
+    std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
         color.resize(n);
         Graph.resize(n);
 
-        for (const vector<int>& edge : edges)
+        for (const std::vector<int>& edge : edges)
             Graph[edge[0]].push_back(edge[1]);
 
         for (int root = 0; root < n && acyclic; root++)
