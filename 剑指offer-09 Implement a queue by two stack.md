@@ -30,7 +30,6 @@ private:
     
 public:
     CQueue() {
-
     }
     
     void appendTail(int value) {
@@ -48,11 +47,12 @@ public:
             s1.pop();
             s2.push(ele);
         }
-        if (s2.empty())
-            return -1;
-        int head = s2.top();
-        s2.pop();
-        return head;
+        if (!s2.empty()) {
+            int head = s2.top();
+            s2.pop();
+            return head;
+        }
+        return -1;
     }
 };
 
