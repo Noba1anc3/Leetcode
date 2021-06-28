@@ -151,7 +151,7 @@ class Solution:
                 return n in square_nums
             
             for k in square_nums:
-                if is_divided_by(n - k, count - 1):
+                if n > k and is_divided_by(n - k, count - 1):
                     return True
             return False
 
@@ -163,8 +163,8 @@ class Solution:
 ```
 
 #### 提交
-执行用时：76 ms, 在所有 Python3 提交中击败了94.27%的用户  
-内存消耗：13.9 MB, 在所有 Python3 提交中击败了32.41%的用户
+执行用时：68 ms, 在所有 Python3 提交中击败了92.27%的用户  
+内存消耗：15.5 MB, 在所有 Python3 提交中击败了18.41%的用户
 
 Attention:  
 - set相比于list可以降低时间复杂度
