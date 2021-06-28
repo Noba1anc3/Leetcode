@@ -231,6 +231,8 @@ Attention:
 
 注意：在典型的 BFS 算法中，```queue``` 变量通常是数组或列表类型。但是，这里我们使用 ```set``` 类型，以消除同一级别中的剩余项的冗余。事实证明，这个小技巧甚至可以增加 5 倍的运行加速。
 
+python
+
 ```python
 class Solution:
     def numSquares(self, n):
@@ -258,3 +260,40 @@ class Solution:
         return level
 ```
 
+c++
+
+```c++
+class Solution {
+private:
+    int level = 0;
+    set<int> squares;
+
+public:
+    int numSquares(int n) {
+        vector<int> remains = {n};
+
+        for (int i = 1; i <= sqrt(n); i++)
+            squares.insert(pow(i, 2));
+        
+        while(!remains.empty()){
+            level++;
+            vector<int> new_remains;
+
+            for (const int& remain : remains)
+                for (const int& square : squares){
+                    if (remain == square) return level;
+                    else if (remain < square) break;
+                    else new_remains.push_back(remain - square);
+                }
+                
+            remains = new_remains;
+        }
+        
+        return 0;
+    }
+};
+```
+
+执行用时：148 ms, 在所有 C++ 提交中击败了63.97%的用户
+
+内存消耗：111.7 MB, 在所有 C++ 提交中击败了4.97%的用户
