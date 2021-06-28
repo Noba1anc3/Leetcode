@@ -137,6 +137,8 @@ c++
 
 ![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9ncmVlZHkucG5n?x-oss-process=image/format,png)
 
+python
+
 ```python
 class Solution:
     def numSquares(self, n):
@@ -162,9 +164,48 @@ class Solution:
                 return count
 ```
 
+c++
+```c++
+class Solution {
+private:
+    set<int> squares;
+
+public:
+    bool canDivide(int n, int count) {
+        if (count == 1)
+            return squares.find(n) != squares.end();
+        
+        for (const int& i : squares) 
+            if (n > i && canDivide(n - i, count - 1))
+                return true;
+        return false;
+    }
+
+    int numSquares(int n) {
+        for (int i = 1; i <= sqrt(n); i++)
+            squares.insert(pow(i, 2));
+        
+        for (int i = 1; i <= n; i++)
+            if (canDivide(n, i))
+                return i;
+        
+        return 0;
+    }
+};
+```
+
 #### 提交
-执行用时：68 ms, 在所有 Python3 提交中击败了92.27%的用户  
+python
+
+执行用时：68 ms, 在所有 Python3 提交中击败了92.27%的用户
+
 内存消耗：15.5 MB, 在所有 Python3 提交中击败了18.41%的用户
+
+c++
+
+执行用时：16 ms, 在所有 C++ 提交中击败了93.60%的用户
+
+内存消耗：6.9 MB, 在所有 C++ 提交中击败了84.74%的用户
 
 Attention:  
 - set相比于list可以降低时间复杂度
