@@ -104,7 +104,7 @@ public:
         
         color[vertex] = GRAY;
 
-        for (auto adjVertex : Graph[vertex]){
+        for (const int& adjVertex : Graph[vertex]){
             if (color[adjVertex] == WHITE){
                 DFSVisit(adjVertex);
                 if (!acyclic)
@@ -124,7 +124,7 @@ public:
         color.resize(numCourses);
         Graph.resize(numCourses);
 
-        for (auto prerequisite : prerequisites)
+        for (const vector<int>& prerequisite : prerequisites)
             Graph[prerequisite[1]].push_back(prerequisite[0]);
         
         for (int root = 0; root < numCourses && acyclic; root++)
@@ -140,6 +140,6 @@ public:
 };
 ```
 
-执行用时：60 ms, 在所有 C++ 提交中击败了27.34%的用户
+执行用时：24 ms, 在所有 C++ 提交中击败了78.34%的用户
 
-内存消耗：15.2 MB, 在所有 C++ 提交中击败了10.48%的用户
+内存消耗：13.7 MB, 在所有 C++ 提交中击败了47.48%的用户
