@@ -29,11 +29,9 @@ public:
         
         color[vertex] = GRAY;
 
-        for (auto adjVertex : G[vertex]){
-            if (color[adjVertex] == WHITE){
+        for (const int& adjVertex : G[vertex])
+            if (color[adjVertex] == WHITE)
                 DFSVisit(G, adjVertex, color);
-            }
-        }
 
         color[vertex] = BLACK;
     }
@@ -46,24 +44,24 @@ public:
         vector<int> color(n, WHITE);
         vector<vector<int>> Graph(n, vector<int>());
 
-        for (auto edge : edges){
+        for (const vector<int>& edge : edges){
             Graph[edge[0]].push_back(edge[1]);
             Graph[edge[1]].push_back(edge[0]);
         }
 
         DFSVisit(Graph, root, color);
         
-        for (auto ele : color)
-            if (ele != BLACK)
+        for (const int& c : color)
+            if (c != BLACK)
                 return false;
         return true;
     }
 };
 ```
 
-执行用时：28 ms, 在所有 C++ 提交中击败了75.97%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了74.74%的用户
 
-内存消耗：11.2 MB, 在所有 C++ 提交中击败了47.30%的用户
+内存消耗：12.3 MB, 在所有 C++ 提交中击败了24.91%的用户
 
 ### BFS
 
