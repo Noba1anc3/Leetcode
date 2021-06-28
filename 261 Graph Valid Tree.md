@@ -18,6 +18,8 @@ Output: false
 
 ## Solution
 
+对于无向图判断环路，如果一次BFS/DFS后，仍然有白色节点，则代表存在环路
+
 ### DFS
 
 ```c++
@@ -52,7 +54,7 @@ public:
         DFSVisit(Graph, root, color);
         
         for (const int& c : color)
-            if (c != BLACK)
+            if (c == WHITE)
                 return false;
         return true;
     }
@@ -106,7 +108,7 @@ public:
         BFSVisit(Graph, 0, color);
             
         for (const int& ele : color)
-            if (ele != BLACK)
+            if (ele == WHITE)
                 return false;
         return true;
     }
