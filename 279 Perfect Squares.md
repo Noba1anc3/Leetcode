@@ -64,6 +64,8 @@ class Solution(object):
 
 ![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMubGVldGNvZGUtY24uY29tL0ZpZ3VyZXMvMjc5LzI3OV9kcC5wbmc?x-oss-process=image/format,png)
 
+python
+
 ```python
 class Solution(object):
     def numSquares(self, n):
@@ -79,6 +81,31 @@ class Solution(object):
                 dp[i] = min(dp[i], dp[i-square] + 1)
         
         return dp[-1]
+```
+
+c++
+
+```c++
+class Solution {
+public:
+    int numSquares(int n) {
+        vector<int> dp(n+1, INT_MAX);
+        dp[0] = 0;
+
+        vector<int> squares;
+        for (int i = 1; i <= sqrt(n); i++)
+            squares.push_back(pow(i, 2));
+        
+        for (int i = 1; i <= n; i++){
+            for (const int& square : squares){
+                if (i < square) break;
+                dp[i] = min(dp[i], dp[i - square] + 1);
+            }
+        }
+        
+        return dp[n];
+    }
+};
 ```
 
 #### 复杂度分析
