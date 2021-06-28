@@ -1,27 +1,29 @@
 ```c++
 class Solution {
 public:
-    vector<int> Topological_Sort(int vertices, vector<vector<int>>& edges) {
-        vector<vector<int>> Graph(vertices, vector<int>());
-        vector<int> InDegree(vertices, 0);
-        vector<int> Topological;
-        queue<int> Q;
+    std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
+        std::vector<std::vector<int>> GraphReverse(n, std::vector<int>());
+        std::vector<int> InDegree(n, 0);
+        std::vector<int> Topological;
+        std::queue<int> Q;
 
-        for (auto edge : edges){
-            Graph[edge[1]].push_back(edge[0]);
+        for (const std::vector<int>& edge : edges){
+            GraphReverse[edge[1]].push_back(edge[0]);
             InDegree[edge[0]]++;
         }
 
-        for (int i = 0; i < vertices; i++)
-            if (InDegree[i] == 0) Q.push(i);
+        for (int i = 0; i < n; i++)
+            if (InDegree[i] == 0)
+                Q.push(i);
 
         while (!Q.empty()){
             int vertex = Q.front();
             Q.pop();
             Topological.push_back(vertex);
-            for (auto node : Graph[vertex]){
-                InDegree[node]--;
-                if (InDegree[node] == 0) Q.push(node);
+            for (const int& adjVertex : GraphReverse[vertex]){
+                InDegree[adjVertex]--;
+                if (InDegree[adjVertex] == 0)
+                    Q.push(adjVertex);
             }
         }
 
