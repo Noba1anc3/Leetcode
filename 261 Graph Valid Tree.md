@@ -70,23 +70,21 @@ class Solution {
 public:
     int WHITE = 0, GRAY = 1, BLACK = 2;
 
-    bool BFSVisit(vector<vector<int>> &G, int vertex, vector<int> &color){
-        color[vertex] = GRAY;
-        
+    bool BFSVisit(vector<vector<int>>& G, int vertex, vector<int>& color){
         queue<int> Q;
-        Q.push(vertex);
         
+        Q.push(vertex);
+        color[vertex] = GRAY;
+
         while (!Q.empty()){
             int curVertex = Q.front();
             Q.pop();
-            
-            for (auto adjVertex : G[curVertex]){
+            for (const int& adjVertex : G[curVertex]){
                 if (color[adjVertex] == WHITE){
                     color[adjVertex] = GRAY;
                     Q.push(adjVertex);
                 }
             }
-            
             color[curVertex] = BLACK;
         }
         
@@ -100,14 +98,14 @@ public:
         vector<int> color(n, WHITE);    
         vector<vector<int>> Graph(n, vector<int>());
 
-        for (auto edge : edges){
+        for (const vector<int>& edge : edges){
             Graph[edge[0]].push_back(edge[1]);
             Graph[edge[1]].push_back(edge[0]);
         }
 
         BFSVisit(Graph, 0, color);
             
-        for (auto ele : color)
+        for (const int& ele : color)
             if (ele != BLACK)
                 return false;
         return true;
@@ -115,6 +113,6 @@ public:
 };
 ```
 
-执行用时：28 ms, 在所有 C++ 提交中击败了75.97%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了74.74%的用户
 
-内存消耗：11.2 MB, 在所有 C++ 提交中击败了47.30%的用户
+内存消耗：11.9 MB, 在所有 C++ 提交中击败了50.30%的用户
