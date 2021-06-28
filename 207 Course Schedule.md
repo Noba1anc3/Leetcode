@@ -60,14 +60,12 @@ public:
                     Q.push(node);
             }
         }
-
-        if (Topological.size() == numCourses)
-            return true;
-        return false;
+        return Topological.size() == numCourses;
     }
 };
 ```
-执行用时：80 ms, 在所有 C++ 提交中击败了13.99%的用户
 
-内存消耗：12.8 MB, 在所有 C++ 提交中击败了24.68%的用户
+执行用时：28 ms, 在所有 C++ 提交中击败了53.83%的用户
+
+内存消耗：13.6 MB, 在所有 C++ 提交中击败了34.07%的用户
 
