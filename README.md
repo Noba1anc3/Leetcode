@@ -7,7 +7,7 @@
 - [☆ 207. Course Schedule ☆](207%20Course%20Schedule.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
-- [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [☆☆☆ 279 Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 662 Maximum Width of Binary Tree ☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 - [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
