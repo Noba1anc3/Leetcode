@@ -116,3 +116,62 @@ public:
 执行用时：20 ms, 在所有 C++ 提交中击败了74.74%的用户
 
 内存消耗：11.9 MB, 在所有 C++ 提交中击败了50.30%的用户
+
+### Union-Find Set
+
+```c++
+class Solution {
+private:
+    vector<int> parent, height;
+
+public:
+    int findSet(int x){
+        while (parent[x] != x)
+            x = parent[x];
+        return x;
+    }
+
+    bool Union(int x, int y){
+        int ROOT1 = findSet(x);
+        int ROOT2 = findSet(y);
+
+        if (ROOT1 == ROOT2) return false;
+
+        if (height[ROOT1] <= height[ROOT2]) {
+            parent[ROOT2] = ROOT1;
+            parent[y] = ROOT1;
+            height[ROOT2] = height[ROOT1] + 1;
+            height[y] = height[ROOT1] + 1;
+        }
+        else{
+            parent[ROOT1] = ROOT2;
+            parent[x] = ROOT2;
+            height[ROOT1] = height[ROOT2] + 1;
+            height[x] = height[ROOT2] + 1;
+        }
+
+        return true;
+    }
+
+    bool validTree(int n, vector<vector<int>>& edges) {
+        if (edges.size() + 1 != n)
+            return false;
+
+        height.resize(n);
+        parent.resize(n);
+
+        for (int i = 0; i < n; i++)
+            parent[i] = i;  
+
+        for (const vector<int>& edge : edges)
+            if (!Union(edge[0], edge[1]))
+                return false;
+
+        return true;
+    }
+};
+```
+
+执行用时：20 ms, 在所有 C++ 提交中击败了74.74%的用户
+
+内存消耗：11.7 MB, 在所有 C++ 提交中击败了72.63%的用户
