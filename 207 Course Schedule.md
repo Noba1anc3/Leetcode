@@ -71,7 +71,7 @@ public:
 
 ### DFS Acyclic Judge
 
-```
+```c++
 class Solution {
 private:
     int WHITE = 0, GRAY = 1, BLACK = 2;
