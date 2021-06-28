@@ -55,32 +55,31 @@ int WHITE = 0, GRAY = 1, BLACK = 2;
 
 struct Graph{
     int Vnum;
-    vector<vector<int>> AdjacentMatrix;
+    std::vector<std::vector<int>> AdjacentMatrix;
 };
 
-vector<int> adjacent(Graph G, int vertex){
-    vector<int> Adjacent;
-    vector<int> vertexRow = G.AdjacentMatrix[vertex];
+std::vector<int> adjacent(Graph G, int vertex){
+    std::vector<int> Adjacent;
 
-    for (int i = 0; i < G.Vnum; i++){
-        if (vertexRow[i]) Adjacent.push_back(i);
-    }
+    for (int i = 0; i < G.Vnum; i++)
+        if (G.AdjacentMatrix[vertex][i])
+            Adjacent.push_back(i);
 
     return Adjacent;
 }
 
-void BFSVisit(Graph G, int vertex, vector<int> &color, vector<int> &dist, vector<int> &pred){
+void BFSVisit(Graph G, int vertex, std::vector<int>& color, std::vector<int>& dist, std::vector<int>& pred){
     color[vertex] = GRAY;
     dist[vertex] = 0;
-    
+
     queue<int> Q;
     Q.push(vertex);
-    
+
     while (!Q.empty()){
         int curVertex = Q.front();
         Q.pop();
-        
-        for (auto adjVertex : adjacent(G, curVertex)){
+
+        for (const int& adjVertex : adjacent(G, curVertex)){
             if (color[adjVertex] == WHITE){
                 color[adjVertex] = GRAY;
                 dist[adjVertex] = dist[curVertex] + 1;
@@ -88,22 +87,21 @@ void BFSVisit(Graph G, int vertex, vector<int> &color, vector<int> &dist, vector
                 Q.push(adjVertex);
             }
         }
-        
+
         color[curVertex] = BLACK;
     }
 }
 
 void BFS(Graph G)
 {
-    vector<int> color(G.Vnum, WHITE), pred(G.Vnum, NULL), dist(G.Vnum, 0);
+    std::vector<int> color(G.Vnum, WHITE), pred(G.Vnum, NULL), dist(G.Vnum, 0);
 
     // BFSVisit(G, 1, color, dist, pred);  start from vertex-2
 
-    for (int i = 0; i < G.Vnum; i++){
+    for (int i = 0; i < G.Vnum; i++)
         if (color[i] == WHITE)
             BFSVisit(G, i, color, dist, pred);
-    }
-    
+
     cout<<"color: ";
     for(auto ele : color)
         cout<<ele<<' ';
@@ -119,13 +117,13 @@ void BFS(Graph G)
 
 int main()
 {
-    vector<vector<int>> metrix(8, vector<int>(8, 0));
+    std::vector<std::vector<int>> matrix(8, std::vector<int>(8, 0));
 
-    metrix[0][1] = metrix[0][4] = metrix[1][0] = metrix[1][5] = metrix[4][0] = metrix[5][1] =
-    metrix[5][2] = metrix[5][6] = metrix[6][5] = metrix[6][7] = metrix[6][2] = metrix[2][5] =
-    metrix[2][6] = metrix[2][3] = metrix[7][6] = metrix[7][3] = metrix[3][2] = metrix[3][7] = 1;
+    matrix[0][1] = matrix[0][4] = matrix[1][0] = matrix[1][5] = matrix[4][0] = matrix[5][1] =
+    matrix[5][2] = matrix[5][6] = matrix[6][5] = matrix[6][7] = matrix[6][2] = matrix[2][5] =
+    matrix[2][6] = matrix[2][3] = matrix[7][6] = matrix[7][3] = matrix[3][2] = matrix[3][7] = 1;
 
-    Graph G = {8, metrix};
+    Graph G = {8, matrix};
 
     BFS(G);
 
