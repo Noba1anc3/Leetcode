@@ -102,9 +102,8 @@
 ## BFS
 
 - [Breadth First Search](Graph%20-%20BFS.md)
-
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
-- [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 
 ## DFS
@@ -202,7 +201,7 @@
 - [☆☆ 055. Jump Game ☆☆](055%20Jump%20Game.md)
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
-- [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆☆ 392. Is Subsequence ☆☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 435. Non-overlapping Intervals ☆☆☆ (Activity Selection)](435%20Non-overlapping%20Intervals.md)
 - [☆☆☆ 452. Minimum Number of Arrays to Burst Balloons ☆☆☆ (Activity Selection)](452%20Minimum%20Number%20of%20Arrays%20to%20Burst%20Balloons.md)
@@ -234,7 +233,7 @@
 - [☆☆☆ 072. Edit Distance ☆☆☆](072%20Edit%20Distance.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
-- [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
 - [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
@@ -357,7 +356,7 @@
 - [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
-- [279. Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
