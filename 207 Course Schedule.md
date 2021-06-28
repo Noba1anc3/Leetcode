@@ -30,7 +30,7 @@ Topological Sort
 
 ## Solution
 
-### c++
+### Topological Sort
 
 ```c++
 class Solution {
@@ -69,3 +69,50 @@ public:
 
 内存消耗：13.6 MB, 在所有 C++ 提交中击败了34.07%的用户
 
+### DFS Acyclic Judge
+
+```
+class Solution {
+private:
+    int WHITE = 0, GRAY = 1, BLACK = 2;
+    bool acyclic = true;
+
+    std::vector<int> color;
+    std::vector<std::vector<int>> Graph;
+
+public:
+    void DFSVisit(int vertex){
+        color[vertex] = GRAY;
+        for (const int& adjVertex : Graph[vertex]){
+            if (color[adjVertex] == WHITE){
+                DFSVisit(adjVertex);
+                if (!acyclic)
+                    return;
+            }
+            else if (color[adjVertex] == GRAY){
+                acyclic = false;
+                return;
+            }
+        }
+        color[vertex] = BLACK;
+    }
+
+    bool canFinish(int numCourses, std::vector<std::vector<int>>& prerequisites) {
+        color.resize(numCourses);
+        Graph.resize(numCourses);
+
+        for (const std::vector<int>& edge : prerequisites)
+            Graph[edge[0]].push_back(edge[1]);
+
+        for (int root = 0; root < numCourses && acyclic; root++)
+            if (color[root] == WHITE)
+                DFSVisit(root);
+
+        return acyclic;
+    }
+};
+```
+
+执行用时：20 ms, 在所有 C++ 提交中击败了93.82%的用户
+
+内存消耗：13.5 MB, 在所有 C++ 提交中击败了40.26%的用户
