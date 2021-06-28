@@ -41,26 +41,28 @@ Topological Sort
 class Solution {
 public:
     vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> Graph(numCourses, vector<int>());
+        vector<vector<int>> GraphR(numCourses, vector<int>());
         vector<int> InDegree(numCourses, 0);
         vector<int> Topological;
         queue<int> Q;
 
         for (auto prerequisite : prerequisites){
-            Graph[prerequisite[1]].push_back(prerequisite[0]);
+            GraphR[prerequisite[1]].push_back(prerequisite[0]);
             InDegree[prerequisite[0]]++;
         }
 
         for (int i = 0; i < numCourses; i++)
-            if (InDegree[i] == 0) Q.push(i);
+            if (InDegree[i] == 0) 
+                Q.push(i);
 
         while (!Q.empty()){
             int vertex = Q.front();
             Q.pop();
             Topological.push_back(vertex);
-            for (auto node : Graph[vertex]){
+            for (const int& node : GraphR[vertex]){
                 InDegree[node]--;
-                if (InDegree[node] == 0) Q.push(node);
+                if (InDegree[node] == 0) 
+                    Q.push(node);
             }
         }
 
@@ -70,6 +72,7 @@ public:
     }
 };
 ```
+
 执行用时：56 ms, 在所有 C++ 提交中击败了36.87%的用户
 
 内存消耗：14.2 MB, 在所有 C++ 提交中击败了42.33%的用户
