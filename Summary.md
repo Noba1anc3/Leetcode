@@ -1,3 +1,7 @@
+
+
+# Language Specialty
+
 ## C++
 
 ### struct
@@ -105,6 +109,16 @@ std::pair.first
 std::pair.second
 ```
 
+### queue
+
+```c++
+std::queue<type> Q;
+std::queue.empty()
+std::queue.front()
+std::queue.pop()
+std::queue.push()
+```
+
 ### priority_queue
 
 c++
@@ -126,8 +140,6 @@ heapq.heappush(list, element)
 heapq.heappop(list)
 ```
 
-
-
 ### other
 
 c++
@@ -144,46 +156,34 @@ python
 list.sort(key = lambda x : x[0])
 ```
 
-## Graph
+# Data Structure
 
-### SCC
+## Queue
 
-- 求所有SCCs
-  - 建图
-  - 反转图
-  - 求DFS序列
-  - 反转DFS序列
-  - 根据反转DFS序列在图上进行DFS，得到SCCs
-- 只需要SCC个数
-  - DFS遇到WHITE节点就+1
-  - 并查集
+### Questions
 
-### Prim
+- [BFS](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)
+  - 只要队列不空
+    - 取出队首
+    - 遍历其白色邻接点
+      - 改为灰色后压入队列
+    - 遍历后将其改为黑色
+- [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
+  - 将所有入度为0的节点压入队列
+  - 只要队列不空
+    - 取出队首，压入最终结果
+    - 遍历所有指向该节点的源节点
+      - 入度减一
+      - 如果入度变为0，压入队列
 
-[Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
+## Stack
 
-- 构建图和权重vector时要将边的两侧都赋值
-- 基于pair<key, vertex>构建最小堆（优先队列）
-- 只要队列不空
-  - 弹出队顶
-  - 对其每个白色邻接点，如果边权重小于邻接点的key，则修改邻接点key
-  - 将邻接点的pair推进队列
-  - 队顶元素改为黑色
+### Questions
 
-### Kruskal
-
-
-
-### Dijkstra
-
-[Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
-
-- 基于pair<dist, vertex>构建最小堆（优先队列）
-- 只要队列不空
-  - 弹出队顶
-  - 对其每个白色邻接点，如果边权重加队顶元素距离小于邻接点的距离，则修改邻接点的距离
-  - 将邻接点的pair推进队列
-  - 队顶元素改为黑色
+- 拓扑排序
+  - 基于DFS算法
+  - 在完成对邻接点的遍历后将节点压入栈
+  - 栈顶到栈底的序列即为拓扑排序
 
 ## Heap
 
@@ -211,38 +211,6 @@ list.sort(key = lambda x : x[0])
 - [拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
   - 基于最小堆的哈夫曼树
 
-## DFS
-
-### Questions
-
-- 岛屿数量
-  - 先行后列遍历每个点，如果是岛屿就开始dfs，结束时岛屿个数+1
-  - dfs时判断该格子出界或非1返回，不返回则修改该格子为2
-- 最大岛屿面积
-  - dfs时判断该格子出界或非1返回0，不返回则修改该格子为2
-  - dfs的递推公式为 1 + ... + ... + ... + ...
-- 填海造陆
-  - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
-  - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
-- 岛屿周长
-  - 先行后列遍历每个点，如果是岛屿就开始dfs
-  - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
-  - 四方向遍历求和
-- 判断回路
-  - 在遍历邻接点时，如果是灰色节点代表有回路
-
-### Algorithm
-
-[DFS](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20DFS.md)
-
-要点：start，finish，pred，color
-
-- 刚访问时color改灰，访问完相邻节点后color改黑
-- start和finish的触发时间与color变灰及变黑的时间一致
-- 遍历邻接点时，对于白色结点，将邻接点的pred设为本节点
-
-对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
-
 ## Union-Find Set
 
 ### Questions
@@ -266,6 +234,9 @@ list.sort(key = lambda x : x[0])
   - 建立26个字母的并查集
   - 对相等符号连接的字母合并
   - 判断不等符号连接的字母是否是一个key
+- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于节点的个数
+  - 如若并查集合并时根相同，则不能组成一棵树
 
 ### Algorithm
 
@@ -305,7 +276,278 @@ void Union(int x, int y) {
 }
 ```
 
+## Graph
 
+### BFS
+
+要点：dist, pred, color
+
+- 只要队列不空
+  - 取出队首
+  - 遍历其白色邻接点
+    - 改为灰色后压入队列
+  - 遍历后将其改为黑色
+
+对于连通图，只需要BFS一个root节点即可；对于非连通图，需要遍历所有白色节点的BFS
+
+```c++
+void BFSVisit(Graph G, int vertex){
+    color[vertex] = GRAY;
+    dist[vertex] = 0;
+
+    queue<int> Q;
+    Q.push(vertex);
+
+    while (!Q.empty()){
+        int curVertex = Q.front();
+        Q.pop();
+
+        for (const int& adjVertex : adjacent(G, curVertex)){
+            if (color[adjVertex] == WHITE){
+                color[adjVertex] = GRAY;
+                dist[adjVertex] = dist[curVertex] + 1;
+                pred[adjVertex] = curVertex;
+                Q.push(adjVertex);
+            }
+        }
+
+        color[curVertex] = BLACK;
+    }
+}
+```
+
+#### Questions
+
+[判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+
+- 首先判断边的个数加1是否等于节点的个数
+  - 少了一定无法存在孤立点
+  - 多了一定存在环路
+- 从0节点遍历一次DFS后仍然有白色节点，意味着有环路+孤立节点 返回false
+
+### DFS
+
+要点：start，finish，pred，color
+
+- 被访问节点改为灰色
+- 遍历邻接点中的白色节点，递归进入该节点
+- 访问完邻接点后颜色改黑
+- start和finish的触发时间与color变灰及变黑的时间一致
+
+对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
+
+```c++
+void DFSVisit(int vertex){
+    color[vertex] = GRAY;
+    start[vertex] = ++time;
+
+    for (const int& adjVertex : Graph[vertex])
+        if (color[adjVertex] == WHITE) {
+            pred[adjVertex] = vertex;
+            DFSVisit(adjVertex);
+        }
+
+    color[vertex] = BLACK;
+    finish[vertex] = ++time;
+}
+```
+
+#### Questions
+
+[判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+
+- 首先判断边的个数加1是否等于节点的个数
+  - 少了一定无法存在孤立点
+  - 多了一定存在环路
+- 从0节点遍历一次DFS后仍然有白色节点，意味着有环路+孤立节点 返回false
+
+### SCC
+
+DFS Based
+
+- 求所有SCCs
+  - 建图
+  - 反转图
+  - 求DFS序列
+  - 反转DFS序列
+  - 根据反转DFS序列在图上进行DFS，得到SCCs
+- 只需要SCC个数
+  - DFS遇到WHITE节点就+1
+  - 并查集
+
+### Prim
+
+Priority Queue Based
+
+[Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
+
+- 构建图和权重vector时要将边的两侧都赋值
+- 基于pair<key, vertex>构建最小堆（优先队列）
+- 只要队列不空
+  - 弹出队顶
+  - 对其每个白色邻接点，如果边权重小于邻接点的key，则修改邻接点key
+  - 将邻接点的pair推进队列
+  - 队顶元素改为黑色
+
+### Kruskal
+
+
+
+### Dijkstra
+
+Priority Queue Based
+
+[Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+
+- 基于pair<dist, vertex>构建最小堆（优先队列）
+- 只要队列不空
+  - 弹出队顶
+  - 对其每个白色邻接点，如果边权重加队顶元素距离小于邻接点的距离，则修改邻接点的距离
+  - 将邻接点的pair推进队列
+  - 队顶元素改为黑色
+
+### Topological Sort
+
+[Algorithm](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
+
+#### Queue Based
+
+- 构建反向图和节点入度表
+- 将所有入度为0的节点压入队列
+- 只要队列不空
+  - 取出队首，压入最终结果
+  - 遍历所有指向该节点的源节点
+    - 入度减一
+    - 如果入度变为0，压入队列
+
+```c++
+std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
+    std::vector<std::vector<int>> GraphReverse(n, std::vector<int>());
+    std::vector<int> InDegree(n, 0);
+    std::vector<int> Topological;
+    std::queue<int> Q;
+
+    for (const std::vector<int>& edge : edges){
+        GraphReverse[edge[1]].push_back(edge[0]);
+        InDegree[edge[0]]++;
+    }
+
+    for (int i = 0; i < n; i++)
+        if (InDegree[i] == 0)
+            Q.push(i);
+
+    while (!Q.empty()){
+        int vertex = Q.front();
+        Q.pop();
+        Topological.push_back(vertex);
+        for (const int& adjVertex : GraphReverse[vertex]){
+            InDegree[adjVertex]--;
+            if (InDegree[adjVertex] == 0)
+                Q.push(adjVertex);
+        }
+    }
+
+    return Topological;
+}
+```
+
+#### DFS & Stack Based
+
+- 需要加入有环的判断，否则算法停不下来
+- 基于DFS算法
+- 在完成对邻接点的遍历后，将源节点压入栈
+- 最后从栈顶到栈底的序列即为DFS序列
+
+```c++
+class Solution {
+private:
+    int WHITE = 0, GRAY = 1, BLACK = 2;
+    bool acyclic = true;
+
+    std::vector<int> order;
+    std::vector<int> color;
+    std::vector<std::vector<int>> Graph;
+
+public:
+    void DFSVisit(int vertex){
+        color[vertex] = GRAY;
+        for (const int& adjVertex : Graph[vertex]){
+            if (color[adjVertex] == WHITE){
+                DFSVisit(adjVertex);
+                if (!acyclic)
+                    return;
+            }
+            else if (color[adjVertex] == GRAY){
+                acyclic = false;
+                return;
+            }
+        }
+        order.push_back(vertex);
+        color[vertex] = BLACK;
+    }
+
+    std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
+        color.resize(n);
+        Graph.resize(n);
+
+        for (const std::vector<int>& edge : edges)
+            Graph[edge[0]].push_back(edge[1]);
+
+        for (int root = 0; root < n && acyclic; root++)
+            if (color[root] == WHITE)
+                DFSVisit(root);
+
+        if (!acyclic)
+            return {};
+
+        reverse(order.begin(), order.end());
+        return order;
+    }
+};
+```
+
+#### Questions
+
+- [给定课程学习先决条件，判断能否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
+  - 拓扑排序序列长度是否等于节点个数
+  - DFS判断是否有环
+- [给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
+  - 拓扑排序
+  - DFS
+
+# Algorithm
+
+## DFS
+
+### Questions
+
+- 岛屿数量
+  - 先行后列遍历每个点，如果是岛屿就开始dfs，结束时岛屿个数+1
+  - dfs时判断该格子出界或非1返回，不返回则修改该格子为2
+- 最大岛屿面积
+  - dfs时判断该格子出界或非1返回0，不返回则修改该格子为2
+  - dfs的递推公式为 1 + ... + ... + ... + ...
+- 填海造陆
+  - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
+  - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
+- 岛屿周长
+  - 先行后列遍历每个点，如果是岛屿就开始dfs
+  - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
+  - 四方向遍历求和
+- 判断回路
+  - 在遍历邻接点时，如果是灰色节点代表有回路
+
+### Algorithm
+
+[DFS](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20DFS.md)
+
+要点：start，finish，pred，color
+
+- 刚访问时color改灰，访问完相邻节点后color改黑
+- start和finish的触发时间与color变灰及变黑的时间一致
+- 遍历邻接点时，对于白色结点，将邻接点的pred设为本节点
+
+对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
 
 ## Backtrack
 
@@ -405,9 +647,9 @@ string 存每次回溯之前的临时结果
 
 无论是非法结果还是得到了一个答案，都需要return
 
-## Useful method
+# Useful method
 
-### Judge valid parenthesis
+## Judge valid parenthesis
 
 ```c++
 bool check(std::string& ans){
