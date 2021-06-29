@@ -138,3 +138,4 @@ Attention
 - ```python
   unsigned long long
   ```
+- 将起始编号和left从1换为0可以获得很大的速度提升，许多 * 2 都保留为原来的0，而如果是1，则会不断幂乘
