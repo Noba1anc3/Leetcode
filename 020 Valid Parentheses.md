@@ -86,22 +86,22 @@ private:
         {']', '['},
         {'}', '{'}
     };
-    stack<char> Q;
+    stack<char> S;
 
 public:
     bool isValid(string s) {
         for (const auto& ch : s){
             if (kuohao.find(ch) != kuohao.end()){
-                if (Q.empty() || Q.top() != kuohao.at(ch))
+                if (S.empty() || S.top() != kuohao.at(ch))
                     return false;
-				Q.pop();
+				S.pop();
             }
             else{
-                Q.push(ch);
+                S.push(ch);
             }
         }
 
-        return Q.empty();
+        return S.empty();
     }
 };
 ```
