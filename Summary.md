@@ -29,6 +29,18 @@ struct Edge{
 'c' + 3 = 'f'
 'c' - 'a' = 2
 '2' - '0' = 2  // 不能用int('2')  会变成ascii码
+    
+// 判断是否是字母或数字
+isalnum(char)
+
+// 判断是否是数字
+isdigit(char)
+ 
+// 判断是否是字母
+isalpha(char)
+    
+// 转成小写字母
+tolower(char)
 ```
 
 ### string
@@ -42,6 +54,9 @@ std::string.substr(0, std::string.size()-1)
 std::string -> int
 	char* s = std::string.c_str()
 	integer I = atoi(char*)
+
+std::string -> int
+    integer I = stoi(string)
     
 int -> std::string
    	std::string s = to_string(integer)
@@ -112,7 +127,12 @@ std::set(std::vector.begin(), std::vector.end())
 std::unordered_map<char, string> mapping = {
 	{'2', "abc"}, {}, {}
 }
+
+// 根据key查找value
 std::unordered_map.at(key)
+    
+// 查找是否有某个key
+std::unordered_map.find(key) != std::unordered_map.end()
 ```
 
 ### pair
@@ -121,6 +141,14 @@ std::unordered_map.at(key)
 std::pair.first
 std::pair.second
 ```
+
+### stack
+
+```
+std::stack<type> S;
+```
+
+
 
 ### queue
 
@@ -169,7 +197,7 @@ python
 
 ```python
 list.sort(key = lambda x : x[0])
-maximum: float('inf')
+maximum: float('inf') / math.inf
 ```
 
 # Data Structure
@@ -212,6 +240,34 @@ maximum: float('inf')
     - 2号栈空，将1号栈逐一弹出并压入2号栈
     - 2号栈不空，弹出2号栈顶
     - 2号栈空，返回错误
+- [判断是否为有效的括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+  - 长度为奇数可直接返回
+  - 构建右括号到左括号的哈希映射加速
+  - 如果遇到右括号
+    - 如果栈空或栈顶和右括号对应的左括号不一致则返回错误
+    - 弹出栈顶
+  - 如果遇到左括号
+    - 压入栈
+  - 返回栈是否为空
+- [二叉树中序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+  - 将根节点与白色压入栈中
+  - 只要栈不空，每次弹出栈顶，如果是空指针则continue
+  - 如果是白色，依次将白色右节点，灰色本节点与白色左节点压入栈中
+  - 如果是灰色，将节点值加到中序序列中
+- [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
+- [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
+- [判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 遍历两次字符串
+  - 第一次遍历时，将所有字母数字压入栈中
+  - 第二次遍历时，比较当前元素与栈顶元素，如果相同则弹出
+- [求逆波兰表达式的值](http://github.com/Noba1anc3/Leetcode/edit/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
+  - 遍历字符串
+  - 如果是数字就压入栈中
+  - 如果是运算符就取出栈顶和次栈顶，按运算符运算后压入栈中
+- [最小栈](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
+  - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
+  - 压栈时，A栈压数字，B栈压数字与B栈栈顶的最小值
+  - 弹栈时，两栈同步弹出
 
 ## Heap
 
@@ -325,6 +381,17 @@ void Union(int x, int y) {
     ```
 
   - 若左右儿子不空，则将左右儿子压入队列，高度+1
+
+- [二叉树中序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+
+  - 将根节点与白色压入栈中
+  - 只要栈不空，每次弹出栈顶，如果是空指针则continue
+  - 如果是白色，依次将白色右节点，灰色本节点与白色左节点压入栈中
+  - 如果是灰色，将节点值加到中序序列中
+
+- [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
+
+- [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 
 ## Graph
 
@@ -608,6 +675,16 @@ public:
 - 遍历邻接点时，对于白色结点，将邻接点的pred设为本节点
 
 对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
+
+## Double Pointer
+
+### Questions
+
+- [验证回文串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 两指针分别位于字符串的首尾  while(i < j)
+  - 如果i和j不是字母数字，且不会发生错位，则向中间靠拢
+  - 如果双指针对应的小写字母一样，i++，j--，否则返回错误
+  - 跳出while循环，返回true
 
 ## Backtrack
 
