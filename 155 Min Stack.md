@@ -58,8 +58,9 @@ class MinStack:
         return self.min_stack[-1]
 ```
 
-执行用时：76 ms, 在所有 Python3 提交中击败了85.58%的用户  
-内存消耗：16.4 MB, 在所有 Python3 提交中击败了67.61%的用户
+执行用时：64 ms, 在所有 Python3 提交中击败了83.80%的用户
+
+内存消耗：18.2 MB, 在所有 Python3 提交中击败了13.82%的用户
 
 ### 数值齐存
 ```java
