@@ -47,34 +47,33 @@ c++
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
-        stack<int> st;
-        for (int i = 0; i < tokens.size(); i++) {
-            if (tokens[i] == "+" || tokens[i] == "-" || tokens[i] == "*" || tokens[i] == "/") {
-                int num1 = st.top();
-                st.pop();
-                int num2 = st.top();
-                st.pop();
-                if (tokens[i] == "+") st.push(num2 + num1);
-                if (tokens[i] == "-") st.push(num2 - num1);
-                if (tokens[i] == "*") st.push(num2 * num1);
-                if (tokens[i] == "/") st.push(num2 / num1);
-            } else {
-                st.push(stoi(tokens[i]));
+        set<string> operators = {"+", "-", "*", "/"};
+        stack<int> S;
+
+        for (const string& token : tokens) {
+            if (operators.find(token) == operators.end()) {
+                S.push(stoi(token));
+            } 
+            else {
+                int num1 = S.top(); S.pop();
+                int num2 = S.top(); S.pop();
+                if (token == "+") S.push(num2 + num1);
+                if (token == "-") S.push(num2 - num1);
+                if (token == "*") S.push(num2 * num1);
+                if (token == "/") S.push(num2 / num1);
             }
         }
-        int result = st.top();
-        st.pop(); // 把栈里最后一个元素弹出（其实不弹出也没事）
-        return result;
+        return S.top();
     }
 };
-
 ```
-执行用时：24 ms, 在所有 C++ 提交中击败了60.18%的用户  
-内存消耗：10.5 MB, 在所有 C++ 提交中击败了16.08%的用户
+
+执行用时：12 ms, 在所有 C++ 提交中击败了72.99%的用户
+
+内存消耗：11.7 MB, 在所有 C++ 提交中击败了14.85%的用户
 
 Attention:
 - stoi(string)
-- vector<string>& list
 
 During the 1970s and 1980s, Hewlett-Packard used RPN in all of their desktop and hand-held calculators, and continued to use it in some models into the 2020s.
 
