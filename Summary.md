@@ -495,14 +495,16 @@ DFS Based
   - DFS遇到WHITE节点就+1
   - 并查集
 
-### Prim
+### MST
 
-#### Algorithm
+#### Prim
+
+##### Algorithm
 
 Priority Queue Based
 
 - [Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
-  - 构建图和权重vector时要将边的两侧都赋值
+  - 构建图和权重的vector时要将边的两侧都赋值
   - 基于pair<key, vertex>构建最小堆（优先队列）
   - 只要队列不空
     - 弹出队顶
@@ -510,11 +512,15 @@ Priority Queue Based
     - 将邻接点的pair推进队列
     - 队顶元素改为黑色
 
-### Kruskal
+#### Kruskal
 
+##### Algorithm
 
+Union-Find Set Based
 
-### Dijkstra
+- [Kruskal](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
+
+### SSSP - Dijkstra
 
 Priority Queue Based
 
@@ -523,7 +529,7 @@ Priority Queue Based
 - 基于pair<dist, vertex>构建最小堆（优先队列）
 - 只要队列不空
   - 弹出队顶
-  - 对其每个白色邻接点，如果边权重加队顶元素距离小于邻接点的距离，则修改邻接点的距离
+  - 对其每个白色邻接点，如果边权重 + 距队顶元素的距离小于邻接点的距离，则修改邻接点的距离
   - 将邻接点的pair推进队列
   - 队顶元素改为黑色
 
