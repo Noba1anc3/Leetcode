@@ -7,25 +7,22 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 C++
 ```c++
 class Solution {
+private:
+    vector<int> inOrder;
+
 public:
-    void inorder(TreeNode* root, vector<int>& InOrder) {
-        if (!root) {
-            return;
-        }
-        inorder(root->left, InOrder);
-        InOrder.push_back(root->val);
-        inorder(root->right, InOrder);
-    }
     vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> InOrder;
-        inorder(root, InOrder);
-        return InOrder;
+        if (root){
+            if (root->left) inorderTraversal(root->left);
+            inOrder.push_back(root->val);
+            if (root->right) inorderTraversal(root->right);
+        }
+        return inOrder;
     }
 };
-
 ```
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户  
-内存消耗：8.3 MB, 在所有 C++ 提交中击败了11.30%的用户
+内存消耗：9.3 MB, 在所有 C++ 提交中击败了7.30%的用户
 
 ### 迭代
 
