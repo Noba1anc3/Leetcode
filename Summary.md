@@ -225,28 +225,29 @@ maximum: float('inf') / math.inf
 
 ### Questions
 
-- 拓扑排序
+- [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
   - 基于DFS算法
   - 在完成对邻接点的遍历后将节点压入栈
   - 栈顶到栈底的序列即为拓扑排序
 - [用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
-  - 入队压入1号栈
+  - 入队
+    - 压入1号栈
   - 出队
     - 2号栈不空，弹出2号栈顶
     - 2号栈空，将1号栈逐一弹出并压入2号栈
     - 2号栈不空，弹出2号栈顶
     - 2号栈空，返回错误
 - [判断是否为有效的括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
-  - 长度为奇数可直接返回
-  - 构建右括号到左括号的哈希映射加速
-  - 如果遇到右括号
-    - 如果栈空或栈顶和右括号对应的左括号不一致则返回错误
+  - 长度为奇数可直接返回错误
+  - 构建右括号到左括号的哈希映射以加速
+  - 遇到右括号
+    - 栈空或栈顶和右括号对应的左括号不一致则返回错误
     - 弹出栈顶
-  - 如果遇到左括号
+  - 遇到左括号
     - 压入栈
   - 返回栈是否为空
 - [二叉树中序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
-  - 将根节点与白色压入栈中
+  - 将白色根节点压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
   - 如果是白色，依次将白色右节点，灰色本节点与白色左节点压入栈中
   - 如果是灰色，将节点值加到中序序列中
@@ -262,7 +263,7 @@ maximum: float('inf') / math.inf
   - 如果是运算符就取出栈顶和次栈顶，按运算符运算后压入栈中
 - [最小栈](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
   - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
-  - 压栈时，A栈压数字，B栈压数字与B栈栈顶的最小值
+  - 压栈时，A栈压数字，B栈压入 数字与B栈栈顶的最小值
   - 弹栈时，两栈同步弹出
 
 ## Heap
