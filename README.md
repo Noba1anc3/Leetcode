@@ -15,7 +15,7 @@
 
 ## Stack
 
-- [☆☆ Topological Sort ☆☆](Graph%20-%20Topological%20Sort.md)
+- [Topological Sort](Graph%20-%20Topological%20Sort.md)
 - [☆ 020. Valid Parentheses ☆](020%20Valid%20Parentheses.md)
 - [094. Binary Tree Inorder Traversal](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆ 125 Valid Palindrome ☆☆](125%20Valid%20Palindrome.md)
