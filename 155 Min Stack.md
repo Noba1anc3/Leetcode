@@ -37,6 +37,7 @@ minStack.getMin(); // return -2
 
 - 在任意一个时刻，栈内元素的最小值就存储在辅助栈的栈顶元素中。
 
+python
 ```python
 class MinStack:
     def __init__(self):
@@ -61,6 +62,43 @@ class MinStack:
 执行用时：64 ms, 在所有 Python3 提交中击败了83.80%的用户
 
 内存消耗：18.2 MB, 在所有 Python3 提交中击败了13.82%的用户
+
+c++
+
+```c++
+class MinStack {
+private:
+    stack<int> S, minimum;
+
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+        minimum.push(INT_MAX);
+    }
+    
+    void push(int val) {
+        S.push(val);
+        minimum.push(min(minimum.top(), val));
+    }
+    
+    void pop() {
+        S.pop();
+        minimum.pop();
+    }
+    
+    int top() {
+        return S.top();
+    }
+    
+    int getMin() {
+        return minimum.top();
+    }
+};
+```
+
+执行用时：20 ms, 在所有 C++ 提交中击败了95.86%的用户
+
+内存消耗：16 MB, 在所有 C++ 提交中击败了31.39%的用户
 
 ### 数值齐存
 ```java
