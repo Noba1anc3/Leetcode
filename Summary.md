@@ -367,14 +367,14 @@ void Union(int x, int y) {
     pair<TreeNode*, pair<int, unsigned long long>> ROOT(root, level_id)
     ```
 
-  - 若左右儿子不空，则将左右儿子压入队列，高度+1，id分别为 2* id, 2* id + 1
+  - 若左右儿子不空，则将左右儿子压入队列，层数+1，id分别为父节点的2倍, 2倍+1
 
-  - 每次进入下一层的时候，更新left的id
+  - 每次进入下一层的时候，更新left的id，用于计算宽度
 
 - [求二叉树深度](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
   - ```c++
-    pair<TreeNode*, int>(T, 1)
+    pair<TreeNode*, int>(T, height)
     ```
 
   - 若左右儿子不空，则将左右儿子压入队列，高度+1
@@ -394,7 +394,9 @@ void Union(int x, int y) {
 
 ### BFS
 
-要点：dist, pred, color
+#### Algorithm
+
+可以加入到遍历过程中的其他信息：dist, pred, color
 
 - 只要队列不空
   - 取出队首
@@ -441,7 +443,9 @@ void BFSVisit(Graph G, int vertex){
 
 ### DFS
 
-要点：start，finish，pred，color
+#### Algorithm
+
+可以加入到遍历过程中的其他信息：start，finish，pred，color
 
 - 被访问节点改为灰色
 - 遍历邻接点中的白色节点，递归进入该节点
@@ -477,9 +481,11 @@ void DFSVisit(int vertex){
 
 ### SCC
 
+#### Algorithm
+
 DFS Based
 
-- 求所有SCCs
+- [求所有SCCs](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20SCC.md)
   - 建图
   - 反转图
   - 求DFS序列
@@ -491,17 +497,18 @@ DFS Based
 
 ### Prim
 
+#### Algorithm
+
 Priority Queue Based
 
-[Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
-
-- 构建图和权重vector时要将边的两侧都赋值
-- 基于pair<key, vertex>构建最小堆（优先队列）
-- 只要队列不空
-  - 弹出队顶
-  - 对其每个白色邻接点，如果边权重小于邻接点的key，则修改邻接点key
-  - 将邻接点的pair推进队列
-  - 队顶元素改为黑色
+- [Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
+  - 构建图和权重vector时要将边的两侧都赋值
+  - 基于pair<key, vertex>构建最小堆（优先队列）
+  - 只要队列不空
+    - 弹出队顶
+    - 对其每个白色邻接点，如果边权重小于邻接点的key，则修改邻接点key
+    - 将邻接点的pair推进队列
+    - 队顶元素改为黑色
 
 ### Kruskal
 
