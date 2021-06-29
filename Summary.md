@@ -697,48 +697,6 @@ public:
 
 ## Backtrack
 
-### Questions
-
-- [手机打字的可能组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-- [生成括号](https://github.com/Noba1anc3/Leetcode/blob/master/022%20Generate%20Parenthesis.md)
-- [填数独](https://github.com/Noba1anc3/Leetcode/blob/master/037%20Sudoku%20Solver.md)
-- [可以无限使用，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/039%20Combination%20Sum.md)
-- [一个数只能用一次，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/040%20Combination%20Sum%20II.md)
-- [集合内元素的全排列](https://github.com/Noba1anc3/Leetcode/blob/master/046%20Permutations.md)
-- [集合内元素的unique全排列](https://github.com/Noba1anc3/Leetcode/blob/master/047%20Permutation%20II.md)
-  - 如果同一层当前元素和上一个元素一样，就continue
-- [1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
-  - 计算N-1的阶乘，得到第K个全排列的首数字和其是剩余数字的第几个全排列
-  - 对剩余数字回溯计算全排列
-  - 直接找到指定枝叶
-- [1到N当中的数字 由k个元素构成的所有组合](https://github.com/Noba1anc3/Leetcode/blob/master/077%20Combinations.md)
-- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
-  - 将回溯过程中所有子过程的res都加到ans中
-  - 最后加空集合{}
-- [求无重复元素的集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
-- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/090%20Subsets%20II.md)
-  - 加一步排序
-  - 对同一层，该元素与上一个元素相同的情况，进行剪枝
-- [N皇后](https://github.com/Noba1anc3/Leetcode/blob/master/051%20N-Queens.md)
-  - 放之前检查（当前位置为0且不会被攻击）
-  - 落子
-  - 退子
-- [还原ip地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
-  - 对切成的段数和当前下标进行回溯
-    - 如果段数为4或下标到字符串长度则返回
-      - 如果两个条件都满足，将该ip添加到结果当中
-    - 遍历时从1位到3位
-      - 如果index+i超限，返回
-      - 如果首字母为0且长度不为1，返回
-      - 如果长度为3且index到i的字串超过255，返回
-      - ip加该子串
-- [大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
-  - 如果是小写字母，改大写
-  - 如果是大写字母，改小写
-  - 大小写字母回溯结束后，再进行一次回溯，针对原大小写
-- [输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
-  - 从0-9对N位进行回溯
-
 ### Algorithm
 
 vector<string> 存所有结果
@@ -768,30 +726,88 @@ string 存每次回溯之前的临时结果
 
   如果在浅层就知道这个分支不能产生需要的结果，应该提前剪枝，剪枝的条件是什么，代码怎么写？
 
-### Generate Parenthesis
+### Questions
 
-除回溯函数，要写check函数，判断字符串是否符合要求
+- [手机打字的可能组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 
-回溯剪枝
+- [生成括号](https://github.com/Noba1anc3/Leetcode/blob/master/022%20Generate%20Parenthesis.md)
 
-- 如果左括号个数少于n，生成左括号
-- 如果右括号个数少于左括号，生成右括号
+  - 除回溯函数，要写check函数，判断字符串是否符合要求
 
-### Sudoku
+    回溯剪枝
 
-1. 找到当前数独中缺少的数字个数
-2. 根据缺少个数进行回溯
-   1. 对行列进行遍历，找到每一个缺数的位置
-   2. 遍历1-9，如果该位置可以被填入数字，填入数字，缺少个数-1
-   3. 进入下一层，递归
-   4. 退出时，如果缺少个数为0，返回
-   5. 否则，将该位置的数字去掉，缺少个数+1
+    - 如果左括号个数少于n，生成左括号
+    - 如果右括号个数少于左括号，生成右括号
 
-### Combination Sum
+- [填数独](https://github.com/Noba1anc3/Leetcode/blob/master/037%20Sudoku%20Solver.md)
 
-回溯法讲究还原场景，无论是否得到一个tmp_ans，都需要在加入到ans之后还原现场
+  - 找到当前数独中缺少的数字个数
+  - 根据缺少个数进行回溯
+    1. 对行列进行遍历，找到每一个缺数的位置
+    2. 遍历1-9，如果该位置可以被填入数字，填入数字，缺少个数-1
+    3. 进入下一层，递归
+    4. 退出时，如果缺少个数为0，返回
+    5. 否则，将该位置的数字去掉，缺少个数+1
 
-无论是非法结果还是得到了一个答案，都需要return
+- [可以无限使用，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/039%20Combination%20Sum.md)
+
+  - 回溯法讲究还原场景，无论是否得到一个tmp_ans，都需要在加入到ans之后还原现场
+  - 无论是非法结果还是得到了一个答案，都需要return
+
+- [一个数只能用一次，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/040%20Combination%20Sum%20II.md)
+
+- [集合内元素的全排列](https://github.com/Noba1anc3/Leetcode/blob/master/046%20Permutations.md)
+
+- [集合内元素的unique全排列](https://github.com/Noba1anc3/Leetcode/blob/master/047%20Permutation%20II.md)
+
+  - 如果同一层当前元素和上一个元素一样，就continue
+
+- [1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
+
+  - 计算N-1的阶乘，得到第K个全排列的首数字和其是剩余数字的第几个全排列
+  - 对剩余数字回溯计算全排列
+  - 直接找到指定枝叶
+
+- [1到N当中的数字 由k个元素构成的所有组合](https://github.com/Noba1anc3/Leetcode/blob/master/077%20Combinations.md)
+
+- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
+
+  - 将回溯过程中所有子过程的res都加到ans中
+  - 最后加空集合{}
+
+- [求无重复元素的集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
+
+- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/090%20Subsets%20II.md)
+
+  - 加一步排序
+  - 对同一层，该元素与上一个元素相同的情况，进行剪枝
+
+- [N皇后](https://github.com/Noba1anc3/Leetcode/blob/master/051%20N-Queens.md)
+
+  - 放之前检查（当前位置为0且不会被攻击）
+  - 落子
+  - 退子
+
+- [还原ip地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
+
+  - 对切成的段数和当前下标进行回溯
+    - 如果段数为4或下标到字符串长度则返回
+      - 如果两个条件都满足，将该ip添加到结果当中
+    - 遍历时从1位到3位
+      - 如果index+i超限，返回
+      - 如果首字母为0且长度不为1，返回
+      - 如果长度为3且index到i的字串超过255，返回
+      - ip加该子串
+
+- [大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
+
+  - 如果是小写字母，改大写
+  - 如果是大写字母，改小写
+  - 大小写字母回溯结束后，再进行一次回溯，针对原大小写
+
+- [输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
+
+  - 从0-9对N位进行回溯
 
 ## Dynamic Programming
 
