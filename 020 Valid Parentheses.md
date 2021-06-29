@@ -94,7 +94,7 @@ public:
             if (kuohao.find(ch) != kuohao.end()){
                 if (S.empty() || S.top() != kuohao.at(ch))
                     return false;
-				S.pop();
+		S.pop();
             }
             else{
                 S.push(ch);
