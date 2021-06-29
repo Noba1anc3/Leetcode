@@ -101,6 +101,9 @@ public:
 内存消耗：16 MB, 在所有 C++ 提交中击败了31.39%的用户
 
 ### 数值齐存
+
+java
+
 ```java
 class MinStack {
     int min = Integer.MAX_VALUE;
@@ -136,3 +139,44 @@ class MinStack {
 执行用时：6 ms, 在所有 Java 提交中击败了97.64%的用户  
 内存消耗：40.8 MB, 在所有 Java 提交中击败了25.56%的用户
 
+c++
+
+```c++
+class MinStack {
+private:
+    stack<int> S;
+    int minimum = INT_MAX;
+
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+    }
+    
+    void push(int val) {
+        if (val <= minimum){
+            S.push(minimum);
+            minimum = val;
+        }
+        S.push(val);
+    }
+    
+    void pop() {
+        if (minimum == S.top()){
+            S.pop();
+            minimum = S.top();
+        }
+        S.pop();
+    }
+    
+    int top() {
+        return S.top();
+    }
+    
+    int getMin() {
+        return minimum;
+    }
+};
+```
+执行用时：28 ms, 在所有 C++ 提交中击败了59.48%的用户
+
+内存消耗：15.8 MB, 在所有 C++ 提交中击败了94.32%的用户
