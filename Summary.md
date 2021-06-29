@@ -17,8 +17,8 @@ to_string(integer)
 
 ```c++
 struct Edge{
-	int vertex1;
-	int vertex2;
+    int vertex1;
+    int vertex2;
     int weight;
 };
 ```
@@ -52,14 +52,14 @@ std::string.pop_back()
 std::string.substr(0, std::string.size()-1)
     
 std::string -> int
-	char* s = std::string.c_str()
-	integer I = atoi(char*)
+char* s = std::string.c_str()
+integer I = atoi(char*)
 
 std::string -> int
-    integer I = stoi(string)
+integer I = stoi(string)
     
 int -> std::string
-   	std::string s = to_string(integer)
+std::string s = to_string(integer)
 ```
 
 ### vector
@@ -111,7 +111,7 @@ std::set.insert(ele)
 
 // 遍历set
 for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
-	value = *it;
+    value = *it;
 
 // 查找set
 if (std::set.find(element) == std::set.end())
@@ -125,7 +125,7 @@ std::set(std::vector.begin(), std::vector.end())
 
 ```c++
 std::unordered_map<char, string> mapping = {
-	{'2', "abc"}, {}, {}
+    {'2', "abc"}, {}, {}
 }
 
 // 根据key查找value
