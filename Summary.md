@@ -543,7 +543,7 @@ Priority Queue Based
 - 将所有入度为0的节点压入队列
 - 只要队列不空
   - 取出队首，压入最终结果
-  - 遍历所有指向该节点的源节点
+  - 遍历所有该节点指向的节点
     - 入度减一
     - 如果入度变为0，压入队列
 
@@ -581,7 +581,6 @@ std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
 #### DFS & Stack Based
 
 - 需要加入有环的判断，否则算法停不下来
-- 基于DFS算法
 - 在完成对邻接点的遍历后，将源节点压入栈
 - 最后从栈顶到栈底的序列即为DFS序列
 
@@ -636,10 +635,10 @@ public:
 #### Questions
 
 - [给定课程学习先决条件，判断能否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
-  - 拓扑排序序列长度是否等于节点个数
+  - 拓扑排序序列长度是否等于节点个数 或
   - DFS判断是否有环
 - [给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
-  - 拓扑排序
+  - 拓扑排序 或
   - DFS
 
 # Algorithm
@@ -649,30 +648,12 @@ public:
 ### Questions
 
 - [绕过不可走的位置，解开转盘锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
-  - 将初始状态压入队列，进行BFS搜索，只要队列不空
-    - 取出队首，如果是结果，返回步数
+  - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首。
+    - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
     - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
 
 ## DFS
-
-### Questions
-
-- 岛屿数量
-  - 先行后列遍历每个点，如果是岛屿就开始dfs，结束时岛屿个数+1
-  - dfs时判断该格子出界或非1返回，不返回则修改该格子为2
-- 最大岛屿面积
-  - dfs时判断该格子出界或非1返回0，不返回则修改该格子为2
-  - dfs的递推公式为 1 + ... + ... + ... + ...
-- 填海造陆
-  - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
-  - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
-- 岛屿周长
-  - 先行后列遍历每个点，如果是岛屿就开始dfs
-  - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
-  - 四方向遍历求和
-- 判断回路
-  - 在遍历邻接点时，如果是灰色节点代表有回路
 
 ### Algorithm
 
@@ -685,6 +666,24 @@ public:
 - 遍历邻接点时，对于白色结点，将邻接点的pred设为本节点
 
 对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
+
+### Questions
+
+- [岛屿数量](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
+  - 先行后列遍历每个点，如果是岛屿就开始dfs，结束时岛屿个数+1
+  - dfs时判断该格子出界或非1返回，不返回则修改该格子为2
+- [最大岛屿面积](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
+  - dfs时判断该格子出界或非1返回0，不返回则修改该格子为2
+  - dfs的递推公式为 1 + ... + ... + ... + ...
+- [填海造陆](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
+  - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
+  - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
+- [岛屿周长](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
+  - 先行后列遍历每个点，如果是岛屿就开始dfs
+  - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
+  - 四方向遍历求和
+- [判断回路]()
+  - 在遍历邻接点时，如果是灰色节点代表有回路
 
 ## Double Pointer
 
@@ -700,31 +699,31 @@ public:
 
 ### Questions
 
-- 手机打字的可能组合
-- 生成括号
-- 填数独
-- 可以无限使用，数组内元素组成一个和
-- 一个数只能用一次，数组内元素组成一个和
-- 集合内元素的全排列
-- 集合内元素的unique全排列
+- [手机打字的可能组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+- [生成括号](https://github.com/Noba1anc3/Leetcode/blob/master/022%20Generate%20Parenthesis.md)
+- [填数独](https://github.com/Noba1anc3/Leetcode/blob/master/037%20Sudoku%20Solver.md)
+- [可以无限使用，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/039%20Combination%20Sum.md)
+- [一个数只能用一次，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/040%20Combination%20Sum%20II.md)
+- [集合内元素的全排列](https://github.com/Noba1anc3/Leetcode/blob/master/046%20Permutations.md)
+- [集合内元素的unique全排列](https://github.com/Noba1anc3/Leetcode/blob/master/047%20Permutation%20II.md)
   - 如果同一层当前元素和上一个元素一样，就continue
-- 1到N元素的第K个全排列
+- [1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
   - 计算N-1的阶乘，得到第K个全排列的首数字和其是剩余数字的第几个全排列
   - 对剩余数字回溯计算全排列
   - 直接找到指定枝叶
-- 1到N元素的由k个元素构成的组合
-- 求集合的所有子集
+- [1到N当中的数字 由k个元素构成的所有组合](https://github.com/Noba1anc3/Leetcode/blob/master/077%20Combinations.md)
+- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
   - 将回溯过程中所有子过程的res都加到ans中
   - 最后加空集合{}
-- 求无重复元素的集合的所有子集
-- 求集合的所有子集
+- [求无重复元素的集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
+- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/090%20Subsets%20II.md)
   - 加一步排序
   - 对同一层，该元素与上一个元素相同的情况，进行剪枝
-- N皇后
+- [N皇后](https://github.com/Noba1anc3/Leetcode/blob/master/051%20N-Queens.md)
   - 放之前检查（当前位置为0且不会被攻击）
   - 落子
   - 退子
-- 还原ip地址
+- [还原ip地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
   - 对切成的段数和当前下标进行回溯
     - 如果段数为4或下标到字符串长度则返回
       - 如果两个条件都满足，将该ip添加到结果当中
@@ -733,11 +732,11 @@ public:
       - 如果首字母为0且长度不为1，返回
       - 如果长度为3且index到i的字串超过255，返回
       - ip加该子串
-- 大小写全排列
+- [大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
   - 如果是小写字母，改大写
   - 如果是大写字母，改小写
   - 大小写字母回溯结束后，再进行一次回溯，针对原大小写
-- 输出1到10的N次方之间的所有数字
+- [输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
   - 从0-9对N位进行回溯
 
 ### Algorithm
