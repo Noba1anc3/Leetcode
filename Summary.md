@@ -1,5 +1,3 @@
-
-
 # Language Specialty
 
 ## C++
@@ -148,8 +146,6 @@ std::pair.second
 std::stack<type> S;
 ```
 
-
-
 ### queue
 
 ```c++
@@ -215,13 +211,13 @@ maximum: float('inf') / math.inf
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
   - 将所有入度为0的节点压入队列
   - 只要队列不空
-    - 取出队首，压入最终结果
-    - 遍历所有指向该节点的源节点
+    - 取出队首，放入拓扑排序序列结果
+    - 遍历所有该节点指向的节点
       - 入度减一
       - 如果入度变为0，压入队列
 - [绕过不可走的位置，解开转盘锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
-  - 将初始状态压入队列，进行BFS搜索，只要队列不空
-    - 取出队首，如果是结果，返回步数
+  - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首
+    - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
     - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
 
