@@ -19,6 +19,8 @@ Output: false
 
 ## Solution - 双指针
 
+由两侧向中间靠拢
+
 ### c++
 
 ```c++
@@ -62,6 +64,9 @@ Attention:
 
 ## Solution - 栈
 
+遍历两次字符串，第一次将所有字母数字压入栈中。
+第二次遍历时，比较当前元素与栈顶元素，如果相同则弹出。
+
 ### c++
 
 ```c++
@@ -70,11 +75,11 @@ public:
     bool isPalindrome(string s) {
         stack<char> S;
 
-        for (const char c : s)
+        for (const char& c : s)
             if (isalnum(c))
                 S.push(c);
 
-        for (const char c : s){
+        for (const char& c : s){
             if (isalnum(c)){
                 if (tolower(S.top()) == tolower(c))
                     S.pop();
@@ -88,6 +93,6 @@ public:
 };
 ```
 
-执行用时：4 ms, 在所有 C++ 提交中击败了95.13%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了89.13%的用户
 
-内存消耗：7.7 MB, 在所有 C++ 提交中击败了42.66%的用户
+内存消耗：7.7 MB, 在所有 C++ 提交中击败了5.66%的用户
