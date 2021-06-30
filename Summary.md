@@ -111,7 +111,7 @@ std::set.insert(ele)
 for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
     value = *it;
 
-// 查找set
+// 查找set  两种方法时间复杂度相当
 if (std::set.find(element) == std::set.end())
 if (std::set.count(element))
 
@@ -181,10 +181,20 @@ heapq.heappop(list)
 ### other
 
 ```c++
+// int 最大值
 INT_MAX
+
+// a和b两个整型的最大值
 max(integer a, integer b)
+
+// 求幂
 pow(integer, 2)
+
+// 空与空指针
 NULL
+nullptr
+
+// 无符号长长型
 unsigned long long
 ```
 
@@ -326,9 +336,54 @@ maximum: float('inf') / math.inf
 ### Questions
 
 - [返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
+
   - 第一次遍历：构建数字到下标的倒排
-  - 第二次遍历：寻找target - i是否为哈希表的key，如果是且value不等于i，则返回i，j
+  - 第二次遍历：如果target - i是哈希表的key且value不等于i，则返回i，j
   - 如果是重复元素，加到哈希表时后一次出现的元素会覆盖前面的写入，因此不会有问题
+
+- [九键打字的字母组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+
+  - 构建从数字到字符串的映射
+
+- [判断是否为有效括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+
+  - 构建从右括号到左括号的映射
+
+- [二叉树前中序恢复建树](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+
+  - 构建中序序列的值到下标的倒排映射map
+
+  - 递归构建左右子树
+
+    - 如果前序序列左下标超过又下标，返回nullptr
+
+    - ```c++
+      TreeNode* root = new TreeNode(preorder[preorder_root])
+      ```
+
+    - 用根据倒排得到的中序root减去中序左下标，得到左子树元素个数left_subtree_size
+
+    - 递归构建左子树（pre_left + 1, pre_left + left_subtree_size, in_left, in_root - 1)
+
+    - 递归构建右子树（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)
+
+## Set
+
+一般使用基于哈希表的无序的unordered_set, 其作用在于有效降低查找时的时间复杂度。O(n) -> O(1)
+
+### Questions
+
+- [最长连续序列](https://github.com/Noba1anc3/Leetcode/blob/master/128%20Longest%20Consecutive%20Sequence.md)
+
+  - 用unordered_set存储vector所有元素
+
+  - 遍历set中每个元素，如果找不到其前一个元素
+
+    - ```c++
+      while (nums_set.count(++curNum)) curLength++;
+      ```
+
+- 
 
 ## Union-Find Set
 
@@ -427,6 +482,24 @@ void Union(int x, int y) {
 - [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 
 - [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
+
+- [二叉树前中序恢复建树](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+
+  - 构建中序序列的值到下标的倒排映射map
+
+  - 递归构建左右子树
+
+    - 如果前序序列左下标超过又下标，返回空指针
+
+    - ```c++
+      TreeNode* root = new TreeNode(preorder[preorder_root])
+      ```
+
+    - 用根据倒排得到的中序root减去中序左下标，得到左子树元素个数
+
+    - 递归构建左子树（pre_left + 1, pre_left + left_subtree_size, in_left, in_root - 1)
+
+    - 递归构建右子树（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)
 
 ## Graph
 
