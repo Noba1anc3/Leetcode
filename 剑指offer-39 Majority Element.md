@@ -18,6 +18,7 @@ Output: 2
 ```
 
 ## Solution [Sort] - O(n log n) 
+
 ### python
 
 ```python
@@ -30,7 +31,8 @@ class Solution:
 
 内存消耗：15.9 MB, 在所有 Python3 提交中击败了85.84%的用户
 
-## Solution - I Hash
+## Solution [Hash] - O(n)
+
 ### c++
 
 ```c++
@@ -38,23 +40,21 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         int target = nums.size() / 2;
-        if (nums.size() % 2 == 1)
-            target++;
+        if (nums.size() % 2 == 1) target++;
 
-        unordered_map<int, int> hashmap;
-        for (int num : nums){
-            if (hashmap[num] + 1 == target)
+        unordered_map<int, int> M;
+        for (const int& num : nums)
+            if (++M[num] == target)
                 return num;
-            hashmap[num]++;
-        }
+
         return 0;
     }
 };
 ```
 
-执行用时：24 ms, 在所有 C++ 提交中击败了86.54%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了71.42%的用户
 
-内存消耗：18.4 MB, 在所有 C++ 提交中击败了81.78%的用户
+内存消耗：18.4 MB, 在所有 C++ 提交中击败了9.75%的用户
 
 ## Solution - II Vote Idea
 
