@@ -84,30 +84,23 @@ c++
 ```c
 class Solution {
 public:
-    vector<int> dailyTemperatures(vector<int>& T) {
-        int n = T.size();
-        vector<int> ans(n);
-        stack<int> s;
-        for (int i = 0; i < n; i++) {
-            while (!s.empty() && T[i] > T[s.top()]) {
-                int previousIndex = s.top();
-                ans[previousIndex] = i - previousIndex;
-                s.pop();
+    vector<int> dailyTemperatures(vector<int>& temperatures) {
+        stack<int> S;
+        vector<int> rsp(temperatures.size(), 0);
+
+        for(int i = 0; i < temperatures.size(); i++){
+            while (!S.empty() && temperatures[S.top()] < temperatures[i]){
+                rsp[S.top()] = i - S.top();
+                S.pop();
             }
-            s.push(i);
+            S.push(i);
         }
-        return ans;
+
+        return rsp;
     }
 };
 ```
 
-执行用时：116 ms, 在所有 C++ 提交中击败了84.85%的用户  
-内存消耗：38.9 MB, 在所有 C++ 提交中击败了5.00%的用户
+执行用时：188 ms, 在所有 C++ 提交中击败了15.52%的用户
 
-Attention:
-- vector<int>&
-- vector.size()
-- stack.empty()
-- stack.top()
-- stack.pop()
-- stack.push(i)
+内存消耗：86.7 MB, 在所有 C++ 提交中击败了21.12%的用户
