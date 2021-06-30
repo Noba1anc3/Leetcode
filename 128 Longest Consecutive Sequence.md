@@ -25,7 +25,7 @@ Output: 9
 
 ## Solution - O(n)
 
-c++
+### c++
 
 ```c++
 class Solution {
@@ -62,7 +62,7 @@ Attention:
   unorder_set.count是O(1)的复杂度
   ```
 
-python
+### python
 
 对于以下在c++中数据结构替换实验带来的效果提升，python中有相同的结论。
 
