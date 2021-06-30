@@ -173,11 +173,20 @@ std::priority_queue.size()
 std::priority_queue.empty()
 ```
 
-python
+### iterator
 
-```python
-heapq.heappush(list, element)
-heapq.heappop(list)
+```c++
+// 生成迭代器
+std::set<int>::iterator iter = set.begin()
+
+// 遍历迭代器
+while (iter != set.end())
+
+// 取值
+*iter
+
+// 迭代器前移
+iter++  // 不能用iter+=1
 ```
 
 ### other
@@ -227,6 +236,13 @@ dicts = collections.defaultdict(int) # 括号内为value类型
 # 取key, value
 dict.keys()
 dict.values()
+```
+
+### priority_queue
+
+```python
+heapq.heappush(list, element)
+heapq.heappop(list)
 ```
 
 ### other
