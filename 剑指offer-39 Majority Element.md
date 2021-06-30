@@ -17,6 +17,19 @@ Input: nums = [2,2,1,1,1,2,2]
 Output: 2
 ```
 
+## Solution - I Sort
+### python
+
+```python
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        return sorted(nums)[int(len(nums)/2)]
+```
+
+执行用时：60 ms, 在所有 Python3 提交中击败了33.62%的用户
+
+内存消耗：15.9 MB, 在所有 Python3 提交中击败了85.84%的用户
+
 ## Solution - I Hash
 ### c++
 
