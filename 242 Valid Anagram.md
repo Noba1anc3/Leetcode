@@ -80,20 +80,25 @@ class Solution(object):
 
 ### Hashmap
 
-c++
+#### c++
+
+alphabet的初始化可以用以下三种方式：
+- ```unordered_map<int, int> alphabet;```
+- ```int alphabet[26] = {0}```
+- ```vector<int> alphabet(26)```
 
 ```c++
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if (s.size() != t.size())
+		if (s.size() != t.size())
             return false;
         
-        int alphabet[26] = {0};
+        unordered_map<int, int> alphabet;
 
         for(int i = 0; i < s.size(); i++){
             alphabet[int(s[i]) - 97] += 1;
-            alphabet[int(t[i]) - 97] -= 1;
+			alphabet[int(t[i]) - 97] -= 1;
         }
 
         for (int i = 0; i < 26; i++)
@@ -104,9 +109,9 @@ public:
 };
 ```
 
-执行用时：4 ms, 在所有 C++ 提交中击败了98.18%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了97.81%的用户
 
-内存消耗：7.1 MB, 在所有 C++ 提交中击败了99.28%的用户
+内存消耗：7.1 MB, 在所有 C++ 提交中击败了65.83%的用户
 
 python
 
