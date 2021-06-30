@@ -96,7 +96,7 @@ private:
 public:
     int longestConsecutive(vector<int>& nums) {
         for (const int& num : nums){
-            if (find(nums.begin(), nums.end(), num-1) != nums.end()){
+            if (find(nums.begin(), nums.end(), num-1) == nums.end()){
                 int curNum = num;
                 int curLength = 1;
                 while (find(nums.begin(), nums.end(), ++curNum) != nums.end())
