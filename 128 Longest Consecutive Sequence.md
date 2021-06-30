@@ -25,6 +25,7 @@ Output: 9
 
 ## Solution - O(n)
 
+c++
 
 ```c++
 class Solution {
@@ -60,6 +61,31 @@ Attention:
 - ```
   unorder_set.count是O(1)的复杂度
   ```
+
+python
+
+对于以下在c++中数据结构替换实验带来的效果提升，python中有相同的结论。
+
+```python
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        nums = set(nums)
+        length = 0
+        
+        for num in nums:
+            if num - 1 not in nums:
+                curNum = num + 1
+                curLength = 1
+                while curNum in nums:
+                    curLength += 1
+                    curNum += 1
+                length = max(length, curLength)
+        return length
+```
+ 
+执行用时：56 ms, 在所有 Python3 提交中击败了64.66%的用户
+
+内存消耗：26.1 MB, 在所有 Python3 提交中击败了18.38%的用户
 
 ## Solution - Brute Force
 
@@ -145,7 +171,7 @@ public:
 
 内存消耗：30.1 MB, 在所有 C++ 提交中击败了27.09%的用户
 
-## Solution - 遍历数组替换为unorder_set
+## Solution - 被遍历的vector替换为unordered_set
 
 或许是由于其哈希表机制的原因，导致计算时间复杂度大大降低
 
