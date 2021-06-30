@@ -23,8 +23,6 @@ Output: [0,1]
 ```
 
 ## Brute Force
-- num2 in nums，返回 True 说明有戏
-- nums.index(num2)，查找 num2 的索引
 
 ### 原始方法
 python
@@ -69,11 +67,13 @@ class Solution:
 
 内存消耗：15 MB, 在所有 Python3 提交中击败了48.40%的用户
 
+Attention
+- list.index(element, index)，查找 index下标之后的元素中 element 的索引
+- list.count(element), 查找 list 中有几个 element
+
 ## Hashmap
 
-### python
-
-使用字典模拟哈希表
+python
 
 ```python
 class Solution:
@@ -86,9 +86,10 @@ class Solution:
             if j is not None and not i == j:
                 return [i, j]
 ```
+
 Time : 44ms
 
-### c++
+c++
 
 ```c++
 class Solution {
@@ -120,7 +121,6 @@ public:
 内存消耗：9.9 MB, 在所有 C++ 提交中击败了24.04%的用户
 
 Attention:
-
 - unordered_map<int, int> map
 - map[key] = value
 - unordered_map<int, int>::iterator it = map.find(key)
