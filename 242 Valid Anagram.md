@@ -86,14 +86,14 @@ c++
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-		if (s.size() != t.size())
+        if (s.size() != t.size())
             return false;
         
         int alphabet[26] = {0};
 
         for(int i = 0; i < s.size(); i++){
             alphabet[int(s[i]) - 97] += 1;
-			alphabet[int(t[i]) - 97] -= 1;
+            alphabet[int(t[i]) - 97] -= 1;
         }
 
         for (int i = 0; i < 26; i++)
