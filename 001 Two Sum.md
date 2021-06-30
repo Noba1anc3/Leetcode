@@ -55,20 +55,18 @@ class Solution:
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        rsp = []
         for i in range(len(nums)):
             if (target - nums[i]) in nums[i+1:]:
-                if nums.count(target - nums[i]) == 1 and 2 * nums[i] == target:
-                    continue
-                else:
-                    j = nums.index(target - nums[i], i+1) #index(x,i+1)是从num1后的序列后找num2
-                    break
-
-        if j > 0 :
-            return [i, j]
-        else:
-            return []
+                j = nums.index(target - nums[i], i+1)
+                rsp = [i, j]
+                break
+        return rsp
 ```
-Time : 856 ms
+
+执行用时：564 ms, 在所有 Python3 提交中击败了18.07%的用户
+
+内存消耗：15.1 MB, 在所有 Python3 提交中击败了32.06%的用户
 
 ## Hashmap
 
