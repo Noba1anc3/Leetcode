@@ -43,7 +43,7 @@
 - [☆☆ 020. Valid Parentheses ☆☆](020%20Valid%20Parentheses.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
-- [☆☆ 242. Valid Anagram ☆☆ (set)](242%20Valid%20Anagram.md)
+- [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆ (set)](349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆ (set)](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
 - [☆☆☆ 剑指Offer 07. Construct Binary Tree from Preorder and Inorder ☆☆☆ (map) (同105)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
