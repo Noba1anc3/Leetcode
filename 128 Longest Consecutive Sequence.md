@@ -61,7 +61,7 @@ Attention:
   unorder_set.count是O(1)的复杂度
   ```
 
-## Solution - O(n3)
+## Solution - Brute Force
 
 时间复杂度过高，计算超时。
 
@@ -87,7 +87,7 @@ public:
 
 ## Solution - 减少无效计算
 
-进一步地，如果数组中有前一个数字，则不进行搜索。仍然超时。
+进一步地，如果数组中有前一个数字，则这次搜索一定是冗余计算。结果仍然超时。
 
 ```c++
 class Solution {
@@ -144,3 +144,37 @@ public:
 执行用时：580 ms, 在所有 C++ 提交中击败了17.38%的用户
 
 内存消耗：30.1 MB, 在所有 C++ 提交中击败了27.09%的用户
+
+## Solution - 遍历数组替换为unorder_set
+
+或许是由于其哈希表机制的原因，导致计算时间复杂度大大降低
+
+```
+class Solution {
+private:
+    int maxLength = 0;
+    unordered_set<int> nums_set;
+
+public:
+    int longestConsecutive(vector<int>& nums) {
+        for (const int& num : nums)
+            nums_set.insert(num);
+        
+        for (const int& num : nums_set){
+            if (nums_set.find(num-1) == nums_set.end()){
+                int curNum = num;
+                int curLength = 1;
+                while (nums_set.find(++curNum) != nums_set.end())
+                    curLength++;
+                maxLength = max(maxLength, curLength);
+            }
+        }
+
+        return maxLength;
+    }
+};
+```
+
+执行用时：68 ms, 在所有 C++ 提交中击败了48.59%的用户
+
+内存消耗：30.1 MB, 在所有 C++ 提交中击败了29.26%的用户
