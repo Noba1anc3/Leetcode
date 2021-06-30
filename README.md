@@ -42,7 +42,6 @@
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆ (map)](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 020. Valid Parentheses ☆☆ (map)](020%20Valid%20Parentheses.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆ (map)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
-- [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆ (set)](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 169. Majority Element ☆☆ (map) (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 242. Valid Anagram ☆☆ (set)](242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆ (set)](349%20Intersection%20of%20Two%20Arrays.md)
@@ -50,6 +49,9 @@
 - [☆☆☆ 剑指Offer 07. Construct Binary Tree from Preorder and Inorder ☆☆☆ (map) (同105)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 剑指Offer 39. Majority Element (map) ☆☆](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆ (set)](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
+
+## Set
+- [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆ (set)](128%20Longest%20Consecutive%20Sequence.md)
 
 ## Union-Find Set
 
@@ -98,6 +100,7 @@
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
 
 # Algorithm
+
 ## BFS
 
 - [Breadth First Search](Graph%20-%20BFS.md)
