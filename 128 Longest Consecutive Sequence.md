@@ -57,9 +57,6 @@ public:
 内存消耗：10.9 MB, 在所有 C++ 提交中击败了39.86%的用户
 
 Attention:
-
-- 遍历列表时，使用&可以变快
-
 - ```
   unorder_set.count是O(1)的复杂度
   ```
@@ -86,7 +83,7 @@ public:
 };
 ```
 
-## Solution - O(n2)
+## Solution - O(n3-)
 
 ```c++
 class Solution {
