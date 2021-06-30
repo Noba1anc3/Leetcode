@@ -180,8 +180,6 @@ heapq.heappop(list)
 
 ### other
 
-c++
-
 ```c++
 INT_MAX
 max(integer a, integer b)
@@ -190,10 +188,31 @@ NULL
 unsigned long long
 ```
 
-python
+## python
+
+### list
 
 ```python
+# 按照元素的首元素进行排序
 list.sort(key = lambda x : x[0])
+
+# 寻找list中有几个count元素
+list.count(element)
+
+# 寻找list中，从index下标开始，value所在的下标
+list.index(value, index)
+```
+
+### dict
+
+```python
+# 根据key取value
+value = dict.get(key)
+```
+
+### other
+
+```python
 maximum: float('inf') / math.inf
 ```
 
@@ -301,6 +320,15 @@ maximum: float('inf') / math.inf
       - 无论是否弹出，将当前行程加入堆中
 - [拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
   - 基于最小堆的哈夫曼树
+
+## Map
+
+### Questions
+
+- [返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
+  - 第一次遍历：构建数字到下标的倒排
+  - 第二次遍历：寻找target - i是否为哈希表的key，如果是且value不等于i，则返回i，j
+  - 如果是重复元素，加到哈希表时后一次出现的元素会覆盖前面的写入，因此不会有问题
 
 ## Union-Find Set
 
