@@ -87,7 +87,9 @@ class Solution:
                 return [i, j]
 ```
 
-Time : 44ms
+执行用时：56 ms, 在所有 Python3 提交中击败了26.22%的用户
+
+内存消耗：15.9 MB, 在所有 Python3 提交中击败了5.17%的用户
 
 c++
 
@@ -95,30 +97,24 @@ c++
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> dict;
-        vector<int> ans;
-
+        unordered_map<int, int> M;
         for (int i = 0; i < nums.size(); i++)
-            dict[nums[i]] = i;
+            M[nums[i]] = i;
 
-        for (int i = 0; i < nums.size(); i++){
-            unordered_map<int,int>::iterator it;
-            it = dict.find(target - nums[i]);
-            if (it != dict.end() && i != it->second){
-                ans.push_back(i);
-                ans.push_back(it->second);
-                break;
-            }
+        for (int i = 0; i < nums.size(); i++) {
+            int another = target - nums[i];
+            if (M.find(another) != M.end() && M[another] != i)
+                return {i, M[another]};
         }
 
-        return ans;
+        return {};
     }
 };
 ```
 
-执行用时：8 ms, 在所有 C++ 提交中击败了90.24%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了34.58%的用户
 
-内存消耗：9.9 MB, 在所有 C++ 提交中击败了24.04%的用户
+内存消耗：11.6 MB, 在所有 C++ 提交中击败了5.00%的用户
 
 Attention:
 - unordered_map<int, int> map
