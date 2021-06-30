@@ -132,7 +132,7 @@ class Solution:
 
 ### 排序 + 双指针
 
-c++
+#### 双指针
 
 ```c++
 class Solution {
@@ -155,16 +155,13 @@ public:
                 continue;
             }
 
-            if (nums1[index1] < nums2[index2]){
+            if (nums1[index1] < nums2[index2])
                 index1 += 1;
-            }
-            else if (nums1[index1] > nums2[index2]){
+            else if (nums1[index1] > nums2[index2])
                 index2 += 1;
-            }
             else{
                 interSection.push_back(nums1[index1]);
-                index1 += 1;
-                index2 += 1;
+                index1 += 1; index2 += 1;
             }
         }
 
@@ -173,6 +170,42 @@ public:
 };
 ```
 
-执行用时：8 ms, 在所有 C++ 提交中击败了96.18%的用户  
+执行用时：8 ms, 在所有 C++ 提交中击败了63.97%的用户
 
-内存消耗：10.1 MB, 在所有 C++ 提交中击败了94.95%的用户
+内存消耗：9.8 MB, 在所有 C++ 提交中击败了80.93%的用户
+
+
+#### 双迭代器
+
+set自带排序，因此无需再次排序
+
+```c++
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> interSection;
+        set<int> nums1_set, nums2_set;
+
+        for (const int& num : nums1)
+            nums1_set.insert(num);
+        for (const int& num : nums2)
+            nums2_set.insert(num);
+
+        set<int>::iterator iter1 = nums1_set.begin(), iter2 = nums2_set.begin();
+
+        while (iter1 != nums1_set.end() && iter2 != nums2_set.end())
+            if (*iter1 < *iter2) iter1++;
+            else if (*iter1 > *iter2) iter2++;
+            else{
+                interSection.push_back(*iter1);
+                iter1++; iter2++;
+            }
+
+        return interSection;
+    }
+};
+```
+
+执行用时：4 ms, 在所有 C++ 提交中击败了94.06%的用户
+
+内存消耗：10.6 MB, 在所有 C++ 提交中击败了5.02%的用户
