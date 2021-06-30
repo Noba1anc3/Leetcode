@@ -287,7 +287,7 @@
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 - [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (Quick Sort) (同剑指offer-40)](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
 
-# Brain Twister
+## Brain Twister
 
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 
