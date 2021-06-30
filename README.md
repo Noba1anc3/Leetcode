@@ -22,9 +22,9 @@
 - [☆☆ 144. Binary Tree Preorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [☆☆ 145. Binary Tree Postorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 - [☆ 150. Evaluate Reverse Polish Notation ☆](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
-- [☆☆☆ 155. Min Stack ☆☆☆ (同面试题 03.02)](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
+- [☆☆☆ 155. Min Stack (同面试题 03.02) ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
-- [739. Daily Temperatures](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
+- [☆☆☆ 739. Daily Temperatures ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
 - [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
 
 ## Heap
@@ -375,7 +375,7 @@
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
-- [739. Daily Temperatures](739%20Daily%20Temperatures.md)
+- [☆☆☆ 739. Daily Temperatures ☆☆☆](739%20Daily%20Temperatures.md)
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
 - [☆☆ 752. Open the Lock ☆☆](752%20Open%20the%20Lock.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
