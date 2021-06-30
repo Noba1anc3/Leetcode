@@ -30,18 +30,18 @@ Output: 9
 class Solution {
 private:
     int maxLength = 0;
-    unordered_set<int> hashmap;
+    unordered_set<int> nums_set;
 
 public:
     int longestConsecutive(vector<int>& nums) {
-        for (int& num : nums)
-            hashmap.insert(num);
+        for (const int& num : nums)
+            nums_set.insert(num);
         
-        for (const int& num : hashmap){
-            if (!hashmap.count(num-1)){
+        for (const int& num : nums_set){
+            if (!nums_set.count(num-1)){
                 int curNum = num;
                 int curLength = 1;
-                while (hashmap.count(++curNum))
+                while (nums_set.count(++curNum))
                     curLength++;
                 maxLength = max(maxLength, curLength);
             }
@@ -52,9 +52,9 @@ public:
 };
 ```
 
-执行用时：16 ms, 在所有 C++ 提交中击败了94.14%的用户
+执行用时：72 ms, 在所有 C++ 提交中击败了47.62%的用户
 
-内存消耗：10.9 MB, 在所有 C++ 提交中击败了39.86%的用户
+内存消耗：30.2 MB, 在所有 C++ 提交中击败了12.35%的用户
 
 Attention:
 - ```
