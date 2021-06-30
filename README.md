@@ -37,12 +37,12 @@
 - [☆☆☆ 1094. Car Pooling ☆☆☆](1094%20Car%20Pooling.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 
-## Hash
-- [☆☆ 001. Two Sum ☆☆ (map)](001%20Two%20Sum.md)
-- [☆☆ 017. Letter Combination of a Phone Number ☆☆ (map)](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-- [☆☆ 020. Valid Parentheses ☆☆ (map)](020%20Valid%20Parentheses.md)
-- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆ (map)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
-- [☆☆ 169. Majority Element ☆☆ (map) (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+## Map
+- [☆☆ 001. Two Sum ☆☆](001%20Two%20Sum.md)
+- [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+- [☆☆ 020. Valid Parentheses ☆☆](020%20Valid%20Parentheses.md)
+- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆ 169. Majority Element ☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 242. Valid Anagram ☆☆ (set)](242%20Valid%20Anagram.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆ (set)](349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆ (set)](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
