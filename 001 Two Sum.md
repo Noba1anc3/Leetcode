@@ -22,28 +22,32 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 ```
 
-## Python List
+## Brute Force
 - num2 in nums，返回 True 说明有戏
 - nums.index(num2)，查找 num2 的索引
 
-### 方法一 
+### 方法一
+python
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        rsp = []
+
         for i in range(len(nums)):
             if (target - nums[i]) in nums:
-                if nums.count(target - nums[i]) == 1 and 2 * nums[i] == target:
+                if nums.count(target - nums[i]) == 1 and nums[i] * 2 == target:
                     continue
                 else:
                     j = nums.index(target - nums[i], i+1) #index(x,i+1)是从num1后的序列后找num2
+                    rsp = [i, j]
                     break
 
-        if j > 0 :
-            return [i, j]
-        else:
-            return []
+        return rsp
 ```
-Time : 1140ms
+
+执行用时：708 ms, 在所有 Python3 提交中击败了17.37%的用户
+
+内存消耗：15.1 MB, 在所有 Python3 提交中击败了34.48%的用户
 
 ### 方法二
 优化: 对j的寻找在nums[i]的后面进行即可,不必在nums整个数组中进行
