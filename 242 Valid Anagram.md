@@ -54,9 +54,7 @@ public:
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());
 
-        if (s == t)
-            return true;
-        return false;
+        return s == t;
     }
 };
 ```
@@ -73,9 +71,8 @@ class Solution(object):
         """
         if len(s) != len(t):
             return False
-        if sorted(s) != sorted(t):
-            return False
-        return True
+
+        return sorted(s) == sorted(t)
 ```
 
 ### Hashmap
@@ -91,14 +88,14 @@ alphabet的初始化可以用以下三种方式：
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-		if (s.size() != t.size())
+        if (s.size() != t.size())
             return false;
         
         unordered_map<int, int> alphabet;
 
         for(int i = 0; i < s.size(); i++){
             alphabet[int(s[i]) - 97] += 1;
-			alphabet[int(t[i]) - 97] -= 1;
+            alphabet[int(t[i]) - 97] -= 1;
         }
 
         for (int i = 0; i < 26; i++)
@@ -111,9 +108,14 @@ public:
 
 执行用时：4 ms, 在所有 C++ 提交中击败了97.81%的用户
 
-内存消耗：7.1 MB, 在所有 C++ 提交中击败了65.83%的用户
+内存消耗：7.1 MB, 在所有 C++ 提交中击败了61.74%的用户
 
-python
+Attention
+
+- int alphabet[26] = {0};
+- int('a') = 97
+ 
+#### python
 
 ```python
 class Solution(object):
@@ -139,6 +141,8 @@ class Solution(object):
 ```
 
 Attention
+- ```collections.defaultdict(int)```
 
-- int alphabet[26] = {0};
-- a = 97
+执行用时：64 ms, 在所有 Python3 提交中击败了48.20%的用户
+
+内存消耗：15.2 MB, 在所有 Python3 提交中击败了41.72%的用户
