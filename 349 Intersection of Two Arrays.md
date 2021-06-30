@@ -50,35 +50,35 @@ Output: [9,4]
 
 ### Baseline
 
-c++
+#### c++
 
 ```c++
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        unordered_set<int> ret;
-        for (auto& num : nums1) {
-            for (auto& num2 : nums2){
-                if (num == num2){
-                    ret.insert(num);
-                }
-            }
-        }
+        unordered_set<int> rsp_set;
+        vector<int> rsp;
         
-        vector<int> n_ret;
+        for (const int& num1 : nums1)
+            for (const int& num2 : nums2)
+                if (num1 == num2)
+                    rsp_set.insert(num1);
 
-        for (auto& ele : ret){
-            n_ret.push_back(ele);
-        }
-
-        return n_ret;
+        for (const int& ele : rsp_set)
+            rsp.push_back(ele);
+            
+        return rsp;
     }
 };
 ```
 
+执行用时：12 ms, 在所有 C++ 提交中击败了24.70%的用户
+
+内存消耗：9.9 MB, 在所有 C++ 提交中击败了76.27%的用户
+
 ### Hashmap
 
-c++
+#### c++
 
 ```c++
 class Solution {
@@ -86,9 +86,9 @@ public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
         unordered_set<int> set1, set2;
         
-        for (auto& num : nums1)
+        for (const int& num : nums1)
             set1.insert(num);
-        for (auto& num : nums2)
+        for (const int& num : nums2)
             set2.insert(num);
         
         return getIntersection(set1, set2);
@@ -99,7 +99,8 @@ public:
             return getIntersection(set2, set1);
 
         vector<int> intersection;
-        for (auto& num : set1)
+        
+        for (const int& num : set1)
             if (set2.count(num))
                 intersection.push_back(num);
 
@@ -108,18 +109,16 @@ public:
 };
 ```
 
-执行用时：24 ms, 在所有 C++ 提交中击败了12.14%的用户  
+执行用时：12 ms, 在所有 C++ 提交中击败了24.70%的用户
 
-内存消耗：10.9 MB, 在所有 C++ 提交中击败了21.20%的用户
+内存消耗：10.4 MB, 在所有 C++ 提交中击败了25.07%的用户
 
-python
+#### python
 
 ```python
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        set1 = set(nums1)
-        set2 = set(nums2)
-        return self.set_intersection(set1, set2)
+        return self.set_intersection(set(nums1), set(nums2))
 
     def set_intersection(self, set1, set2):
         if len(set1) > len(set2):
@@ -127,11 +126,9 @@ class Solution:
         return [x for x in set1 if x in set2]
 ```
 
-Attention
+执行用时：32 ms, 在所有 Python3 提交中击败了97.37%的用户
 
-- unordered_set<int>  set_name
-- set.insert()
-- for (auto& element : vector)
+内存消耗：15.1 MB, 在所有 Python3 提交中击败了17.65%的用户
 
 ### 排序 + 双指针
 
