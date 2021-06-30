@@ -138,6 +138,7 @@ std::unordered_map.find(key) != std::unordered_map.end()
 ```c++
 std::pair.first
 std::pair.second
+make_pair(value1, value2)
 ```
 
 ### stack
@@ -262,13 +263,17 @@ maximum: float('inf') / math.inf
   - 如果是数字就压入栈中
   - 如果是运算符就取出栈顶和次栈顶，按运算符运算后压入栈中
 - [最小栈](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
-  - 双栈
-    - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
-    - 压栈时，A栈压数字，B栈压入 数字与B栈栈顶的最小值
-    - 弹栈时，两栈同步弹出
-  - 数值齐存
-    - 压栈时：如果当前值更小，保存并更新此前的最小值。无论当前值是否更小，都将新值压入栈顶。
-    - 弹栈时：如果最小值和栈顶相同，说明次栈顶是以前的最小值，弹出栈顶并将新栈顶赋值给最小值。无论最小值和栈顶是否相同，都将栈顶弹出。
+  - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
+  - 压栈时，A栈压数字，B栈压入 数字与B栈栈顶的最小值
+  - 弹栈时，两栈同步弹出
+- [根据天气列表，得出每一天需要等几天能等来更暖和的天气](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
+  - 维护一个存储下标的单调栈，栈底到栈顶的下标对应温度依次递减
+  - 如果一个下标在单调栈中，说明尚未找到更高天气的下标
+  -  正向遍历温度列表。对于温度列表中的每个元素 `T[i]`
+    - 如果栈不为空，则比较栈顶元素 `prevIndex` 对应的温度 `T[prevIndex]` 和当前温度 `T[i]`
+    - 如果 `T[i] > T[prevIndex]`，则将 `prevIndex` 移除，并将 `prevIndex` 对应的等待天数赋为 `i - prevIndex`
+    - 重复上述操作直到栈为空或者栈顶元素对应的温度大于等于当前温度
+    - 将 `i` 进栈
 
 ## Heap
 
@@ -283,6 +288,7 @@ maximum: float('inf') / math.inf
     - 开始时间晚于堆顶结束时间则弹出堆顶
     - 无论是否弹出，将当前会议加入堆中
   - 返回堆的大小
+- [全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
 - [出租车能否坐下所有乘客](https://github.com/Noba1anc3/Leetcode/edit/master/1094%20Car%20Pooling.md)
   - 简单方法
     - 乘客个数变化只发生在上下车时间
