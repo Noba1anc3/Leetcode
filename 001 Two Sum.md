@@ -26,7 +26,7 @@ Output: [0,1]
 - num2 in nums，返回 True 说明有戏
 - nums.index(num2)，查找 num2 的索引
 
-### 方法一
+### 原始方法
 python
 ```python
 class Solution:
@@ -49,7 +49,8 @@ class Solution:
 
 内存消耗：15.1 MB, 在所有 Python3 提交中击败了34.48%的用户
 
-### 方法二
+### 初步优化
+
 优化: 对j的寻找在nums[i]的后面进行即可,不必在nums整个数组中进行
 
 ```python
@@ -64,9 +65,9 @@ class Solution:
         return rsp
 ```
 
-执行用时：564 ms, 在所有 Python3 提交中击败了18.07%的用户
+执行用时：484 ms, 在所有 Python3 提交中击败了19.57%的用户
 
-内存消耗：15.1 MB, 在所有 Python3 提交中击败了32.06%的用户
+内存消耗：15 MB, 在所有 Python3 提交中击败了48.40%的用户
 
 ## Hashmap
 
