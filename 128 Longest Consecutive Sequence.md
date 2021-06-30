@@ -149,7 +149,7 @@ public:
 
 或许是由于其哈希表机制的原因，导致计算时间复杂度大大降低
 
-```
+```c++
 class Solution {
 private:
     int maxLength = 0;
