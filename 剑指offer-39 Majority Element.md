@@ -56,7 +56,7 @@ public:
 
 内存消耗：18.4 MB, 在所有 C++ 提交中击败了9.75%的用户
 
-## Solution - II Vote Idea
+## Solution [Vote] - O(n)
 
 ### c++
 
@@ -64,16 +64,16 @@ public:
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int x = 0, votes = 0;
-        for(int num : nums){
-            if(votes == 0) x = num;
-            votes += num == x ? 1 : -1;
+        int dom_num = 0, votes = 0;
+        for (const int& num : nums){
+            if(votes == 0) dom_num = num;
+            votes += num == dom_num ? 1 : -1;
         }
-        return x;
+        return dom_num;
     }
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了97.13%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了90.26%的用户
 
-内存消耗：19.2 MB, 在所有 C++ 提交中击败了18.20%的用户
+内存消耗：18.4 MB, 在所有 C++ 提交中击败了25.69%的用户
