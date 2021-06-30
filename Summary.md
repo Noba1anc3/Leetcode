@@ -27,7 +27,9 @@ struct Edge{
 'c' + 3 = 'f'
 'c' - 'a' = 2
 '2' - '0' = 2  // 不能用int('2')  会变成ascii码
-    
+
+int('a') = 97
+
 // 判断是否是字母或数字
 isalnum(char)
 
@@ -218,6 +220,13 @@ list.index(value, index)
 ```python
 # 根据key取value
 value = dict.get(key)
+
+# 解决key不存在时的异常
+dicts = collections.defaultdict(int) # 括号内为value类型
+
+# 取key, value
+dict.keys()
+dict.values()
 ```
 
 ### other
@@ -367,23 +376,37 @@ maximum: float('inf') / math.inf
 
     - 递归构建右子树（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)
 
+- [求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+  - 计算数字需要出现的最少次数
+    - 数组长度为偶数：半长
+    - 数组长度为奇数：半长+1
+  - 构建数字到出现个数的映射
+- [判断两个字符串是否为字母异位词]()
+  - 如果长度不相等，直接返回
+  - 构建字母与其出现次数的映射
+  - 遍历两个字符串，A串的字母次数增长，B串的字母次数下降
+  - 遍历映射表，如值不为0，返回错误
+
 ## Set
 
 一般使用基于哈希表的无序的unordered_set, 其作用在于有效降低查找时的时间复杂度。O(n) -> O(1)
 
 ### Questions
 
-- [最长连续序列](https://github.com/Noba1anc3/Leetcode/blob/master/128%20Longest%20Consecutive%20Sequence.md)
+- [**最长连续序列**](https://github.com/Noba1anc3/Leetcode/blob/master/128%20Longest%20Consecutive%20Sequence.md)
 
-  - 用unordered_set存储vector所有元素
+  - 用unordered_set存储vector所有元素(去重 + 降低搜索时间复杂度)
 
-  - 遍历set中每个元素，如果找不到其前一个元素
+  - 遍历set中每个元素，如果找不到其前一个元素（若能找到，这次计算将是冗余的）
 
     - ```c++
       while (nums_set.count(++curNum)) curLength++;
       ```
 
-- 
+- [**求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+
+  - 遍历两数组，将其元素分别insert到两个unordered_set当中（为了去重）
+  - **遍历小set中的元素**，如果在大set中能找到该元素，则将其加入返回vector当中
 
 ## Union-Find Set
 
@@ -805,6 +828,12 @@ public:
   - 如果i和j不是字母数字，且不会发生错位，则向中间靠拢
   - 如果双指针对应的小写字母一样，i++，j--，否则返回错误
   - 跳出while循环，返回true
+- [**求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
+  - 生成两个迭代器分别在两个set中前进
+    - 如果迭代器1的值小于迭代器2的值，迭代器1++
+    - 反之，迭代器2++
+    - 如果二者相等，将值加入交集中，两迭代器均++
 
 ## Backtrack
 
@@ -952,6 +981,16 @@ string 存每次回溯之前的临时结果
 
     - 根据贪心算法的思想，先遍历完同级元素后再遍历下一节是更合理的做法
     - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层迭代
+
+## Math
+
+### Questions
+
+- [计算数组中出现次数超过一半的数字]()
+  - 首先设定主导数字和票数均为0
+  - 遍历所有数字
+    - 如果当前票数为0，修改主导数字为当前被遍历到的数字
+    - 无论票数是否为0，如果主导数字与当前被遍历的数字相同则票数+1，否则-1
 
 # Useful method
 
