@@ -65,7 +65,7 @@ Attention:
 
 - ```c++
   if (preorder_left > preorder_right)
-  	return nullptr;
+      return nullptr;
   ```
 
 - ```c++
