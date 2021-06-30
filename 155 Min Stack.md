@@ -27,7 +27,7 @@ minStack.getMin(); // return -2
 
 ## Solution
 
-### 辅助栈
+### 双栈
 
 按照上面的思路，我们只需要设计一个数据结构，使得每个元素 a 与其相应的最小值 m 时刻保持一一对应。因此我们可以使用一个辅助栈，与元素栈同步插入与删除，用于存储与每个元素对应的最小值。
 
@@ -99,6 +99,43 @@ public:
 执行用时：20 ms, 在所有 C++ 提交中击败了95.86%的用户
 
 内存消耗：16 MB, 在所有 C++ 提交中击败了31.39%的用户
+
+### 单栈
+
+c++
+
+```c++
+class MinStack {
+private:
+    stack<pair<int, int>> S;
+
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+    }
+    
+    void push(int val) {
+        if (S.empty()) S.push(make_pair(val, val));
+        else S.push(make_pair(val, min(val, S.top().second)));
+    }
+    
+    void pop() {
+        S.pop();
+    }
+    
+    int top() {
+        return S.top().first;
+    }
+    
+    int getMin() {
+        return S.top().second;
+    }
+};
+```
+
+执行用时：24 ms, 在所有 C++ 提交中击败了84.25%的用户
+
+内存消耗：15.9 MB, 在所有 C++ 提交中击败了82.41%的用户
 
 ### 数值齐存
 
