@@ -66,7 +66,7 @@
 
 ## Linked-List
 
-- [002. Add Two Numbers](002%20Add%20Two%20Numbers.md)
+- [☆☆ 002. Add Two Numbers ☆☆](002%20Add%20Two%20Numbers.md)
 - [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [☆☆☆ 206. Reverse LinkList ☆☆☆ (同剑指offer-24)](%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
@@ -304,8 +304,8 @@
 
 # Questions
 
-- [001. Two Sum](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
-- [002. Add Two Numbers](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
+- [☆☆ 001. Two Sum ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
+- [☆☆ 002. Add Two Numbers ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [004. findMedianSortedArrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20findMedianSortedArrays.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
