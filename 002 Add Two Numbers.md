@@ -10,6 +10,7 @@ Explanation: 342 + 465 = 807.
 ```
 
 ## Solution 1
+
 将长度较短的链表在末尾补0使得两个链表的长度相等，再一个一个元素对齐相加
 
 Learned:
@@ -22,76 +23,71 @@ Learned:
  * struct ListNode {
  *     int val;
  *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
 
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int len1=1;//记录l1的长度
-        int len2=1;//记录l2的长度
-        ListNode* p=l1;
-        ListNode* q=l2;
+        int len1 = 0, len2 = 0l;
+        ListNode *p = l1, *q = l2;
 
-        while(p->next!=NULL)//获取l1的长度
+        while(p->next != NULL)
         {
             len1++;
-            p=p->next;
+            p = p->next;
         }
-        while(q->next!=NULL)//获取l2的长度
+        while(q->next != NULL)
         {
             len2++;
-            q=q->next;
+            q = q->next;
         }
 
-        if(len1>len2)//l1较长，在l2末尾补零
+        if(len1 > len2)
         {
-            for(int i=1;i<=len1-len2;i++)
+            for(int i = 0; i < len1 - len2; i++)
             {
-                q->next=new ListNode(0);
-                q=q->next;
+                q->next = new ListNode(0);
+                q = q->next;
             }
         }
-        else//l2较长，在l1末尾补零
+        else
         {
-            for(int i=1;i<=len2-len1;i++)
+            for(int i = 0; i < len2 - len1; i++)
             {
-                p->next=new ListNode(0);
-                p=p->next;
+                p->next = new ListNode(0);
+                p = p->next;
             }
         }
 
+        ListNode* l3 = new ListNode(-1); //存放结果的链表
+        ListNode* w = l3; //l3的移动指针
+        int i = 0; //记录相加结果
+	    int count = 0; //记录进位
 
-	p=l1;
-        q=l2;
-        bool count=false;//记录进位
-        ListNode* l3=new ListNode(-1);//存放结果的链表
-        ListNode* w=l3;//l3的移动指针
-        int i=0;//记录相加结果
-	
-	while(p!=NULL&&q!=NULL)
+	    while(l1 != NULL && l2!= NULL)
         {
-            i=count+p->val+q->val;
-            w->next=new ListNode(i%10);
-            count=i>=10?true:false;
-            w=w->next;
-            p=p->next;
-            q=q->next;
+            i = count + l1->val + l2->val;
+            w->next = new ListNode(i % 10);
+            count = i >= 10 ? 1 : 0;
+            w = w->next;
+            l1 = l1->next;
+            l2 = l2->next;
         }
-        if(count)//若最后还有进位
-        {
-            w->next=new ListNode(1);
-            w=w->next;
-        }
+
+        if(count) w->next = new ListNode(1);
+
         return l3->next; 
     }
 };
-
 ```
 
-Time : 28ms  
-Memory : 9.4MB
+执行用时：24 ms, 在所有 C++ 提交中击败了97.93%的用户
+
+内存消耗：69.6 MB, 在所有 C++ 提交中击败了5.24%的用户
 
 ## Solution 2
 不对齐补零
