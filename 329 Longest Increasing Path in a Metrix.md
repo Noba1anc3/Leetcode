@@ -49,44 +49,43 @@ Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is n
 class Solution {
 public:
     int dirs[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-    int rows, columns;
+    int rows, cols, ans = 0;
 
-    int longestIncreasingPath(vector<vector<int>> &matrix) {
+    int longestIncreasingPath(vector<vector<int>>& matrix) {
         if (matrix.size() == 0 || matrix[0].size() == 0)
             return 0;
 
         rows = matrix.size();
-        columns = matrix[0].size();
-        vector<vector<int>> memo(rows, vector<int>(columns));
-        int ans = 0;
-        
+        cols = matrix[0].size();
+        vector<vector<int>> memo(rows, vector<int>(cols));
+
         for (int i = 0; i < rows; i++)
-            for (int j = 0; j < columns; j++)
+            for (int j = 0; j < cols; j++)
                 ans = max(ans, dfs(matrix, i, j, memo));
 
         return ans;
     }
 
-    int dfs(vector<vector<int>> &matrix, int row, int column, vector<vector<int>> &memo) {
-        if (memo[row][column] != 0)
-            return memo[row][column];
+    int dfs(vector<vector<int>>& matrix, int row, int col, vector<vector<int>>& memo) {
+        if (memo[row][col] != 0)
+            return memo[row][col];
 
-        memo[row][column]++;
+        memo[row][col] = 1;
         for (int i = 0; i < 4; i++) {
-            int newRow = row + dirs[i][0], newColumn = column + dirs[i][1];
-            if (newRow >= 0 && newRow < rows && newColumn >= 0 && newColumn < columns && matrix[newRow][newColumn] > matrix[row][column]) {
-                memo[row][column] = max(memo[row][column], dfs(matrix, newRow, newColumn, memo) + 1);
+            int newRow = row + dirs[i][0], newColumn = col + dirs[i][1];
+            if (newRow >= 0 && newRow < rows && newColumn >= 0 && newColumn < cols && matrix[newRow][newColumn] > matrix[row][col]) {
+                memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
             }
         }
         
-        return memo[row][column];
+        return memo[row][col];
     }
 };
 ```
 
-执行用时：72 ms, 在所有 C++ 提交中击败了82.87%的用户
+执行用时：56 ms, 在所有 C++ 提交中击败了55.63%的用户
 
-内存消耗：13.8 MB, 在所有 C++ 提交中击败了76.98%的用户
+内存消耗：15.5 MB, 在所有 C++ 提交中击败了75.23%的用户
 
 复杂度分析
 
