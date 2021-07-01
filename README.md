@@ -8,7 +8,7 @@
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆☆ 279 Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-- [☆☆ 662 Maximum Width of Binary Tree ☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
+- [☆☆☆ 662 Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [☆☆ 752. Open the Lock ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
 - [☆☆ 剑指Offer 09. Implement a queue by two stack ☆☆](%E5%89%91%E6%8C%87offer-09%20Implement%20a%20queue%20by%20two%20stack.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
@@ -78,7 +78,7 @@
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 144. Binary Tree Preorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [☆☆ 145. Binary Tree Postorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
-- [☆☆ 662 Maximum Width of Binary Tree ☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
+- [☆☆☆ 662 Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 ## Graph
@@ -372,6 +372,7 @@
 - [☆☆ 518. Coin Change 2 ☆☆](518%20Coin%20Change%202.md)
 - [537. Complex Number Multiplication](537%20Complex%20Number%20Multiplication.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
+- [☆☆☆ 662 Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
