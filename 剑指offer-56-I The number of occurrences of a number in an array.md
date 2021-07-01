@@ -22,27 +22,25 @@
 class Solution {
 public:
     vector<int> singleNumbers(vector<int>& nums) {
-        vector<int> ans;
-        unordered_set<int> hash;
+        vector<int> rsp;
+        unordered_set<int> S;
 
-        for (int num : nums){
-            if (hash.count(num))
-                hash.erase(num);
-            else
-                hash.insert(num);
+        for (const int& num : nums){
+            if (S.count(num)) S.erase(num);
+            else S.insert(num);
         }
 
-        for(int num : hash)
-            ans.push_back(num);
+        for (const int& num : S)
+            rsp.push_back(num);
         
-        return ans;
+        return rsp;
     }
 };
 ```
 
-执行用时：44 ms, 在所有 C++ 提交中击败了38.43%的用户
+执行用时：40 ms, 在所有 C++ 提交中击败了10.88%的用户
 
-内存消耗：18.8 MB, 在所有 C++ 提交中击败了14.05%的用户
+内存消耗：18.9 MB, 在所有 C++ 提交中击败了5.11%的用户
 
 Attention
 
