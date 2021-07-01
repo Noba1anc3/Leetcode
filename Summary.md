@@ -1,259 +1,3 @@
-# Language Specialty
-
-## C++
-
-### int
-
-```c++
-// c++中对负数求余数不会是正数，需要加上余数
-
-// int -> string
-to_string(integer)
-```
-
-### struct
-
-```c++
-struct Edge{
-    int vertex1;
-    int vertex2;
-    int weight;
-};
-```
-
-### char
-
-```c++
-'c' + 3 = 'f'
-'c' - 'a' = 2
-'2' - '0' = 2  // 不能用int('2')  会变成ascii码
-
-int('a') = 97
-
-// 判断是否是字母或数字
-isalnum(char)
-
-// 判断是否是数字
-isdigit(char)
- 
-// 判断是否是字母
-isalpha(char)
-    
-// 转成小写字母
-tolower(char)
-```
-
-### string
-
-```c++
-std::string += std::string / char
-std::string.push_back(char)
-std::string.pop_back()
-std::string.substr(0, std::string.size()-1)
-    
-std::string -> int
-char* s = std::string.c_str()
-integer I = atoi(char*)
-
-std::string -> int
-integer I = stoi(string)
-    
-int -> std::string
-std::string s = to_string(integer)
-```
-
-### vector
-
-```c++
-// vector排序
-static bool cmp(type ele1, type ele2) {}
-sort(std::vector.begin(), std::vector.end(), cmp)
-
-// 去除vector中的相同元素
-sort(std::vector.begin(), std::vector.end())
-std::vector.erase(unique(std::vector.begin(), std::vector.end()), std::vector.end())
-
-// 判断vector为空
-std::vector.empty()
-    
-// 清除vector指定位置元素，一般用于回溯
-std::vector.erase(std::vector.begin() + i)
-
-// vector进出元素
-std::vector.push_back()
-std::vector.pop_back()
-
-// vector大小
-std::vector.size()
-
-// vector调整大小
-std::vector.resize(integer)
-    
-// vector初始化
-std::vector<type> vector2(vector1.begin(), vector1.end())
-std::vector<std::vector<type>> vector(n, std::vector<type>())
-std::vector<std::vector<type>> vector(n, std::vector<type>(n, INT_MAX))
-    
-// vector反转
-reverse(std::vector.begin(), std::vector.end())
-```
-
-### set & unordered_set
-
-![](https://img-blog.csdn.net/20180906204853658?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhbHVvbHVvMjEx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
-```c++
-// set大小
-std::set.size()
-
-// 插入set
-std::set.insert(ele)
-
-// 删除set中元素
-std::set.erase(ele)
-
-// 遍历set
-for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
-    value = *it;
-
-// 查找set  两种方法时间复杂度相当
-if (std::set.find(element) == std::set.end())
-if (std::set.count(element))
-
-// vector转set
-std::set(std::vector.begin(), std::vector.end())
-```
-
-### map & unordered_map
-
-```c++
-std::unordered_map<char, string> mapping = {
-    {'2', "abc"}, {}, {}
-}
-
-// 根据key查找value
-std::unordered_map.at(key)
-    
-// 查找是否有某个key
-std::unordered_map.find(key) != std::unordered_map.end()
-```
-
-### pair
-
-```c++
-std::pair.first
-std::pair.second
-make_pair(value1, value2)
-```
-
-### stack
-
-```
-std::stack<type> S;
-```
-
-### queue
-
-```c++
-std::queue<type> Q;
-std::queue.empty()
-std::queue.front()
-std::queue.pop()
-std::queue.push()
-```
-
-### priority_queue
-
-c++
-
-```c++
-std::priority_queue // default: big root heap
-std::priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
-std::priority_queue.top()
-std::priority_queue.pop()
-std::priority_queue.push()
-std::priority_queue.size()
-std::priority_queue.empty()
-```
-
-### iterator
-
-```c++
-// 生成迭代器
-std::set<int>::iterator iter = set.begin()
-
-// 遍历迭代器
-while (iter != set.end())
-
-// 取值
-*iter
-
-// 迭代器前移
-iter++  // 不能用iter+=1
-```
-
-### other
-
-```c++
-// int 最大值
-INT_MAX
-
-// a和b两个整型的最大值
-max(integer a, integer b)
-
-// 求幂
-pow(integer, 2)
-
-// 空与空指针
-NULL
-nullptr
-
-// 无符号长长型
-unsigned long long
-```
-
-## python
-
-### list
-
-```python
-# 按照元素的首元素进行排序
-list.sort(key = lambda x : x[0])
-
-# 寻找list中有几个count元素
-list.count(element)
-
-# 寻找list中，从index下标开始，value所在的下标
-list.index(value, index)
-```
-
-### dict
-
-```python
-# 根据key取value
-value = dict.get(key)
-
-# 解决key不存在时的异常
-dicts = collections.defaultdict(int) # 括号内为value类型
-
-# 取key, value
-dict.keys()
-dict.values()
-```
-
-### priority_queue
-
-```python
-heapq.heappush(list, element)
-heapq.heappop(list)
-```
-
-### other
-
-```python
-maximum: float('inf') / math.inf
-```
-
 # Data Structure
 
 ## Queue
@@ -1028,6 +772,262 @@ string 存每次回溯之前的临时结果
   - 用1与异或结果求与 &，若结果不为1，则1向左移一位 << 1, 直到结果为1
   - 按照这一位对数字进行分类，值为1的在一组，值为0的在一组
   - 组内分别计算异或，两组异或的结果就是两个只出现了一次的数字
+
+# Language Specialty
+
+## C++
+
+### int
+
+```c++
+// c++中对负数求余数不会是正数，需要加上余数
+
+// int -> string
+to_string(integer)
+```
+
+### struct
+
+```c++
+struct Edge{
+    int vertex1;
+    int vertex2;
+    int weight;
+};
+```
+
+### char
+
+```c++
+'c' + 3 = 'f'
+'c' - 'a' = 2
+'2' - '0' = 2  // 不能用int('2')  会变成ascii码
+
+int('a') = 97
+
+// 判断是否是字母或数字
+isalnum(char)
+
+// 判断是否是数字
+isdigit(char)
+ 
+// 判断是否是字母
+isalpha(char)
+    
+// 转成小写字母
+tolower(char)
+```
+
+### string
+
+```c++
+std::string += std::string / char
+std::string.push_back(char)
+std::string.pop_back()
+std::string.substr(0, std::string.size()-1)
+    
+std::string -> int
+char* s = std::string.c_str()
+integer I = atoi(char*)
+
+std::string -> int
+integer I = stoi(string)
+    
+int -> std::string
+std::string s = to_string(integer)
+```
+
+### vector
+
+```c++
+// vector排序
+static bool cmp(type ele1, type ele2) {}
+sort(std::vector.begin(), std::vector.end(), cmp)
+
+// 去除vector中的相同元素
+sort(std::vector.begin(), std::vector.end())
+std::vector.erase(unique(std::vector.begin(), std::vector.end()), std::vector.end())
+
+// 判断vector为空
+std::vector.empty()
+    
+// 清除vector指定位置元素，一般用于回溯
+std::vector.erase(std::vector.begin() + i)
+
+// vector进出元素
+std::vector.push_back()
+std::vector.pop_back()
+
+// vector大小
+std::vector.size()
+
+// vector调整大小
+std::vector.resize(integer)
+    
+// vector初始化
+std::vector<type> vector2(vector1.begin(), vector1.end())
+std::vector<std::vector<type>> vector(n, std::vector<type>())
+std::vector<std::vector<type>> vector(n, std::vector<type>(n, INT_MAX))
+    
+// vector反转
+reverse(std::vector.begin(), std::vector.end())
+```
+
+### set & unordered_set
+
+![](https://img-blog.csdn.net/20180906204853658?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhbHVvbHVvMjEx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+```c++
+// set大小
+std::set.size()
+
+// 插入set
+std::set.insert(ele)
+
+// 删除set中元素
+std::set.erase(ele)
+
+// 遍历set
+for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
+    value = *it;
+
+// 查找set  两种方法时间复杂度相当
+if (std::set.find(element) == std::set.end())
+if (std::set.count(element))
+
+// vector转set
+std::set(std::vector.begin(), std::vector.end())
+```
+
+### map & unordered_map
+
+```c++
+std::unordered_map<char, string> mapping = {
+    {'2', "abc"}, {}, {}
+}
+
+// 根据key查找value
+std::unordered_map.at(key)
+    
+// 查找是否有某个key
+std::unordered_map.find(key) != std::unordered_map.end()
+```
+
+### pair
+
+```c++
+std::pair.first
+std::pair.second
+make_pair(value1, value2)
+```
+
+### stack
+
+```
+std::stack<type> S;
+```
+
+### queue
+
+```c++
+std::queue<type> Q;
+std::queue.empty()
+std::queue.front()
+std::queue.pop()
+std::queue.push()
+```
+
+### priority_queue
+
+c++
+
+```c++
+std::priority_queue // default: big root heap
+std::priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
+std::priority_queue.top()
+std::priority_queue.pop()
+std::priority_queue.push()
+std::priority_queue.size()
+std::priority_queue.empty()
+```
+
+### iterator
+
+```c++
+// 生成迭代器
+std::set<int>::iterator iter = set.begin()
+
+// 遍历迭代器
+while (iter != set.end())
+
+// 取值
+*iter
+
+// 迭代器前移
+iter++  // 不能用iter+=1
+```
+
+### other
+
+```c++
+// int 最大值
+INT_MAX
+
+// a和b两个整型的最大值
+max(integer a, integer b)
+
+// 求幂
+pow(integer, 2)
+
+// 空与空指针
+NULL
+nullptr
+
+// 无符号长长型
+unsigned long long
+```
+
+## python
+
+### list
+
+```python
+# 按照元素的首元素进行排序
+list.sort(key = lambda x : x[0])
+
+# 寻找list中有几个count元素
+list.count(element)
+
+# 寻找list中，从index下标开始，value所在的下标
+list.index(value, index)
+```
+
+### dict
+
+```python
+# 根据key取value
+value = dict.get(key)
+
+# 解决key不存在时的异常
+dicts = collections.defaultdict(int) # 括号内为value类型
+
+# 取key, value
+dict.keys()
+dict.values()
+```
+
+### priority_queue
+
+```python
+heapq.heappush(list, element)
+heapq.heappop(list)
+```
+
+### other
+
+```python
+maximum: float('inf') / math.inf
+```
 
 # Useful method
 
