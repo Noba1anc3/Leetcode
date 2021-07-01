@@ -41,16 +41,15 @@
 - [☆☆ 001. Two Sum ☆☆](001%20Two%20Sum.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 020. Valid Parentheses ☆☆](020%20Valid%20Parentheses.md)
-- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
-- [☆☆☆ 剑指Offer 07. Construct Binary Tree from Preorder and Inorder ☆☆☆ (map) (同105)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆☆ 剑指offer-56-I. The number of occurrences of a number in an array ☆☆☆ (set)](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 
 ## Set
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
-- [☆ 剑指Offer 03. Duplicate Num in Array ☆ (set)](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
+- [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
 
 ## Union-Find Set
 
@@ -75,9 +74,8 @@
 
 ## Tree
 
-- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 662 Maximum Width of Binary Tree ☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
-- [☆☆☆ 剑指Offer 07. Construct Binary Tree from Preorder and Inorder ☆☆☆ (同105)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 ## Graph
@@ -177,7 +175,7 @@
 - [☆☆☆ 090. Subsets II ☆☆☆](090%20Subsets%20II.md)
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
 - [☆☆ 094. Binary Tree Inorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
-- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
@@ -185,7 +183,6 @@
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
-- [☆☆☆ 剑指Offer 07. Construct Binary Tree from Preorder and Inorder ☆☆☆ (同105)](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
@@ -332,7 +329,7 @@
 - [☆☆☆ 090. Subsets II ☆☆☆](090%20Subsets%20II.md)
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
 - [☆☆ 094. Binary Tree Inorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
-- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆ 125 Valid Palindrome ☆☆](125%20Valid%20Palindrome.md)
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
