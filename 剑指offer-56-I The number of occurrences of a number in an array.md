@@ -110,40 +110,38 @@ $$
 class Solution {
 public:
     vector<int> singleNumbers(vector<int>& nums) {
-        int ret = 0;
-        for (int n : nums)
-            ret ^= n;
+        int exclusive_OR = 0;
+        for (const int& n : nums)
+            exclusive_OR ^= n;
 
         int div = 1;
-        while ((div & ret) == 0)
+        while ((div & exclusive_OR) == 0)
             div <<= 1;
 
         int a = 0, b = 0;
-        for (int n : nums)
-            if (div & n)
-                a ^= n;
-            else
-                b ^= n;
+        for (const int& n : nums)
+            if (div & n) a ^= n;
+            else b ^= n;
                 
         return vector<int>{a, b};
     }
 };
 ```
 
-执行用时：20 ms, 在所有 C++ 提交中击败了93.28%的用户
+执行用时：12 ms, 在所有 C++ 提交中击败了98.58%的用户
 
-内存消耗：15.7 MB, 在所有 C++ 提交中击败了91.98%的用户
+内存消耗：15.6 MB, 在所有 C++ 提交中击败了79.19%的用户
 
 Attention:
 
 - ```c++
-  int ret = 0;
-  for (int n : nums)
-  	ret ^= n;
+  int exclusive_OR = 0;
+  for (const int& n : nums)
+      exclusive_OR ^= n;
   ```
 
 - ```c++
   int div = 1;
-  while ((div & ret) == 0)
-  	div <<= 1;
+  while ((div & exclusive_OR) == 0)
+      div <<= 1;
   ```
