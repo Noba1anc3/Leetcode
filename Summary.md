@@ -184,33 +184,6 @@
 
 ## Union-Find Set
 
-### Questions
-
-- [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
-- [**填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
-  - 对所有‘O’元素生成并查集并合并
-  - 对四条边的‘O’元素，找到其并查集的key，加入set
-  - 对所有中间‘O’元素，如果不在set中，则改为‘X’
-- [**岛屿数量**](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
-  - 生成每个陆地的并查集
-  - 对相邻陆地进行合并
-  - 查找最后有几个root
-- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
-- [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
-  - 与上题一致
-- [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
-  - 如果**一次union操作的两个root的key相同**，则找到该边
-- [账号合并](https://github.com/Noba1anc3/Leetcode/blob/master/721%20Accounts%20Merge.md)
-  - 并查集的key为每个账户的下标
-  - 建立邮件set和邮件到人名的映射
-- [等式可满足性](https://github.com/Noba1anc3/Leetcode/blob/master/990%20Satisfiability%20of%20Equality%20Equations.md)
-  - 建立26个字母的并查集
-  - 对相等符号连接的字母合并
-  - **判断不等符号连接的字母是否是一个key**
-- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-  - 首先判断边的个数加1是否等于节点的个数
-  - 如若并查集合并时根相同，则不能组成一棵树
-
 ### Algorithm
 
 ```c++
@@ -249,6 +222,33 @@ void Union(int x, int y) {
 }
 ```
 
+### Questions
+
+- [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
+- [**填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
+  - 对所有‘O’元素生成并查集并合并
+  - 对四条边的‘O’元素，找到其并查集的key，加入set
+  - 对所有中间‘O’元素，如果不在set中，则改为‘X’
+- [**岛屿数量**](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
+  - 生成每个陆地的并查集
+  - 对相邻陆地进行合并
+  - 查找最后有几个root
+- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+- [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+  - 与上题一致
+- [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
+  - 如果**一次union操作的两个root的key相同**，则找到该边
+- [账号合并](https://github.com/Noba1anc3/Leetcode/blob/master/721%20Accounts%20Merge.md)
+  - 并查集的key为每个账户的下标
+  - 建立邮件set和邮件到人名的映射
+- [等式可满足性](https://github.com/Noba1anc3/Leetcode/blob/master/990%20Satisfiability%20of%20Equality%20Equations.md)
+  - 建立26个字母的并查集
+  - 对相等符号连接的字母合并
+  - **判断不等符号连接的字母是否是一个key**
+- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于节点的个数
+  - 如若并查集合并时根相同，则不能组成一棵树
+
 ## Tree
 
 ### Questions
@@ -261,7 +261,7 @@ void Union(int x, int y) {
 
   - 若左右儿子不空，则将左右儿子压入队列，层数+1，id分别为父节点的2倍, 2倍+1
 
-  - 每次进入下一层的时候，更新left的id，用于计算宽度
+  - **每次进入下一层的时候，更新left的id，用于计算宽度**
 
 - [求二叉树深度](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
@@ -271,7 +271,7 @@ void Union(int x, int y) {
 
   - 若左右儿子不空，则将左右儿子压入队列，高度+1
 
-- [二叉树中序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [**二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 
   - 将根节点与白色压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
@@ -282,7 +282,7 @@ void Union(int x, int y) {
 
 - [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 
-- [二叉树前中序恢复建树](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [**二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 
   - 构建中序序列的值到下标的倒排映射map
 
@@ -302,19 +302,22 @@ void Union(int x, int y) {
 
 ## Graph
 
-### BFS
+### Breath First Search
 
 #### Algorithm
 
 可以加入到遍历过程中的其他信息：dist, pred, color
 
 - 只要队列不空
-  - 取出队首
+  - 取出队首作为当前节点
   - 遍历其白色邻接点
-    - 改为灰色后压入队列
-  - 遍历后将其改为黑色
+    - 距离：当前节点的距离+1
+    - 先驱：设为当前节点
+    - 颜色：改为灰色
+    - 修改完毕后，压入队列
+  - 遍历完成后，将当前节点的颜色改为黑色
 
-对于连通图，只需要BFS一个root节点即可；对于非连通图，需要遍历所有白色节点的BFS
+对于连通图，只需要BFS一个root节点即可；对于非连通图，需要遍历所有白色节点的BFS.
 
 ```c++
 void BFSVisit(Graph G, int vertex){
@@ -349,20 +352,20 @@ void BFSVisit(Graph G, int vertex){
 - 首先判断边的个数加1是否等于节点的个数
   - 少了一定无法存在孤立点
   - 多了一定存在环路
-- 从0节点遍历一次DFS后仍然有白色节点，意味着有环路+孤立节点 返回false
+- 从0节点遍历一次BFS后仍然有白色节点，意味着有环路+孤立节点 返回false
 
-### DFS
+### Depth First Search
 
 #### Algorithm
 
 可以加入到遍历过程中的其他信息：start，finish，pred，color
 
-- 被访问节点改为灰色
-- 遍历邻接点中的白色节点，递归进入该节点
-- 访问完邻接点后颜色改黑
+- 当前节点颜色修改为灰色
+  - 遍历其白色邻接点，递归进入该节点
+- 访问完邻接点后，当前节点颜色改黑
 - start和finish的触发时间与color变灰及变黑的时间一致
 
-对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
+对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS.
 
 ```c++
 void DFSVisit(int vertex){
@@ -389,158 +392,74 @@ void DFSVisit(int vertex){
   - 多了一定存在环路
 - 从0节点遍历一次DFS后仍然有白色节点，意味着有环路+孤立节点 返回false
 
-### SCC
+### Strongly Connected Components
 
 #### Algorithm
 
-DFS Based
+> DFS Based
 
 - [求所有SCCs](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20SCC.md)
   - 建图
-  - 反转图
-  - 求DFS序列
-  - 反转DFS序列
-  - 根据反转DFS序列在图上进行DFS，得到SCCs
-- 只需要SCC个数
+  - 反转图（边）
+  - 求反转图的DFS序列
+  - 反转上述DFS序列
+  - 根据反转DFS序列，在原图上进行DFS，得到SCCs
+- 只需要SCCs的个数
   - DFS遇到WHITE节点就+1
   - 并查集
 
-### MST
+### Minimum Spanning Tree
 
-#### Prim
+#### Algorithm
 
-##### Algorithm
+##### [Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
 
-Priority Queue Based
+> Priority Queue Based
 
-- [Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
-  - 构建图和权重的vector时要将边的两侧都赋值
-  - 基于pair<key, vertex>构建最小堆（优先队列）
-  - 只要队列不空
-    - 弹出队顶
-    - 对其每个白色邻接点，如果边权重小于邻接点的key，则修改邻接点key
-    - 将邻接点的pair推进队列
-    - 队顶元素改为黑色
+- 构建边和权重vector时要将边的两个端点都赋值
+- 基于 pair<key, vertex> 构建最小堆（优先队列）
+- 只要队列不空
+  - 弹出队顶节点作为当前节点
+  - 对其每一个 **边权重小于其key**的 **白色**邻接点
+    - 修改其key为边权重
+    - 将邻接点的pair压入队列
+  - 将当前节点的颜色改为黑色
 
-#### Kruskal
+##### [Kruskal](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
 
-##### Algorithm
+> Union-Find Set Based
 
-Union-Find Set Based
+### Single Source Shortest Path
 
-- [Kruskal](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
+#### [Algorithm - Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
 
-### SSSP - Dijkstra
-
-Priority Queue Based
-
-[Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+> Priority Queue Based
 
 - 基于pair<dist, vertex>构建最小堆（优先队列）
 - 只要队列不空
-  - 弹出队顶
-  - 对其每个白色邻接点，如果边权重 + 距队顶元素的距离小于邻接点的距离，则修改邻接点的距离
-  - 将邻接点的pair推进队列
-  - 队顶元素改为黑色
+  - 弹出队顶节点作为当前节点
+    - 对其每个 **边权重 + 当前节点的距离 小于其自身距离**的 **白色**邻接点
+      - 修改邻接点的距离
+      - 将邻接点的pair推进队列
+  - 将当前节点的颜色改为黑色
 
-### Topological Sort
+### [Topological Sort](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
 
-[Algorithm](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
+#### Algorithm - Queue Based
 
-#### Queue Based
-
-- 构建反向图和节点入度表
+- 构建图和节点入度列表
 - 将所有入度为0的节点压入队列
 - 只要队列不空
-  - 取出队首，压入最终结果
+  - 取出队首，压入拓扑序列
   - 遍历所有该节点指向的节点
     - 入度减一
     - 如果入度变为0，压入队列
 
-```c++
-std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
-    std::vector<std::vector<int>> GraphReverse(n, std::vector<int>());
-    std::vector<int> InDegree(n, 0);
-    std::vector<int> Topological;
-    std::queue<int> Q;
+#### Algorithm - Stack Based
 
-    for (const std::vector<int>& edge : edges){
-        GraphReverse[edge[1]].push_back(edge[0]);
-        InDegree[edge[0]]++;
-    }
-
-    for (int i = 0; i < n; i++)
-        if (InDegree[i] == 0)
-            Q.push(i);
-
-    while (!Q.empty()){
-        int vertex = Q.front();
-        Q.pop();
-        Topological.push_back(vertex);
-        for (const int& adjVertex : GraphReverse[vertex]){
-            InDegree[adjVertex]--;
-            if (InDegree[adjVertex] == 0)
-                Q.push(adjVertex);
-        }
-    }
-
-    return Topological;
-}
-```
-
-#### DFS & Stack Based
-
-- 需要加入有环的判断，否则算法停不下来
+- 需要加入有环的判断，否则算法无法停止
 - 在完成对邻接点的遍历后，将源节点压入栈
 - 最后从栈顶到栈底的序列即为DFS序列
-
-```c++
-class Solution {
-private:
-    int WHITE = 0, GRAY = 1, BLACK = 2;
-    bool acyclic = true;
-
-    std::vector<int> order;
-    std::vector<int> color;
-    std::vector<std::vector<int>> Graph;
-
-public:
-    void DFSVisit(int vertex){
-        color[vertex] = GRAY;
-        for (const int& adjVertex : Graph[vertex]){
-            if (color[adjVertex] == WHITE){
-                DFSVisit(adjVertex);
-                if (!acyclic)
-                    return;
-            }
-            else if (color[adjVertex] == GRAY){
-                acyclic = false;
-                return;
-            }
-        }
-        order.push_back(vertex);
-        color[vertex] = BLACK;
-    }
-
-    std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
-        color.resize(n);
-        Graph.resize(n);
-
-        for (const std::vector<int>& edge : edges)
-            Graph[edge[0]].push_back(edge[1]);
-
-        for (int root = 0; root < n && acyclic; root++)
-            if (color[root] == WHITE)
-                DFSVisit(root);
-
-        if (!acyclic)
-            return {};
-
-        reverse(order.begin(), order.end());
-        return order;
-    }
-};
-```
 
 #### Questions
 
