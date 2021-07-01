@@ -1,5 +1,35 @@
 # 民企
 
+## 京东
+
+[招聘信息](https://mp.weixin.qq.com/s/lPy3KmESM6pWknlBwpN4vw)
+
+### 备注
+
+DDL ：07.15
+
+无笔试，三轮面试
+
+## 小米
+
+[招聘信息](https://mp.weixin.qq.com/s/xvNXeBKINI5agkRk46WBCw)
+
+### 备注
+
+Base ：北京、上海、深圳
+
+秋招岗位于7月中旬发布
+
+秋招最多投递两个岗位，提前批两次机会用完后，无法投递其他秋招岗位
+
+内推投递不受岗位投递次数限制
+
+## 360
+
+[招聘信息](https://mp.weixin.qq.com/s/wMZZmpZ_PygScWSfs7OzVg)
+
+扫描二维码投递
+
 ## 猿辅导
 
 [招聘信息](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
@@ -34,17 +64,42 @@ DDL ：07.15
 
 未通过筛选，正式批申请其他岗位
 
+## Megvii
+
+[招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
+
+### 备注
+
+免笔试
+
+DDL ：08.15
+
 # 外企
 
+## Intel
+
+[招聘信息](https://mp.weixin.qq.com/s/tXLcLC6u8bOJJxaCqG1lfg)
+
+[官方网站](https://chinacampus.jobs.intel.cn/intel/home/index)
+
+### 备注
+
+校招
+
+Base ：Shanghai、Beijing
+
 ## Shopee
+
+[招聘信息](https://mp.weixin.qq.com/s/qBj-GLAfvs6C7iejeh_bYA)
 
 ### 备注
 
 DDL ：08.01
-
 Base ：Shenzhen，Beijing，Shanghai，Singapore
 
-shopee虾皮招聘
+关注 ”Shopee虾皮招聘“ 公众号查询校招进度
+
+提前批只能选择一个工作地点，投递一个岗位
 
 # 国企
 
