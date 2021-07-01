@@ -253,7 +253,11 @@ void Union(int x, int y) {
 
 ### Questions
 
-
+- [两链表求和](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
+  - 每次求和时如果超过10，新结点为求和余10的结果，并将进位设为1；
+  - 下次求和时如果有进位，则将求和结果+1
+  - 如果做完最终运算，仍有进位，创建新结点并设为1
+  - 结果新链表设置一个头节点，一个移动结点。移动结点不断后移，最终返回头节点。
 
 ## Tree
 
