@@ -11,10 +11,10 @@
       - 改为灰色后压入队列
     - 遍历后将其改为黑色
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
-  - 将所有入度为0的节点压入队列
+  - 将所有入度为0的结点压入队列
   - 只要队列不空
     - 取出队首，放入拓扑排序序列结果
-    - 遍历所有该节点指向的节点
+    - 遍历所有该结点指向的结点
       - 入度减一
       - 如果入度变为0，压入队列
 - [**绕过不可走的位置，解开转盘锁**](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
@@ -29,7 +29,7 @@
 
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
   - **基于DFS算法**
-  - 在完成对邻接点的遍历后将节点压入栈
+  - 在完成对邻接点的遍历后将结点压入栈
   - 栈顶到栈底的序列即为拓扑排序
 - [**用两个栈实现队列**](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
   - 入队
@@ -49,10 +49,10 @@
     - 压入栈
   - 返回栈是否为空
 - [**二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
-  - 将白色根节点压入栈中
+  - 将白色根结点压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
-  - 如果是白色，依次将白色右节点，灰色本节点与白色左节点压入栈中
-  - 如果是灰色，将节点值加到中序序列中
+  - 如果是白色，依次将白色右结点，灰色本结点与白色左结点压入栈中
+  - 如果是灰色，将结点值加到中序序列中
 - [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 - [判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
@@ -233,7 +233,7 @@ void Union(int x, int y) {
   - 生成每个陆地的并查集
   - 对相邻陆地进行合并
   - 查找最后有几个root
-- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
   - 与上题一致
 - [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
@@ -246,8 +246,14 @@ void Union(int x, int y) {
   - 对相等符号连接的字母合并
   - **判断不等符号连接的字母是否是一个key**
 - [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-  - 首先判断边的个数加1是否等于节点的个数
+  - 首先判断边的个数加1是否等于结点的个数
   - 如若并查集合并时根相同，则不能组成一棵树
+
+## Linked-List
+
+### Questions
+
+
 
 ## Tree
 
@@ -259,7 +265,7 @@ void Union(int x, int y) {
     pair<TreeNode*, pair<int, unsigned long long>> ROOT(root, level_id)
     ```
 
-  - 若左右儿子不空，则将左右儿子压入队列，层数+1，id分别为父节点的2倍, 2倍+1
+  - 若左右儿子不空，则将左右儿子压入队列，层数+1，id分别为父结点的2倍, 2倍+1
 
   - **每次进入下一层的时候，更新left的id，用于计算宽度**
 
@@ -273,10 +279,10 @@ void Union(int x, int y) {
 
 - [**二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 
-  - 将根节点与白色压入栈中
+  - 将根结点与白色压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
-  - 如果是白色，依次将白色右节点，灰色本节点与白色左节点压入栈中
-  - 如果是灰色，将节点值加到中序序列中
+  - 如果是白色，依次将白色右结点，灰色本结点与白色左结点压入栈中
+  - 如果是灰色，将结点值加到中序序列中
 
 - [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 
@@ -309,15 +315,15 @@ void Union(int x, int y) {
 可以加入到遍历过程中的其他信息：dist, pred, color
 
 - 只要队列不空
-  - 取出队首作为当前节点
+  - 取出队首作为当前结点
   - 遍历其白色邻接点
-    - 距离：当前节点的距离+1
-    - 先驱：设为当前节点
+    - 距离：当前结点的距离+1
+    - 先驱：设为当前结点
     - 颜色：改为灰色
     - 修改完毕后，压入队列
-  - 遍历完成后，将当前节点的颜色改为黑色
+  - 遍历完成后，将当前结点的颜色改为黑色
 
-对于连通图，只需要BFS一个root节点即可；对于非连通图，需要遍历所有白色节点的BFS.
+对于连通图，只需要BFS一个root结点即可；对于非连通图，需要遍历所有白色结点的BFS.
 
 ```c++
 void BFSVisit(Graph G, int vertex){
@@ -349,10 +355,10 @@ void BFSVisit(Graph G, int vertex){
 
 [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
 
-- 首先判断边的个数加1是否等于节点的个数
+- 首先判断边的个数加1是否等于结点的个数
   - 少了一定无法存在孤立点
   - 多了一定存在环路
-- 从0节点遍历一次BFS后仍然有白色节点，意味着有环路+孤立节点 返回false
+- 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
 
 ### Depth First Search
 
@@ -360,12 +366,12 @@ void BFSVisit(Graph G, int vertex){
 
 可以加入到遍历过程中的其他信息：start，finish，pred，color
 
-- 当前节点颜色修改为灰色
-  - 遍历其白色邻接点，递归进入该节点
-- 访问完邻接点后，当前节点颜色改黑
+- 当前结点颜色修改为灰色
+  - 遍历其白色邻接点，递归进入该结点
+- 访问完邻结点后，当前结点颜色改黑
 - start和finish的触发时间与color变灰及变黑的时间一致
 
-对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS.
+对于连通图，只需要DFS一个root结点即可；对于非连通图，需要遍历所有白色结点的DFS.
 
 ```c++
 void DFSVisit(int vertex){
@@ -385,12 +391,23 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-[判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于结点的个数
+    - 少了一定无法存在孤立点
+    - 多了一定存在环路
+  - 从0结点遍历一次DFS后仍然有白色结点，意味着有环路+孤立结点 返回false
 
-- 首先判断边的个数加1是否等于节点的个数
-  - 少了一定无法存在孤立点
-  - 多了一定存在环路
-- 从0节点遍历一次DFS后仍然有白色节点，意味着有环路+孤立节点 返回false
+- [**矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+
+  - 将矩阵看成有向图，相邻单元格之间存在较小值指向较大值的有向边，问题转化为有向图寻找最长路径
+
+  - 用一个矩阵作为DFS结果的缓存矩阵，将计算好的DFS结果保存下来
+
+  - 对每个没有缓存的结点，计算其四方向邻接点的DFS
+
+    - ```c++
+      memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
+      ```
 
 ### Strongly Connected Components
 
@@ -405,8 +422,15 @@ void DFSVisit(int vertex){
   - 反转上述DFS序列
   - 根据反转DFS序列，在原图上进行DFS，得到SCCs
 - 只需要SCCs的个数
-  - DFS遇到WHITE节点就+1
+  - DFS遇到WHITE结点就+1
   - 并查集
+
+#### Questions
+
+- [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
+  - 如果**一次union操作的两个root的key相同**，则找到该边
+- [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+  - 与上题一致
 
 ### Minimum Spanning Tree
 
@@ -419,11 +443,11 @@ void DFSVisit(int vertex){
 - 构建边和权重vector时要将边的两个端点都赋值
 - 基于 pair<key, vertex> 构建最小堆（优先队列）
 - 只要队列不空
-  - 弹出队顶节点作为当前节点
+  - 弹出队顶结点作为当前结点
   - 对其每一个 **边权重小于其key**的 **白色**邻接点
     - 修改其key为边权重
     - 将邻接点的pair压入队列
-  - 将当前节点的颜色改为黑色
+  - 将当前结点的颜色改为黑色
 
 ##### [Kruskal](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
 
@@ -437,38 +461,49 @@ void DFSVisit(int vertex){
 
 - 基于pair<dist, vertex>构建最小堆（优先队列）
 - 只要队列不空
-  - 弹出队顶节点作为当前节点
-    - 对其每个 **边权重 + 当前节点的距离 小于其自身距离**的 **白色**邻接点
+  - 弹出队顶结点作为当前结点
+    - 对其每个 **边权重 + 当前结点的距离 小于其自身距离**的 **白色**邻接点
       - 修改邻接点的距离
       - 将邻接点的pair推进队列
-  - 将当前节点的颜色改为黑色
+  - 将当前结点的颜色改为黑色
+
+#### Questions
+
+- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
+
+- [全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
 
 ### [Topological Sort](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
 
 #### Algorithm - Queue Based
 
-- 构建图和节点入度列表
-- 将所有入度为0的节点压入队列
+- 构建图和结点入度列表
+- 将所有入度为0的结点压入队列
 - 只要队列不空
   - 取出队首，压入拓扑序列
-  - 遍历所有该节点指向的节点
+  - 遍历所有该结点指向的结点
     - 入度减一
     - 如果入度变为0，压入队列
 
 #### Algorithm - Stack Based
 
 - 需要加入有环的判断，否则算法无法停止
-- 在完成对邻接点的遍历后，将源节点压入栈
+- 在完成对邻接点的遍历后，将源结点压入栈
 - 最后从栈顶到栈底的序列即为DFS序列
 
 #### Questions
 
 - [给定课程学习先决条件，判断能否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
-  - 拓扑排序序列长度是否等于节点个数 或
+  - 拓扑排序序列长度是否等于结点个数 或
   - DFS判断是否有环
 - [给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
   - 拓扑排序 或
   - DFS
+- [**矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+  - 该问题基于拓扑排序的解决方案与传统拓扑排序不同的地方在于，将**出度为0**的结点入队
+  - 首先遍历所有结点，得到出度列表。将所有出度为0的点（边界点，制高点）压入队列。
+  - 只要队列不空，逐一遍历处理这一层BFS的结点，每处理一层，level+1，最终返回level层数
+  - 对层内每个结点，遍历其四方向的邻结点，如果邻结点小于本结点，将邻结点的出度减1，如果出度减少为0，则压入队列
 
 # Algorithm
 
@@ -490,11 +525,11 @@ void DFSVisit(int vertex){
 
 要点：start，finish，pred，color
 
-- 刚访问时color改灰，访问完相邻节点后color改黑
+- 刚访问时color改灰，访问完相邻结点后color改黑
 - start和finish的触发时间与color变灰及变黑的时间一致
-- 遍历邻接点时，对于白色结点，将邻接点的pred设为本节点
+- 遍历邻接点时，对于白色结点，将邻接点的pred设为本结点
 
-对于连通图，只需要DFS一个root节点即可；对于非连通图，需要遍历所有白色节点的DFS
+对于连通图，只需要DFS一个root结点即可；对于非连通图，需要遍历所有白色结点的DFS
 
 ### Questions
 
@@ -512,7 +547,7 @@ void DFSVisit(int vertex){
   - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
   - 四方向遍历求和
 - [判断回路]()
-  - 在遍历邻接点时，如果是灰色节点代表有回路
+  - 在遍历邻接点时，如果是灰色结点代表有回路
 
 ## Double Pointer
 
