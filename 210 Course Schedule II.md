@@ -41,13 +41,13 @@ Topological Sort
 class Solution {
 public:
     vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> GraphR(numCourses, vector<int>());
+        vector<vector<int>> Graph(numCourses, vector<int>());
         vector<int> InDegree(numCourses, 0);
         vector<int> Topological;
         queue<int> Q;
 
         for (auto prerequisite : prerequisites){
-            GraphR[prerequisite[1]].push_back(prerequisite[0]);
+            Graph[prerequisite[1]].push_back(prerequisite[0]);
             InDegree[prerequisite[0]]++;
         }
 
@@ -56,10 +56,9 @@ public:
                 Q.push(i);
 
         while (!Q.empty()){
-            int vertex = Q.front();
-            Q.pop();
+            int vertex = Q.front(); Q.pop();
             Topological.push_back(vertex);
-            for (const int& node : GraphR[vertex]){
+            for (const int& node : Graph[vertex]){
                 InDegree[node]--;
                 if (InDegree[node] == 0) 
                     Q.push(node);
