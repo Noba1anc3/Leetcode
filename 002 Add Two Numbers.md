@@ -13,10 +13,6 @@ Explanation: 342 + 465 = 807.
 
 将长度较短的链表在末尾补0使得两个链表的长度相等，再一个一个元素对齐相加
 
-Learned:
-- ListNode* FuncName(ListNode* l1, ListNode* l2)
-- new ListNode(0)
-
 ```c++
 /**
  * Definition for singly-linked list.
