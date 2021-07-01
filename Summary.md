@@ -273,7 +273,7 @@ maximum: float('inf') / math.inf
     - 遍历所有该节点指向的节点
       - 入度减一
       - 如果入度变为0，压入队列
-- [绕过不可走的位置，解开转盘锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+- [**绕过不可走的位置，解开转盘锁**](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
   - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首
     - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
@@ -284,10 +284,10 @@ maximum: float('inf') / math.inf
 ### Questions
 
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
-  - 基于DFS算法
+  - **基于DFS算法**
   - 在完成对邻接点的遍历后将节点压入栈
   - 栈顶到栈底的序列即为拓扑排序
-- [用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
+- [**用两个栈实现队列**](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
   - 入队
     - 压入1号栈
   - 出队
@@ -304,7 +304,7 @@ maximum: float('inf') / math.inf
   - 遇到左括号
     - 压入栈
   - 返回栈是否为空
-- [二叉树中序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [**二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
   - 将白色根节点压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
   - 如果是白色，依次将白色右节点，灰色本节点与白色左节点压入栈中
@@ -319,14 +319,14 @@ maximum: float('inf') / math.inf
   - 遍历字符串
   - 如果是数字就压入栈中
   - 如果是运算符就取出栈顶和次栈顶，按运算符运算后压入栈中
-- [最小栈](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
+- [**最小栈**](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
   - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
   - 压栈时，A栈压数字，B栈压入 数字与B栈栈顶的最小值
   - 弹栈时，两栈同步弹出
-- [根据天气列表，得出每一天需要等几天能等来更暖和的天气](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
+- [**根据天气列表，得出每一天需要等几天能等来更暖和的天气**](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
   - 维护一个存储下标的单调栈，栈底到栈顶的下标对应温度依次递减
   - 如果一个下标在单调栈中，说明尚未找到更高天气的下标
-  -  正向遍历温度列表。对于温度列表中的每个元素 `T[i]`
+  - 正向遍历温度列表。对于温度列表中的每个元素 `T[i]`
     - 如果栈不为空，则比较栈顶元素 `prevIndex` 对应的温度 `T[prevIndex]` 和当前温度 `T[i]`
     - 如果 `T[i] > T[prevIndex]`，则将 `prevIndex` 移除，并将 `prevIndex` 对应的等待天数赋为 `i - prevIndex`
     - 重复上述操作直到栈为空或者栈顶元素对应的温度大于等于当前温度
@@ -338,8 +338,8 @@ maximum: float('inf') / math.inf
 
 - [最小生成树 - Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
 - [单源最短路径 - Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
-- [最小的k个数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [需要几间会议室](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
+- [**最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [**需要几间会议室**](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
   - 按开始时间排序
   - 遍历会议，按结束时间进入最小堆
     - 开始时间晚于堆顶结束时间则弹出堆顶
@@ -347,7 +347,7 @@ maximum: float('inf') / math.inf
   - 返回堆的大小
 - [全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
 - [出租车能否坐下所有乘客](https://github.com/Noba1anc3/Leetcode/edit/master/1094%20Car%20Pooling.md)
-  - 简单方法
+  - **简单方法**
     - 乘客个数变化只发生在上下车时间
     - 遍历所有路程中间点，如果容量为负，则不能坐下
   - 最小堆
@@ -365,7 +365,7 @@ maximum: float('inf') / math.inf
 
 - [返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 
-  - 第一次遍历：构建数字到下标的倒排
+  - 第一次遍历：构建数字到下标的倒排映射
   - 第二次遍历：如果target - i是哈希表的key且value不等于i，则返回i，j
   - 如果是重复元素，加到哈希表时后一次出现的元素会覆盖前面的写入，因此不会有问题
 
@@ -377,13 +377,13 @@ maximum: float('inf') / math.inf
 
   - 构建从右括号到左括号的映射
 
-- [二叉树前中序恢复建树](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [**二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 
-  - 构建中序序列的值到下标的倒排映射map
+  - 构建中序序列的值到下标的倒排映射
 
   - 递归构建左右子树
 
-    - 如果前序序列左下标超过又下标，返回nullptr
+    - 如果前序序列左下标超过右下标，返回nullptr
 
     - ```c++
       TreeNode* root = new TreeNode(preorder[preorder_root])
@@ -396,14 +396,17 @@ maximum: float('inf') / math.inf
     - 递归构建右子树（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)
 
 - [求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+
   - 计算数字需要出现的最少次数
     - 数组长度为偶数：半长
     - 数组长度为奇数：半长+1
   - 构建数字到出现个数的映射
+
 - [判断两个字符串是否为字母异位词]()
+
   - 如果长度不相等，直接返回
   - 构建字母与其出现次数的映射
-  - 遍历两个字符串，A串的字母次数增长，B串的字母次数下降
+  - 遍历两个字符串，**A串的字母次数增长，B串的字母次数下降**
   - 遍历映射表，如值不为0，返回错误
 
 ## Set
@@ -416,7 +419,7 @@ maximum: float('inf') / math.inf
 
   - 用unordered_set存储vector所有元素(去重 + 降低搜索时间复杂度)
 
-  - 遍历set中每个元素，如果找不到其前一个元素（若能找到，这次计算将是冗余的）
+  - 遍历set中每个元素，如果**找不到其前一个元素**（若能找到，这次计算将是冗余的）
 
     - ```c++
       while (nums_set.count(++curNum)) curLength++;
@@ -440,24 +443,26 @@ maximum: float('inf') / math.inf
 ### Questions
 
 - [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
-- [被围绕的区域](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
+- [**填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
   - 对所有‘O’元素生成并查集并合并
   - 对四条边的‘O’元素，找到其并查集的key，加入set
   - 对所有中间‘O’元素，如果不在set中，则改为‘X’
-- [岛屿数量](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
+- [**岛屿数量**](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
   - 生成每个陆地的并查集
   - 对相邻陆地进行合并
   - 查找最后有几个root
 - [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+- [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+  - 与上题一致
 - [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
-  - 如果一次union操作的两个root key相同，则找到该边
+  - 如果**一次union操作的两个root的key相同**，则找到该边
 - [账号合并](https://github.com/Noba1anc3/Leetcode/blob/master/721%20Accounts%20Merge.md)
   - 并查集的key为每个账户的下标
   - 建立邮件set和邮件到人名的映射
 - [等式可满足性](https://github.com/Noba1anc3/Leetcode/blob/master/990%20Satisfiability%20of%20Equality%20Equations.md)
   - 建立26个字母的并查集
   - 对相等符号连接的字母合并
-  - 判断不等符号连接的字母是否是一个key
+  - **判断不等符号连接的字母是否是一个key**
 - [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
   - 首先判断边的个数加1是否等于节点的个数
   - 如若并查集合并时根相同，则不能组成一棵树
