@@ -141,15 +141,14 @@ public:
                     
         while (!Q.empty()) {
             level++;
-            int n = Q.size();
+            int n = Q.size(); // 由于遍历过程中会继续添加节点，因此需要暂存队列长度
             for (int i = 0; i < n; i++) {
                 pair<int, int> vertex = Q.front(); Q.pop();
                 int row = vertex.first, col = vertex.second;
                 for (int k = 0; k < 4; k++) {
                     int newRow = row + dirs[k][0], newCol = col + dirs[k][1];
-                    if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && matrix[newRow][newCol] < matrix[row][col]) {
+                    if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && matrix[newRow][newCol] < matrix[row][col])
                         if (--outdegrees[newRow][newCol] == 0) Q.push(make_pair(newRow, newCol));
-                    }
                 }
             }
         }
