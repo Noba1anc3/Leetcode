@@ -17,7 +17,7 @@
 
 - [Topological Sort](Graph%20-%20Topological%20Sort.md)
 - [☆ 020. Valid Parentheses ☆](020%20Valid%20Parentheses.md)
-- [☆☆ 094. Binary Tree Inorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [☆☆☆ 094. Binary Tree Inorder Traversal ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆ 125 Valid Palindrome ☆☆](125%20Valid%20Palindrome.md)
 - [☆☆ 144. Binary Tree Preorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [☆☆ 145. Binary Tree Postorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
@@ -74,7 +74,7 @@
 
 ## Tree
 
-- [☆☆ 094. Binary Tree Inorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [☆☆☆ 094. Binary Tree Inorder Traversal ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 144. Binary Tree Preorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [☆☆ 145. Binary Tree Postorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
@@ -177,7 +177,7 @@
 - [☆☆ 078. Subsets ☆☆](078%20Subsets.md)
 - [☆☆☆ 090. Subsets II ☆☆☆](090%20Subsets%20II.md)
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
-- [☆☆ 094. Binary Tree Inorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [☆☆☆ 094. Binary Tree Inorder Traversal ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
@@ -331,7 +331,7 @@
 - [☆☆ 078. Subsets ☆☆](078%20Subsets.md)
 - [☆☆☆ 090. Subsets II ☆☆☆](090%20Subsets%20II.md)
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
-- [☆☆ 094. Binary Tree Inorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [☆☆☆ 094. Binary Tree Inorder Traversal ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆ 125 Valid Palindrome ☆☆](125%20Valid%20Palindrome.md)
