@@ -2,14 +2,14 @@
 class Solution {
 public:
     std::vector<int> Topological_Sort(int n, std::vector<std::vector<int>>& edges) {
-        std::vector<std::vector<int>> GraphReverse(n, std::vector<int>());
+        std::vector<std::vector<int>> Graph(n, std::vector<int>());
         std::vector<int> InDegree(n, 0);
         std::vector<int> Topological;
         std::queue<int> Q;
 
         for (const std::vector<int>& edge : edges){
-            GraphReverse[edge[1]].push_back(edge[0]);
-            InDegree[edge[0]]++;
+            Graph[edge[0]].push_back(edge[1]);
+            InDegree[edge[1]]++;
         }
 
         for (int i = 0; i < n; i++)
@@ -17,10 +17,9 @@ public:
                 Q.push(i);
 
         while (!Q.empty()){
-            int vertex = Q.front();
-            Q.pop();
+            int vertex = Q.front(); Q.pop();
             Topological.push_back(vertex);
-            for (const int& adjVertex : GraphReverse[vertex]){
+            for (const int& adjVertex : Graph[vertex]){
                 InDegree[adjVertex]--;
                 if (InDegree[adjVertex] == 0)
                     Q.push(adjVertex);
