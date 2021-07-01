@@ -38,6 +38,7 @@
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 
 ## Map
+
 - [☆☆ 001. Two Sum ☆☆](001%20Two%20Sum.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 020. Valid Parentheses ☆☆](020%20Valid%20Parentheses.md)
@@ -46,6 +47,7 @@
 - [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
 
 ## Set
+
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
@@ -94,7 +96,7 @@
 - [☆☆☆ 210. Course Schedule II ☆☆☆](210%20Course%20Schedule%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
-- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
@@ -107,6 +109,7 @@
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 752. Open the Lock ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 
 ## DFS
 
@@ -127,7 +130,7 @@
 - [☆☆ 093. Restore IP Addresses ☆☆](093%20Restore%20IP%20Addresses.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
-- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 463. Island Perimeter ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
@@ -182,7 +185,7 @@
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
-- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
@@ -236,7 +239,7 @@
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
-- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆☆ 392. Is Subsequence ☆☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -359,7 +362,7 @@
 - [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
-- [☆☆ 329. Longest Increasing Path in a Metrix ☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
