@@ -23,7 +23,7 @@ class Solution {
 public:
     int findRepeatNumber(vector<int>& nums) {
         unordered_set<int> numset;
-        for (int num : nums){
+        for (const int& num : nums){
             if (numset.count(num))
                 return num;
             numset.insert(num);
@@ -32,7 +32,6 @@ public:
     }
 };
 ```
+执行用时：52 ms, 在所有 C++ 提交中击败了50.33%的用户
 
-执行用时：52 ms, 在所有 C++ 提交中击败了89.63%的用户
-
-内存消耗：26.9 MB, 在所有 C++ 提交中击败了31.88%的用户
+内存消耗：26.8 MB, 在所有 C++ 提交中击败了35.52%的用户
