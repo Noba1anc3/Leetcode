@@ -109,6 +109,9 @@ std::set.size()
 // 插入set
 std::set.insert(ele)
 
+// 删除set中元素
+std::set.erase(ele)
+
 // 遍历set
 for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
     value = *it;
@@ -423,6 +426,14 @@ maximum: float('inf') / math.inf
 
   - 遍历两数组，将其元素分别insert到两个unordered_set当中（为了去重）
   - **遍历小set中的元素**，如果在大set中能找到该元素，则将其加入返回vector当中
+
+- [找出数组当中任意一个重复数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
+
+- [找出数组中唯二只出现了一次的数字，其他数字均出现两次](http://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
+
+  - 遍历数组
+  - 如果set中有该数字，删除该数字
+  - 如果set中没有该数字，插入该数字
 
 ## Union-Find Set
 
@@ -1007,6 +1018,11 @@ string 存每次回溯之前的临时结果
   - 遍历所有数字
     - 如果当前票数为0，修改主导数字为当前被遍历到的数字
     - 无论票数是否为0，如果主导数字与当前被遍历的数字相同则票数+1，否则-1
+- [找出数组中唯二只出现了一次的数字，其他数字均出现两次](http://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
+  - 用0与数组所有元素逐一异或 ^
+  - 用1与异或结果求与 &，若结果不为1，则1向左移一位 << 1, 直到结果为1
+  - 按照这一位对数字进行分类，值为1的在一组，值为0的在一组
+  - 组内分别计算异或，两组异或的结果就是两个只出现了一次的数字
 
 # Useful method
 
