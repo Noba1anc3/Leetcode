@@ -50,6 +50,17 @@
     - 2号栈不空，弹出2号栈顶
     - 2号栈空，返回错误
 
+#### Monotonous Stack
+
+- [**739. 根据天气列表，得出每一天需要等几天能等来更暖和的天气**](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
+  - 维护一个存储下标的单调栈，栈底到栈顶的下标对应温度依次递减
+  - 如果一个下标在单调栈中，说明尚未找到更高天气的下标
+  - 正向遍历温度列表。对于温度列表中的每个元素 `T[i]`
+    - 如果栈不为空，则比较栈顶元素 `prevIndex` 对应的温度 `T[prevIndex]` 和当前温度 `T[i]`
+    - 如果 `T[i] > T[prevIndex]`，则将 `prevIndex` 移除，并将 `prevIndex` 对应的等待天数赋为 `i - prevIndex`
+    - 重复上述操作直到栈为空或者栈顶元素对应的温度大于等于当前温度
+    - 将 `i` 进栈
+
 #### String
 
 - [020. 判断是否为有效的括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
@@ -87,17 +98,6 @@
   - 在完成对邻结点的遍历后将结点压入栈
   - 栈顶到栈底的序列即为拓扑排序
 - [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
-
-#### Monotonous Stack
-
-- [**739. 根据天气列表，得出每一天需要等几天能等来更暖和的天气**](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
-  - 维护一个存储下标的单调栈，栈底到栈顶的下标对应温度依次递减
-  - 如果一个下标在单调栈中，说明尚未找到更高天气的下标
-  - 正向遍历温度列表。对于温度列表中的每个元素 `T[i]`
-    - 如果栈不为空，则比较栈顶元素 `prevIndex` 对应的温度 `T[prevIndex]` 和当前温度 `T[i]`
-    - 如果 `T[i] > T[prevIndex]`，则将 `prevIndex` 移除，并将 `prevIndex` 对应的等待天数赋为 `i - prevIndex`
-    - 重复上述操作直到栈为空或者栈顶元素对应的温度大于等于当前温度
-    - 将 `i` 进栈
 
 ## Heap
 
@@ -198,7 +198,7 @@
 
 ### Questions
 
-- [**最长连续序列**](https://github.com/Noba1anc3/Leetcode/blob/master/128%20Longest%20Consecutive%20Sequence.md)
+- [**128. 最长连续序列**](https://github.com/Noba1anc3/Leetcode/blob/master/128%20Longest%20Consecutive%20Sequence.md)
 
   - 用unordered_set存储vector所有元素(去重 + 降低搜索时间复杂度)
 
@@ -208,14 +208,14 @@
       while (nums_set.count(++curNum)) curLength++;
       ```
 
-- [**求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+- [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 
   - 遍历两数组，将其元素分别insert到两个unordered_set当中（为了去重）
   - **遍历小set中的元素**，如果在大set中能找到该元素，则将其加入返回vector当中
 
-- [找出数组当中任意一个重复数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
+- [剑指Offer-03. 找出数组当中任意一个重复数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
 
-- [找出数组中唯二只出现了一次的数字，其他数字均出现两次](http://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
+- [剑指Offer-56-I. 找出数组中唯二只出现了一次的数字，其他数字均出现两次](http://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 
   - 遍历数组
   - 如果set中有该数字，删除该数字
@@ -223,7 +223,7 @@
 
 ## Union-Find Set
 
-### Algorithm
+### Implementation
 
 ```c++
 std::vector<int> parent(N, 0), height(N, 0);
@@ -263,30 +263,39 @@ void Union(int x, int y) {
 
 ### Questions
 
-- [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
-- [**填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
-  - 对所有`'O'`元素生成并查集并合并
-  - 对四条边的`'O'`元素，找到其并查集的key，加入set
-  - 对所有中间`'O'`元素，如果不在set中，则改为`'X'`
-- [**岛屿数量**](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
-  - 生成每个陆地的并查集
-  - 对相邻陆地进行合并
-  - 查找最后有几个root
-- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
-- [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
-  - 与上题一致
-- [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
-  - 如果**一次union操作的两个root的key相同**，则找到该边
-- [账号合并](https://github.com/Noba1anc3/Leetcode/blob/master/721%20Accounts%20Merge.md)
+#### Basics
+
+- [721. 账号合并](https://github.com/Noba1anc3/Leetcode/blob/master/721%20Accounts%20Merge.md)
   - 并查集的key为每个账户的下标
   - 建立邮件set和邮件到人名的映射
-- [等式可满足性](https://github.com/Noba1anc3/Leetcode/blob/master/990%20Satisfiability%20of%20Equality%20Equations.md)
+- [990. 等式可满足性](https://github.com/Noba1anc3/Leetcode/blob/master/990%20Satisfiability%20of%20Equality%20Equations.md)
   - 建立26个字母的并查集
   - 对相等符号连接的字母合并
   - **判断不等符号连接的字母是否是一个key**
-- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+
+#### Tree
+
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
   - 首先判断边的个数加1是否等于结点的个数
   - 如若并查集合并时根相同，则不能组成一棵树
+- [684. 寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
+  - 如果**一次union操作的两个root的key相同**，则找到该边
+
+#### Graph
+
+- [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
+- [**130. 填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
+  - 对所有`'O'`元素生成并查集并合并
+  - 对四条边的`'O'`元素，找到其并查集的key，加入set
+  - 对所有中间`'O'`元素，如果不在set中，则改为`'X'`
+- [**200. 岛屿数量**](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
+  - 生成每个陆地的并查集
+  - 对相邻陆地进行合并
+  - 查找最后有几个root
+- [323. 无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
+
+- [547. 省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+  - 与上题一致
 
 ## Linked-List
 
