@@ -6,9 +6,7 @@
 
 ### Questions
 
-#### BFS
-
-##### Basics
+#### Basics
 
 - [**279. 求组成数字需要的最少完全平方数**](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
   - 因要找到最少的完全平方数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
@@ -20,16 +18,14 @@
     - 如果在不可走位置列表中，continue
     - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
 
-##### Tree
+#### Tree
+
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
 
 - [**662. 二叉树的最大宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [**剑指Offer 55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
-##### Graph
-
-- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-
-#### Topological Sort
+#### Graph
 
 - [207. 给定课程学习先决条件，判断是否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
 - [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
@@ -282,9 +278,8 @@ void Union(int x, int y) {
   - 首先判断边的个数加1是否等于结点的个数
   - 如若并查集合并时根相同，则不能组成一棵树
 
-#### Graph
+#### Matrix
 
-- [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
 - [**130. 填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
   - 对所有`'O'`元素生成并查集并合并
   - 对四条边的`'O'`元素，找到其并查集的key，加入set
@@ -293,6 +288,10 @@ void Union(int x, int y) {
   - 生成每个陆地的并查集
   - 对相邻陆地进行合并
   - 查找最后有几个root
+
+#### Graph
+
+- [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
 - [323. 无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 
 - [547. 省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
@@ -501,11 +500,12 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-- [684. 寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
-  - 如果**一次union操作的两个root的key相同**，则找到该边
 - [323. 无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [547. 省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
   - 与上题一致
+
+- [684. 寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
+  - 如果**一次union操作的两个root的key相同**，则找到该边
 
 ### Minimum Spanning Tree
 
@@ -544,9 +544,7 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-- [无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
-
-- [全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
+- [743. 全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
 
 ### [Topological Sort](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
 
@@ -568,10 +566,10 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-- [给定课程学习先决条件，判断能否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
+- [207. 给定课程学习先决条件，判断能否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
   - 拓扑排序序列长度是否等于结点个数 或
   - DFS判断是否有环
-- [给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
+- [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
   - 拓扑排序 或
   - DFS
 - [**矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
