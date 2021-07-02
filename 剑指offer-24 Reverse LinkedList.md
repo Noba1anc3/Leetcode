@@ -30,7 +30,7 @@ Output: 5->4->3->2->1->NULL
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-
+ 
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -47,6 +47,7 @@ public:
     }
 };
 ```
-执行用时：8 ms, 在所有 C++ 提交中击败了85.10%的用户
 
-内存消耗：8 MB, 在所有 C++ 提交中击败了95.05%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了67.91%的用户
+
+内存消耗：8.2 MB, 在所有 C++ 提交中击败了29.57%的用户
