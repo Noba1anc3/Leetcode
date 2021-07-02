@@ -162,89 +162,93 @@ public:
     }
 };
 ```
+
 执行用时：120 ms, 在所有 C++ 提交中击败了69.31%的用户
 
 内存消耗：47.5 MB, 在所有 C++ 提交中击败了22.26%的用户
 
 ### 迭代
 
-```java
+```c++
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * struct ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
  */
 
+
 class Solution {
-    public ListNode sortList(ListNode head) {
+public:
+    ListNode* sortList(ListNode* head) {
         int length = getLength(head);
-        ListNode dummy = new ListNode(-1);
-        dummy.next = head;
-       
-        for(int step = 1; step < length; step*=2){ //依次将链表分成1块，2块，4块...
+        ListNode* dummy = new ListNode(0);
+        dummy->next = head;
+
+        for(int step = 1; step < length; step *= 2) { //依次将链表分成1块，2块，4块...
             //每次变换步长，pre指针和cur指针都初始化在链表头
-            ListNode pre = dummy; 
-            ListNode cur = dummy.next;
-            while(cur!=null){
-                ListNode h1 = cur; //第一部分头 （第二次循环之后，cur为剩余部分头，不断往后把链表按照步长step分成一块一块...）
-                ListNode h2 = split(h1,step);  //第二部分头
-                cur = split(h2,step); //剩余部分的头
-                ListNode temp = merge(h1,h2); //将一二部分排序合并
-                pre.next = temp; //将前面的部分与排序好的部分连接
-                while(pre.next!=null){
-                    pre = pre.next; //把pre指针移动到排序好的部分的末尾
-                }
+            ListNode* pre = dummy;
+            ListNode* cur = dummy->next;
+
+            while(cur != nullptr) {
+                ListNode* h1 = cur; //第一部分头（第二次循环之后，cur为剩余部分头，不断往后把链表按照步长step分成一块一块...）
+                ListNode* h2 = split(h1, step);  //第二部分头
+                cur = split(h2, step); //剩余部分的头
+                pre->next = merge(h1, h2); //将前面的部分与排序好的部分连接
+                while(pre->next != nullptr) pre = pre->next; //把pre指针移动到排序好的部分的末尾
             }
         }
-        return dummy.next;
+
+        return dummy->next;
     }
     
-    public int getLength(ListNode head){
-    //获取链表长度
+    int getLength(ListNode* head) {
+        //获取链表长度
         int count = 0;
-        while(head!=null){
+        while(head != nullptr){
             count++;
-            head=head.next;
+            head = head->next;
         }
         return count;
     }
     
-    public ListNode split(ListNode head,int step){
+    ListNode* split(ListNode* head, int step){
         //断链操作 返回第二部分链表头
-        if(head==null)  return null;
-        ListNode cur = head;
-        for(int i=1; i<step && cur.next!=null; i++){
-            cur = cur.next;
-        }
-        ListNode right = cur.next;
-        cur.next = null; //切断连接
+        if(head == nullptr)  return head;
+        for(int i = 1; i < step && head->next != nullptr; i++)
+            head = head->next;
+        ListNode* right = head->next;
+        head->next = nullptr; //切断连接
         return right;
     }
     
-    public ListNode merge(ListNode h1, ListNode h2){
-    //合并两个有序链表
-        ListNode head = new ListNode(-1);
-        ListNode p = head;
-        while(h1!=null && h2!=null){
-            if(h1.val < h2.val){
-                p.next = h1;
-                h1 = h1.next;
+    ListNode* merge(ListNode* h1, ListNode* h2){
+        ListNode* head = new ListNode(-1);
+        ListNode* p = head;
+        
+        while(h1 != nullptr && h2 != nullptr){
+            if (h1->val < h2->val){
+                p->next = h1;
+                h1 = h1->next;
             }
             else{
-                p.next = h2;
-                h2 = h2.next;
+                p->next = h2;
+                h2 = h2->next;
             }
-            p = p.next;           
+            p = p->next;
         }
-        if(h1!=null)    p.next = h1;
-        if(h2!=null)    p.next = h2;
 
-        return head.next;     
+        p->next = h1 == nullptr ? h2 : h1;
+
+        return head->next;  
     }
-}
+};
 ```
+
+执行用时：124 ms, 在所有 C++ 提交中击败了63.19%的用户
+
+内存消耗：31.9 MB, 在所有 C++ 提交中击败了50.89%的用户
