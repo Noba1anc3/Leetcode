@@ -205,7 +205,8 @@ public:
         dummy->next = head;
 
         for(int subLength = 1; subLength < length; subLength *= 2) { //依次将链表分成1块，2块，4块...
-            //每次变换步长，pre指针和cur指针都初始化在链表头
+            // 每次变换步长，pre指针和cur指针都初始化在链表头
+            // pre负责脚踏实地整理此前的顺序，cur负责仰望星空探索未知
             ListNode* pre = dummy;
             ListNode* cur = dummy->next;
 
