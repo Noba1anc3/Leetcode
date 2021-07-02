@@ -27,10 +27,23 @@ Output: [-1,0,3,4,5]
 对**链表**做归并排序可以通过修改引用来更改节点位置，因此不需要向数组一样开辟额外的 O(n) 空间，但是只要是自顶向下的递归就需要消耗 O(log n) 的空间复杂度，要达到 O(1) 空间复杂度的目标，得使用自底向上的迭代法。
 
 因此对于链表进行排序有两种方案：
-（1）递归实现归并排序（空间复杂度不符合要求）
+（1）递归实现归并排序
 （2）迭代实现归并排序
 
-### 技巧一：通过快慢指针找到链表中点
+### 迭代法思路
+
+首先求得链表的长度length，然后将链表拆分成子链表进行合并。
+
+具体做法如下：
+
+1. 用 subLength 表示每次需要排序的子链表的长度，初始时 subLength=1
+2. 每次将链表拆分成若干个长度为 subLength 的子链表（最后一个子链表的长度可以小于 subLength），按照每两个子链表一组进行合并，合并后即可得到若干个长度为 subLength×2 的有序子链表（最后一个子链表的长度可以小于 subLength×2）。合并两个子链表。
+3. 将 subLength 的值加倍，重复第 2 步，对更长的有序子链表进行合并操作，直到有序子链表的长度大于或等于 length，整个链表排序完毕。
+
+### 需要实现的关键方法
+
+#### 通过快慢指针找到链表中点
+
 需要确定链表的中点以进行两路归并。可以通过快慢指针的方法。快指针每次走两步，慢指针每次走一步。遍历完链表时，慢指针停留的位置就在链表的中点。
 
 ```c++
@@ -46,7 +59,8 @@ ListNode* rightHead = slow->next; //链表第二部分的头节点
 slow->next = NULL; //cut 链表
 ```
 
-### 技巧二：断链操作
+#### 断链操作 （只用在迭代法）
+
 `split(l,n)` 即切掉链表l的前n个节点，并返回后半部分的链表头。
 比如原来链表是`dummy->1->2->4->3->NULL`
 `split(l,2)`的操作造成：
@@ -71,7 +85,7 @@ ListNode* split(ListNode* head, int step){
 }
 ```
 
-### **技巧三：合并两个有序链表**
+### **合并两个有序链表**
 
 ```c++
 ListNode* merge(ListNode* h1, ListNode* h2){
@@ -190,15 +204,16 @@ public:
         ListNode* dummy = new ListNode(0);
         dummy->next = head;
 
-        for(int step = 1; step < length; step *= 2) { //依次将链表分成1块，2块，4块...
+        for(int subLength = 1; subLength < length; subLength *= 2) { //依次将链表分成1块，2块，4块...
             //每次变换步长，pre指针和cur指针都初始化在链表头
             ListNode* pre = dummy;
             ListNode* cur = dummy->next;
 
             while(cur != nullptr) {
-                ListNode* h1 = cur; //第一部分头（第二次循环之后，cur为剩余部分头，不断往后把链表按照步长step分成一块一块...）
-                ListNode* h2 = split(h1, step);  //第二部分头
-                cur = split(h2, step); //剩余部分的头
+                ListNode* h1 = cur; // 第一部分链表头（切割之前还是cur之后完整的部分）
+                ListNode* h2 = split(h1, subLength);  // 第二部分头, split后h1只剩下subLength之前的部分
+                cur = split(h2, subLength); // 剩余部分的头, split后h2只剩下subLength之前的部分
+                // 以下两行代码在每次while循环至此时，将两个子链表merge的结果拼在上一次两个子链表merge的结果的后面
                 pre->next = merge(h1, h2); //将前面的部分与排序好的部分连接
                 while(pre->next != nullptr) pre = pre->next; //把pre指针移动到排序好的部分的末尾
             }
