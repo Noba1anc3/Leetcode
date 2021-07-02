@@ -57,42 +57,42 @@ dummy->1->2->NULL
 
 ```c++
 ListNode* split(ListNode* head, int step){
-        if(head == NULL)  return NULL;
-        ListNode* cur = head;
-        
-        //注意这里 cur->next != NULL 有可能出现后半段还没到规定步长但是走完的情况
-        for(int i = 1; i < step && cur->next != NULL; i++)
-            cur = cur->next;
+    if(head == NULL)  return NULL;
+    ListNode* cur = head;
 
-        ListNode* right = cur->next; //right为后半段链表头
-        cur->next = NULL; //切断前半段
-        return right; //返回后半段链表头
-    }
+    //注意这里 cur->next != NULL 有可能出现后半段还没到规定步长但是走完的情况
+    for(int i = 1; i < step && cur->next != NULL; i++)
+        cur = cur->next;
+
+    ListNode* right = cur->next; //right为后半段链表头
+    cur->next = NULL; //切断前半段
+    return right; //返回后半段链表头
+}
 ```
 
 ### **技巧三：合并两个有序链表**
 
 ```c++
 ListNode* merge(ListNode* h1, ListNode* h2){
-        ListNode* head = new ListNode(-1); //新创建一个伪头节点
-        ListNode* p = head;
-        
-        while(h1 != NULL && h2 != NULL){
-            if (h1->val < h2->val){
-                p->next = h1;
-                h1 = h1->next;
-            }
-            else{
-                p->next = h2;
-                h2 = h2->next;
-            }
-            p = p->next;           
+    ListNode* head = new ListNode(-1); //新创建一个伪头节点
+    ListNode* p = head;
+
+    while(h1 != NULL && h2 != NULL){
+        if (h1->val < h2->val){
+            p->next = h1;
+            h1 = h1->next;
         }
-
-        p->next = h1 == NULL ? h2 : h1;
-
-        return head->next;  //返回排序好的链表头    
+        else{
+            p->next = h2;
+            h2 = h2->next;
+        }
+        p = p->next;           
     }
+
+    p->next = h1 == NULL ? h2 : h1;
+
+    return head->next;  //返回排序好的链表头    
+}
 ```
 
 ## Solution
@@ -110,6 +110,8 @@ ListNode* merge(ListNode* h1, ListNode* h2){
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+
 class Solution {
 public:
     ListNode* sortList(ListNode* head) {
