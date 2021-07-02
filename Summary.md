@@ -29,6 +29,7 @@
 
 - [207. 给定课程学习先决条件，判断是否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
 - [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
+- [**329. 矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 
 ## Stack
 
@@ -534,7 +535,7 @@ void DFSVisit(int vertex){
 
 > Priority Queue Based
 
-- 基于pair<dist, vertex> 构建最小堆（优先队列）
+- 基于 pair<dist, vertex> 构建最小堆（优先队列）
 - 只要队列不空
   - 弹出队顶结点作为当前结点
     - 对其每个 **边权重 + 当前结点的距离 小于其自身距离**的 **白色**邻结点
