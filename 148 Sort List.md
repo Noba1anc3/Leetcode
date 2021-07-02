@@ -85,7 +85,7 @@ ListNode* split(ListNode* head, int step){
 }
 ```
 
-### **合并两个有序链表**
+#### 合并两个有序链表
 
 ```c++
 ListNode* merge(ListNode* h1, ListNode* h2){
