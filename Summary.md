@@ -10,17 +10,17 @@
 
 ##### Tree
 
-- [261. Graph Valid Tree](https://github.com/Noba1anc3/Leetcode/blob/master/261 Graph Valid Tree.md)
-- [662 Maximum Width of Binary Tree](https://github.com/Noba1anc3/Leetcode/blob/master/662 Maximum Width of Binary Tree.md)
-- [剑指Offer 55. Depth of Binary Tree](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-55 Depth of Binary Tree.md)
+- [261. Graph Valid Tree](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+- [662 Maximum Width of Binary Tree](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
+- [剑指Offer 55. Depth of Binary Tree](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 ##### Others
 
-- [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279 Perfect Squares.md)
+- [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
   - 因要找到最少的完全平放数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
   - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层遍历
 
-- [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752 Open the Lock.md)
+- [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
   - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首
     - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
@@ -28,8 +28,8 @@
 
 #### Topological Sort
 
-- [☆ 207. Course Schedule ☆](https://github.com/Noba1anc3/Leetcode/blob/master/207 Course Schedule.md)
-- [☆☆☆ 210. Course Schedule II ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/210 Course Schedule II.md)
+- [☆ 207. Course Schedule ☆](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
+- [☆☆☆ 210. Course Schedule II ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
 
 ## Stack
 
