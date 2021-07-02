@@ -8,13 +8,7 @@
 
 #### BFS
 
-##### Tree
-
-- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-- [**662. 二叉树的最大宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
-- [**剑指Offer 55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
-
-##### Others
+##### Basics
 
 - [**279. 求组成数字需要的最少完全平方数**](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
   - 因要找到最少的完全平方数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
@@ -25,6 +19,12 @@
     - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
     - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
+
+##### Tree
+
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+- [**662. 二叉树的最大宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
+- [**剑指Offer 55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 #### Topological Sort
 
@@ -136,25 +136,39 @@
 
 ## Map
 
+对Map(Hash, Dict) 的使用在于**构建映射关系**，加速搜索过程。
+
 ### Questions
 
-- [返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
+#### Integer
 
-  - 第一次遍历：构建数字到下标的倒排映射
+- [001. 返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
+  - 第一次遍历：**构建数字到下标的倒排映射**
   - 第二次遍历：如果target - i是哈希表的key且value不等于i，则返回i，j
   - 如果是重复元素，加到哈希表时后一次出现的元素会覆盖前面的写入，因此不会有问题
+- [169. 求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+  - 计算数字需要出现的最少次数
+    - 数组长度为偶数：半长
+    - 数组长度为奇数：半长+1
+  - **构建数字到出现个数的映射**
 
-- [九键打字的字母组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+#### String
 
-  - 构建从数字到字符串的映射
+- [017. 九键打字的字母组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+  - **构建从数字到字符串的映射**
+- [020. 判断是否为有效括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+  - **构建从右括号到左括号的映射**
+- [242. 判断两个字符串是否为字母异位词](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
+  - 如果长度不相等，直接返回
+  - **构建字母与其出现次数的映射**
+  - 遍历两个字符串，**A串的字母次数增长，B串的字母次数下降**
+  - 遍历映射表，如值不为0，返回错误
 
-- [判断是否为有效括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
-
-  - 构建从右括号到左括号的映射
+#### Tree
 
 - [**二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 
-  - 构建中序序列的值到下标的倒排映射
+  - **构建中序序列的值到下标的倒排映射**
 
   - 递归构建左右子树
 
@@ -170,23 +184,17 @@
 
     - 递归构建右子树`（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)`
 
-- [求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
-
-  - 计算数字需要出现的最少次数
-    - 数组长度为偶数：半长
-    - 数组长度为奇数：半长+1
-  - 构建数字到出现个数的映射
-
-- [判断两个字符串是否为字母异位词]()
-
-  - 如果长度不相等，直接返回
-  - 构建字母与其出现次数的映射
-  - 遍历两个字符串，**A串的字母次数增长，B串的字母次数下降**
-  - 遍历映射表，如值不为0，返回错误
-
 ## Set
 
-一般使用基于哈希表的无序的unordered_set, 其作用在于有效降低查找时的时间复杂度。O(n) -> O(1)
+一般使用基于哈希表的无序的unordered_set, 其作用在于
+
+- 有效**降低搜索时间复杂度**：`O(n) -> O(1)`
+- 实现去重
+
+对于Set这一数据结构，其独特点在于
+
+- 自带**排序**机制
+- 搜索时间复杂度为 `O(log n)`
 
 ### Questions
 
