@@ -21,7 +21,6 @@
 ```
 
 ## Solution
-### c++
 
 ```c++
 /**
@@ -32,22 +31,22 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+ 
 class Solution {
 public:
     ListNode* deleteNode(ListNode* head, int val) {
         if (head->val == val) return head->next;
-        
-        ListNode* ans = head;
-        while (head->next != NULL && head->next->val != val)
+
+        ListNode* rsp = head;
+        while (head->next->val != val)
             head = head->next;
-        
         head->next = head->next->next;
 
-        return ans;
+        return rsp;
     }
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了93.97%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了96.60%的用户
 
-内存消耗：9 MB, 在所有 C++ 提交中击败了95.52%的用户
+内存消耗：9.1 MB, 在所有 C++ 提交中击败了37.12%的用户
