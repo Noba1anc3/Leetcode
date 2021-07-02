@@ -58,6 +58,7 @@
 - [Kruskal Algorithm for MST](Graph%20-%20Kruskal.md)
 - [☆☆ 130. Surrounded Regions ☆☆](130%20Surrounded%20Regions.md)
 - [☆☆☆ 200. Number of Islands ☆☆☆](200%20Number%20of%20Islands.md)
+- [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
