@@ -22,9 +22,12 @@
 
 ##### Tree
 
-- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
 - [**662. 二叉树的最大宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [**剑指Offer 55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
+
+##### Graph
+
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
 
 #### Topological Sort
 
@@ -278,8 +281,6 @@ void Union(int x, int y) {
 - [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
   - 首先判断边的个数加1是否等于结点的个数
   - 如若并查集合并时根相同，则不能组成一棵树
-- [684. 寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
-  - 如果**一次union操作的两个root的key相同**，则找到该边
 
 #### Graph
 
@@ -296,20 +297,22 @@ void Union(int x, int y) {
 
 - [547. 省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
   - 与上题一致
+- [684. 寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
+  - 如果**一次union操作的两个root的key相同**，则找到该边
 
 ## Linked-List
 
 ### Questions
 
-- [两链表求和](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
+- [002. 两链表求和](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
   - 每次求和时如果超过10，新结点为求和余10的结果，并将进位设为1；
   - 下次求和时如果有进位，则将求和结果+1
   - 如果做完最终运算，仍有进位，创建新结点并设为1
   - 结果新链表设置一个头节点，一个移动结点。移动结点不断后移，结束后返回头节点。
-- [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
   - 双指针向前推进
   - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
-- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
   - 自顶向下
     - 通过**快慢指针法**找到链表中点，并在中间断链，返回后半段链表的头指针
     - 通过递归法进行归并排序，合并方法见上题👆
@@ -321,9 +324,9 @@ void Union(int x, int y) {
         - 使用两次断链方法，得到两个长度为`subLength`的子链表
         - 通过第二次断链，`cur`指针会指向第二个子链表的后继结点
         - 将两部分merge的结果接在`pre`指针的后面，而后更新`pre`指针到当前指针的末尾
-- [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
+- [206. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
   - 基于双指针的局部方向反转
-- [删除链表指定元素](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-18%20Delete%20element%20in%20linkList.md)
+- [剑指Offer-18. 删除链表指定元素](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-18%20Delete%20element%20in%20linkList.md)
   - 首先判断头结点的值是否为指定元素，如是，返回`head->next`
   - 只要头结点的后继结点的值不为指定元素，则不断后移头结点
   - 找到后继结点为指定元素后，将该结点的后继结点赋值为指定元素结点的后继结点
@@ -332,7 +335,13 @@ void Union(int x, int y) {
 
 ### Questions
 
-- [求二叉树宽度](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
+#### Tree-self
+
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于结点的个数
+  - 如若并查集合并时根相同，则不能组成一棵树
+
+- [**662. 求二叉树宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
 
   - ```c++
     pair<TreeNode*, pair<int, unsigned long long>> ROOT(root, level_id)
@@ -342,7 +351,7 @@ void Union(int x, int y) {
 
   - **每次进入下一层的时候，更新left的id，用于计算宽度**
 
-- [求二叉树深度](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
+- [**剑指Offer-55. 求二叉树深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
   - ```c++
     pair<TreeNode*, int>(T, height)
@@ -350,18 +359,20 @@ void Union(int x, int y) {
 
   - 若左右儿子不空，则将左右儿子压入队列，高度+1
 
-- [**二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+#### Traverse
+
+- [**094. 二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
 
   - 将根结点与白色压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
   - 如果是白色，依次将白色右结点，灰色本结点与白色左结点压入栈中
   - 如果是灰色，将结点值加到中序序列中
 
-- [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
+- [144. 二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 
-- [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
+- [145. 二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 
-- [**二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [**105. 二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 
   - 构建中序序列的值到下标的倒排映射map
 
@@ -379,11 +390,16 @@ void Union(int x, int y) {
 
     - 递归构建右子树`（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)`
 
+#### Huffman Tree
+
+- [1167. 拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
+  - 基于最小堆的哈夫曼树
+
 ## Graph
 
 ### Breath First Search
 
-#### Algorithm
+#### Implementation
 
 可以加入到遍历过程中的其他信息：`dist`, `pred`, `color`
 
@@ -424,17 +440,9 @@ void BFSVisit(Graph G, int vertex){
 }
 ```
 
-#### Questions
-
-- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-  - 首先判断边的个数加1是否等于结点的个数
-    - 少了一定无法存在孤立点
-    - 多了一定存在环路
-  - 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
-
 ### Depth First Search
 
-#### Algorithm
+#### Implementation
 
 可以加入到遍历过程中的其他信息：`start`，`finish`，`pred`，`color`
 
@@ -463,13 +471,7 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-  - 首先判断边的个数加1是否等于结点的个数
-    - 少了一定无法存在孤立点
-    - 多了一定存在环路
-  - 从0结点遍历一次DFS后仍然有白色结点，意味着有环路+孤立结点 返回false
-
-- [**矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [**329. 矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 
   - 将矩阵看成有向图，相邻单元格之间存在较小值指向较大值的有向边，问题转化为有向图寻找最长路径
 
@@ -483,7 +485,7 @@ void DFSVisit(int vertex){
 
 ### Strongly Connected Components
 
-#### Algorithm
+#### Implementation
 
 > DFS Based
 
@@ -499,14 +501,15 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-- [寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
+- [684. 寻找树中的冗余边](https://github.com/Noba1anc3/Leetcode/blob/master/684%20Redundant%20Connection.md)
   - 如果**一次union操作的两个root的key相同**，则找到该边
-- [省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+- [323. 无向图中连通分量的个数](https://github.com/Noba1anc3/Leetcode/blob/master/323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
+- [547. 省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
   - 与上题一致
 
 ### Minimum Spanning Tree
 
-#### Algorithm
+#### Implementation
 
 ##### [Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
 
@@ -547,7 +550,7 @@ void DFSVisit(int vertex){
 
 ### [Topological Sort](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
 
-#### Algorithm - Queue Based
+#### Implementation - Queue Based
 
 - 构建图和结点入度列表
 - 将所有入度为0的结点压入队列
@@ -557,7 +560,7 @@ void DFSVisit(int vertex){
     - 入度减一
     - 如果入度变为0，压入队列
 
-#### Algorithm - Stack Based
+#### Implementation - Stack Based
 
 - 需要加入有环的判断，否则算法无法停止
 - 在完成对邻结点的遍历后，将源结点压入栈
