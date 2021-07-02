@@ -80,13 +80,13 @@
 - [144. 二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [145, 二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 
-#### Topological Sort
+#### Graph
 
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
   - **基于DFS算法**
   - 在完成对邻结点的遍历后将结点压入栈
   - 栈顶到栈底的序列即为拓扑排序
-- 
+- [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
 
 #### Monotonous Stack
 
@@ -101,19 +101,19 @@
 
 ## Heap
 
+基于最小堆的两个重要的图算法是求最小生成树的[Prim算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)和求单源最短路径的[Dijkstra算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+
 ### Questions
 
-- [最小生成树 - Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
-- [单源最短路径 - Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
-- [**最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [**需要几间会议室**](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
+#### Basics
+
+- [**253. 需要几间会议室**](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
   - 按开始时间排序
   - 遍历会议，按结束时间进入最小堆
     - 开始时间晚于堆顶结束时间则弹出堆顶
     - 无论是否弹出，将当前会议加入堆中
   - 返回堆的大小
-- [全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
-- [出租车能否坐下所有乘客](https://github.com/Noba1anc3/Leetcode/edit/master/1094%20Car%20Pooling.md)
+- [1094. 出租车能否坐下所有乘客](https://github.com/Noba1anc3/Leetcode/edit/master/1094%20Car%20Pooling.md)
   - **简单方法**
     - 乘客个数变化只发生在上下车时间
     - 遍历所有路程中间点，如果容量为负，则不能坐下
@@ -123,8 +123,16 @@
       - 上客地点远于堆顶下客地点则弹出堆顶，恢复容量
       - 容量减去当前行程的人数，如果为负，则不能坐下
       - 无论是否弹出，将当前行程加入堆中
-- [拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
+- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+
+#### Tree
+
+- [1167. 拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
   - 基于最小堆的哈夫曼树
+
+#### Graph
+
+- [743. 全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
 
 ## Map
 
