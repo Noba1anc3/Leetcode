@@ -35,33 +35,35 @@ Output: [0]
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode* ans = new ListNode(0);
-        ListNode* iter_ans = ans;
+        ListNode* rsp = new ListNode(0);
+        ListNode* iter_rsp = rsp;
+
         while (l1 != NULL && l2 != NULL){
             if (l1->val < l2->val){
-                iter_ans->next = l1;
+                iter_rsp->next = l1;
                 l1 = l1->next;
             }
             else{
-                iter_ans->next = l2;
+                iter_rsp->next = l2;
                 l2 = l2->next;
             }
-            iter_ans = iter_ans->next;
+            iter_rsp = iter_rsp->next;
         }
 
-        iter_ans->next = l1 == NULL ? l2 : l1;
+        iter_rsp->next = l1 == NULL ? l2 : l1;
         
-        return ans->next;
+        return rsp->next;
     }
 };
 ```
 
-执行用时：24 ms, 在所有 C++ 提交中击败了97.81%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了82.48%的用户
 
-内存消耗：18.7 MB, 在所有 C++ 提交中击败了91.59%的用户
+内存消耗：14.4 MB, 在所有 C++ 提交中击败了53.60%的用户
 
 Attention:
 - ```c++
