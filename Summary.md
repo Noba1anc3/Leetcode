@@ -7,7 +7,7 @@
 - [BFS](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)
   - 只要队列不空
     - 取出队首
-    - 遍历其白色邻接点
+    - 遍历其白色邻结点
       - 改为灰色后压入队列
     - 遍历后将其改为黑色
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
@@ -29,7 +29,7 @@
 
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
   - **基于DFS算法**
-  - 在完成对邻接点的遍历后将结点压入栈
+  - 在完成对邻结点的遍历后将结点压入栈
   - 栈顶到栈底的序列即为拓扑排序
 - [**用两个栈实现队列**](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
   - 入队
@@ -133,11 +133,11 @@
       TreeNode* root = new TreeNode(preorder[preorder_root])
       ```
 
-    - 用根据倒排得到的中序root减去中序左下标，得到左子树元素个数left_subtree_size
+    - 用根据倒排得到的中序`root`减去中序左下标，得到左子树元素个数`left_subtree_size`
 
-    - 递归构建左子树（pre_left + 1, pre_left + left_subtree_size, in_left, in_root - 1)
+    - 递归构建左子树`（pre_left + 1, pre_left + left_subtree_size, in_left, in_root - 1)`
 
-    - 递归构建右子树（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)
+    - 递归构建右子树`（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)`
 
 - [求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 
@@ -226,9 +226,9 @@ void Union(int x, int y) {
 
 - [Kruskal生成最小生成树MST](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
 - [**填充被围绕的区域**](https://github.com/Noba1anc3/Leetcode/blob/master/130%20Surrounded%20Regions.md)
-  - 对所有‘O’元素生成并查集并合并
-  - 对四条边的‘O’元素，找到其并查集的key，加入set
-  - 对所有中间‘O’元素，如果不在set中，则改为‘X’
+  - 对所有`'O'`元素生成并查集并合并
+  - 对四条边的`'O'`元素，找到其并查集的key，加入set
+  - 对所有中间`'O'`元素，如果不在set中，则改为`'X'`
 - [**岛屿数量**](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
   - 生成每个陆地的并查集
   - 对相邻陆地进行合并
@@ -257,22 +257,28 @@ void Union(int x, int y) {
   - 每次求和时如果超过10，新结点为求和余10的结果，并将进位设为1；
   - 下次求和时如果有进位，则将求和结果+1
   - 如果做完最终运算，仍有进位，创建新结点并设为1
-  - 结果新链表设置一个头节点，一个移动结点。移动结点不断后移，最终返回头节点。
+  - 结果新链表设置一个头节点，一个移动结点。移动结点不断后移，结束后返回头节点。
 - [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
   - 双指针向前推进
-  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
 - [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
   - 自顶向下
     - 通过**快慢指针法**找到链表中点，并在中间断链，返回后半段链表的头指针
     - 通过递归法进行归并排序，合并方法见上题👆
-    - 递归函数的返回条件为当前指针为空或当前指针的下一个指针为空
+    - 递归函数的返回条件为当前结点或其后继结点为空
   - **自底向上**
-    - 外层循环遍历当前子链表的长度`subLength`，从1开始每次放大2倍（因合并时将两部分合并了）
+    - 外层循环遍历当前子链表的长度`subLength`，从1开始，每次放大2倍（因为后面会合并）
       - 每次进入外循环时，使用`pre`和`cur`双指针用于整理过去和探索未来，分别初始化为链表的头结点指针和有效结点指针
-      - 内层循环判断只要cur指针不为空指针即可进入
+      - 内层循环判断只要cur指针不为空指针即可进入（尚未到达链尾）
         - 使用两次断链方法，得到两个长度为`subLength`的子链表
-        - 通过第二次断链，`cur`指针自动指向第二个子链表的下一指针位置
+        - 通过第二次断链，`cur`指针会指向第二个子链表的后继结点
         - 将两部分merge的结果接在`pre`指针的后面，而后更新`pre`指针到当前指针的末尾
+- [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
+  - 基于双指针的局部方向反转
+- [删除链表指定元素](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-18%20Delete%20element%20in%20linkList.md)
+  - 首先判断头结点的值是否为指定元素，如是，返回`head->next`
+  - 只要头结点的后继结点的值不为指定元素，则不断后移头结点
+  - 找到后继结点为指定元素后，将该结点的后继结点赋值为指定元素结点的后继结点
 
 ## Tree
 
@@ -321,9 +327,9 @@ void Union(int x, int y) {
 
     - 用根据倒排得到的中序root减去中序左下标，得到左子树元素个数
 
-    - 递归构建左子树（pre_left + 1, pre_left + left_subtree_size, in_left, in_root - 1)
+    - 递归构建左子树`（pre_left + 1, pre_left + left_subtree_size, in_left, in_root - 1)`
 
-    - 递归构建右子树（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)
+    - 递归构建右子树`（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)`
 
 ## Graph
 
@@ -331,11 +337,11 @@ void Union(int x, int y) {
 
 #### Algorithm
 
-可以加入到遍历过程中的其他信息：dist, pred, color
+可以加入到遍历过程中的其他信息：`dist`, `pred`, `color`
 
 - 只要队列不空
   - 取出队首作为当前结点
-  - 遍历其白色邻接点
+  - 遍历其白色邻结点
     - 距离：当前结点的距离+1
     - 先驱：设为当前结点
     - 颜色：改为灰色
@@ -383,10 +389,10 @@ void BFSVisit(Graph G, int vertex){
 
 #### Algorithm
 
-可以加入到遍历过程中的其他信息：start，finish，pred，color
+可以加入到遍历过程中的其他信息：`start`，`finish`，`pred`，`color`
 
 - 当前结点颜色修改为灰色
-  - 遍历其白色邻接点，递归进入该结点
+  - 遍历其白色邻结点，递归进入该结点
 - 访问完邻结点后，当前结点颜色改黑
 - start和finish的触发时间与color变灰及变黑的时间一致
 
@@ -422,7 +428,7 @@ void DFSVisit(int vertex){
 
   - 用一个矩阵作为DFS结果的缓存矩阵，将计算好的DFS结果保存下来
 
-  - 对每个没有缓存的结点，计算其四方向邻接点的DFS
+  - 对每个没有缓存的结点，计算其四方向邻结点的DFS
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
@@ -463,9 +469,9 @@ void DFSVisit(int vertex){
 - 基于 pair<key, vertex> 构建最小堆（优先队列）
 - 只要队列不空
   - 弹出队顶结点作为当前结点
-  - 对其每一个 **边权重小于其key**的 **白色**邻接点
+  - 对其每一个 **边权重小于其key**的 **白色**邻结点
     - 修改其key为边权重
-    - 将邻接点的pair压入队列
+    - 将邻结点的pair压入队列
   - 将当前结点的颜色改为黑色
 
 ##### [Kruskal](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
@@ -478,12 +484,12 @@ void DFSVisit(int vertex){
 
 > Priority Queue Based
 
-- 基于pair<dist, vertex>构建最小堆（优先队列）
+- 基于pair<dist, vertex> 构建最小堆（优先队列）
 - 只要队列不空
   - 弹出队顶结点作为当前结点
-    - 对其每个 **边权重 + 当前结点的距离 小于其自身距离**的 **白色**邻接点
-      - 修改邻接点的距离
-      - 将邻接点的pair推进队列
+    - 对其每个 **边权重 + 当前结点的距离 小于其自身距离**的 **白色**邻结点
+      - 修改邻结点的距离
+      - 将邻结点的pair推进队列
   - 将当前结点的颜色改为黑色
 
 #### Questions
@@ -507,7 +513,7 @@ void DFSVisit(int vertex){
 #### Algorithm - Stack Based
 
 - 需要加入有环的判断，否则算法无法停止
-- 在完成对邻接点的遍历后，将源结点压入栈
+- 在完成对邻结点的遍历后，将源结点压入栈
 - 最后从栈顶到栈底的序列即为DFS序列
 
 #### Questions
@@ -546,7 +552,7 @@ void DFSVisit(int vertex){
 
 - 刚访问时color改灰，访问完相邻结点后color改黑
 - start和finish的触发时间与color变灰及变黑的时间一致
-- 遍历邻接点时，对于白色结点，将邻接点的pred设为本结点
+- 遍历邻结点时，对于白色结点，将邻结点的pred设为本结点
 
 对于连通图，只需要DFS一个root结点即可；对于非连通图，需要遍历所有白色结点的DFS
 
@@ -566,7 +572,7 @@ void DFSVisit(int vertex){
   - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
   - 四方向遍历求和
 - [判断回路]()
-  - 在遍历邻接点时，如果是灰色结点代表有回路
+  - 在遍历邻结点时，如果是灰色结点代表有回路
 
 ## Double Pointer
 
@@ -587,6 +593,7 @@ void DFSVisit(int vertex){
   - 双指针向前推进
   - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
 - [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 
 ## Backtrack
 
