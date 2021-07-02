@@ -2,36 +2,46 @@
 
 ## Queue
 
+基于队列的算法最重要的就是广度优先搜索和拓扑排序
+
 ### Questions
 
-- [BFS](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)
-  - 只要队列不空
-    - 取出队首
-    - 遍历其白色邻结点
-      - 改为灰色后压入队列
-    - 遍历后将其改为黑色
-- [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
-  - 将所有入度为0的结点压入队列
-  - 只要队列不空
-    - 取出队首，放入拓扑排序序列结果
-    - 遍历所有该结点指向的结点
-      - 入度减一
-      - 如果入度变为0，压入队列
-- [**绕过不可走的位置，解开转盘锁**](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+#### BFS
+
+##### Tree
+
+- [261. Graph Valid Tree](https://github.com/Noba1anc3/Leetcode/blob/master/261 Graph Valid Tree.md)
+- [662 Maximum Width of Binary Tree](https://github.com/Noba1anc3/Leetcode/blob/master/662 Maximum Width of Binary Tree.md)
+- [剑指Offer 55. Depth of Binary Tree](https://github.com/Noba1anc3/Leetcode/blob/master/剑指offer-55 Depth of Binary Tree.md)
+
+##### Others
+
+- [279 Perfect Squares](https://github.com/Noba1anc3/Leetcode/blob/master/279 Perfect Squares.md)
+  - 因要找到最少的完全平放数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
+  - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层遍历
+
+- [752. Open the Lock](https://github.com/Noba1anc3/Leetcode/blob/master/752 Open the Lock.md)
   - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首
     - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
     - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
 
+#### Topological Sort
+
+- [☆ 207. Course Schedule ☆](https://github.com/Noba1anc3/Leetcode/blob/master/207 Course Schedule.md)
+- [☆☆☆ 210. Course Schedule II ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/210 Course Schedule II.md)
+
 ## Stack
 
 ### Questions
 
-- [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
-  - **基于DFS算法**
-  - 在完成对邻结点的遍历后将结点压入栈
-  - 栈顶到栈底的序列即为拓扑排序
-- [**用两个栈实现队列**](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
+#### Stack-self
+
+- [**155. 最小栈**](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
+  - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
+  - 压栈时，A栈压数字，B栈压入 数字与B栈栈顶的最小值
+  - 弹栈时，两栈同步弹出
+- [**剑指Offer-09. 用两个栈实现队列**](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/submissions/)
   - 入队
     - 压入1号栈
   - 出队
@@ -39,7 +49,10 @@
     - 2号栈空，将1号栈逐一弹出并压入2号栈
     - 2号栈不空，弹出2号栈顶
     - 2号栈空，返回错误
-- [判断是否为有效的括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+
+#### String
+
+- [020. 判断是否为有效的括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
   - 长度为奇数可直接返回错误
   - 构建右括号到左括号的哈希映射以加速
   - 遇到右括号
@@ -48,26 +61,35 @@
   - 遇到左括号
     - 压入栈
   - 返回栈是否为空
-- [**二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 遍历两次字符串
+  - 第一次遍历时，将所有字母数字压入栈中
+  - 第二次遍历时，比较当前元素与栈顶元素，如果相同则弹出
+- [150. 求逆波兰表达式的值](http://github.com/Noba1anc3/Leetcode/edit/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
+  - 遍历字符串
+  - 如果是数字就压入栈中
+  - 如果是运算符就取出栈顶和次栈顶，按运算符运算后压入栈中
+
+#### Tree
+
+- [**094. 二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
   - 将白色根结点压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
   - 如果是白色，依次将白色右结点，灰色本结点与白色左结点压入栈中
   - 如果是灰色，将结点值加到中序序列中
-- [二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
-- [二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
-- [判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
-  - 遍历两次字符串
-  - 第一次遍历时，将所有字母数字压入栈中
-  - 第二次遍历时，比较当前元素与栈顶元素，如果相同则弹出
-- [求逆波兰表达式的值](http://github.com/Noba1anc3/Leetcode/edit/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
-  - 遍历字符串
-  - 如果是数字就压入栈中
-  - 如果是运算符就取出栈顶和次栈顶，按运算符运算后压入栈中
-- [**最小栈**](https://github.com/Noba1anc3/Leetcode/blob/master/155%20Min%20Stack.md)
-  - A栈存储数字，B栈存储对应数字的最小值，初始化为最大值
-  - 压栈时，A栈压数字，B栈压入 数字与B栈栈顶的最小值
-  - 弹栈时，两栈同步弹出
-- [**根据天气列表，得出每一天需要等几天能等来更暖和的天气**](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
+- [144. 二叉树前序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
+- [145, 二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
+
+#### Topological Sort
+
+- [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
+  - **基于DFS算法**
+  - 在完成对邻结点的遍历后将结点压入栈
+  - 栈顶到栈底的序列即为拓扑排序
+
+#### Monotonous Stack
+
+- [**739. 根据天气列表，得出每一天需要等几天能等来更暖和的天气**](https://github.com/Noba1anc3/Leetcode/blob/master/739%20Daily%20Temperatures.md)
   - 维护一个存储下标的单调栈，栈底到栈顶的下标对应温度依次递减
   - 如果一个下标在单调栈中，说明尚未找到更高天气的下标
   - 正向遍历温度列表。对于温度列表中的每个元素 `T[i]`
@@ -378,12 +400,11 @@ void BFSVisit(Graph G, int vertex){
 
 #### Questions
 
-[判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
-
-- 首先判断边的个数加1是否等于结点的个数
-  - 少了一定无法存在孤立点
-  - 多了一定存在环路
-- 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
+- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于结点的个数
+    - 少了一定无法存在孤立点
+    - 多了一定存在环路
+  - 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
 
 ### Depth First Search
 
@@ -534,13 +555,36 @@ void DFSVisit(int vertex){
 
 ## BFS
 
+### [Algorithm](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)
+
+可以加入到遍历过程中的其他信息：`dist`, `pred`, `color`
+
+- 只要队列不空
+  - 取出队首作为当前结点
+  - 遍历其白色邻结点
+    - 距离：当前结点的距离+1
+    - 先驱：设为当前结点
+    - 颜色：改为灰色
+    - 修改完毕后，压入队列
+  - 遍历完成后，将当前结点的颜色改为黑色
+
 ### Questions
+
+- [**求组成数字需要的最少完全平方数**](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+  - 因要找到最少的完全平放数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
+  - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层遍历
 
 - [绕过不可走的位置，解开转盘锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
   - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首。
     - 如果是结果，返回步数
     - 如果在不可走位置列表中，continue
     - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
+
+- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于结点的个数
+    - 少了一定无法存在孤立点
+    - 多了一定存在环路
+  - 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
 
 ## DFS
 
@@ -573,6 +617,12 @@ void DFSVisit(int vertex){
   - 四方向遍历求和
 - [判断回路]()
   - 在遍历邻结点时，如果是灰色结点代表有回路
+
+- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 首先判断边的个数加1是否等于结点的个数
+    - 少了一定无法存在孤立点
+    - 多了一定存在环路
+  - 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
 
 ## Double Pointer
 
