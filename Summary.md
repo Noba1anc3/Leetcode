@@ -258,6 +258,21 @@ void Union(int x, int y) {
   - 下次求和时如果有进位，则将求和结果+1
   - 如果做完最终运算，仍有进位，创建新结点并设为1
   - 结果新链表设置一个头节点，一个移动结点。移动结点不断后移，最终返回头节点。
+- [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+  - 双指针向前推进
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
+- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+  - 自顶向下
+    - 通过**快慢指针法**找到链表中点，并在中间断链，返回后半段链表的头指针
+    - 通过递归法进行归并排序，合并方法见上题👆
+    - 递归函数的返回条件为当前指针为空或当前指针的下一个指针为空
+  - **自底向上**
+    - 外层循环遍历当前子链表的长度`subLength`，从1开始每次放大2倍（因合并时将两部分合并了）
+      - 每次进入外循环时，使用`pre`和`cur`双指针用于整理过去和探索未来，分别初始化为链表的头结点指针和有效结点指针
+      - 内层循环判断只要cur指针不为空指针即可进入
+        - 使用两次断链方法，得到两个长度为`subLength`的子链表
+        - 通过第二次断链，`cur`指针自动指向第二个子链表的下一指针位置
+        - 将两部分merge的结果接在`pre`指针的后面，而后更新`pre`指针到当前指针的末尾
 
 ## Tree
 
@@ -568,6 +583,10 @@ void DFSVisit(int vertex){
     - 如果迭代器1的值小于迭代器2的值，迭代器1++
     - 反之，迭代器2++
     - 如果二者相等，将值加入交集中，两迭代器均++
+- [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+  - 双指针向前推进
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
+- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 
 ## Backtrack
 
@@ -682,6 +701,22 @@ string 存每次回溯之前的临时结果
 - [输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 
   - 从0-9对N位进行回溯
+
+## Sort
+
+### Quick Sort
+
+#### Questions
+
+- [**最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+
+### Merge Sort
+
+#### Questions
+
+- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+
+### Heap Sort
 
 ## Dynamic Programming
 
