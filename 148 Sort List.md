@@ -33,15 +33,16 @@ Output: [-1,0,3,4,5]
 需要确定链表的中点以进行两路归并。可以通过快慢指针的方法。快指针每次走两步，慢指针每次走一步。遍历完链表时，慢指针停留的位置就在链表的中点。
 
 ```c++
-ListNode slow = head;
-ListNode fast = head.next; 
+ListNode* slow = head;
+ListNode* fast = head->next; 
 
-while(fast!=null && fast.next!=null){ 
-    slow = slow.next; //慢指针走一步
-    fast = fast.next.next; //快指针走两步
+while(fast != NULL && fast.next != NULL){ 
+    slow = slow->next; //慢指针走一步
+    fast = fast->next->next; //快指针走两步
 }
-ListNode rightHead = slow.next; //链表第二部分的头节点
-slow.next = null; //cut 链表
+
+ListNode* rightHead = slow->next; //链表第二部分的头节点
+slow->next = NULL; //cut 链表
 ```
 
 ### 技巧二：断链操作
@@ -55,15 +56,16 @@ dummy->1->2->NULL
 ```
 
 ```c++
-public ListNode split(ListNode head,int step){
-        if(head==null)  return null;
-        ListNode cur = head;
-        //注意这里cur.next!=null 有可能出现后半段还没到规定步长但是走完的情况
-        for(int i=1; i < step && cur.next!=null; i++){
-            cur = cur.next;
-        }
-        ListNode right = cur.next; //right为后半段链表头
-        cur.next = null; //切断前半段
+ListNode* split(ListNode* head, int step){
+        if(head == NULL)  return NULL;
+        ListNode* cur = head;
+        
+        //注意这里 cur->next != NULL 有可能出现后半段还没到规定步长但是走完的情况
+        for(int i = 1; i < step && cur->next != NULL; i++)
+            cur = cur->next;
+
+        ListNode* right = cur->next; //right为后半段链表头
+        cur->next = NULL; //切断前半段
         return right; //返回后半段链表头
     }
 ```
@@ -71,25 +73,25 @@ public ListNode split(ListNode head,int step){
 ### **技巧三：合并两个有序链表**
 
 ```c++
-public ListNode merge(ListNode h1, ListNode h2){
-        ListNode head = new ListNode(-1); //新创建一个伪头节点
-        ListNode p = head;
-        while(h1!=null && h2!=null){
-            if(h1.val < h2.val){
-                p.next = h1;
-                h1 = h1.next;
+ListNode* merge(ListNode* h1, ListNode* h2){
+        ListNode* head = new ListNode(-1); //新创建一个伪头节点
+        ListNode* p = head;
+        
+        while(h1 != NULL && h2 != NULL){
+            if (h1->val < h2->val){
+                p->next = h1;
+                h1 = h1->next;
             }
             else{
-                p.next = h2;
-                h2 = h2.next;
+                p->next = h2;
+                h2 = h2->next;
             }
-            p = p.next;           
+            p = p->next;           
         }
-        //判断哪个链表还有没被比较完的值，直接把p指针指向它
-        if(h1!=null)    p.next = h1;
-        if(h2!=null)    p.next = h2;
 
-        return head.next;  //返回排序好的链表头    
+        p.next = h1 == NULL ? h2 : h1;
+
+        return head->next;  //返回排序好的链表头    
     }
 ```
 
