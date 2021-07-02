@@ -12,10 +12,9 @@ public:
         Q.push(vertex);
         
         while (!Q.empty()){
-            int curVertex = Q.front();
-            Q.pop();
+            int curVertex = Q.front(); Q.pop();
             
-            for (int adjVertex : G[curVertex]){
+            for (const int& adjVertex : G[curVertex]){
                 if (color[adjVertex] == WHITE){
                     color[adjVertex] = GRAY;
                     Q.push(adjVertex);
@@ -76,8 +75,7 @@ void BFSVisit(Graph G, int vertex, std::vector<int>& color, std::vector<int>& di
     Q.push(vertex);
 
     while (!Q.empty()){
-        int curVertex = Q.front();
-        Q.pop();
+        int curVertex = Q.front(); Q.pop();
 
         for (const int& adjVertex : adjacent(G, curVertex)){
             if (color[adjVertex] == WHITE){
