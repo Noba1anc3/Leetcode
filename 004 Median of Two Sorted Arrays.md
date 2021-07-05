@@ -99,7 +99,46 @@ class Solution:
 
 内存消耗：15.3 MB, 在所有 Python3 提交中击败了7.26%的用户
 
-Attention:
-- 二分查找
+### C++
 
+```c++
+class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        if (nums1.size() > nums2.size())
+            return findMedianSortedArrays(nums2, nums1);
+
+        int len1 = nums1.size(), len2 = nums2.size();
+        int left = 0, right = len1, half_len = (len1 + len2 + 1) / 2;
+        int mid1 = (left + right) / 2, mid2 = half_len - mid1;
+        int max_of_left, min_of_right;
+
+        while (left < right){
+            if (mid1 < len1 and nums1[mid1] < nums2[mid2 - 1])
+                left = mid1 + 1;
+            else
+                right = mid1;
+            mid1 = (left + right) / 2;
+            mid2 = half_len - mid1;
+        }
+
+        if (mid1 == 0) max_of_left = nums2[mid2 - 1];
+        else if (mid2 == 0) max_of_left = nums1[mid1 - 1];
+        else max_of_left = max(nums1[mid1 - 1], nums2[mid2 - 1]);
+
+        if ((len1 + len2) % 2 == 1) return max_of_left;
+
+        if (mid1 == len1) min_of_right = nums2[mid2];
+        else if (mid2 == len2) min_of_right = nums1[mid1];
+        else min_of_right = min(nums1[mid1], nums2[mid2]);
+
+        return float(max_of_left + min_of_right) / 2;
+
+    }
+};
+```
+
+执行用时：36 ms, 在所有 C++ 提交中击败了82.03%的用户
+
+内存消耗：86.8 MB, 在所有 C++ 提交中击败了78.89%的用户
 
