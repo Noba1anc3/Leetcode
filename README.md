@@ -41,7 +41,7 @@
 
 - [☆☆ 001. Two Sum ☆☆](001%20Two%20Sum.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-- [☆☆ 020. Valid Parentheses ☆☆](020%20Valid%20Parentheses.md)
+- [☆ 020. Valid Parentheses ☆](020%20Valid%20Parentheses.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
@@ -309,7 +309,7 @@
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-- [020. Valid Parentheses](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
+- [☆ 020. Valid Parentheses ☆](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [☆☆ 021. Merge Two Sorted Lists （同剑指Offer 25）☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
