@@ -598,21 +598,20 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [**求组成数字需要的最少完全平方数**](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-  - 因要找到最少的完全平放数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
-  - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层遍历
-
-- [绕开禁区解锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
-  - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首。
-    - 如果是结果，返回步数
-    - 如果在不可走位置列表中，continue
-    - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
-
-- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
   - 首先判断边的个数加1是否等于结点的个数
     - 少了一定无法存在孤立点
     - 多了一定存在环路
   - 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
+- [**279. 求组成数字需要的最少完全平方数**](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+  - 因要找到最少的完全平放数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
+  - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层遍历
+- [**329. 矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [752. 绕开禁区解锁](https://github.com/Noba1anc3/Leetcode/blob/master/752%20Open%20the%20Lock.md)
+  - 将初始状态压入队列，进行BFS搜索。只要队列不空，取出队首。
+    - 如果是结果，返回步数
+    - 如果在不可走位置列表中，continue
+    - 计算其4*2个邻居，如果不在走过的位置中，就加入走过的位置，并压入队列
 
 ## DFS
 
@@ -628,29 +627,53 @@ void DFSVisit(int vertex){
 
 对于连通图，只需要DFS一个root结点即可；对于非连通图，需要遍历所有白色结点的DFS
 
+对于有向图，在DFS遍历邻结点时，如果遇到灰色结点代表有回路
+
 ### Questions
 
-- [岛屿数量](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
-  - 先行后列遍历每个点，如果是岛屿就开始dfs，结束时岛屿个数+1
-  - dfs时判断该格子出界或非1返回，不返回则修改该格子为2
-- [最大岛屿面积](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
-  - dfs时判断该格子出界或非1返回0，不返回则修改该格子为2
-  - dfs的递推公式为 1 + ... + ... + ... + ...
-- [填海造陆](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
-  - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
-  - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
-- [岛屿周长](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
-  - 先行后列遍历每个点，如果是岛屿就开始dfs
-  - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，不返回则修改为2
-  - 四方向遍历求和
-- [判断回路]()
-  - 在遍历邻结点时，如果是灰色结点代表有回路
+- [200. 岛屿数量](https://github.com/Noba1anc3/Leetcode/blob/master/200%20Number%20of%20Islands.md)
 
-- [判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+  - 遍历每个点，如果是岛屿就开始DFS，结束时岛屿个数+1
+  - DFS时判断该格子出界或非1返回，如未返回则修改该格子为2
+
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+
   - 首先判断边的个数加1是否等于结点的个数
     - 少了一定无法存在孤立点
     - 多了一定存在环路
-  - 从0结点遍历一次BFS后仍然有白色结点，意味着有环路+孤立结点 返回false
+  - 从0结点遍历一次DFS后仍然有白色结点，意味着有环路+孤立结点 返回false
+
+- [**329. 矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+
+  - 将矩阵看成有向图，相邻单元格之间存在较小值指向较大值的有向边，问题转化为有向图寻找最长路径
+
+  - 用一个矩阵作为DFS结果的缓存矩阵，将计算好的DFS结果保存下来
+
+  - 对每个没有缓存的结点，计算其四方向邻结点的DFS
+
+    - ```c++
+      memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
+      ```
+
+- [463. 岛屿周长](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
+
+  - 遍历每个点，如果是岛屿就开始DFS
+  - DFS时判断该格子出界或为海洋返回1，遍历过的格子返回0，如未返回则修改为2
+  - 四方向遍历求和
+
+- [547. 省份的个数](https://github.com/Noba1anc3/Leetcode/blob/master/547%20Number%20of%20Provinces.md)
+
+  - 对于所有结点，只要其需要进行DFS计算，省份的个数+1
+
+- [695. 最大岛屿面积](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
+
+  - DFS时判断该格子出界或非1返回0，如未返回则修改该格子为2
+  - DFS的递推公式为 1 + ... + ... + ... + ...
+
+- [827. 填海造陆](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
+
+  - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
+  - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
 
 ## Double Pointer
 
