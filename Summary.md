@@ -925,6 +925,17 @@ void DFSVisit(int vertex){
   - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
   - 如果中间数等于右边的数，right下标-1
 
+## Slide Window
+
+### Questions
+
+- [**求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+  - 用`left`记录当前滑动窗口的左端点
+  - 遍历字符串中的元素
+    - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
+    - 字符不在set当中时，将该字符加入set（窗口右沿右移）
+    - 更新最长字串的长度记录为当前最长字串的长度记录和set大小的最大值
+
 ## Sort
 
 ### Quick Sort
@@ -1230,6 +1241,14 @@ dicts = collections.defaultdict(int) # 括号内为value类型
 # 取key, value
 dict.keys()
 dict.values()
+```
+
+### set
+
+```python
+lookup = set()
+set.remove(element)
+set.add(element)
 ```
 
 ### priority_queue
