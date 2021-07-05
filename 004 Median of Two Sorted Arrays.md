@@ -25,7 +25,8 @@ Output: 2.00000
 
 ## Solution
 
-Python
+### Python
+
 ```python
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2) -> float:
@@ -65,7 +66,8 @@ class Solution:
         return (max_of_left + min_of_right) / 2
 
 ```
-Time : 60ms  
+
+Time : 60ms
 Memory : 13.8MB
 
 Attention:
