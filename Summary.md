@@ -881,22 +881,41 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [验证回文串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
-  - 两指针分别位于字符串的首尾  while(i < j)
-  - 如果i和j不是字母数字，且不会发生错位，则向中间靠拢
-  - 如果双指针对应的小写字母一样，i++，j--，否则返回错误
-  - 跳出while循环，返回true
-- [**求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+#### Head-Head
+
+- [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
   - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
   - 生成两个迭代器分别在两个set中前进
     - 如果迭代器1的值小于迭代器2的值，迭代器1++
     - 反之，迭代器2++
     - 如果二者相等，将值加入交集中，两迭代器均++
-- [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
   - 双指针向前推进
-  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
-- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
+
+#### Head-Tail
+
+- [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 两指针分别位于字符串的首尾  `while(i < j)`
+  - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
+  - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
+  - 跳出while循环，返回true
+
+#### Fast-Low
+
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+  - 快慢双指针确定链表中点
+
+#### Cur-Pre
+
 - [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
+  - 前后双指针
+
+## Divide & Conquer
+
+### Questions
+
+
 
 ## Sort
 
