@@ -839,23 +839,43 @@ void DFSVisit(int vertex){
 - [093. 还原IP地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
 
   - 对切成的段数和当前下标进行回溯
+
+  - ```c++
+    void backtrack(std::string& s, int piece, int index)
+    ```
+
     - 如果段数为4或下标到字符串长度则返回
-      - 如果两个条件都满足，将该ip添加到结果当中
+      - 如果两个条件都满足，将当前解添加到解集当中
     - 遍历时从1位到3位
-      - 如果index+i超限，返回
-      - 如果首字母为0且长度不为1，返回
+      - 如果index+位数超过字符串长度，返回
+      - 如果index位字母为0且长度不为1，返回
       - 如果长度为3且index到i的字串超过255，返回
-      - ip加该子串
+      - 在当前解中加该子串，并添加一个`'.'`
+      - 递归回溯，段数+1，index+位数
 
-- [784. 大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
+- [784. 字母与数字的大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
 
-  - 如果是小写字母，改大写
-  - 如果是大写字母，改小写
-  - 大小写字母回溯结束后，再进行一次回溯，针对原大小写
+  - ```c++
+    void backtrack(string& S, int i)
+    ```
 
-- [剑指Offer 17. 输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
+  - 如果i遍历到了字符串长度则返回
 
-  - 从0-9对N位进行回溯
+  - 如果是小写字母，将其大写字母拼到解当中，进行递归回溯
+
+  - 如果是大写字母，将其小写字母拼到解当中，进行递归回溯
+
+  - 大小写字母回溯结束后，再进行一次递归回溯，针对原大小写
+
+- [剑指Offer 17. 输出1到最大的N位数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
+
+  - ```c++
+    void backtrack(int width)
+    ```
+
+  - 如果width减到0，则返回
+
+  - 从0到9进行递归回溯
 
 ## Double Pointer
 
