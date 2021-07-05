@@ -108,8 +108,8 @@ public:
         if (nums1.size() > nums2.size())
             return findMedianSortedArrays(nums2, nums1);
 
-        int len1 = nums1.size(), len2 = nums2.size();
-        int left = 0, right = len1, half_len = (len1 + len2 + 1) / 2;
+        int len1 = nums1.size(), len2 = nums2.size(), half_len = (len1 + len2 + 1) / 2;
+        int left = 0, right = len1;
         int mid1 = (left + right) / 2, mid2 = half_len - mid1;
         int max_of_left, min_of_right;
 
@@ -133,7 +133,6 @@ public:
         else min_of_right = min(nums1[mid1], nums2[mid2]);
 
         return float(max_of_left + min_of_right) / 2;
-
     }
 };
 ```
