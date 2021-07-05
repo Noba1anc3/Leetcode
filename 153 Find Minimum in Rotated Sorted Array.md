@@ -40,11 +40,10 @@ public:
         int left = 0, right = nums.size() - 1;
         while (left < right){
             int mid = (left + right) / 2;
-            int ele = nums[mid];
 
-            if (ele < nums[right])
+            if (nums[mid] < nums[right]) 
                 right = mid; // mid可能是答案
-            else
+            else 
                 left = mid + 1;
         }
 
@@ -55,4 +54,4 @@ public:
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：9.8 MB, 在所有 C++ 提交中击败了97.53%的用户
+内存消耗：9.8 MB, 在所有 C++ 提交中击败了75.53%的用户
