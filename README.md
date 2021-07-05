@@ -132,7 +132,7 @@
 - [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 463. Island Perimeter ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
-- [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
+- [☆☆ 695. Max Area Of Islands ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 827. Making A Large Island ☆☆☆](827%20Making%20A%20Large%20Island.md)
 
@@ -375,7 +375,7 @@
 - [☆☆ 547. Number of Provinces ☆☆](547%20Number%20of%20Provinces.md)
 - [☆☆☆ 662 Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
-- [695. Max Area Of Islands](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
+- [☆☆ 695. Max Area Of Islands ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
 - [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
 - [☆☆☆ 739. Daily Temperatures ☆☆☆](739%20Daily%20Temperatures.md)
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
