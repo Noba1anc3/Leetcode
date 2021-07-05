@@ -1,5 +1,29 @@
 # 民企
 
+## 网易游戏 - 雷火
+
+[招聘信息](https://mp.weixin.qq.com/s/XNoaqls2qfq5ixmxgNX8kg)
+
+### 备注
+
+DDL ：提前批7月底，秋招9月中
+
+## 米哈游
+
+[招聘信息](https://mp.weixin.qq.com/s/YgJU61_KFIG6gjLgC5ENbw)
+
+### 备注
+
+DDL ：07.21
+
+## 百度
+
+[招聘信息](https://mp.weixin.qq.com/s/aCxWsscE9QVBBCIF-QG3-Q)
+
+### 备注
+
+DDL ：08.27
+
 ## 京东
 
 [招聘信息](https://mp.weixin.qq.com/s/lPy3KmESM6pWknlBwpN4vw)
