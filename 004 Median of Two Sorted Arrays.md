@@ -75,7 +75,7 @@ class Solution:
         mid2 = half_len - mid1
 
         while left < right:
-            if mid1 < len1 and nums1[mid1] < nums2[mid2 - 1]:
+            if nums1[mid1] < nums2[mid2 - 1]:
                 left = mid1 + 1
             else:
                 right = mid1
