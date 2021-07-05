@@ -136,7 +136,7 @@
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 827. Making A Large Island ☆☆☆](827%20Making%20A%20Large%20Island.md)
 
-## Half-Search
+## Split-Search
 - [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆ 153 Find Minimum in Rotated Sorted Array ☆☆](153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
 - [☆☆☆ 154 Find Minimum in Rotated Sorted Array II (同剑指Offer 11) ☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
