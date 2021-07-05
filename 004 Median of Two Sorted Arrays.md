@@ -114,7 +114,7 @@ public:
         int max_of_left, min_of_right;
 
         while (left < right){
-            if (mid1 < len1 and nums1[mid1] < nums2[mid2 - 1])
+            if (nums1[mid1] < nums2[mid2 - 1])
                 left = mid1 + 1;
             else
                 right = mid1;
@@ -138,7 +138,7 @@ public:
 };
 ```
 
-执行用时：36 ms, 在所有 C++ 提交中击败了82.03%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了99.03%的用户
 
-内存消耗：86.8 MB, 在所有 C++ 提交中击败了78.89%的用户
+内存消耗：86.8 MB, 在所有 C++ 提交中击败了86.79%的用户
 
