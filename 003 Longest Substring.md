@@ -31,61 +31,51 @@ Explanation: The answer is "wke", with the length of 3.
 
 时间复杂度：O(n)
 
-Python
+### Python
 ```python
 class Solution:
     def lengthOfLongestSubstring(self, string: str) -> int:
-        if not string:
-            return 0
-
         lookup = set()
-        left = 0
-        max_len = 0
-        cur_len = 0
+        left, max_len = 0, 0
 
         for char in string:
-            cur_len += 1
             while char in lookup:
                 lookup.remove(string[left])
                 left += 1
-                cur_len -= 1
-            if cur_len > max_len:
-                max_len = cur_len
             lookup.add(char)
+            max_len = max(max_len, len(lookup))
+            
 
         return max_len
 ```
-Time : 68ms  
-Memory : 13.8MB
+
+执行用时：68 ms, 在所有 Python3 提交中击败了80.94%的用户
+
+内存消耗：15.1 MB, 在所有 Python3 提交中击败了29.92%的用户
 
 Attention:
-- if not string
-- set() : 无序不重复元素集　（集合）
+- set() : 无序不重复元素集（集合）
 - set.add()  set.remove()
 - while 不是 if : pwwb
 
-c++
+### c++
 ```c++
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        if(s.size() == 0) return 0;
-
-        unordered_set<char> lookup;
-        int maxStr = 0;
-        int left = 0;
-        for(int i = 0; i < s.size(); i++){
-            while (lookup.find(s[i]) != lookup.end()){
-                lookup.erase(s[left]);
-                left++;
-            }
-            maxStr = max(maxStr,i-left+1);
-            lookup.insert(s[i]);
-    	}
-        return maxStr;
+        int longest = 0, window_left = 0;
+        unordered_set<char> S;
+        for (const char& c : s){
+            while (S.count(c))
+                S.erase(s[window_left++]);
+            S.insert(c);
+            longest = max(longest, int(S.size()));
+        }
+        return longest;
     }
 };
-
 ```
-Time : 72ms  
-Memory : 11MB
+
+执行用时：20 ms, 在所有 C++ 提交中击败了68.47%的用户
+
+内存消耗：10.6 MB, 在所有 C++ 提交中击败了25.01%的用户
