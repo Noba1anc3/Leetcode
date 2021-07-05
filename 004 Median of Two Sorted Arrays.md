@@ -41,13 +41,11 @@ public:
                 nums.push_back(nums2[j++]);
 
         if (i == nums1.size())
-            for (; j < nums2.size(); j++){
-                nums.push_back(nums2[j]);
-            }
+            while (j < nums2.size())
+                nums.push_back(nums2[j++]);
         else
-            for (; i < nums1.size(); i++){
-                nums.push_back(nums1[i]);
-            }
+            while (i < nums1.size())
+                nums.push_back(nums1[i++]);
 
         if (nums.size() % 2 == 0) 
             return float(nums[nums.size() / 2 - 1] + nums[nums.size() / 2]) / 2;
@@ -56,9 +54,9 @@ public:
 };
 ```
 
-执行用时：44 ms, 在所有 C++ 提交中击败了55.76%的用户
+执行用时：36 ms, 在所有 C++ 提交中击败了82.76%的用户
 
-内存消耗：87.7 MB, 在所有 C++ 提交中击败了9.01%的用户
+内存消耗：87.6 MB, 在所有 C++ 提交中击败了14.01%的用户
 
 
 
