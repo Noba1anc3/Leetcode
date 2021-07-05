@@ -72,13 +72,13 @@ public:
 
     std::vector<int> printNumbers(int n) {
         backtrack(n);
-        
-		std::vector<int> ret_ans;
-        for (string num : ans)
-            ret_ans.push_back(atoi(num.c_str()));
 
-        std::vector<int> new_ans(ret_ans.begin() + 1, ret_ans.end());
-        return new_ans;
+	std::vector<int> rsp;
+        for (string num : ans)
+            rsp.push_back(atoi(num.c_str()));
+
+        std::vector<int> new_rsp(rsp.begin() + 1, rsp.end());
+        return new_rsp;
     }       
 };
 ```
