@@ -48,6 +48,7 @@
 
 ## Set
 
+- [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [☆☆☆ 128. Longest Consecutive Sequence ☆☆☆](128%20Longest%20Consecutive%20Sequence.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 剑指Offer 03. Duplicate Num in Array ☆](%E5%89%91%E6%8C%87offer-03%20Duplicate%20num%20in%20array.md)
@@ -142,7 +143,7 @@
 - [☆☆☆ 154 Find Minimum in Rotated Sorted Array II (同剑指Offer 11) ☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 
 ## Slide Window
-- [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+- [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 
 ## Backtracking
 
@@ -303,7 +304,7 @@
 
 - [☆☆ 001. Two Sum ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 - [☆☆ 002. Add Two Numbers ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
-- [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+- [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
