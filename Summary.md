@@ -198,6 +198,11 @@
 
 ### Questions
 
+- [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+  - 使用set数据结构的原因
+    1. 加速判断当前字符是否在滑动窗口的查找过程
+    2. 在需要将滑动窗口左沿右移时，便于删除左沿元素
+
 - [**128. 最长连续序列**](https://github.com/Noba1anc3/Leetcode/blob/master/128%20Longest%20Consecutive%20Sequence.md)
 
   - 用unordered_set存储vector所有元素(去重 + 降低搜索时间复杂度)
@@ -929,7 +934,7 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [**求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+- [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
   - 用`left`记录当前滑动窗口的左端点
   - 遍历字符串中的元素
     - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
