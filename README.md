@@ -137,10 +137,9 @@
 - [☆☆☆ 827. Making A Large Island ☆☆☆](827%20Making%20A%20Large%20Island.md)
 
 ## Half-Search
-- [004. Median of Two Sorted Arrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
+- [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆ 153 Find Minimum in Rotated Sorted Array ☆☆](153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
-- [☆☆☆ 154 Find Minimum in Rotated Sorted Array II ☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
-- [☆☆☆ 剑指Offer 11. Find Minimum in Rotated Sorted Array ☆☆☆ (同154)](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
+- [☆☆☆ 154 Find Minimum in Rotated Sorted Array II (同剑指Offer 11)☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 
 ## Slide Window
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
@@ -305,7 +304,7 @@
 - [☆☆ 001. Two Sum ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 - [☆☆ 002. Add Two Numbers ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
 - [003. Longest Substring](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
-- [004. Median of Two Sorted Arrays](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
+- [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
