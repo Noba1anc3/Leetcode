@@ -44,7 +44,8 @@ Output: true
 
 注意到有效字符串的长度一定为偶数，因此如果字符串的长度为奇数，我们可以直接返回 ```False```，省去后续的遍历判断过程。
 
-Python
+### Python
+
 ```python
 class Solution:
     def isValid(self, s: str) -> bool:
