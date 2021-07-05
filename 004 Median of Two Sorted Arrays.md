@@ -23,8 +23,46 @@ Input: nums1 = [2], nums2 = []
 Output: 2.00000
 ```
 
-## Solution
+## Solution - I
 
+如果使用O(m+n)的时间复杂度和空间复杂度，则可以先将两列表合并，寻找其中位数
+
+```c++
+class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int i = 0, j = 0;
+        vector<int> nums;
+
+        while (i < nums1.size() && j < nums2.size())
+            if (nums1[i] < nums2[j]) 
+                nums.push_back(nums1[i++]);
+            else 
+                nums.push_back(nums2[j++]);
+
+        if (i == nums1.size())
+            for (; j < nums2.size(); j++){
+                nums.push_back(nums2[j]);
+            }
+        else
+            for (; i < nums1.size(); i++){
+                nums.push_back(nums1[i]);
+            }
+
+        if (nums.size() % 2 == 0) 
+            return float(nums[nums.size() / 2 - 1] + nums[nums.size() / 2]) / 2;
+        return nums[nums.size() / 2];
+    }
+};
+```
+
+执行用时：44 ms, 在所有 C++ 提交中击败了55.76%的用户
+
+内存消耗：87.7 MB, 在所有 C++ 提交中击败了9.01%的用户
+
+
+
+## Solution - II
 ### Python
 
 ```python
