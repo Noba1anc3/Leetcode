@@ -46,7 +46,6 @@ class Solution:
             # 窗口右沿右移
             lookup.add(char)
             max_len = max(max_len, len(lookup))
-            
 
         return max_len
 ```
