@@ -883,15 +883,16 @@ void DFSVisit(int vertex){
 
 #### Head-Head
 
+- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+  - 双指针向前推进
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
+
 - [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
   - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
   - 生成两个迭代器分别在两个set中前进
     - 如果迭代器1的值小于迭代器2的值，迭代器1++
     - 反之，迭代器2++
     - 如果二者相等，将值加入交集中，两迭代器均++
-- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
-  - 双指针向前推进
-  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
 
 #### Head-Tail
 
@@ -908,14 +909,21 @@ void DFSVisit(int vertex){
 
 #### Cur-Pre
 
-- [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
+- [剑指Offer 24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
   - 前后双指针
 
-## Divide & Conquer
+## Split-Search
 
 ### Questions
 
-
+- [**004. 寻找两个有序数组的中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
+- [153. 寻找旋转后有序无重复元素数组的最小值](https://github.com/Noba1anc3/Leetcode/blob/master/153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
+  - 如果中间数小于右边的数，把mid赋给right下标（因为mid可能是答案）
+  - 反之，把mid+1赋给left下标
+  - 最终返回`nums[right]`
+- [**154. 寻找旋转后有序有重复元素数组的最小值**](https://github.com/Noba1anc3/Leetcode/blob/master/154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
+  - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
+  - 如果中间数等于右边的数，right下标-1
 
 ## Sort
 
