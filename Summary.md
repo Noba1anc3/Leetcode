@@ -747,7 +747,7 @@ void DFSVisit(int vertex){
 - [039. 数组内元素可无限使用，组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/039%20Combination%20Sum.md)
 
   - ```c++
-    backtracking(std::vector<int>& candidates, int target, int index)
+    void backtrack(std::vector<int>& candidates, int target, int index)
     ```
 
   - 如果`target`小于0，返回
@@ -765,37 +765,78 @@ void DFSVisit(int vertex){
 
 - [046. 集合内元素的全排列](https://github.com/Noba1anc3/Leetcode/blob/master/046%20Permutations.md)
 
+  - ```c++
+    void backtrack(vector<int>& nums)
+    ```
+
+  - ```c++
+    vector<int> newlist = nums;
+    newlist.erase(newlist.begin() + i);
+    ```
+
+  - 如果列表为空，将解加入解集
+
 - [047. 集合内元素的unique全排列](https://github.com/Noba1anc3/Leetcode/blob/master/047%20Permutation%20II.md)
 
-  - 如果同一层当前元素和上一个元素一样，就continue
+  - 在046的基础上进行**剪枝**：如果当前元素和上一个元素一样，就continue
 
 - [051. N皇后](https://github.com/Noba1anc3/Leetcode/blob/master/051%20N-Queens.md)
 
-  - 放之前检查（当前位置为0且不会被攻击）
-  - 落子
-  - 退子
+  - ```c++
+    void backtrack(int row)
+    ```
 
-- [060. 1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
+  - 如果row与总行数相同，将解加入解集
+
+  - 遍历当前行下的每一列，进行检查（当前位置为0且不会被攻击）
+
+  - 递归回溯前，将解加入解集，并进行落子（其所在行列和两条斜线改为-1，该位置设为1）
+
+  - 递归回溯前，将解退出解集，并进行退子（其所在行列和两条斜线改为0，该位置设为0）
+
+- [060. 求1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
 
   - 计算N-1的阶乘，得到第K个全排列的首数字和其是剩余数字的第几个全排列
+
+    - ```c++
+      int x = factorial(n-1);
+      int a = (k - 1) / x + 1;
+      int b = k % x == 0 ? x : k % x;
+      ```
+
   - 对剩余数字回溯计算全排列
+
   - 直接找到指定枝叶
 
-- [1到N当中的数字 由k个元素构成的所有组合](https://github.com/Noba1anc3/Leetcode/blob/master/077%20Combinations.md)
+- [077. 1到N当中的数字 由k个元素构成的所有组合](https://github.com/Noba1anc3/Leetcode/blob/master/077%20Combinations.md)
 
-- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
+  - ```c++
+    void backtrack(int max, int cur, int width)
+    ```
 
-  - 将回溯过程中所有子过程的res都加到ans中
+  - N为max，K为width，cur初始为1
+
+  - 如果`width`为0，将解加入解集
+
+  - 每次递归回溯时，max不变，初始数字cur+1，width-1
+
+- [078. 求不含重复元素集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
+
+  - ```c++
+    void backtrack(vector<int>& nums, int index)
+    ```
+
+  - 将回溯过程中所有尚未完成的解都加到解集中
+
   - 最后加空集合{}
 
-- [求无重复元素的集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
+- [090. 求无重复元素的集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/078%20Subsets.md)
 
-- [求集合的所有子集](https://github.com/Noba1anc3/Leetcode/blob/master/090%20Subsets%20II.md)
+  - 在078的基础之上
+    - 在回溯之前，**对数组进行排序**
+    - 回溯过程中加入**剪枝**，如果当前下标超过index且当前元素与上一元素相等，则continue
 
-  - 加一步排序
-  - 对同一层，该元素与上一个元素相同的情况，进行剪枝
-
-- [还原ip地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
+- [093. 还原IP地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
 
   - 对切成的段数和当前下标进行回溯
     - 如果段数为4或下标到字符串长度则返回
@@ -806,13 +847,13 @@ void DFSVisit(int vertex){
       - 如果长度为3且index到i的字串超过255，返回
       - ip加该子串
 
-- [大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
+- [784. 大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
 
   - 如果是小写字母，改大写
   - 如果是大写字母，改小写
   - 大小写字母回溯结束后，再进行一次回溯，针对原大小写
 
-- [输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
+- [剑指Offer 17. 输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 
   - 从0-9对N位进行回溯
 
