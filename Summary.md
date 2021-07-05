@@ -675,95 +675,107 @@ void DFSVisit(int vertex){
   - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
   - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
 
-## Double Pointer
-
-### Questions
-
-- [验证回文串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
-  - 两指针分别位于字符串的首尾  while(i < j)
-  - 如果i和j不是字母数字，且不会发生错位，则向中间靠拢
-  - 如果双指针对应的小写字母一样，i++，j--，否则返回错误
-  - 跳出while循环，返回true
-- [**求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
-  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
-  - 生成两个迭代器分别在两个set中前进
-    - 如果迭代器1的值小于迭代器2的值，迭代器1++
-    - 反之，迭代器2++
-    - 如果二者相等，将值加入交集中，两迭代器均++
-- [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
-  - 双指针向前推进
-  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
-- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-- [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
-
 ## Backtrack
 
 ### Algorithm
 
-vector<string> 存所有结果
-
-string 存每次回溯之前的临时结果
+> 做题的时候，建议先画**树形图** ，画图能帮助我们想清楚递归结构，想清楚如何剪枝。
+>
+> 在画图的过程中思考清楚：
+>
+> - 分支如何产生；
+>
+> - 题目需要的解在哪里？是在叶子结点、还是在非叶子结点、还是在从跟结点到叶子结点的路径？
+>
+> - 哪些搜索会产生不需要的解？
+>
+>   如果在浅层就知道这个分支不能产生需要的结果，应该提前剪枝，剪枝的条件是什么，代码怎么写？
 
 控制回溯进程
 
 - 如果每次前进的内容不同（输入法）
   - 指针移动
   - 每次回溯，指针+1
-- 如果每次潜近的内容相同（生成括号）
+- 如果每次前进的内容相同（生成括号）
   - 判断总长度是否满足要求即可
   - 每次回溯，判断长度是否达到要求
-- 每次进入回溯函数，先判断指针是否到头，如果到头就把临时结果存到所有结果
-- push进临时结果 -> 回溯 -> pop临时结果
-
-做题的时候，建议先画**树形图** ，画图能帮助我们想清楚递归结构，想清楚如何剪枝。
-
-在画图的过程中思考清楚：
-
-- 分支如何产生；
-
-- 题目需要的解在哪里？是在叶子结点、还是在非叶子结点、还是在从跟结点到叶子结点的路径？
-
-- 哪些搜索会产生不需要的解？
-
-  如果在浅层就知道这个分支不能产生需要的结果，应该提前剪枝，剪枝的条件是什么，代码怎么写？
+- 每次进入回溯函数，先判断指针是否到头或解满足要求，如到头或满足要求，则把解存到解集，并返回
+- push进当前解 -> 回溯 -> pop当前解
 
 ### Questions
 
-- [手机打字的可能组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
+- [017. 九字输入法可能的字母组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 
-- [生成括号](https://github.com/Noba1anc3/Leetcode/blob/master/022%20Generate%20Parenthesis.md)
+  - ```c++
+    void backtrack(std::string& digits, int start)
+    ```
+
+  - 如果当前下标达到`digits` 长度，将解加入解集
+
+  - 遍历当前下标对应数字对应的字母，进行回溯
+
+- [022. 生成括号](https://github.com/Noba1anc3/Leetcode/blob/master/022%20Generate%20Parenthesis.md)
 
   - 除回溯函数，要写check函数，判断字符串是否符合要求
 
-    回溯剪枝
+  - **回溯剪枝**
 
-    - 如果左括号个数少于n，生成左括号
+    - ```c++
+      void backtrack(int length, int left, int right)
+      ```
+
+    - 如果左括号个数少于length，生成左括号
+
     - 如果右括号个数少于左括号，生成右括号
 
-- [填数独](https://github.com/Noba1anc3/Leetcode/blob/master/037%20Sudoku%20Solver.md)
+- [037. 填数独](https://github.com/Noba1anc3/Leetcode/blob/master/037%20Sudoku%20Solver.md)
 
   - 找到当前数独中缺少的数字个数
+
   - 根据缺少个数进行回溯
+
+  - ```c++
+    void backtrack(std::vector<std::vector<char>>& board)
+    ```
+
     1. 对行列进行遍历，找到每一个缺数的位置
     2. 遍历1-9，如果该位置可以被填入数字，填入数字，缺少个数-1
-    3. 进入下一层，递归
-    4. 退出时，如果缺少个数为0，返回
-    5. 否则，将该位置的数字去掉，缺少个数+1
+    3. 递归回溯，寻找下一个空位置
+    4. 从回溯函数返回时，如果缺少个数为0，返回
+    5. 否则，将该位置的数字去掉，缺少个数复原+1
 
-- [可以无限使用，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/039%20Combination%20Sum.md)
+- [039. 数组内元素可无限使用，组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/039%20Combination%20Sum.md)
 
-  - 回溯法讲究还原场景，无论是否得到一个tmp_ans，都需要在加入到ans之后还原现场
-  - 无论是非法结果还是得到了一个答案，都需要return
+  - ```c++
+    backtracking(std::vector<int>& candidates, int target, int index)
+    ```
 
-- [一个数只能用一次，数组内元素组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/040%20Combination%20Sum%20II.md)
+  - 如果`target`小于0，返回
 
-- [集合内元素的全排列](https://github.com/Noba1anc3/Leetcode/blob/master/046%20Permutations.md)
+  - 如果`target`等于0，将解加入解集，返回
 
-- [集合内元素的unique全排列](https://github.com/Noba1anc3/Leetcode/blob/master/047%20Permutation%20II.md)
+  - 回溯时从index开始遍历，递归调用回溯函数时，下标保持不变
+
+- [040. 数组内元素只能用一次，组成一个和](https://github.com/Noba1anc3/Leetcode/blob/master/040%20Combination%20Sum%20II.md)
+
+  - 在039的基础上
+    - 在回溯之前，**对数组进行排序**
+    - 回溯过程中加入**剪枝**，如果当前下标超过index且当前元素与上一元素相等，则continue
+    - 递归调用回溯函数时，**下标不再保持不变，而是加1**
+
+- [046. 集合内元素的全排列](https://github.com/Noba1anc3/Leetcode/blob/master/046%20Permutations.md)
+
+- [047. 集合内元素的unique全排列](https://github.com/Noba1anc3/Leetcode/blob/master/047%20Permutation%20II.md)
 
   - 如果同一层当前元素和上一个元素一样，就continue
 
-- [1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
+- [051. N皇后](https://github.com/Noba1anc3/Leetcode/blob/master/051%20N-Queens.md)
+
+  - 放之前检查（当前位置为0且不会被攻击）
+  - 落子
+  - 退子
+
+- [060. 1到N元素的第K个全排列](https://github.com/Noba1anc3/Leetcode/blob/master/060%20Permutation%20Sequence.md)
 
   - 计算N-1的阶乘，得到第K个全排列的首数字和其是剩余数字的第几个全排列
   - 对剩余数字回溯计算全排列
@@ -782,12 +794,6 @@ string 存每次回溯之前的临时结果
 
   - 加一步排序
   - 对同一层，该元素与上一个元素相同的情况，进行剪枝
-
-- [N皇后](https://github.com/Noba1anc3/Leetcode/blob/master/051%20N-Queens.md)
-
-  - 放之前检查（当前位置为0且不会被攻击）
-  - 落子
-  - 退子
 
 - [还原ip地址](https://github.com/Noba1anc3/Leetcode/blob/master/093%20Restore%20IP%20Addresses.md)
 
@@ -809,6 +815,27 @@ string 存每次回溯之前的临时结果
 - [输出1到10的N次方之间的所有数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 
   - 从0-9对N位进行回溯
+
+## Double Pointer
+
+### Questions
+
+- [验证回文串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 两指针分别位于字符串的首尾  while(i < j)
+  - 如果i和j不是字母数字，且不会发生错位，则向中间靠拢
+  - 如果双指针对应的小写字母一样，i++，j--，否则返回错误
+  - 跳出while循环，返回true
+- [**求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
+  - 生成两个迭代器分别在两个set中前进
+    - 如果迭代器1的值小于迭代器2的值，迭代器1++
+    - 反之，迭代器2++
+    - 如果二者相等，将值加入交集中，两迭代器均++
+- [合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+  - 双指针向前推进
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的next指向`l2`，否则指向`l1`
+- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 
 ## Sort
 
