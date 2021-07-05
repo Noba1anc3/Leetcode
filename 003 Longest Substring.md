@@ -40,8 +40,10 @@ class Solution:
 
         for char in string:
             while char in lookup:
-                lookup.remove(string[left])
+                # 窗口左沿右移
+                lookup.remove(string[left]) 
                 left += 1
+            # 窗口右沿右移
             lookup.add(char)
             max_len = max(max_len, len(lookup))
             
