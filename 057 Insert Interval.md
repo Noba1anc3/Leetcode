@@ -37,21 +37,19 @@ c++
 class Solution {
 public:
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-        int left = newInterval[0];
-        int right = newInterval[1];
         vector<vector<int>> ans;
         
         for (const vector<int>& interval : intervals) {
-            if (interval[1] < left || interval[0] > right)
+            if (interval[1] < newInterval[0] || interval[0] > newInterval[1])
                 ans.push_back(interval);
             else {
                 // 与插入区间有交集，计算它们的并集
-                left = min(left, interval[0]);
-                right = max(right, interval[1]);
+                newInterval[0] = min(newInterval[0], interval[0]);
+                newInterval[1] = max(newInterval[1], interval[1]);
             }
         }
 		
-        ans.push_back({left, right});
+        ans.push_back(newInterval);
         sort(ans.begin(), ans.end());
         
         return ans;
