@@ -92,17 +92,14 @@ public:
 
         int LeftMax = maxSubArray(Left);
         int RightMax = maxSubArray(Right);
-        int GapMax = maxGapArray(nums);
+        int GapMax = maxGapArray(nums, mid);
 
         return max(max(LeftMax, RightMax), GapMax);
     }
 
-    int maxGapArray(vector<int> nums){
-        int mid = nums.size() / 2;
-
-        int LeftMax = INT_MIN;
-        int RightMax = INT_MIN;
+    int maxGapArray(vector<int> nums, int mid){
         int LeftCur = 0, RightCur = 0;
+        int LeftMax = INT_MIN, RightMax = INT_MIN;
 
         for (int i = mid - 1; i >= 0; i--){
             LeftCur += nums[i];
