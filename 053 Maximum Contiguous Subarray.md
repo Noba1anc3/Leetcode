@@ -137,8 +137,8 @@ c++
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int curAns = 0, maxAns = nums[0];
-        for (const auto &x: nums) {
+        int curAns = 0, maxAns = INT_MIN;
+        for (const int& x: nums) {
             curAns = max(curAns + x, x);
             maxAns = max(maxAns, curAns);
         }
@@ -147,6 +147,6 @@ public:
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了65.74%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了68.20%的用户
 
-内存消耗：13.3 MB, 在所有 C++ 提交中击败了12.45%的用户
+内存消耗：12.8 MB, 在所有 C++ 提交中击败了80.66%的用户
