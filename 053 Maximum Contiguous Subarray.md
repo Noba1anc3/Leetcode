@@ -103,13 +103,11 @@ public:
 
         for (int i = mid - 1; i >= 0; i--){
             LeftCur += nums[i];
-            if (LeftCur > LeftMax)
-                LeftMax = LeftCur;
+            LeftMax = max(LeftMax, LeftCur);
         }
         for (int i = mid; i < nums.size(); i++){
             RightCur += nums[i];
-            if (RightCur > RightMax)
-                RightMax = RightCur;
+            RightMax = max(RightMax, RightCur);
         }
 
         return LeftMax + RightMax;        
