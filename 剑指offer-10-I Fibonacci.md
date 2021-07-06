@@ -72,10 +72,9 @@ c++
 class Solution {
 public:
     int fib(int n) {
-        if (n < 2)
-            return n;
+        if (n < 2) return n;
 
-        int minusTwo = 0, minusOne = 1, minusZero = 1;
+        int minusTwo = 0, minusOne = 1, minusZero;
 
         for (int i = 2; i <= n; i++){
             minusZero = (minusOne + minusTwo) % (int)(1e9+7);
@@ -90,4 +89,4 @@ public:
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：6.3 MB, 在所有 C++ 提交中击败了16.92%的用户
+内存消耗：5.8 MB, 在所有 C++ 提交中击败了72.11%的用户
