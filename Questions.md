@@ -137,13 +137,24 @@
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 827. Making A Large Island ☆☆☆](827%20Making%20A%20Large%20Island.md)
 
+
+## Slide Window
+
+- [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+
 ## Split-Search
+
 - [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆ 153 Find Minimum in Rotated Sorted Array ☆☆](153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
 - [☆☆☆ 154 Find Minimum in Rotated Sorted Array II (同剑指Offer 11) ☆☆☆](154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
 
-## Slide Window
-- [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+## Double Pointer
+
+- [☆☆ 021. Merge Two Sorted Lists ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+- [☆☆ 125. Valid Palindrome ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+- [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+- [☆☆☆ 剑指Offer 24. Reverse LinkedList ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 
 ## Backtracking
 
@@ -163,17 +174,10 @@
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 
-## Double Pointer
-
-- [☆☆ 021. Merge Two Sorted Lists ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
-- [☆☆ 125. Valid Palindrome ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
-- [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-- [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
-- [☆☆☆ 剑指Offer 24. Reverse LinkedList ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
-
-
 ## Recursive
 
+It has been concealed due to the recursive category is inessential.  
+If u want to check out the questions belong to this category, please check the raw data of this markdown file.
 
 <!--
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
