@@ -772,7 +772,7 @@ void DFSVisit(int vertex){
     - 首尾双指针
     - **随机快排**：`int pivotIndex = rand() % (right - left + 1) + left;`
 - [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
-- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [**剑指Offer-40. 最小的K个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 
 ### Merge Sort
 
@@ -784,9 +784,39 @@ void DFSVisit(int vertex){
 
 #### Questions
 
+- [**253. 需要几间会议室**](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
+  - 按开始时间排序
+  - 遍历会议，按结束时间进入最小堆
+    - 开始时间晚于堆顶结束时间则弹出堆顶
+    - 无论是否弹出，将当前会议加入堆中
+  - 返回堆的大小
+
 - [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
   - 用最大堆存储前K个数
   - 后面的数只要比堆顶小，就弹出堆顶，将当前数插入堆中
+
+### Topological Sort
+
+#### Questions
+
+- [207. 给定课程学习先决条件，判断能否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
+  - 拓扑排序序列长度是否等于结点个数 或
+  - DFS判断是否有环
+- [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
+  - 拓扑排序 或
+  - DFS
+
+### Others
+
+#### Questions
+
+- [对字典按值排序](https://github.com/Noba1anc3/Leetcode/blob/master/Sort%20dict%20by%20value.md)
+  - 将dict转成vector
+  - 实现cmp函数，对vector排序
+- [242. 判断两个字符串是否为字母异位词](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
+  - 排序后判断是否相同
+- [252. 判断一个人能否参加全部会议](https://github.com/Noba1anc3/Leetcode/blob/master/252%20Meeting%20Rooms.md)
+- [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Backtrack
 
@@ -998,14 +1028,18 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+- [**053. 求数组的最大和连续子数组**](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
   - Divide
     - 递归函数的返回条件为数组的长度为1
     - 问题的解是左半数组，右半数组和整个数组三部分解的最大值
   - Conquer
     - 从中间向两边进行扩散，不断更新左右两侧的最大和，返回两侧最大和的和
   - `O(n) = 2 * O(n/2) + O(n) = O(n log n)`
-- [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+- 快速排序
+  - [215. 第K大的数](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
+  - [剑指Offer-40. 最小的K个数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [**剑指Offer-51. 数组的逆序对数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
   - Divide
     - 递归函数的返回条件为数组的长度小于等于1
     - 问题的解是左半数组，右半数组和对这两个子数组计算逆序对数三部分解的和
