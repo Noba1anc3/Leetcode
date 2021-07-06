@@ -171,7 +171,7 @@
 - [☆☆☆ 215. Kth Largest Element in an Array (Quick Sort) ☆☆☆](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
 - [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
-- [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
+- [☆☆☆ 253. Meeting Rooms II (Heap Sort) ☆☆☆](253%20Meeting%20Rooms%20II.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](350%20Intersection%20of%20Two%20Arrays%20II.md)
 - [☆☆☆ 912. Sort an Array (Quick Sort) ☆☆☆](912%20Sort%20an%20Array.md)
@@ -179,7 +179,7 @@
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [☆☆☆ 剑指Offer 40. Minimum K (同面试题 17.14) (Quick Sort) ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
-- [☆☆☆ 剑指Offer 51. Reverse Num (Merge Sort) ☆☆☆](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Backtracking
 
