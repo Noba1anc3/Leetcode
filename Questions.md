@@ -141,6 +141,7 @@
 ## Slide Window
 
 - [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+- [☆☆ 056. Merge Intervals ☆☆](056%20Merge%20Intervals.md)
 
 ## Split-Search
 
