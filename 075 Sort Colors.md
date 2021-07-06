@@ -27,7 +27,7 @@ Output: [0]
 
 ## Sort Lib
 
-### Time Complexity : O(n·logn)  ;  Space Complexity : O(1)
+### Time Complexity : O(n logn); Space Complexity : O(1)
 
 c++
 
@@ -40,9 +40,7 @@ public:
 };
 ```
 
-## Store Value in Three Vectors
-
-### Time Complexity : O(n)  ;  Space Complexity : O(n)
+## Based on Vector
 
 c++
 
@@ -50,34 +48,25 @@ c++
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        vector<int> zero, one, two;
-        for (int i = 0; i < nums.size(); i++){
-            if (nums[i] == 0){
-                zero.push_back(0);
-            }
-            else if (nums[i] == 1){
-                one.push_back(1);
-            }
-            else{
-                two.push_back(2);
-            }
-        }
-        zero.insert(zero.end(), one.begin(), one.end());
-        zero.insert(zero.end(), two.begin(), two.end());
-        nums = zero;
+        vector<int> zero_one_two(3, 0);
+        vector<int> rsp;
+        
+        for (const int& num : nums)
+            zero_one_two[num]++;
+
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < zero_one_two[i]; j++)
+                rsp.push_back(i);
+        
+        nums = rsp;
+        
     }
 };
 ```
 
-执行用时：0 ms, 在所有 Python3 提交中击败了100.0%的用户  
-内存消耗：8.9 MB, 在所有 Python3 提交中击败了5.09%的用户
-
-Attention:
-- vector.insert(vector.end(), vector1.begin(), vector1.end())
-
 ## Loop Once without Extra Space Usage
 
-### Time Complexity : O(n)  ; Space Complexity : O(1)
+### Time Complexity : O(n); Space Complexity : O(1)
 
 c++
 
@@ -108,12 +97,11 @@ public:
 内存消耗：8.4 MB, 在所有 C++ 提交中击败了14.35%的用户
 
 Attention:
-
 - swap(a, b)
 
 ## Quick-Sort Based
 
-### Time Complexity : O(n)  ; Space Complexity : O(1)
+### Time Complexity : O(n); Space Complexity : O(1)
 
 c++
 
