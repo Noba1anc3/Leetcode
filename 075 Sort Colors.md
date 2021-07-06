@@ -103,15 +103,15 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) {
         int i = 0;
-        int zero = 0, two = nums.size();
+        int zero = 0, two = nums.size() - 1;
         
-        while (i < two)
+        while (i <= two)
             if (nums[i] == 0)
                 swap(nums[zero++], nums[i++]);
             else if (nums[i] == 1)
                 i++;
             else
-                swap(nums[i], nums[--two]);
+                swap(nums[i], nums[two--]);
     }
 };
 ```
