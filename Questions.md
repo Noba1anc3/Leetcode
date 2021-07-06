@@ -156,6 +156,33 @@
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆☆☆ 剑指Offer 24. Reverse LinkedList ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 
+## Sort
+
+- [Recursive QuickSort](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [Non Recursive QuickSort](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
+- [Count Sort](Sort%20-%20Count%20Sort.md)
+- [Sort Dict by Value](Sort%20dict%20by%20value.md)
+- [☆☆ 021. Merge Two Sorted Lists （同剑指Offer 25）☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
+- [☆☆ 056. Merge Intervals ☆☆](056%20Merge%20Intervals.md)
+- [☆ 057. Insert Intervals ☆](057%20Insert%20Interval.md)
+- [☆☆ 075. Sort Colors ☆☆ (Quick Sort)](075%20Sort%20Colors.md)
+- [☆☆☆ 148. Sort List ☆☆☆ (Merge Sort)](148%20Sort%20List.md)
+- [☆ 207. Course Schedule ☆ (Topological Sort)](207%20Course%20Schedule.md)
+- [☆☆☆ 210. Course Schedule II ☆☆☆ (Topological Sort)](210%20Course%20Schedule%20II.md)
+- [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆ (Quick Sort)](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+- [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
+- [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
+- [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
+- [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
+- [☆ 350. Intersection of Two Arrays II ☆](350%20Intersection%20of%20Two%20Arrays%20II.md)
+- [☆☆☆ 912. Sort an Array ☆☆☆ (Quick Sort)](912%20Sort%20an%20Array.md)
+- [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
+- [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
+- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆ (Quick Sort)](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
+- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+- [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (Quick Sort) (同剑指offer-40)](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
+
 ## Backtracking
 
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
@@ -273,33 +300,6 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 面试题 08.11. Coin ☆☆ (同518)](%E9%9D%A2%E8%AF%95%E9%A2%98%2008.11%20Coin.md)
 - [☆☆☆ 面试题 16.17. Contiguous Sequence ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 面试题 17.16. The Masseuse ☆☆](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.16%20The%20Masseuse.md)
-
-## Sort
-
-- [Recursive QuickSort](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [Non Recursive QuickSort](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
-- [Count Sort](Sort%20-%20Count%20Sort.md)
-- [Sort Dict by Value](Sort%20dict%20by%20value.md)
-- [☆☆ 021. Merge Two Sorted Lists （同剑指Offer 25）☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
-- [☆☆ 056. Merge Intervals ☆☆](056%20Merge%20Intervals.md)
-- [☆ 057. Insert Intervals ☆](057%20Insert%20Interval.md)
-- [☆☆ 075. Sort Colors ☆☆ (Quick Sort)](075%20Sort%20Colors.md)
-- [☆☆☆ 148. Sort List ☆☆☆ (Merge Sort)](148%20Sort%20List.md)
-- [☆ 207. Course Schedule ☆ (Topological Sort)](207%20Course%20Schedule.md)
-- [☆☆☆ 210. Course Schedule II ☆☆☆ (Topological Sort)](210%20Course%20Schedule%20II.md)
-- [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆ (Quick Sort)](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-- [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
-- [☆ 252. Meeting Rooms ☆](252%20Meeting%20Rooms.md)
-- [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
-- [☆☆ 349. Intersection of Two Arrays ☆☆](349%20Intersection%20of%20Two%20Arrays.md)
-- [☆ 350. Intersection of Two Arrays II ☆](350%20Intersection%20of%20Two%20Arrays%20II.md)
-- [☆☆☆ 912. Sort an Array ☆☆☆ (Quick Sort)](912%20Sort%20an%20Array.md)
-- [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
-- [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
-- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆ (Quick Sort)](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
-- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
-- [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (Quick Sort) (同剑指offer-40)](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
 
 ## Brain Twister
 
