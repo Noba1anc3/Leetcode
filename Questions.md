@@ -181,7 +181,7 @@
 - [☆☆ 046. Permutations ☆☆](046%20Permutations.md)
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
 - [☆☆ 051. N-Queens ☆☆](051%20N-Queens.md)
-- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆☆ 060. Permutation Sequence ☆☆☆](060%20Permutation%20Sequence.md)
 - [☆☆ 077. Combinations ☆☆](077%20Combinations.md)
 - [☆☆ 078. Subsets ☆☆](078%20Subsets.md)
@@ -199,7 +199,6 @@
 - [☆☆ 剑指Offer 10 - I. Fibonacci ☆☆](%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 - [☆☆☆ 剑指Offer 17. Print N-bit Numbers ☆☆☆](%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
@@ -222,11 +221,10 @@
 
 ## Divide & Conquer
 
-- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](912%20Sort%20an%20Array.md)
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Dynamic Programming
@@ -239,7 +237,7 @@
 - [☆☆ Weighted Activity Selection ☆☆](DP%20-%20Weighted%20Activity%20Selection.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
-- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 070. Climbing Stairs ☆☆](070%20Climbing%20Stairs.md)
 - [☆☆☆ 072. Edit Distance ☆☆☆](072%20Edit%20Distance.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
@@ -258,7 +256,6 @@
 - [☆☆ 剑指Offer 10 - II. Frog Jump Stairs ☆☆ (同070)](070%20Climbing%20Stairs.md)
 - [☆☆ 剑指Offer 14 - I. Rope Cutting I ☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
-- [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 47. Maximum Value of Presents ☆☆](%E5%89%91%E6%8C%87offer-47%20Maximum%20Value%20of%20Presents.md)
 - [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆ 面试题 01.05. One Way ☆☆](%E9%9D%A2%E8%AF%95%E9%A2%98%2001.05%20One%20Way.md)
@@ -328,7 +325,7 @@
 - [☆☆ 046. Permutations ☆☆](046%20Permutations.md)
 - [☆☆ 047. Permutation II ☆☆](047%20Permutation%20II.md)
 - [☆☆ 051. N-Queens ☆☆](051%20N-Queens.md)
-- [☆☆☆ 053. Maximum Contiguous Subarray ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 055. Jump Game ☆☆](055%20Jump%20Game.md)
 - [☆☆ 056. Merge Intervals ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
