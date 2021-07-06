@@ -31,46 +31,28 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 ### c++
 
 ```c++
-#include <algorithm>
-
 class Solution {
 public:
-    // 可以不用这个比较函数
-    static bool compare(vector<int> lista, vector<int> listb){
-        if (lista[0] < listb[0]){
-            return true;
-        return false;
-    }
-
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        // 边界条件
-        if (intervals.empty())
-            return intervals;
+        sort(intervals.begin(), intervals.end());
 
-        sort(intervals.begin(), intervals.end(), compare);
+        vector<vector<int>> merged;
 
-        vector<vector<int>> sorted;
-        vector<int> cur_max_interval = intervals[0];
-
-        for (int i = 1; i < intervals.size(); i++){
-            vector<int> cur_interval = intervals[i];
-            if (cur_interval[0] <= cur_max_interval[1])
-                cur_max_interval[1] = max(cur_interval[1], cur_max_interval[1]);
-            else{
-                sorted.push_back(cur_max_interval);
-                cur_max_interval = cur_interval;
-            }
+        for (const vector<int>& interval : intervals){
+            if (merged.empty() || merged[merged.size() - 1][1] < interval[0])
+                merged.push_back(interval);
+            else
+                merged[merged.size() - 1][1] = max(interval[1], merged[merged.size() - 1][1]);
         }
 
-        sorted.push_back(cur_max_interval);
-
-        return sorted;
+        return merged;
     }
 };
 ```
 
-执行用时：72 ms, 在所有 C++ 提交中击败了22.39%的用户  
-内存消耗：15 MB, 在所有 C++ 提交中击败了13.92%的用户
+执行用时：20 ms, 在所有 C++ 提交中击败了86.61%的用户
+
+内存消耗：13.8 MB, 在所有 C++ 提交中击败了74.87%的用户
 
 ### python
 
@@ -91,10 +73,4 @@ class Solution:
         return merged
 ```
 
-时间复杂度：O(nlogn)，其中 n 为区间的数量。除去排序的开销，我们只需要一次线性扫描，所以主要的时间开销是排序的 O(nlogn)。
-
-Attention:
-- 边界条件的情况
-- vector.begin(), vector.end()
-- vector.empty()
-- vector.push_back()
+时间复杂度：O(n logn)，其中 n 为区间的数量。除去排序的开销，我们只需要一次线性扫描，所以主要的时间开销是排序的 O(n logn)
