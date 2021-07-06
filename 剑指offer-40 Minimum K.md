@@ -87,7 +87,7 @@ public:
 - Q.pop()
 - Q.top()
 
-### Quicksort
+### Randomized-Quicksort
 
 c++
 
@@ -115,6 +115,9 @@ public:
     }
 
     int Partition(vector<int>& nums, int p, int q){
+        int randIndex = rand() % (q - p + 1) + p;
+        swap(nums[randIndex], nums[q]);
+        
         int i = p - 1;
         int pivot = nums[q];
 
@@ -132,9 +135,9 @@ public:
 };
 ```
     
-执行用时：28 ms, 在所有 C++ 提交中击败了87.68%的用户
+执行用时：24 ms, 在所有 C++ 提交中击败了95.82%的用户
     
-内存消耗：18.3 MB, 在所有 C++ 提交中击败了80.96%的用户
+内存消耗：18.3 MB, 在所有 C++ 提交中击败了70.96%的用户
 
 **复杂度分析**
 
