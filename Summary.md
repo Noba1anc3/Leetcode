@@ -952,28 +952,27 @@ void DFSVisit(int vertex){
 
 #### Questions
 
-- [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
-
-- [**最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 外层
     - 迭代法
       - 更快速
-      - 随机快排：`int pivotIndex = rand() % (right - left + 1) + left;`
       - 根据每次pivot，k和数组大小之间的关系来修改left或right指针
     - 递归法
       - 更好写
-      - 只对一侧进行递归快排
+      - **只对一侧进行递归快排**
       - 根据每次pivot，k和快排右端点之间的关系来修改快排的左右端点及K的大小
   - 内层`partition`
     - 前后双指针
     - 首尾双指针
+    - **随机快排**：`int pivotIndex = rand() % (right - left + 1) + left;`
+- [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
+- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 
 ### Merge Sort
 
 #### Questions
 
-- [**排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 
 ### Heap Sort
 
