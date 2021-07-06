@@ -1,6 +1,6 @@
 # Questions List
 
-[Questions](https://github.com/Noba1anc3/Leetcode/blob/master/README.md)
+[Questions](https://github.com/Noba1anc3/Leetcode/blob/master/Questions.md)
 
 # Recruit Information
 
