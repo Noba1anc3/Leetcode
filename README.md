@@ -992,9 +992,28 @@ void DFSVisit(int vertex){
 
 ## Divide & Conquer
 
+> 与回溯法类似，均需要设计递归函数。递归的返回条件十分重要，否则将陷入无穷的递归当中。
+>
+> 常规方法：设计一递归方法，首先指明返回条件，而后将数组分为左右两个子数组，递归处理两部分子数组，单独处理整个数组，得到三部分结果后，基于一定规则将三部分合并。
+
 ### Questions
 
-
+- [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+  - Divide
+    - 递归函数的返回条件为数组的长度为1
+    - 问题的解是左半数组，右半数组和整个数组三部分解的最大值
+  - Conquer
+    - 从中间向两边进行扩散，不断更新左右两侧的最大和，返回两侧最大和的和
+  - `O(n) = 2 * O(n/2) + O(n) = O(n log n)`
+- [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+  - Divide
+    - 递归函数的返回条件为数组的长度小于等于1
+    - 问题的解是左半数组，右半数组和对这两个子数组计算逆序对数三部分解的和
+  - Conquer
+    - 排序两数组
+    - 使用首-首双指针向前推进
+      - 如果A数组元素小于B数组元素，A指针前移
+      - 反之，逆序对数增加A数组长度与A指针的差，B指针前移
 
 ## Greedy
 
@@ -1021,13 +1040,24 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+
+  - ```c++
+    curAns = max(curAns + x, x)
+    ```
+
+- [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
   - 外层遍历数字，内层遍历平方数列表
 
   - ```c++
     dp[i] = min(dp[i], dp[i - square] + 1)
     ```
+
+- [剑指Offer-10-I. 求斐波那契数列的第n项](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
+  - 如果n小于2，直接返回n
+  - 使用三个整型记录斐波那契的基项和结果项
+  - 计算过程中不断根据计算结果调整基项
 
 ## Math
 
