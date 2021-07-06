@@ -34,7 +34,7 @@ public:
 
 内存消耗：9.7 MB, 在所有 C++ 提交中击败了59.41%的用户
 
-### Non-Recursive QuickSort
+### Iterative QuickSort
 
 #### Non-Randomized
 
@@ -52,9 +52,7 @@ public:
             while (lt <= right && arr[lt] < arr[pivot]) lt++;
             while (rt >= left && arr[rt] > arr[pivot]) rt--;
             if (lt > rt) break;
-            swap(arr[lt], arr[rt]);
-            lt++;
-            rt--;
+            swap(arr[lt++], arr[rt--]);
         }
 
         swap(arr[pivot], arr[lt]);
@@ -77,12 +75,9 @@ public:
 };
 ```
 
-执行用时：96 ms, 在所有 C++ 提交中击败了13.84%的用户
+执行用时：92 ms, 在所有 C++ 提交中击败了16.76%的用户
 
-内存消耗：10 MB, 在所有 C++ 提交中击败了17.33%的用户
-
-Attention:
-- 边界情况
+内存消耗：9.6 MB, 在所有 C++ 提交中击败了91.12%的用户
 
 #### Randomized
 
@@ -103,9 +98,7 @@ public:
             while (lt <= right && arr[lt] < arr[pivot]) lt++;
             while (rt >= left && arr[rt] > arr[pivot]) rt--;
             if (lt > rt) break;
-            swap(arr[lt], arr[rt]);
-            lt++;
-            rt--;
+            swap(arr[lt++], arr[rt--]);
         }
 
         swap(arr[pivot], arr[lt]);
@@ -128,9 +121,9 @@ public:
 };
 ```
 
-执行用时：8 ms, 在所有 C++ 提交中击败了99.62%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了98.72%的用户
 
-内存消耗：10.1 MB, 在所有 C++ 提交中击败了15.33%的用户
+内存消耗：9.8 MB, 在所有 C++ 提交中击败了34.41%的用户
 
 ### Recursive Quicksort
 
