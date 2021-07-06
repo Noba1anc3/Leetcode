@@ -688,6 +688,106 @@ void DFSVisit(int vertex){
   - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
   - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
 
+## Slide Window
+
+### Questions
+
+- [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+  - 用`left`记录当前滑动窗口的左端点
+  - 遍历字符串中的元素
+    - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
+    - 字符不在set当中时，将该字符加入set（窗口右沿右移）
+    - 更新最长字串的长度记录为当前最长字串的长度记录和set大小的最大值
+
+## Split-Search
+
+### Questions
+
+- [**004. 寻找两个有序数组的中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
+- [153. 寻找旋转后有序无重复元素数组的最小值](https://github.com/Noba1anc3/Leetcode/blob/master/153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
+  - 如果中间数小于右边的数，把mid赋给right下标（因为mid可能是答案）
+  - 反之，把mid+1赋给left下标
+  - 最终返回`nums[right]`
+- [**154. 寻找旋转后有序有重复元素数组的最小值**](https://github.com/Noba1anc3/Leetcode/blob/master/154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
+  - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
+  - 如果中间数等于右边的数，right下标-1
+
+## Double Pointer
+
+### Questions
+
+#### Head-Head
+
+- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+  - 双指针向前推进
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
+
+- [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
+  - 生成两个迭代器分别在两个set中前进
+    - 如果迭代器1的值小于迭代器2的值，迭代器1++
+    - 反之，迭代器2++
+    - 如果二者相等，将值加入交集中，两迭代器均++
+
+#### Head-Tail
+
+- [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 两指针分别位于字符串的首尾  `while(i < j)`
+  - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
+  - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
+  - 跳出while循环，返回true
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 内层`partition`可用首尾双指针
+
+#### Fast-Low
+
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+  - 快慢双指针确定链表中点
+
+#### Cur-Pre
+
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 内层`partition`可用前后双指针
+
+- [剑指Offer-24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
+  - 前后双指针
+
+## Sort
+
+### Quick Sort
+
+#### Questions
+
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 外层
+    - 迭代法
+      - 更快速
+      - 根据每次pivot，k和数组大小之间的关系来修改left或right指针
+    - 递归法
+      - 更好写
+      - **只对一侧进行递归快排**
+      - 根据每次pivot，k和快排右端点之间的关系来修改快排的左右端点及K的大小
+  - 内层`partition`
+    - 前后双指针
+    - 首尾双指针
+    - **随机快排**：`int pivotIndex = rand() % (right - left + 1) + left;`
+- [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
+- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+
+### Merge Sort
+
+#### Questions
+
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+
+### Heap Sort
+
+#### Questions
+
+- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+  - 用最大堆存储前K个数
+  - 后面的数只要比堆顶小，就弹出堆顶，将当前数插入堆中
+
 ## Backtrack
 
 ### Algorithm
@@ -890,111 +990,30 @@ void DFSVisit(int vertex){
 
   - 从0到9进行递归回溯
 
-## Double Pointer
+## Divide & Conquer
+
+> 与回溯法类似，均需要设计递归函数。递归的返回条件十分重要，否则将陷入无穷的递归当中。
+>
+> 常规方法：设计一递归方法，首先指明返回条件，而后将数组分为左右两个子数组，递归处理两部分子数组，单独处理整个数组，得到三部分结果后，基于一定规则将三部分合并。
 
 ### Questions
 
-#### Head-Head
-
-- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
-  - 双指针向前推进
-  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
-
-- [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
-  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
-  - 生成两个迭代器分别在两个set中前进
-    - 如果迭代器1的值小于迭代器2的值，迭代器1++
-    - 反之，迭代器2++
-    - 如果二者相等，将值加入交集中，两迭代器均++
-
-#### Head-Tail
-
-- [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
-  - 两指针分别位于字符串的首尾  `while(i < j)`
-  - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
-  - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
-  - 跳出while循环，返回true
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-  - 内层`partition`可用首尾双指针
-
-#### Fast-Low
-
-- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-  - 快慢双指针确定链表中点
-
-#### Cur-Pre
-
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-  - 内层`partition`可用前后双指针
-
-- [剑指Offer-24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
-  - 前后双指针
-
-## Split-Search
-
-### Questions
-
-- [**004. 寻找两个有序数组的中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
-- [153. 寻找旋转后有序无重复元素数组的最小值](https://github.com/Noba1anc3/Leetcode/blob/master/153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
-  - 如果中间数小于右边的数，把mid赋给right下标（因为mid可能是答案）
-  - 反之，把mid+1赋给left下标
-  - 最终返回`nums[right]`
-- [**154. 寻找旋转后有序有重复元素数组的最小值**](https://github.com/Noba1anc3/Leetcode/blob/master/154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
-  - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
-  - 如果中间数等于右边的数，right下标-1
-
-## Slide Window
-
-### Questions
-
-- [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
-  - 用`left`记录当前滑动窗口的左端点
-  - 遍历字符串中的元素
-    - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
-    - 字符不在set当中时，将该字符加入set（窗口右沿右移）
-    - 更新最长字串的长度记录为当前最长字串的长度记录和set大小的最大值
-
-## Sort
-
-### Quick Sort
-
-#### Questions
-
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-  - 外层
-    - 迭代法
-      - 更快速
-      - 根据每次pivot，k和数组大小之间的关系来修改left或right指针
-    - 递归法
-      - 更好写
-      - **只对一侧进行递归快排**
-      - 根据每次pivot，k和快排右端点之间的关系来修改快排的左右端点及K的大小
-  - 内层`partition`
-    - 前后双指针
-    - 首尾双指针
-    - **随机快排**：`int pivotIndex = rand() % (right - left + 1) + left;`
-- [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
-- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-
-### Merge Sort
-
-#### Questions
-
-- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-
-### Heap Sort
-
-## Dynamic Programming
-
-### Questions
-
-- [求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-
-  - 外层遍历数字，内层遍历平方数列表
-
-  - ```c++
-    dp[i] = min(dp[i], dp[i - square] + 1)
-    ```
+- [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+  - Divide
+    - 递归函数的返回条件为数组的长度为1
+    - 问题的解是左半数组，右半数组和整个数组三部分解的最大值
+  - Conquer
+    - 从中间向两边进行扩散，不断更新左右两侧的最大和，返回两侧最大和的和
+  - `O(n) = 2 * O(n/2) + O(n) = O(n log n)`
+- [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+  - Divide
+    - 递归函数的返回条件为数组的长度小于等于1
+    - 问题的解是左半数组，右半数组和对这两个子数组计算逆序对数三部分解的和
+  - Conquer
+    - 排序两数组
+    - 使用首-首双指针向前推进
+      - 如果A数组元素小于B数组元素，A指针前移
+      - 反之，逆序对数增加A数组长度与A指针的差，B指针前移
 
 ## Greedy
 
@@ -1016,6 +1035,29 @@ void DFSVisit(int vertex){
 
     - 根据贪心算法的思想，先遍历完同级元素后再遍历下一节是更合理的做法
     - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层迭代
+
+## Dynamic Programming
+
+### Questions
+
+- [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+
+  - ```c++
+    curAns = max(curAns + x, x)
+    ```
+
+- [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+
+  - 外层遍历数字，内层遍历平方数列表
+
+  - ```c++
+    dp[i] = min(dp[i], dp[i - square] + 1)
+    ```
+
+- [剑指Offer-10-I. 求斐波那契数列的第n项](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
+  - 如果n小于2，直接返回n
+  - 使用三个整型记录斐波那契的基项和结果项
+  - 计算过程中不断根据计算结果调整基项
 
 ## Math
 
