@@ -16,8 +16,7 @@ Examples:
 ```python
 class Solution:
     def reversePairs(self, nums) -> int:
-        totalReverse = self.SortCount(nums)
-        return totalReverse
+        return self.SortCount(nums)
 
     def SortCount(self, nums):
         if len(nums) <= 1:
@@ -40,10 +39,7 @@ class Solution:
         listB = sorted(listB)
 
         while i < len(listA) and j < len(listB):
-            eleA = listA[i]
-            eleB = listB[j]
-
-            if eleA <= eleB:
+            if listA[i] <= listB[j]:
                 i += 1
             else:
                 rC += len(listA) - i
@@ -52,9 +48,9 @@ class Solution:
         return rC
 ```
 
-执行用时：1484 ms, 在所有 Python3 提交中击败了57.55%的用户
+执行用时：1192 ms, 在所有 Python3 提交中击败了93.63%的用户
 
-内存消耗：19.8 MB, 在所有 Python3 提交中击败了36.05%的用户
+内存消耗：20 MB, 在所有 Python3 提交中击败了63.16%的用户
 
 Attention:
 - del 耗时
@@ -66,15 +62,14 @@ Attention:
 class Solution {
 public:
     int reversePairs(vector<int>& nums) {
-        int ans = count(nums);
-        return ans;
+        return count(nums);
     }
     
     int count(vector<int>& nums){
         if (nums.size() <= 1)
             return 0;
         
-        int mid = int(nums.size() / 2);
+        int mid = nums.size() / 2;
         vector<int> numsA(nums.begin(), nums.begin() + mid);
         vector<int> numsB(nums.begin() + mid, nums.end());
 
@@ -92,10 +87,7 @@ public:
         int i = 0, j = 0, num = 0;
 
         while (i < numsA.size() && j < numsB.size()){
-            int eleA = numsA[i];
-            int eleB = numsB[j];
-
-            if (eleA <= eleB)
+            if (numsA[i] <= numsB[j])
                 i++;
             else{
                 num += numsA.size() - i;
@@ -108,6 +100,6 @@ public:
 };
 ```
 
-执行用时：796 ms, 在所有 C++ 提交中击败了11.25%的用户
+执行用时：644 ms, 在所有 C++ 提交中击败了11.25%的用户
 
-内存消耗：137 MB, 在所有 C++ 提交中击败了8.91%的用户
+内存消耗：136.9 MB, 在所有 C++ 提交中击败了11.41%的用户
