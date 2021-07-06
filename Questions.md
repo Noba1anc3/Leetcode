@@ -171,8 +171,11 @@
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆☆☆ 剑指Offer 24. Reverse LinkedList ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 
+
 ## Recursive
 
+
+<!--
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆☆ 022. Generate Parenthesis ☆☆](022%20Generate%20Parenthesis.md)
 - [☆☆☆ 037. Sudoku Solver ☆☆☆](037%20Sudoku%20Solver.md)
@@ -201,6 +204,8 @@
 - [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
+
+-->
 
 ## Greedy
 
