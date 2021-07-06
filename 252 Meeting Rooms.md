@@ -17,19 +17,19 @@ Output: true
 class Solution {
 public:
     bool canAttendMeetings(vector<vector<int>>& intervals) {
-        if (intervals.empty())
-            return true;
+        if (intervals.empty()) return true;
 
         sort(intervals.begin(), intervals.end());
 
         for (int i = 1; i < intervals.size(); i++)
             if (intervals[i][0] < intervals[i-1][1])
                 return false;
+                
         return true;
     }
 };
 ```
 
-执行用时：48 ms, 在所有 C++ 提交中击败了50.00%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了95.74%的用户
 
-内存消耗：11.8 MB, 在所有 C++ 提交中击败了50.00%的用户
+内存消耗：11.4 MB, 在所有 C++ 提交中击败了66.43%的用户
