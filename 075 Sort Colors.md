@@ -75,26 +75,19 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) {
         int zero_end = -1;
-        for (int i = 0; i < nums.size(); i++){
-            if (nums[i] == 0){
-                zero_end += 1;
-                swap(nums[i], nums[zero_end]);
-            }
-        }
-        int one_end = zero_end;
-        for (int i = zero_end + 1; i < nums.size(); i++){
-            if (nums[i] == 1){
-                one_end += 1;
-                swap(nums[i], nums[one_end]);
-            }
-        }
+        for (int i = 0; i < nums.size(); i++)
+            if (nums[i] == 0)
+                swap(nums[i], nums[++zero_end]);
+        for (int i = zero_end + 1; i < nums.size(); i++)
+            if (nums[i] == 1)
+                swap(nums[i], nums[++zero_end]);
     }
 };
 ```
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户  
 
-内存消耗：8.4 MB, 在所有 C++ 提交中击败了14.35%的用户
+内存消耗：8.1 MB, 在所有 C++ 提交中击败了30.35%的用户
 
 Attention:
 - swap(a, b)
@@ -109,38 +102,23 @@ c++
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int size = nums.size();
-        if (size < 2) {
-            return;
-        }
-
-        // all in [0, zero) = 0
-        // all in [zero, i) = 1
-        // all in [two, len - 1] = 2
-
         int i = 0;
-        int zero = 0;
-        int two = size;
+        int zero = 0, two = nums.size();
         
-        while (i < two) {
-            if (nums[i] == 0) {
-                swap(nums[zero], nums[i]);
-                zero++;
+        while (i < two)
+            if (nums[i] == 0)
+                swap(nums[zero++], nums[i++]);
+            else if (nums[i] == 1)
                 i++;
-            } else if (nums[i] == 1) {
-                i++;
-            } else {
-                two--;
-                swap(nums[i], nums[two]);
-            }
-        }
+            else
+                swap(nums[i], nums[--two]);
     }
 };
 ```
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户  
 
-内存消耗：8.6 MB, 在所有 C++ 提交中击败了5.09%的用户
+内存消耗：8.1 MB, 在所有 C++ 提交中击败了15.09%的用户
 
 Attention:
 
