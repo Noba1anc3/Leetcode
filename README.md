@@ -31,7 +31,7 @@
 - [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
 
 - [**662. 二叉树的最大宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
-- [**剑指Offer 55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
+- [**剑指Offer-55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 #### Graph
 
@@ -586,7 +586,7 @@ void DFSVisit(int vertex){
 - [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
   - 拓扑排序 或
   - DFS
-- [**矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
+- [**329. 矩阵中的最长递增路径**](https://github.com/Noba1anc3/Leetcode/blob/master/329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
   - 该问题基于拓扑排序的解决方案与传统拓扑排序不同的地方在于，将**出度为0**的结点入队
   - 首先遍历所有结点，得到出度列表。将所有出度为0的点（边界点，制高点）压入队列。
   - 只要队列不空，逐一遍历处理这一层BFS的结点，每处理一层，level+1，最终返回level层数
@@ -687,6 +687,70 @@ void DFSVisit(int vertex){
 
   - 计算出每个岛屿的面积，将格子修改为面积下标，并创建面积数组存储下标对应的面积
   - 遍历海洋格子，用set存周围陆地格子的面积数组下标，对下标对应的面积求和
+
+## Slide Window
+
+### Questions
+
+- [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+  - 用`left`记录当前滑动窗口的左端点
+  - 遍历字符串中的元素
+    - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
+    - 字符不在set当中时，将该字符加入set（窗口右沿右移）
+    - 更新最长字串的长度记录为当前最长字串的长度记录和set大小的最大值
+
+## Split-Search
+
+### Questions
+
+- [**004. 寻找两个有序数组的中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
+- [153. 寻找旋转后有序无重复元素数组的最小值](https://github.com/Noba1anc3/Leetcode/blob/master/153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
+  - 如果中间数小于右边的数，把mid赋给right下标（因为mid可能是答案）
+  - 反之，把mid+1赋给left下标
+  - 最终返回`nums[right]`
+- [**154. 寻找旋转后有序有重复元素数组的最小值**](https://github.com/Noba1anc3/Leetcode/blob/master/154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
+  - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
+  - 如果中间数等于右边的数，right下标-1
+
+## Double Pointer
+
+### Questions
+
+#### Head-Head
+
+- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
+  - 双指针向前推进
+  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
+
+- [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
+  - 生成两个迭代器分别在两个set中前进
+    - 如果迭代器1的值小于迭代器2的值，迭代器1++
+    - 反之，迭代器2++
+    - 如果二者相等，将值加入交集中，两迭代器均++
+
+#### Head-Tail
+
+- [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
+  - 两指针分别位于字符串的首尾  `while(i < j)`
+  - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
+  - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
+  - 跳出while循环，返回true
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 内层`partition`可用首尾双指针
+
+#### Fast-Low
+
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
+  - 快慢双指针确定链表中点
+
+#### Cur-Pre
+
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 内层`partition`可用前后双指针
+
+- [剑指Offer-24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
+  - 前后双指针
 
 ## Backtrack
 
@@ -880,7 +944,7 @@ void DFSVisit(int vertex){
 
   - 大小写字母回溯结束后，再进行一次递归回溯，针对原大小写
 
-- [剑指Offer 17. 输出1到最大的N位数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
+- [剑指Offer-17. 输出1到最大的N位数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-17%20Print%20N-bit%20Numbers.md)
 
   - ```c++
     void backtrack(int width)
@@ -889,70 +953,6 @@ void DFSVisit(int vertex){
   - 如果width减到0，则返回
 
   - 从0到9进行递归回溯
-
-## Double Pointer
-
-### Questions
-
-#### Head-Head
-
-- [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
-  - 双指针向前推进
-  - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
-
-- [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
-  - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
-  - 生成两个迭代器分别在两个set中前进
-    - 如果迭代器1的值小于迭代器2的值，迭代器1++
-    - 反之，迭代器2++
-    - 如果二者相等，将值加入交集中，两迭代器均++
-
-#### Head-Tail
-
-- [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
-  - 两指针分别位于字符串的首尾  `while(i < j)`
-  - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
-  - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
-  - 跳出while循环，返回true
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-  - 内层`partition`可用首尾双指针
-
-#### Fast-Low
-
-- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-  - 快慢双指针确定链表中点
-
-#### Cur-Pre
-
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-  - 内层`partition`可用前后双指针
-
-- [剑指Offer 24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
-  - 前后双指针
-
-## Split-Search
-
-### Questions
-
-- [**004. 寻找两个有序数组的中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
-- [153. 寻找旋转后有序无重复元素数组的最小值](https://github.com/Noba1anc3/Leetcode/blob/master/153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
-  - 如果中间数小于右边的数，把mid赋给right下标（因为mid可能是答案）
-  - 反之，把mid+1赋给left下标
-  - 最终返回`nums[right]`
-- [**154. 寻找旋转后有序有重复元素数组的最小值**](https://github.com/Noba1anc3/Leetcode/blob/master/154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
-  - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
-  - 如果中间数等于右边的数，right下标-1
-
-## Slide Window
-
-### Questions
-
-- [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
-  - 用`left`记录当前滑动窗口的左端点
-  - 遍历字符串中的元素
-    - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
-    - 字符不在set当中时，将该字符加入set（窗口右沿右移）
-    - 更新最长字串的长度记录为当前最长字串的长度记录和set大小的最大值
 
 ## Sort
 
@@ -983,6 +983,12 @@ void DFSVisit(int vertex){
 - [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 
 ### Heap Sort
+
+#### Questions
+
+- [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+  - 用最大堆存储前K个数
+  - 后面的数只要比堆顶小，就弹出堆顶，将当前数插入堆中
 
 ## Dynamic Programming
 
