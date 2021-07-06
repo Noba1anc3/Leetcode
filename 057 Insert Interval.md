@@ -41,15 +41,9 @@ public:
         int right = newInterval[1];
         vector<vector<int>> ans;
         
-        for (const auto& interval: intervals) {
-            if (interval[1] < left) {
-                // 在插入区间的左侧且无交集
-                ans.push_back(interval)
-            }
-            else if (interval[0] > right) {
-                // 在插入区间的右侧且无交集
+        for (const vector<int>& interval : intervals) {
+            if (interval[1] < left || interval[0] > right)
                 ans.push_back(interval);
-            }
             else {
                 // 与插入区间有交集，计算它们的并集
                 left = min(left, interval[0]);
@@ -58,17 +52,16 @@ public:
         }
 		
         ans.push_back({left, right});
+        sort(ans.begin(), ans.end());
         
-        sort(ans.begin(), ans.end())
         return ans;
     }
 };
 ```
 
-执行用时：40 ms, 在所有 C++ 提交中击败了30.98%的用户
+执行用时：12 ms, 在所有 C++ 提交中击败了97.09%的用户
 
-内存消耗：17.2 MB, 在所有 C++ 提交中击败了36.41%的用户
+内存消耗：16.6 MB, 在所有 C++ 提交中击败了72.56%的用户
 
 Attention
-
 - vector<vector<int>>.push_back({ele a, ele b})
