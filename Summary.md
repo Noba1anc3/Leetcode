@@ -906,6 +906,8 @@ void DFSVisit(int vertex){
   - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
   - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
   - 跳出while循环，返回true
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 内层`partition`可用首尾双指针
 
 #### Fast-Low
 
@@ -913,6 +915,9 @@ void DFSVisit(int vertex){
   - 快慢双指针确定链表中点
 
 #### Cur-Pre
+
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 内层`partition`可用前后双指针
 
 - [剑指Offer 24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
   - 前后双指针
@@ -947,7 +952,22 @@ void DFSVisit(int vertex){
 
 #### Questions
 
+- [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
+
 - [**最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+  - 外层
+    - 迭代法
+      - 更快速
+      - 随机快排：`int pivotIndex = rand() % (right - left + 1) + left;`
+      - 根据每次pivot，k和数组大小之间的关系来修改left或right指针
+    - 递归法
+      - 更好写
+      - 只对一侧进行递归快排
+      - 根据每次pivot，k和快排右端点之间的关系来修改快排的左右端点及K的大小
+  - 内层`partition`
+    - 前后双指针
+    - 首尾双指针
 
 ### Merge Sort
 
@@ -1101,6 +1121,9 @@ std::vector<type> vector2(vector1.begin(), vector1.end())
 std::vector<std::vector<type>> vector(n, std::vector<type>())
 std::vector<std::vector<type>> vector(n, std::vector<type>(n, INT_MAX))
     
+// 交换vector元素位置
+swap(std::vector[i], std::vector[j])
+
 // vector反转
 reverse(std::vector.begin(), std::vector.end())
 ```
