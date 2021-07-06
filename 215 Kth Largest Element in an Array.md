@@ -171,9 +171,9 @@ public:
 };
 ```
 
-执行用时：256 ms, 在所有 C++ 提交中击败了6.75%的用户
+执行用时：128 ms, 在所有 C++ 提交中击败了13.68%的用户
 
-内存消耗：10.4 MB, 在所有 C++ 提交中击败了5.08%的用户
+内存消耗：9.8 MB, 在所有 C++ 提交中击败了46.25%的用户
 
 #### Randomized
 
@@ -202,10 +202,10 @@ public:
     }
 
     int Partition(vector<int>& nums, int p, int q){
-        int i = p - 1;
         int pivotIndex = rand() % (q - p + 1) + p;
-
         swap(nums[pivotIndex], nums[q]);
+        
+        int i = p - 1;
         int pivot = nums[q];
         
         for (int j = p; j < q; j++){
@@ -222,6 +222,6 @@ public:
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了97.18%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了98.70%的用户
 
-内存消耗：9.9 MB, 在所有 C++ 提交中击败了42.16%的用户
+内存消耗：9.8 MB, 在所有 C++ 提交中击败了36.42%的用户
