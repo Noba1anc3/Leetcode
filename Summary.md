@@ -1,3 +1,11 @@
+# Questions List
+
+[Questions](https://github.com/Noba1anc3/Leetcode/blob/master/README.md)
+
+# Recruit Information
+
+[Recruit Information](https://github.com/Noba1anc3/Leetcode/blob/master/Recruit.md)
+
 # Data Structure
 
 ## Queue
