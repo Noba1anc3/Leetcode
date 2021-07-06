@@ -99,25 +99,20 @@ public:
 
     int maxGapArray(vector<int> nums){
         int mid = nums.size() / 2;
-        int left = mid - 1;
-        int right = mid;
 
-        int LeftMax = nums[left];
-        int RightMax = nums[right];
-        int LeftCur = LeftMax;
-        int RightCur = RightMax;
+        int LeftMax = INT_MIN;
+        int RightMax = INT_MIN;
+        int LeftCur = 0, RightCur = 0;
 
-        for (int i = left - 1; i >= 0; i--){
+        for (int i = mid - 1; i >= 0; i--){
             LeftCur += nums[i];
-            if (LeftCur > LeftMax){
+            if (LeftCur > LeftMax)
                 LeftMax = LeftCur;
-            }
         }
-        for (int i = right + 1; i < nums.size(); i++){
+        for (int i = mid; i < nums.size(); i++){
             RightCur += nums[i];
-            if (RightCur > RightMax){
+            if (RightCur > RightMax)
                 RightMax = RightCur;
-            }
         }
 
         return LeftMax + RightMax;        
@@ -125,9 +120,9 @@ public:
 };
 ```
 
-执行用时：56 ms, 在所有 C++ 提交中击败了5.47%的用户
+执行用时：44 ms, 在所有 C++ 提交中击败了6.93%的用户
 
-内存消耗：45 MB, 在所有 C++ 提交中击败了5.02%的用户
+内存消耗：41 MB, 在所有 C++ 提交中击败了5.14%的用户
 
 ### Dynamic Programming Algorithm - O(n)
 
