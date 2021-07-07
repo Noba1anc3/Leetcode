@@ -81,8 +81,8 @@ public:
         sort(nums2.begin(), nums2.end());
 
         vector<int>::iterator it1 = nums1.begin(), it2 = nums2.begin();
-
         vector<int> interSection;
+        
         while (it1 < nums1.end() && it2 < nums2.end()){
             if (*it1 < *it2)
                 *it1++;
@@ -103,3 +103,32 @@ public:
 执行用时：4 ms, 在所有 C++ 提交中击败了91.53%的用户
 
 内存消耗：9.6 MB, 在所有 C++ 提交中击败了96.67%的用户
+
+### 突发奇想 利用双Map计算交集
+
+```c++
+class Solution {
+public:
+    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> interSection;
+        unordered_map<int, int> M1, M2;
+        for (const int& num : nums1) M1[num]++;
+        for (const int& num : nums2) M2[num]++;
+
+        unordered_map<int, int>::iterator it1 = M1.begin();
+
+        while (it1 != M1.end()){
+            if (M2.find(it1->first) != M2.end())
+                for (int i = 0; i < min(it1->second, M2[it1->first]); i++)
+                    interSection.push_back(it1->first);
+            it1++;
+        }
+
+        return interSection;
+    }
+};
+```
+
+执行用时：8 ms, 在所有 C++ 提交中击败了56.39%的用户
+
+内存消耗：10.5 MB, 在所有 C++ 提交中击败了6.58%的用户
