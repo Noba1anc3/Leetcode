@@ -174,7 +174,7 @@
 
 #### Tree
 
-- [**二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [**105. 二叉树前中序恢复建树**](https://github.com/Noba1anc3/Leetcode/blob/master/105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
 
   - **构建中序序列的值到下标的倒排映射**
 
@@ -698,6 +698,11 @@ void DFSVisit(int vertex){
     - 当前字符在set当中：只要该字符还在set当中，将left下标字符删除，left下标+1（窗口左沿右移）
     - 字符不在set当中时，将该字符加入set（窗口右沿右移）
     - 更新最长字串的长度记录为当前最长字串的长度记录和set大小的最大值
+- [056. 合并区间](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
+  - 对区间列表按起点进行排序
+  - 遍历每个区间
+    - 如果合并列表为空或合并列表最后一个区间的终点小于当前区间的起点，将该区间加入合并列表
+    - 否则，更新合并列表最后一个区间的终点为其与当前区间终点的最大值
 
 ## Split-Search
 
@@ -714,6 +719,8 @@ void DFSVisit(int vertex){
 
 ## Double Pointer
 
+> 对于vector，能用iterator就不用int型指针，会进一步加速算法耗时
+
 ### Questions
 
 #### Head-Head
@@ -728,6 +735,7 @@ void DFSVisit(int vertex){
     - 如果迭代器1的值小于迭代器2的值，迭代器1++
     - 反之，迭代器2++
     - 如果二者相等，将值加入交集中，两迭代器均++
+- [350. 求两个数组的交数组](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
 
 #### Head-Tail
 
@@ -757,6 +765,13 @@ void DFSVisit(int vertex){
 ### Quick Sort
 
 #### Questions
+
+- [**075. 将012的乱序数组恢复顺序**](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
+  - 初始化零指针为-1，二指针为数组长度
+  - 初始化遍历指针为0，只要其小于二指针
+    - 如果下标元素为0，交换下标元素与前移零指针元素，遍历指针前移
+    - 如果下标元素为1，遍历指针前移
+    - 如果下标元素为2，交换该元素与后移二指针元素
 
 - [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 外层
@@ -813,9 +828,21 @@ void DFSVisit(int vertex){
 - [对字典按值排序](https://github.com/Noba1anc3/Leetcode/blob/master/Sort%20dict%20by%20value.md)
   - 将dict转成vector
   - 实现cmp函数，对vector排序
+- [056. 合并区间](https://github.com/Noba1anc3/Leetcode/blob/master/056%20Merge%20Intervals.md)
+  - 对区间列表按起点进行排序
+  - 遍历每个区间
+    - 如果合并列表为空或合并列表最后一个区间的终点小于当前区间的起点，将该区间加入合并列表
+    - 否则，更新合并列表最后一个区间的终点为其与当前区间终点的最大值
+- [057. 插入区间](https://github.com/Noba1anc3/Leetcode/blob/master/057%20Insert%20Interval.md)
+  - 遍历每个区间
+    - 如果区间与待插入的区间没有交集，直接加入到结果当中
+    - 如果有交集，更新待插入区间的左右端点
+  - 将待插入区间加入结果当中，对结果进行排序
 - [242. 判断两个字符串是否为字母异位词](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
   - 排序后判断是否相同
 - [252. 判断一个人能否参加全部会议](https://github.com/Noba1anc3/Leetcode/blob/master/252%20Meeting%20Rooms.md)
+- [349. 求两个集合的交集](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+- [350. 求两个数组的交数组](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
 - [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Backtrack
@@ -1097,7 +1124,7 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [计算数组中出现次数超过一半的数字]()
+- [169. 计算数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
   - 首先设定主导数字和票数均为0
   - 遍历所有数字
     - 如果当前票数为0，修改主导数字为当前被遍历到的数字
@@ -1192,6 +1219,9 @@ std::vector.erase(std::vector.begin() + i)
 // vector进出元素
 std::vector.push_back()
 std::vector.pop_back()
+
+// 将B vector插入到A vector的后面
+std::vector.insert(A.end(), B.begin(), B.end())
 
 // vector大小
 std::vector.size()
