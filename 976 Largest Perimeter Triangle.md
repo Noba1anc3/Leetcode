@@ -31,32 +31,23 @@ Output: 8
 ## Solution
 
 c++
-```python
-#include <algorithm>
-
+```c++
 class Solution {
 public:
-    static bool compare(int a, int b){
+    static bool cmp(int a, int b){
         return a > b;
     }
 
-    int largestPerimeter(vector<int>& A) {
-        sort(A.begin(), A.end(), compare);
-        
-        for(int i = 0; i < A.size() - 2; i++)
-            if (A[i] < A[i+1] + A[i+2])
-                return A[i] + A[i+1] + A[i+2];
-
+    int largestPerimeter(vector<int>& nums) {
+        sort(nums.begin(), nums.end(), cmp);
+        for (int i = 2; i < nums.size(); i++)
+            if (nums[i-2] < nums[i-1] + nums[i])
+                return nums[i-2] + nums[i-1] + nums[i];
         return 0;
     }
 };
 ```
 
-执行用时：108 ms, 在所有 C++ 提交中击败了81.30%的用户  
-内存消耗：20.6 MB, 在所有 C++ 提交中击败了5.14%的用户
+执行用时：44 ms, 在所有 C++ 提交中击败了55.12%的用户
 
-Attention:
-- vector<int>&
-- vector.size()
-- sort(A.begin(), A.end(), compare);
-- static bool compare()
+内存消耗：21.5 MB, 在所有 C++ 提交中击败了6.73%的用户
