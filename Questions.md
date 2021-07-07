@@ -252,6 +252,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 743. Network Delay Time ☆☆ (Dijkstra)](743%20Network%20Delay%20Time.md)
 - [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆ (Huffman + Priority Queue)](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
+- [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 
 ## Divide & Conquer
