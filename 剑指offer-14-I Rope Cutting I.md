@@ -120,9 +120,8 @@ public:
 ```c++
 class Solution {
 public:
-    int integerBreak(int n) {
-        if (n < 4)
-            return n-1;
+    int cuttingRope(int n) {
+        if (n < 4) return n-1;
 
         int dp[n+1];
         for (int i = 0; i <= n; i++)
