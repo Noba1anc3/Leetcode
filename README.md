@@ -151,7 +151,7 @@
 #### Integer
 
 - [001. 返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
-  - 第一次遍历：**构建数字到下标的倒排映射**
+- 第一次遍历：**构建数字到下标的倒排映射**
   - 第二次遍历：如果target - i是哈希表的key且value不等于i，则返回i，j
   - 如果是重复元素，加到哈希表时后一次出现的元素会覆盖前面的写入，因此不会有问题
 - [169. 求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
@@ -163,9 +163,9 @@
 #### String
 
 - [017. 九键打字的字母组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-  - **构建从数字到字符串的映射**
+- **构建从数字到字符串的映射**
 - [020. 判断是否为有效括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
-  - **构建从右括号到左括号的映射**
+- **构建从右括号到左括号的映射**
 - [242. 判断两个字符串是否为字母异位词](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
   - 如果长度不相等，直接返回
   - **构建字母与其出现次数的映射**
@@ -207,6 +207,7 @@
 ### Questions
 
 - [**003. 求字符串的无重复字符最长字串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
+
   - 使用set数据结构的原因
     1. 加速判断当前字符是否在滑动窗口的查找过程
     2. 在需要将滑动窗口左沿右移时，便于删除左沿元素
@@ -351,6 +352,7 @@ void Union(int x, int y) {
 #### Tree-self
 
 - [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+
   - 首先判断边的个数加1是否等于结点的个数
   - 如若并查集合并时根相同，则不能组成一棵树
 
@@ -869,7 +871,7 @@ void DFSVisit(int vertex){
 >
 > - 哪些搜索会产生不需要的解？
 >
->   如果在浅层就知道这个分支不能产生需要的结果，应该提前剪枝，剪枝的条件是什么，代码怎么写？
+> 如果在浅层就知道这个分支不能产生需要的结果，应该提前剪枝，剪枝的条件是什么，代码怎么写？
 
 控制回溯进程
 
@@ -1096,13 +1098,23 @@ void DFSVisit(int vertex){
   - 每次贪心选择距离源点最近的结点，松弛与其相邻结点的距离
 - [部分背包](https://github.com/Noba1anc3/Leetcode/blob/master/Greedy%20-%20Fractional%20Knapsack.md)
   - 每次贪心选择单位重量价值最高的物品放入背包
+- [**045. 最少几步能从起点跳到终点**](https://github.com/Noba1anc3/Leetcode/blob/master/045%20Jump%20Game%20II.md)
+  - 初始化搜索区间的起点与终点，步数和最远距离为0（区间搜索）
+  - 只要搜索区间终点尚未达到数组终点
+    - 计算搜索区间内可以达到的最远距离
+    - 将搜索区间起点改为上次搜索区间终点的下一位置，搜索区间终点改为上次搜索得到的最远可达距离，同时将搜索步数+1
+- [**055. 能否从起点跳到终点**](https://github.com/Noba1anc3/Leetcode/blob/master/055%20Jump%20Game.md)
+  - 遍历列表中的下标（点搜索）
+    - 如果最远可达距离超过该下标，根据该下标及其数字更新最远可达距离
+      - 如果新的最远可达距离超过终点，则可抵达终点
+    - 否则，返回不可抵达
 - [253. 需要几间会议室](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
   - 每次贪心进入结束时间小于本次会议开始时间的所有会议室中最早结束的一间
-
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
   - DFS Based
 
     - 对组成数字的完全平方数的个数由少到多进行贪心
+
   - BFS Based
     - 根据贪心算法的思想，先遍历完同层元素后再遍历下一层是更合理的做法
 - [743. 全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
@@ -1112,6 +1124,9 @@ void DFSVisit(int vertex){
 - [1167. 拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
   - 每次贪心选择最短的火柴棍进行拼接
 - [1403. 元素和超过数组一半的最短最大子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
+  - 每次贪心选择最大的数字，检查是否满足要求
+- [剑指Offer-14-II. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
+  - 每次贪心选择将和拆分为3的因子
 
 ## Dynamic Programming
 
