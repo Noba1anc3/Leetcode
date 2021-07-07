@@ -301,14 +301,11 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 面试题 16.17. Contiguous Sequence ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 面试题 17.16. The Masseuse ☆☆](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.16%20The%20Masseuse.md)
 
-## Brain Twister
-
-- [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
-
 ## Mathematics
 
 - [☆☆ 136. Single Number ☆☆](136%20Single%20Number.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
+- [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆☆ 343. Integer Break ☆☆☆ (同剑指offer 14)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆☆ 剑指Offer 14-I. Cutting Rope I ☆☆☆](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14-II. Cutting Rope II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
