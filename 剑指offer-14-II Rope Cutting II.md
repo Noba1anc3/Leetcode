@@ -38,12 +38,10 @@ public:
         while (n > 4){
             result *= 3;
             n -= 3;
-            if (result > (int)(1e9 + 7))
-                result %= (int)(1e9 + 7);
+            result %= (int)(1e9 + 7);
         }
         result *= n;
-        if (result > (int)(1e9 + 7))
-            result %= (int)(1e9 + 7);
+        result %= (int)(1e9 + 7);
         
         return (int)result;
     }
