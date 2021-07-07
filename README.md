@@ -1090,6 +1090,15 @@ void DFSVisit(int vertex){
 
 ### Questions
 
+- [最小生成树 - Prim算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
+  - 每次贪心选择与当前顶点集最近的结点，将两顶点之间的边加入最小生成树
+- [单源最短路径 - Dijkstra算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+  - 每次贪心选择距离源点最近的结点，松弛与其相邻结点的距离
+- [部分背包](https://github.com/Noba1anc3/Leetcode/blob/master/Greedy%20-%20Fractional%20Knapsack.md)
+  - 每次贪心选择单位重量价值最高的物品放入背包
+- [253. 需要几间会议室](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
+  - 每次贪心进入结束时间小于本次会议开始时间的所有会议室中最早结束的一间
+
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
   - DFS Based
@@ -1202,6 +1211,12 @@ struct Edge{
     int vertex2;
     int weight;
 };
+
+// 创建结构体数组
+struct Item items[n];
+
+// 对结构体数组进行排序
+sort(items, items + n)
 ```
 
 ### char
