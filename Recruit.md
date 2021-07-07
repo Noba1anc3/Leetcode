@@ -1,5 +1,35 @@
 # 民企
 
+## 美团 - 北斗
+
+[招聘信息](https://mp.weixin.qq.com/s/YSQWGBzr3CpNR-vbth29pQ)
+
+[官方网站](campus.meituan.com/beidou)
+
+### 备注
+
+DDL ：10月14日
+
+宣讲会：7月16日  美团B站直播间
+
+如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
+
+## DJI
+
+[招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
+
+[官方网站](we.dji.com/zh-CN/campus)
+
+### 备注
+
+DDL ：8月11日
+
+宣讲会：7月20日
+
+Base : 深圳、上海、西安、北京
+
+
+
 ## 网易游戏 - 雷火
 
 [招聘信息](https://mp.weixin.qq.com/s/XNoaqls2qfq5ixmxgNX8kg)
@@ -134,3 +164,6 @@ Base ：Shenzhen，Beijing，Shanghai，Singapore
 ### 备注
 
 DDL ：08.15
+
+
+
