@@ -250,6 +250,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 435. Non-overlapping Intervals ☆☆☆ (Activity Selection)](435%20Non-overlapping%20Intervals.md)
 - [☆☆☆ 452. Minimum Number of Arrays to Burst Balloons ☆☆☆ (Activity Selection)](452%20Minimum%20Number%20of%20Arrays%20to%20Burst%20Balloons.md)
 - [☆☆ 743. Network Delay Time ☆☆ (Dijkstra)](743%20Network%20Delay%20Time.md)
+- [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆ (Huffman + Priority Queue)](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 
