@@ -303,7 +303,7 @@ If u want to check out the questions belong to this category, please check the r
 
 - [☆☆ 136. Single Number ☆☆](136%20Single%20Number.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指Offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
-- [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
+- [☆☆ 292. Nim Game ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆☆ 343. Integer Break ☆☆☆ (同剑指Offer 14-I)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 剑指Offer 14-II. Cutting Rope II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
 - [☆☆☆ 剑指Offer 56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
@@ -365,7 +365,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
 - [☆☆ 261. Graph Valid Tree ☆☆](261%20Graph%20Valid%20Tree.md)
 - [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-- [292. Nim Game](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
+- [☆☆ 292. Nim Game ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/292%20Nim%20Game.md)
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
 - [☆☆ 323. Number of Connected Components in an Undirected Graph ☆☆☆](323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.md)
 - [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
