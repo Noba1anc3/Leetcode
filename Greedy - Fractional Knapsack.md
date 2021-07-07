@@ -36,19 +36,14 @@ double Fraction_Knapsack(int n, int *V, int *W, int K)
             }
             else{
                 items[i].fraction = (double)K/item.weight;
+                K = 0;
                 total += items[i].fraction * item.value;
                 break;
             }
         }
-        break;
     }
 
     return total;
 
 }
 ```
-
-Attention
-
-- Struct
-- cmp
