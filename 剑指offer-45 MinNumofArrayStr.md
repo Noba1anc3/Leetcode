@@ -63,8 +63,8 @@ public:
     string minNumber(vector<int>& nums) {
         string rsp;
         vector<string> str_nums;
+        
         vector<int>::iterator int_it = nums.begin();
-
         while (int_it != nums.end())
             str_nums.push_back(to_string(*int_it++));
 
@@ -87,5 +87,4 @@ Attention:
 - to_string(int)
 - sort(A.begin(), A.end(), compare);
 - Lambda in C++ 11
-
-- 引用传递不需要调用构造函数去构造函数的局部变量 &s1
+- 引用传递不需要调用构造函数去构造函数的局部变量
