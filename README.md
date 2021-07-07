@@ -821,6 +821,12 @@ void DFSVisit(int vertex){
   - 拓扑排序 或
   - DFS
 
+### Count Sort
+
+#### Algorithm
+
+- [计数排序](https://github.com/Noba1anc3/Leetcode/blob/master/Sort%20-%20Count%20Sort.md)
+
 ### Others
 
 #### Questions
