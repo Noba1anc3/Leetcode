@@ -19,7 +19,7 @@ Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 st
 
 如果希望跳跃的次数少，那么跳跃的距离一定是比较远的，但不代表每次都从跳到最远的地方往后跳。
 
-搜寻跳跃距离的空间是上次搜寻空间的终点的后一位到上次搜寻得到的最远距离。
+这一次搜寻跳跃距离的区间是上次搜寻空间的终点的后一位开始，到上次搜寻得到的最远距离为止。
 
 ## Solution
 
@@ -27,14 +27,13 @@ Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 st
 class Solution {
 public:
     int jump(vector<int>& nums) {
-        int start = 0, end = 0, steps = 0;
+        int start = 0, end = 0, steps = 0, maxDist = 0;
         while (end < nums.size() - 1){
-            int maxDistance = 0;
             for (int i = start; i <= end; i++){
-                maxDistance = max(maxDistance, i+nums[i]);
+                maxDist = max(maxDist, i + nums[i]);
             }
             start = end + 1;
-            end = maxDistance;
+            end = maxDist;
             steps++;
         }
         return steps;
@@ -42,6 +41,6 @@ public:
 };
 ```
 
-执行用时：28 ms, 在所有 C++ 提交中击败了49.96%的用户
+执行用时：8 ms, 在所有 C++ 提交中击败了44.66%的用户
 
-内存消耗：15.6 MB, 在所有 C++ 提交中击败了14.97%的用户
+内存消耗：15.8 MB, 在所有 C++ 提交中击败了41.10%的用户
