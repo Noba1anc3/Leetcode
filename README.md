@@ -1100,24 +1100,17 @@ void DFSVisit(int vertex){
   - 每次贪心进入结束时间小于本次会议开始时间的所有会议室中最早结束的一间
 
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-
   - DFS Based
 
-    - 对组成数字的完全平方数由小到大进行贪心
-
-    - 递归函数的返回条件为需要一个数时，该数在完全平方数列表中
-
-    - ```c++
-      canDivide(n, count) -> canDivide(n - square, count - 1);
-      ```
-
+    - 对组成数字的完全平方数的个数由少到多进行贪心
   - BFS Based
-
-    - 根据贪心算法的思想，先遍历完同级元素后再遍历下一节是更合理的做法
-    - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层迭代
-
+    - 根据贪心算法的思想，先遍历完同层元素后再遍历下一层是更合理的做法
+- [743. 全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
+  - 基于Dijkstra算法
 - [976. 三角形的最大周长](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
-
+  - 每次贪心检查最长的三条边能否组成三角形
+- [1167. 拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
+  - 每次贪心选择最短的火柴棍进行拼接
 - [1403. 元素和超过数组一半的最短最大子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 
 ## Dynamic Programming
