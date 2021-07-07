@@ -67,6 +67,39 @@ public:
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了73.49%的用户  
+执行用时：8 ms, 在所有 C++ 提交中击败了56.39%的用户
 
-内存消耗：10.3 MB, 在所有 C++ 提交中击败了63.91%的用户
+内存消耗：9.8 MB, 在所有 C++ 提交中击败了66.38%的用户
+
+### 排序 + 真双指针（不是
+
+```c++
+class Solution {
+public:
+    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        sort(nums1.begin(), nums1.end());
+        sort(nums2.begin(), nums2.end());
+
+        vector<int>::iterator it1 = nums1.begin(), it2 = nums2.begin();
+
+        vector<int> interSection;
+        while (it1 < nums1.end() && it2 < nums2.end()){
+            if (*it1 < *it2)
+                *it1++;
+            else if (*it1 > *it2)
+                *it2++;
+            else{
+                interSection.push_back(*it1);
+                *it1++;
+                *it2++;
+            }
+        }
+
+        return interSection;
+    }
+};
+```
+
+执行用时：4 ms, 在所有 C++ 提交中击败了91.53%的用户
+
+内存消耗：9.6 MB, 在所有 C++ 提交中击败了96.67%的用户
