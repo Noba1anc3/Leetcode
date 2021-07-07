@@ -38,16 +38,19 @@ public:
         int maxDistance = 0;
 
         for (int i = 0; i < nums.size(); i++){
-            if (maxDistance >= i)
+            if (maxDistance >= i){
                 maxDistance = max(maxDistance, i + nums[i]);
-            if (maxDistance >= nums.size() - 1)
-                return true;
+                if (maxDistance >= nums.size() - 1)
+                    return true;
+            }
+            else
+                return false;
         }
         return false;
     }
 };
 ```
 
-执行用时：12 ms, 在所有 C++ 提交中击败了99.81%的用户
+执行用时：44 ms, 在所有 C++ 提交中击败了52.22%的用户
 
-内存消耗：13 MB, 在所有 C++ 提交中击败了30.36%的用户
+内存消耗：47.1 MB, 在所有 C++ 提交中击败了37.68%的用户
