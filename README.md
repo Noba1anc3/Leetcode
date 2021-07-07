@@ -10,7 +10,7 @@
 
 ## Queue
 
-基于队列的算法最重要的就是[广度优先搜索](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)和[拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
+> 基于队列的算法最重要的就是[广度优先搜索](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)和[拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
 
 ### Questions
 
@@ -109,7 +109,7 @@
 
 ## Heap
 
-基于最小堆的两个重要的图算法是求最小生成树的[Prim算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)和求单源最短路径的[Dijkstra算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+> 基于最小堆的两个重要的图算法是求最小生成树的[Prim算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)和求单源最短路径的[Dijkstra算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
 
 ### Questions
 
@@ -144,7 +144,7 @@
 
 ## Map
 
-对Map(Hash, Dict) 的使用在于**构建映射关系**，加速搜索过程。
+> 对Map(Hash, Dict) 的使用在于**构建映射关系**，加速搜索过程。
 
 ### Questions
 
@@ -194,15 +194,15 @@
 
 ## Set
 
-一般使用基于哈希表的无序的unordered_set, 其作用在于
-
-- 有效**降低搜索时间复杂度**：`O(n) -> O(1)`
-- 实现去重
-
-对于Set这一数据结构，其独特点在于
-
-- 自带**排序**机制
-- 搜索时间复杂度为 `O(log n)`
+> 一般使用基于哈希表的无序的unordered_set, 其作用在于
+>
+> - 有效**降低搜索时间复杂度**：`O(n) -> O(1)`
+> - 实现去重
+>
+> 对于Set这一数据结构，其独特点在于
+>
+> - 自带**排序**机制
+> - 搜索时间复杂度为 `O(log n)`
 
 ### Questions
 
