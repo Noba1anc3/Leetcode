@@ -25,31 +25,34 @@
 
 ## Solution - I Mathematics + Greedy
 
-java
-```java
+c++
+
+```c++
 class Solution {
-    public int cuttingRope(int n) {
+public:
+    int cuttingRope(int n) {
         if (n <= 3) return n - 1;
         
-        long result  = 1;
+        long result = 1;
 
         while (n > 4){
             result *= 3;
             n -= 3;
-            if (result > 1e9 + 7)
-                result %= 1e9 + 7;
+            if (result > (int)(1e9 + 7))
+                result %= (int)(1e9 + 7);
         }
         result *= n;
-        if (result > 1e9 + 7)
-            result %= 1e9 + 7;
+        if (result > (int)(1e9 + 7))
+            result %= (int)(1e9 + 7);
         
         return (int)result;
     }
-}
+};
 ```
-执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
 
-内存消耗：35.2 MB, 在所有 Java 提交中击败了77.30%的用户
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
+
+内存消耗：5.8 MB, 在所有 C++ 提交中击败了68.06%的用户
 
 **复杂度分析**
 
@@ -57,5 +60,4 @@ class Solution {
 - 空间复杂度 O(1)
 
 Attention
-
 - long
