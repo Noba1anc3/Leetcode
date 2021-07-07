@@ -29,7 +29,8 @@ Output: [6]
 
 ## Solution
 
-python
+### python
+
 ```python
 class Solution:
     def minSubsequence(self, nums: List[int]) -> List[int]:
@@ -49,3 +50,69 @@ class Solution:
 Attention:
 - array.sort(reverse=True)  降序, 默认升序
 - sum(array)
+
+### c++
+
+#### 基本方法
+
+```c++
+class Solution {
+public:
+    static bool cmp (int a, int b){
+        return a > b;
+    }
+
+    vector<int> minSubsequence(vector<int>& nums) {
+        int sum = 0, sequence_sum = 0;
+        vector<int> sequence;
+
+        for (const int& num : nums)
+            sum += num;
+
+        sort(nums.begin(), nums.end(), cmp);
+
+        for (const int& num : nums){
+            sequence_sum += num;
+            sequence.push_back(num);
+            if (2*sequence_sum > sum) return sequence;
+        }
+
+        return {};
+    }
+};
+```
+
+执行用时：12 ms, 在所有 C++ 提交中击败了40.19%的用户
+
+内存消耗：10.4 MB, 在所有 C++ 提交中击败了39.36%的用户
+
+#### 指针替代整型
+
+```c++
+class Solution {
+public:
+    vector<int> minSubsequence(vector<int>& nums) {
+        int sum = 0, sequence_sum = 0;
+        vector<int> sequence;
+        vector<int>::iterator it = nums.begin();
+        sort(nums.begin(), nums.end());
+
+        while (it != nums.end())
+            sum += *it++;
+
+        it--;
+
+        while (it != nums.begin() - 1){
+            sequence_sum += *it;
+            sequence.push_back(*it--);
+            if (2*sequence_sum > sum) return sequence;
+        }
+
+        return {};
+    }
+};
+```
+
+执行用时：4 ms, 在所有 C++ 提交中击败了97.93%的用户
+
+内存消耗：10.2 MB, 在所有 C++ 提交中击败了94.22%的用户
