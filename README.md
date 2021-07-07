@@ -1130,9 +1130,24 @@ void DFSVisit(int vertex){
     ```
 
 - [剑指Offer-10-I. 求斐波那契数列的第n项](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
+
   - 如果n小于2，直接返回n
   - 使用三个整型记录斐波那契的基项和结果项
   - 计算过程中不断根据计算结果调整基项
+
+- [剑指Offer-14-I. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
+
+  - 递推数组：`int dp[n+1]`
+
+  - 数组初始化：`dp[i] = i`
+
+  - 递推公式
+
+    - ```c++
+      for (int i = 4; i <= n; i++)
+          for (int j = 2; j <= (int)i/2; j++)
+              dp[i] = max(dp[i], dp[j] * dp[i-j]);
+      ```
 
 ## Math
 
@@ -1157,7 +1172,7 @@ void DFSVisit(int vertex){
     - 当 b = 0 时，直接返回 3 ^ a
     - 当 b = 1 时，要将一个 1 + 3 转换为 2 + 2，因此返回 3 ^ (a - 1) x 4
     - 当 b = 2 时，返回 3 ^ a x 2
-- [剑指Offer-14-I. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
+- [剑指Offer-14-II. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
   - 只要n大于4，每次减3，每次将结果 × 3 并对1e9+7取余
   - 将结果 × n，对1e9+7取余
 - [剑指Offer-56-I. 找出数组中唯二只出现了一次的数字，其他数字均出现两次](http://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
