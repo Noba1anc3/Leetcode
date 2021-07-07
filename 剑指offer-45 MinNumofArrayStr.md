@@ -24,58 +24,66 @@ Example 2:
 
 ## Solution
 
-c++
-
 ```c++
 class Solution {
 public:
+    static bool cmp(string a, string b){
+        return a + b < b + a;
+    }
+
     string minNumber(vector<int>& nums) {
-        vector<string>strs;
-        string ans;
-        for(int i = 0; i < nums.size(); i++){
-            strs.push_back(to_string(nums[i]));
-        }
-        sort(strs.begin(), strs.end(), [](string& s1, string& s2){return s1 + s2 < s2 + s1;});
-        for(int i = 0; i < strs.size(); i++)
-            ans += strs[i];
-        return ans;
+        string rsp;
+        vector<string> str_nums;
+
+        for (const int& num : nums)
+            str_nums.push_back(to_string(num));
+
+        sort(str_nums.begin(), str_nums.end(), cmp);
+     // sort(str_nums.begin(), str_nums.end(), [](string& a, string& b){return a + b < b + a;});
+     
+        for (const string& str_num : str_nums)
+            rsp += str_num;
+            
+        return rsp;
     }
 };
 ```
 
-OR
+执行用时：8 ms, 在所有 C++ 提交中击败了78.55%的用户
+
+内存消耗：11.2 MB, 在所有 C++ 提交中击败了10.65%的用户
 
 ```c++
 class Solution {
 public:
-    static bool compare(string s1, string s2){
-        return s1 + s2 < s2 + s1;
+    static bool cmp(string a, string b){
+        return a + b < b + a;
     }
 
     string minNumber(vector<int>& nums) {
-        vector<string> strs;
-        string ans;
-        
-        for(int i = 0; i < nums.size(); i++)
-            strs.push_back(to_string(nums[i]));
+        string rsp;
+        vector<string> str_nums;
+        vector<int>::iterator int_it = nums.begin();
 
-        sort(strs.begin(), strs.end(), compare);
-        
-        for(int i = 0; i < strs.size(); i++)
-            ans += strs[i];
-        
-        return ans;
+        while (int_it != nums.end())
+            str_nums.push_back(to_string(*int_it++));
+
+        sort(str_nums.begin(), str_nums.end(), cmp);
+
+        vector<string>::iterator str_it = str_nums.begin();
+        while (str_it != str_nums.end())
+            rsp += *str_it++;
+
+        return rsp;
     }
 };
 ```
 
-执行用时：8 ms, 在所有 C++ 提交中击败了98.29%的用户
-内存消耗：11.5 MB, 在所有 C++ 提交中击败了17.52%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了97.26%的用户
+
+内存消耗：11.1 MB, 在所有 C++ 提交中击败了52.94%的用户
 
 Attention:
-- vector<int>&
-- vector<string>
-- vector.push_back()
 - to_string(int)
 - sort(A.begin(), A.end(), compare);
 - Lambda in C++ 11
