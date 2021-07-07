@@ -10,7 +10,7 @@
 
 ## Queue
 
-> 基于队列的算法最重要的就是[广度优先搜索](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)和[拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
+> 基于队列的算法最重要的就是[广度优先搜索](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)和基于BFS的[拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
 
 ### Questions
 
@@ -843,6 +843,10 @@ void DFSVisit(int vertex){
 - [252. 判断一个人能否参加全部会议](https://github.com/Noba1anc3/Leetcode/blob/master/252%20Meeting%20Rooms.md)
 - [349. 求两个集合的交集](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [350. 求两个数组的交数组](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
+- [976. 三角形的最大周长](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+- [1403. 元素和超过数组一半的最短最大子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
+- [**剑指Offer-45. 数组元素能组成的最小数字串**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
+  -  重构比较函数，组合` s1` 和 `s2` ，如果 `s1 + s2 < s2 + s1`，那么 `s1` > `s2` 
 - [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Backtrack
@@ -1080,7 +1084,7 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-- [求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
+- [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
   - DFS Based
 
@@ -1096,6 +1100,10 @@ void DFSVisit(int vertex){
 
     - 根据贪心算法的思想，先遍历完同级元素后再遍历下一节是更合理的做法
     - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层迭代
+
+- [976. 三角形的最大周长](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
+
+- [1403. 元素和超过数组一半的最短最大子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 
 ## Dynamic Programming
 
@@ -1279,6 +1287,10 @@ std::unordered_map.at(key)
     
 // 查找是否有某个key
 std::unordered_map.find(key) != std::unordered_map.end()
+    
+// 遍历map的所有key
+unordered_map<int, int>::iterator it1 = M.begin();
+while (it1 != M.end()){ int key = it1->first; }
 ```
 
 ### pair
@@ -1307,8 +1319,6 @@ std::queue.push()
 
 ### priority_queue
 
-c++
-
 ```c++
 std::priority_queue // default: big root heap
 std::priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
@@ -1333,6 +1343,13 @@ while (iter != set.end())
 
 // 迭代器前移
 iter++  // 不能用iter+=1
+ 
+// 倒序遍历数组时
+while (it != nums.begin() - 1)
+    
+// 可以在取值的同时调整指针
+*it++
+*it--
 ```
 
 ### other
@@ -1353,6 +1370,9 @@ nullptr
 
 // 无符号长长型
 unsigned long long
+    
+// 引用传递不需要调用构造函数去构造函数的局部变量
+&s
 ```
 
 ## python
@@ -1363,11 +1383,17 @@ unsigned long long
 # 按照元素的首元素进行排序
 list.sort(key = lambda x : x[0])
 
+# 倒序排序
+list.sort(reverse = True)
+
 # 寻找list中有几个count元素
 list.count(element)
 
 # 寻找list中，从index下标开始，value所在的下标
 list.index(value, index)
+
+# 求数组内元素和
+sum(list)
 ```
 
 ### dict
