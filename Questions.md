@@ -137,7 +137,6 @@
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 827. Making A Large Island ☆☆☆](827%20Making%20A%20Large%20Island.md)
 
-
 ## Slide Window
 
 - [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
@@ -155,6 +154,7 @@
 - [☆☆ 125. Valid Palindrome ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
+- [☆☆ 392. Is Subsequence ☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 剑指Offer 24. Reverse LinkedList ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 
 ## Sort
@@ -246,7 +246,6 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
 - [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-- [☆☆☆ 392. Is Subsequence ☆☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 435. Non-overlapping Intervals ☆☆☆ (Activity Selection)](435%20Non-overlapping%20Intervals.md)
 - [☆☆☆ 452. Minimum Number of Arrays to Burst Balloons ☆☆☆ (Activity Selection)](452%20Minimum%20Number%20of%20Arrays%20to%20Burst%20Balloons.md)
 - [☆☆ 743. Network Delay Time ☆☆ (Dijkstra)](743%20Network%20Delay%20Time.md)
@@ -282,7 +281,6 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
 - [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指Offer 14-I)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
-- [☆☆☆ 392. Is Subsequence ☆☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
 - [☆☆☆ 474. Ones and Zeroes ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
 - [494. Target Sum](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
@@ -372,6 +370,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 343. Integer Break ☆☆ (同剑指offer 14)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆ 349. Intersection of Two Arrays ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
 - [☆ 350. Intersection of Two Arrays II ☆](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
+- [☆☆ 392. Is Subsequence ☆☆](392%20Is%20Subsequence.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
 - [☆☆☆ 435. Non-overlapping Intervals ☆☆☆](435%20Non-overlapping%20Intervals.md)
 - [☆☆☆ 452. Minimum Number of Arrays to Burst Balloons ☆☆☆](452%20Minimum%20Number%20of%20Arrays%20to%20Burst%20Balloons.md)
