@@ -19,18 +19,15 @@ Output: false
 class Solution {
 public:
     int isSubsequence(string s, string t) {
-        int i = 0, j = 0, t_start = 0;
-        for (; i < s.size(); i++){
+        int j = 0;
+        for (int i = 0; i < s.size(); i++){
             bool found = false;
-            for (; j < t.size(); j++){
+            for (; j < t.size(); j++)
                 if (s[i] == t[j]){
-                    if (i + 1 != s.size() && j + 1 == t.size())
-                        return false;
+                    j++;
                     found = true;
-                    j += 1;
                     break;
                 }
-            }
             if (!found)
                 return false;
         }
@@ -41,7 +38,7 @@ public:
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：6.6 MB, 在所有 C++ 提交中击败了36.15%的用户
+内存消耗：6.2 MB, 在所有 C++ 提交中击败了73.15%的用户
 
 ## Idea - II Greedy Optimization
 
