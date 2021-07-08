@@ -27,14 +27,14 @@ Explanation: You don't need to remove any of the intervals since they're already
 class Solution {
 public:
     static bool cmp(vector<int> a, vector<int> b){
-        return (a[1] < b[1]);
+        return a[1] < b[1];
     }
 
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
         int currentEnd = INT_MIN, erase = 0;
         sort(intervals.begin(), intervals.end(), cmp);
         
-        for (auto interval : intervals){
+        for (const vector<int>& interval : intervals){
             if (interval[0] >= currentEnd)
                 currentEnd = interval[1];
             else
@@ -46,6 +46,6 @@ public:
 };
 ```
 
-执行用时：164 ms, 在所有 C++ 提交中击败了26.12%的用户
+执行用时：84 ms, 在所有 C++ 提交中击败了42.71%的用户
 
-内存消耗：23.5 MB, 在所有 C++ 提交中击败了6.80%的用户
+内存消耗：23.8 MB, 在所有 C++ 提交中击败了30.74%的用户
