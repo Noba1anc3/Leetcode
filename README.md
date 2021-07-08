@@ -730,7 +730,6 @@ void DFSVisit(int vertex){
 - [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
   - 双指针向前推进
   - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
-
 - [**349. 求两个数组的交集**](https://github.com/Noba1anc3/Leetcode/blob/master/349%20Intersection%20of%20Two%20Arrays.md)
   - 利用**set自带的排序机制**，将两个列表的元素insert到两个set当中
   - 生成两个迭代器分别在两个set中前进
@@ -738,6 +737,9 @@ void DFSVisit(int vertex){
     - 反之，迭代器2++
     - 如果二者相等，将值加入交集中，两迭代器均++
 - [350. 求两个数组的交数组](https://github.com/Noba1anc3/Leetcode/blob/master/350%20Intersection%20of%20Two%20Arrays%20II.md)
+- [392. 判断A串是否为B串的子序列](https://github.com/Noba1anc3/Leetcode/blob/master/392%20Is%20Subsequence.md)
+  - 如两指针值匹配，后移第一个指针
+  - 无论是否匹配上，后移第二个指针
 
 #### Head-Tail
 
@@ -1108,6 +1110,9 @@ void DFSVisit(int vertex){
     - 如果最远可达距离超过该下标，根据该下标及其数字更新最远可达距离
       - 如果新的最远可达距离超过终点，则可抵达终点
     - 否则，返回不可抵达
+- [122. 多次买卖股票的最大利润](https://github.com/Noba1anc3/Leetcode/blob/master/122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
+  - 遍历每一对前后股票的价格
+  - 如果价格差为正，将其加入到最大利润中
 - [253. 需要几间会议室](https://github.com/Noba1anc3/Leetcode/blob/master/253%20Meeting%20Rooms%20II.md)
   - 每次贪心进入结束时间小于本次会议开始时间的所有会议室中最早结束的一间
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
@@ -1117,6 +1122,12 @@ void DFSVisit(int vertex){
 
   - BFS Based
     - 根据贪心算法的思想，先遍历完同层元素后再遍历下一层是更合理的做法
+- [435. 删除最少的区间使剩下区间无重叠](https://github.com/Noba1anc3/Leetcode/blob/master/435%20Non-overlapping%20Intervals.md)
+  - 对区间按结束时间进行排序
+  - 遍历区间，如果当前区间开始时间晚于上个活动结束时间，更新活动结束时间
+  - 否则，待删除区间数 +1
+- [452. ](https://github.com/Noba1anc3/Leetcode/blob/master/452%20Minimum%20Number%20of%20Arrays%20to%20Burst%20Balloons.md)
+  - 
 - [743. 全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
   - 基于Dijkstra算法
 - [976. 三角形的最大周长](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
