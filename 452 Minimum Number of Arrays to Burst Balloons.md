@@ -58,27 +58,27 @@ Output: 1
 ```c++
 class Solution {
 public:
+    static bool cmp(vector<int>& pA, vector<int>& pB){
+        return pA[1] < pB[1];
+    }
+
     int findMinArrowShots(vector<vector<int>>& points) {
-        if (points.empty())
-            return 0;
+        if (points.empty()) return 0;
 
-        sort(points.begin(), points.end(), [](const vector<int> pA, const vector<int> pB){
-            return pA[1] < pB[1];
-        });
-        
-        int arr = 1, rightPoint = points[0][1];
-        for (auto point : points){
-            if (point[0] > rightPoint){
-                arr++;
-                rightPoint = point[1];
+        sort(points.begin(), points.end(), cmp);
+        int arrows = 1, curEnd = points[0][1];
+
+        for (const vector<int>& point : points)
+            if (point[0] > curEnd){
+                curEnd = point[1];
+                arrows++;
             }
-        }
 
-        return arr;
+        return arrows;
     }
 };
 ```
 
-执行用时：1600 ms, 在所有 C++ 提交中击败了17.02%的用户
+执行用时：120 ms, 在所有 C++ 提交中击败了99.85%的用户
 
-内存消耗：166.8 MB, 在所有 C++ 提交中击败了5.00%的用户
+内存消耗：34.1 MB, 在所有 C++ 提交中击败了41.06%的用户
