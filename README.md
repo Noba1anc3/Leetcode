@@ -407,6 +407,8 @@ void Union(int x, int y) {
 
 #### Huffman Tree
 
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEIkdCy4oUKtQ*cknIk3uZnMsfHM8thT0qlo2pn3VR0S18LV8YynYANQ1n0NHxm5pZslchCZ4b*Ft*DVtFKnGofA!/r)
+
 - [1167. 拼接火柴棍的最小代价](https://github.com/Noba1anc3/Leetcode/blob/master/1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
   - 基于最小堆的哈夫曼树
 
@@ -1116,6 +1118,8 @@ void DFSVisit(int vertex){
 
 ## Greedy
 
+![](http://m.qpic.cn/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEJAetLW06Ii0SiR01HiR9VQaxNgpyr9qwL68YV902EjL5dXWIz3UUs7zUaI098EAzb3aqGSVlnK42OY6a7mGUoc!/b&bo=4wV*AuMFfwIDKQw!&rf=viewer_4)
+
 ### Questions
 
 - [最小生成树 - Prim算法](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
@@ -1147,10 +1151,12 @@ void DFSVisit(int vertex){
   - BFS Based
     - 根据贪心算法的思想，先遍历完同层元素后再遍历下一层是更合理的做法
 - [**435. 删除最少的区间使剩下区间无重叠**](https://github.com/Noba1anc3/Leetcode/blob/master/435%20Non-overlapping%20Intervals.md)
+  - 活动选择问题：删除最少的区间相当于留下最多的区间
   - 对区间按结束时间进行排序
   - 遍历区间，如果当前区间开始时间晚于上个活动结束时间，更新活动结束时间
   - 否则，待删除区间数 +1
 - [**452. 扎破气球所需要的最少数量的箭**](https://github.com/Noba1anc3/Leetcode/blob/master/452%20Minimum%20Number%20of%20Arrays%20to%20Burst%20Balloons.md)
+  - 活动选择问题
   - 对区间按结束时间进行排序
   - 遍历区间，如果当前区间开始时间晚于上个活动结束时间，更新活动结束时间，箭数 +1
 - [743. 全网收到信号需要的时间](https://github.com/Noba1anc3/Leetcode/blob/master/743%20Network%20Delay%20Time.md)
@@ -1167,6 +1173,20 @@ void DFSVisit(int vertex){
 ## Dynamic Programming
 
 ### Questions
+
+- [加权活动选择](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Weighted%20Activity%20Selection.md)
+
+  - 将活动按结束时间排序，构建结束时间早于当前活动开始时间的最晚活动列表`p`
+
+  - 递推数组：`int dp[n+1]`
+
+  - 数组初始化：`dp[0] = 0`
+
+  - 递推公式
+
+    - ```c++
+      dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
+      ```
 
 - [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
 
