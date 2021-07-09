@@ -596,6 +596,8 @@ void DFSVisit(int vertex){
 
 # Algorithm
 
+![](http://r.photo.store.qq.com/psc?/fef49446-40e0-48c4-adcc-654c5015022c/TmEUgtj9EK6.7V8ajmQrENac6FN7FhHXvwTiuUGGpM2jqYZVoghyokllKN.D3NIQPHFW9GsRZcII5eP5K8G1.hWnMMvSTt8b2kZ1DVT7yrU!/r)
+
 ## BFS
 
 ### [Algorithm](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20BFS.md)
@@ -768,6 +770,10 @@ void DFSVisit(int vertex){
 
 ### Quick Sort
 
+#### Algorithm
+
+- [**QuickSort**](https://github.com/Noba1anc3/Leetcode/blob/master/QuickSort.md)
+
 #### Questions
 
 - [**075. 将012的乱序数组恢复顺序**](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
@@ -780,7 +786,7 @@ void DFSVisit(int vertex){
 - [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 外层
     - 迭代法
-      - 更快速
+      - 更快速（只能用在单侧排序，无法用于完整的快排算法）
       - 根据每次pivot，k和数组大小之间的关系来修改left或right指针
     - 递归法
       - 更好写
@@ -793,13 +799,12 @@ void DFSVisit(int vertex){
 - [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [**剑指Offer-40. 最小的K个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 
-### Merge Sort
-
-#### Questions
-
-- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
-
 ### Heap Sort
+
+#### Algorithm
+
+- [**Heap Sort**](https://github.com/Noba1anc3/Leetcode/blob/master/HeapSort.md)
+  - Based on List
 
 #### Questions
 
@@ -813,6 +818,16 @@ void DFSVisit(int vertex){
 - [**剑指Offer-40. 最小的k个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
   - 用最大堆存储前K个数
   - 后面的数只要比堆顶小，就弹出堆顶，将当前数插入堆中
+
+### Merge Sort
+
+#### Algorithm
+
+- [**Merge Sort**](https://github.com/Noba1anc3/Leetcode/blob/master/MergeSort.md)
+
+#### Questions
+
+- [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 
 ### Topological Sort
 
@@ -1063,17 +1078,24 @@ void DFSVisit(int vertex){
 
 ## Divide & Conquer
 
-> 与回溯法类似，均需要设计递归函数。递归的返回条件十分重要，否则将陷入无穷的递归当中。
+> 与回溯法类似，需要设计递归函数。递归的返回条件十分重要，否则将陷入无穷的递归当中。
 >
 > 常规方法：设计一递归方法，首先指明返回条件，而后将数组分为左右两个子数组，递归处理两部分子数组，单独处理整个数组，得到三部分结果后，基于一定规则将三部分合并。
+>
+> - Divide
+>   - Dividing a given problem into two or more subproblems
+> - Conquer
+>   - Solving each subproblem (directly if small enough or recursively)
+> - Combine
+>   - Combining the solutions of the subproblems into a global solution
 
 ### Questions
 
 - [**053. 求数组的最大和连续子数组**](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
-  - Divide
+  - Conquer
     - 递归函数的返回条件为数组的长度为1
     - 问题的解是左半数组，右半数组和整个数组三部分解的最大值
-  - Conquer
+  - Combine
     - 从中间向两边进行扩散，不断更新左右两侧的最大和，返回两侧最大和的和
   - `O(n) = 2 * O(n/2) + O(n) = O(n log n)`
 - 快速排序
@@ -1081,10 +1103,10 @@ void DFSVisit(int vertex){
   - [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
   - [剑指Offer-40. 最小的K个数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [**剑指Offer-51. 数组的逆序对数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
-  - Divide
+  - Conquer
     - 递归函数的返回条件为数组的长度小于等于1
     - 问题的解是左半数组，右半数组和对这两个子数组计算逆序对数三部分解的和
-  - Conquer
+  - Combine
     - 排序两数组
     - 使用首-首双指针向前推进
       - 如果A数组元素小于B数组元素，A指针前移
