@@ -26,7 +26,7 @@ public:
         Heap.push_back(num);
         while (Heap[_get_parent(curIndex)] > Heap[curIndex]){
             swap(Heap[_get_parent(curIndex)], Heap[curIndex]);
-                curIndex = _get_parent(curIndex);
+            curIndex = _get_parent(curIndex);
         }
     }
 
