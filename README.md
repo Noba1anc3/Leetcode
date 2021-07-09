@@ -768,6 +768,8 @@ void DFSVisit(int vertex){
 
 ## Sort
 
+![](http://r.photo.store.qq.com/psc?/fef49446-40e0-48c4-adcc-654c5015022c/TmEUgtj9EK6.7V8ajmQrEAc33.VcF06TJP6HI3KS6o*QBdymPx7ngVeDVYG0T3pssqi.1hGwseWXm11JhZdmvYmGUpfJ1ka2iCJrU2hiooU!/r)
+
 ### Quick Sort
 
 #### Algorithm
