@@ -28,17 +28,17 @@ public:
 
     int Prim(int n, std::vector<std::vector<int>> Graph, std::vector<std::vector<int>> weight, int root) {
         int MSTValue = 0;
-        vector<int> color(n+1, WHITE), key(n+1, INT_MAX);//, pred(n+1, NULL);
+        vector<int> color(n+1, WHITE), key(n+1, INT_MAX), pred(n+1, NULL);
         std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> Q;
-        Q.push(pair<int, int>(0, root));
         key[root] = 0;
+        Q.push(pair<int, int>(0, root));
 
         while (!Q.empty()){
             int curVertex = Q.top().second; Q.pop();
             for (int adjVertex : Graph[curVertex]){
                 if (color[adjVertex] == WHITE && weight[curVertex][adjVertex] < key[adjVertex]){
+                    pred[adjVertex] = curVertex;
                     key[adjVertex] = weight[curVertex][adjVertex];
-                    // pred[adjVertex] = curVertex;
                     Q.push(pair<int, int>(key[adjVertex], adjVertex));
                 }
             }
