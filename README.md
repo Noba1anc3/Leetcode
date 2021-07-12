@@ -1202,6 +1202,16 @@ void DFSVisit(int vertex){
   - 数组初始化：`m[i][i] = 0`
   - 递推公式：`m[i][j] = for k from i to j-1 : min(m[i][k] + m[k+1][j] + pi-1*pk*pj)`
   - 计算顺序：对`j-i`从1到n-1进行计算
+- [最长公共子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
+  - 递推数组：`int dp[m+1][n+1]`
+  - 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
+  - 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = max(dp[i-1][j], dp[i][j-1])`
+  - 计算顺序：先行后列
+- [最长公共子串](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Longest%20Common%20Substring.md)
+  - 递推数组：`int dp[m+1][n+1]`
+  - 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
+  - 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = 0`
+  - 计算顺序：先行后列
 
 - [加权活动选择](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Weighted%20Activity%20Selection.md)
 
@@ -1351,6 +1361,12 @@ integer I = stoi(string)
     
 int -> std::string
 std::string s = to_string(integer)
+```
+
+### list
+
+```c++
+memset(dp, 0, sizeof(dp));
 ```
 
 ### vector
