@@ -34,21 +34,19 @@ public:
         int dp[len1+1][len2+1];
         memset(dp, 0, sizeof(dp));
 
-        for (int i = 1; i <= len1; i++){
+        for (int i = 1; i <= len1; i++)
             for (int j = 1; j <= len2; j++){
-                if (text1[i-1] == text2[j-1]){
+                if (text1[i-1] == text2[j-1])
                     dp[i][j] = dp[i-1][j-1] + 1;
-                }
-                else{
+                else
                     dp[i][j] = max(dp[i][j-1], dp[i-1][j]);
-                }
             }
-        }
 
         return dp[len1][len2];
     }
 };
 ```
-执行用时：12 ms, 在所有 C++ 提交中击败了97.45%的用户
 
-内存消耗：10.7 MB, 在所有 C++ 提交中击败了79.67%的用
+执行用时：8 ms, 在所有 C++ 提交中击败了98.90%的用户
+
+内存消耗：10.4 MB, 在所有 C++ 提交中击败了88.87%的用户
