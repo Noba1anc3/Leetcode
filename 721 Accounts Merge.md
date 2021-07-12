@@ -53,18 +53,13 @@ public:
 
         if (ROOT1 == ROOT2) return;
         
-        if (height[ROOT1] <= height[ROOT2]){
-            parent[ROOT2] = ROOT1;
-            height[ROOT2] = height[ROOT1] + 1;
-            parent[y] = ROOT1;
-            height[y] = height[ROOT1] + 1;
-        }
-        else{
+        if (height[ROOT1] <= height[ROOT2]) {
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
             parent[ROOT1] = ROOT2;
-            height[ROOT1] = height[ROOT2] + 1;
-            parent[x] = ROOT2;
-            height[x] = height[ROOT2] + 1;
         }
+        else
+            parent[ROOT2] = ROOT1;
     }
 
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
@@ -118,9 +113,9 @@ public:
 };
 ```
 
-执行用时：132 ms, 在所有 C++ 提交中击败了55.61%的用户
+执行用时：80 ms, 在所有 C++ 提交中击败了97.72%的用户
 
-内存消耗：37.1 MB, 在所有 C++ 提交中击败了49.59%的用户
+内存消耗：37.1 MB, 在所有 C++ 提交中击败了49.24%的用户
 
 Attention
 
