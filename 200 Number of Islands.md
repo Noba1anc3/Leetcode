@@ -342,17 +342,12 @@ public:
         int ROOT2 = Find_Set(key2);
 
         if (height[ROOT1] <= height[ROOT2]) {
-            parent[ROOT2] = ROOT1;
-            height[ROOT2] = height[ROOT1] + 1;
-            parent[key2] = ROOT1;
-            height[key2] = height[ROOT1] + 1;
-        }
-        else {
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
             parent[ROOT1] = ROOT2;
-            height[ROOT1] = height[ROOT2] + 1;
-            parent[key1] = ROOT2;
-            height[key1] = height[ROOT2] + 1;
         }
+        else
+            parent[ROOT2] = ROOT1;
     }
 
     void Create_Set(int i, int j) {
@@ -403,6 +398,6 @@ vector<int>::iterator it = find(keys.begin(), keys.end(), key)
 if (it == keys.end()) // not found
 ```
 
-执行用时：40 ms, 在所有 C++ 提交中击败了5.20%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了84.32%的用户
 
-内存消耗：10.2 MB, 在所有 C++ 提交中击败了26.41%的用户
+内存消耗：9.9 MB, 在所有 C++ 提交中击败了22.24%的用户
