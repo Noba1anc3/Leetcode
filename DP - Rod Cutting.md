@@ -1,10 +1,11 @@
 ```c++
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int Rod_Cutting(vector<int> p, int n){
-	vector<int> r(n+1, 0), cut(n+1, 0);
+    vector<int> r(n+1, 0), cut(n+1, 0);
     for (int i = 1; i <= n; i++){
         int revenue = -1;
         for (int j = 1; j <= i; j++){
