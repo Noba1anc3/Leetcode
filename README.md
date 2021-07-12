@@ -261,17 +261,12 @@ void Union(int x, int y) {
     if (ROOT1 == ROOT2) return;
     
     if (height[ROOT1] <= height[ROOT2]) {
-        parent[ROOT2] = ROOT1;
-        height[ROOT2] = height[ROOT1] + 1;
-        parent[y] = ROOT1;
-        height[y] = height[ROOT1] + 1;
-    }
-    else{
+        if (height[ROOT1] == height[ROOT2])
+            height[ROOT2]++;
         parent[ROOT1] = ROOT2;
-        height[ROOT1] = height[ROOT2] + 1;
-        parent[x] = ROOT2;
-        height[x] = height[ROOT2] + 1;
     }
+    else
+        parent[ROOT2] = ROOT1;
 }
 ```
 
@@ -527,11 +522,15 @@ void DFSVisit(int vertex){
 
 ### Minimum Spanning Tree
 
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEBQN2l.IIpK8EcEWD.mOcOTQlRK8*V56pNguDzWpnRYLSjqwD5e4fqoHw5RA7GqBWEMAjK5ULsnvmMph9PZ.dR4!/r)
+
 #### Implementation
 
 ##### [Prim](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Prim.md)
 
 > Priority Queue Based
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEKnMEBfDUZvZ2HSunq7PInwYcYSfuuWmgAK9izhyP3rC8sck.mKscowxAwqXMyo5QfzApkuuIIw7kpkgEovJNeU!/r)
 
 - 构建边和权重vector时要将边的两个端点都赋值
 - 基于 pair<key, vertex> 构建最小堆（优先队列）
