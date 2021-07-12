@@ -9,19 +9,18 @@ vector<vector<int>> split(n+1, vector<int>(n+1, 0));
 
 void print(int i,int j)
 {
-	if(i == j)
-	{
-		cout<<"A["<<i<<"]";
-		return;
-	}
-	cout<<"(";
-	print(i, split[i][j]);
-	print(split[i][j]+1, j);
-	cout<<")";
+    if(i == j)
+    {
+        cout<<"A["<<i<<"]";
+        return;
+    }
+    cout<<"(";
+    print(i, split[i][j]);
+    print(split[i][j]+1, j);
+    cout<<")";
 }
 
 int Matrix_Multiplication(vector<int> p, int n){
-
     for (int l = 2; l <= n; l++){
         for (int i = 1; i <= n - l + 1; i++){
             int j = i + l - 1;
@@ -50,9 +49,3 @@ int main()
     return 0;
 }
 ```
-
-Attention
-
-- vector<vector<int>> dp(n+1, vector<int>(n+1, 0));
-- INT_MAX
-- to_string(int)
