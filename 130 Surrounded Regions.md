@@ -59,17 +59,12 @@ public:
             return;
 
         if (height[ROOT1] <= height[ROOT2]) {
-            parent[ROOT2] = ROOT1;
-            parent[y] = ROOT1;
-            height[ROOT2] = height[ROOT1] + 1;
-            height[y] = height[ROOT1] + 1;
-        }
-        else {
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
             parent[ROOT1] = ROOT2;
-            parent[x] = ROOT2;
-            height[ROOT1] = height[ROOT2] + 1;
-            height[x] = height[ROOT2] + 1;
         }
+        else
+            parent[ROOT2] = ROOT1;
     }
 
     void solve(std::vector<std::vector<char>>& board) {
@@ -129,9 +124,9 @@ public:
 };
 ```
 
-执行用时：20 ms, 在所有 C++ 提交中击败了32.31%的用户
+执行用时：12 ms, 在所有 C++ 提交中击败了91.07%的用户
 
-内存消耗：10.2 MB, 在所有 C++ 提交中击败了18.99%的用户
+内存消耗：10.3 MB, 在所有 C++ 提交中击败了17.93%的用户
 
 Attention:
 
