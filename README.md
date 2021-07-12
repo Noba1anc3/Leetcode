@@ -569,7 +569,7 @@ void DFSVisit(int vertex){
       - 将邻结点的pair推进队列
   - 将当前结点的颜色改为黑色
 
-##### [Bellman-Ford]()
+##### [Bellman-Ford](https://github.com/Noba1anc3/Leetcode/blob/master/Bellman_Ford.md)
 
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEITMgCJbeCIg7E2dx2akan5AaI9RojufYfQ0CNadGpIZp.qNbU7SR40pSYgb4uNaiANXc4nZY9gjwtsFCIz1rTE!/r)
 
@@ -1188,6 +1188,20 @@ void DFSVisit(int vertex){
 ## Dynamic Programming
 
 ### Questions
+
+- [0-1背包](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%2001%20Knapsack.md)
+  - 递推数组：`int V[i, w]`
+  - 数组初始化：`V[0,w] = 0`
+  - 递推公式：`V[i, w] = max(V[i-1,w], vi + V[i-1, w - wi])`
+- [切割钢条](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Rod%20Cutting.md)
+  - 递推数组：`int r[n+1]`
+  - 数组初始化：`r[0] = 0`
+  - 递推公式：`r[j] = for i from 1 to j : max(p[i] + r[j - i])`
+- [矩阵乘积](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Matrix%20Multiplication.md)
+  - 递推数组：`int m[n+1][n+1]`
+  - 数组初始化：`m[i][i] = 0`
+  - 递推公式：`m[i][j] = for k from i to j-1 : min(m[i][k] + m[k+1][j] + pi-1*pk*pj)`
+  - 计算顺序：对`j-i`从1到n-1进行计算
 
 - [加权活动选择](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Weighted%20Activity%20Selection.md)
 
