@@ -45,6 +45,7 @@ c++
 class Solution {
 private:
     vector<int> parent;
+    vector<int> height;
     vector<string> equal;
     vector<string> unequal;
     unordered_map<char, int> M;
@@ -63,9 +64,13 @@ public:
         if (ROOT1 == ROOT2)
             return;
         
-        parent[ROOT2] = ROOT1;
-        parent[x] = ROOT1;
-        parent[y] = ROOT1;
+        if (height[ROOT1] <= height[ROOT2]) {
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
+            parent[ROOT1] = ROOT2;
+        }
+        else
+            parent[ROOT2] = ROOT1;
     }
 
     bool equationsPossible(vector<string>& equations) {
@@ -84,9 +89,12 @@ public:
         }
 
         parent.resize(n);
-        for (int i = 1; i < n; i++)
+        height.resize(n);
+        for (int i = 1; i < n; i++){
             parent[i] = i;
-
+            height[i] = 1;
+        }
+        
         for (string& equation : equal)
             Union(M[equation[0]], M[equation[3]]);
 
@@ -130,16 +138,12 @@ public:
             return;
         
         if (height[ROOT1] <= height[ROOT2]) {
-            parent[ROOT2] = ROOT1;
-            height[ROOT2] = height[ROOT1] + 1;
-            parent[y] = ROOT1;
-            height[y] = height[ROOT1] + 1;
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
+            parent[ROOT1] = ROOT2;
         }
         else{
-            parent[ROOT1] = ROOT2;
-            height[ROOT1] = height[ROOT2] + 1;
-            parent[x] = ROOT2;
-            height[x] = height[ROOT2] + 1;
+            parent[ROOT2] = ROOT1;
         }
     }
 
