@@ -12,7 +12,6 @@ class Solution {
 private:
     struct Edge{
         int Vertex1;
-
         int Vertex2;
         int Weight;
     };
@@ -22,10 +21,8 @@ public:
     std::vector<Edge> convertEdge(std::vector<std::vector<int>> weight){
         std::vector<Edge> Weights;
         for (int src = 1; src < weight.size(); src++){
-            std::vector<int> srcEdges = weight[src];
             for (int dst = 1; dst < weight.size(); dst++){
-                int w = weight[src][dst];
-                if (w != INT_MAX){
+                if (weight[src][dst] != INT_MAX){
                     Edge edge;
                     edge.Vertex1 = src;
                     edge.Vertex2 = dst;
@@ -46,9 +43,8 @@ public:
     }
 
     int Find_Set(int x){
-        while (parent[x] != x){
+        while (parent[x] != x)
             x = parent[x];
-        }
         return x;
     }
 
@@ -56,16 +52,15 @@ public:
         int ROOT1 = Find_Set(x);
         int ROOT2 = Find_Set(y);
 
-        if (height[ROOT1] <= height[ROOT2]){
-            parent[ROOT2] = ROOT1;
-            height[ROOT2] = height[ROOT1] + 1;
-        }
-        else{
+        if (height[ROOT1] <= height[ROOT2]) {
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
             parent[ROOT1] = ROOT2;
-            height[ROOT1] = height[ROOT2] + 1;
         }
+        else
+            parent[ROOT2] = ROOT1;
     }
-
+    
     static bool cmp(Edge E1, Edge E2){
         return E1.Weight < E2.Weight;
     }
