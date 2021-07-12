@@ -526,7 +526,7 @@ void DFSVisit(int vertex){
 
 ### Minimum Spanning Tree
 
-![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEBQN2l.IIpK8EcEWD.mOcOTQlRK8*V56pNguDzWpnRYLSjqwD5e4fqoHw5RA7GqBWEMAjK5ULsnvmMph9PZ.dR4!/r)
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEBQN2l.IIpK8EcEWD.mOcOTQlRK8*V56pNguDzWpnRYLSjqwD5e4fqoHw5RA7GqBWEDUYy1mX7fTtY4CXGZ.NrM!/r)
 
 #### Implementation
 
@@ -553,9 +553,13 @@ void DFSVisit(int vertex){
 
 ### Single Source Shortest Path
 
-#### [Algorithm - Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
+#### Implementation
+
+##### [Dijkstra](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Dijkstra.md)
 
 > Priority Queue Based
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEHphHvi5bErf*H6dfYFOJ1cGugzyC2oZIjXk3ZPKWrfO.aJV*NEbr*izyEwyc6IwjjDFThdrdhwyuNvMGcer*ok!/r)
 
 - 基于 pair<dist, vertex> 构建最小堆（优先队列）
 - 只要队列不空
@@ -564,6 +568,12 @@ void DFSVisit(int vertex){
       - 修改邻结点的距离
       - 将邻结点的pair推进队列
   - 将当前结点的颜色改为黑色
+
+##### [Bellman-Ford]()
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEITMgCJbeCIg7E2dx2akan5AaI9RojufYfQ0CNadGpIZp.qNbU7SR40pSYgb4uNaiANXc4nZY9gjwtsFCIz1rTE!/r)
+
+检查有向图中是否存在负权重环
 
 #### Questions
 
