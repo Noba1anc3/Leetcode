@@ -3,12 +3,11 @@
 #include <vector>
 using namespace std;
 
-int Knapsack(int W, vector<int> w, vector<int> v){
-    int n = w.size();
-	int V[n+1][W+1], keep[n+1][W+1];
+int Knapsack(int n, int W, vector<int> w, vector<int> v){
+    int V[n+1][W+1], keep[n+1][W+1];
 
-    for (int i = 0; i <= W; i++)
-        V[0][i] = 0;
+    for (int w = 0; w <= W; w++)
+        V[0][w] = 0;
 
     for (int i = 1; i <= n; i++){
         for (int j = 0; j <= W; j++){
@@ -39,13 +38,13 @@ int Knapsack(int W, vector<int> w, vector<int> v){
 
 int main()
 {
+    int n = 4;
     int W = 10;
     vector<int> w = {0, 5, 4, 6, 3};
     vector<int> v = {0, 10, 40, 30, 50};
 
-    Knapsack(W, w, v);
+    Knapsack(n, W, w, v);
 
     return 0;
 }
 ```
-
