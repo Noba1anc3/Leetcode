@@ -1,16 +1,16 @@
 ```c++
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int n = 4;
 vector<vector<int>> dp(n+1, vector<int>(n+1, 0));
 vector<vector<int>> split(n+1, vector<int>(n+1, 0));
 
-void print(int i,int j)
+void print(int i, int j)
 {
-    if(i == j)
-    {
+    if(i == j){
         cout<<"A["<<i<<"]";
         return;
     }
@@ -21,9 +21,9 @@ void print(int i,int j)
 }
 
 int Matrix_Multiplication(vector<int> p, int n){
-    for (int l = 2; l <= n; l++){
-        for (int i = 1; i <= n - l + 1; i++){
-            int j = i + l - 1;
+    for (int l = 1; l <= n - 1; l++){
+        for (int i = 1; i <= n - l; i++){
+            int j = i + l;
             dp[i][j] = INT_MAX;
             for (int k = i; k < j; k++){
                 int q = dp[i][k] + dp[k+1][j] + p[i-1]*p[k]*p[j];
