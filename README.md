@@ -237,6 +237,10 @@
 
 ## Union-Find Set
 
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEFy3QO5ubD6pAPAzUY7otgbBuBb34JPwThL1qeVkpgW0Zg2qr*9MnrqkinYmqbYWd4dtlqbc0YpAWVYUGtWGSQ0!/r)
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEKQE0fRjdyuxRXmgfj3VdB.j2m4ewQFksQKXlDuzB8tdv6dLpKYcrfKbB*6h44qPE9OVqbzIIVCkkyHx3FONV*w!/r)
+
 ### Implementation
 
 ```c++
@@ -544,6 +548,8 @@ void DFSVisit(int vertex){
 ##### [Kruskal](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Kruskal.md)
 
 > Union-Find Set Based
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEIAXtRZjacc5ITbgkTl377nd3ithzbPfIQAlED3LRd8KwpTlf4vOk0xqy1fBINca7odfWrQyhcBBz4pWjWAoI84!/r)
 
 ### Single Source Shortest Path
 
