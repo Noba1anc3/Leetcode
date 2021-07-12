@@ -143,16 +143,12 @@ public:
         if (ROOT1 == ROOT2) return false;
 
         if (height[ROOT1] <= height[ROOT2]) {
-            parent[ROOT2] = ROOT1;
-            parent[y] = ROOT1;
-            height[ROOT2] = height[ROOT1] + 1;
-            height[y] = height[ROOT1] + 1;
+            if (height[ROOT1] == height[ROOT2])
+                height[ROOT2]++;
+            parent[ROOT1] = ROOT2;
         }
         else{
-            parent[ROOT1] = ROOT2;
-            parent[x] = ROOT2;
-            height[ROOT1] = height[ROOT2] + 1;
-            height[x] = height[ROOT2] + 1;
+            parent[ROOT2] = ROOT1;
         }
 
         return true;
@@ -177,6 +173,6 @@ public:
 };
 ```
 
-执行用时：20 ms, 在所有 C++ 提交中击败了74.74%的用户
+执行用时：12 ms, 在所有 C++ 提交中击败了98.64%的用户
 
-内存消耗：11.7 MB, 在所有 C++ 提交中击败了72.63%的用户
+内存消耗：11.7 MB, 在所有 C++ 提交中击败了75.25%的用户
