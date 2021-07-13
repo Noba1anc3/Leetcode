@@ -150,6 +150,7 @@
 
 ## Double Pointer
 
+- [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆ 021. Merge Two Sorted Lists ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 125. Valid Palindrome ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
