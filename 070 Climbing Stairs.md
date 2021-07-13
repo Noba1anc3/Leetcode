@@ -60,21 +60,21 @@ public:
 ```c++
 class Solution {
 public:
-    int numWays(int n) {
-        int a = 1, b = 1, tmp;
+    int climbStairs(int n) {
+        int a = 1, b = 1, c = 1;
         for (int i = 2; i <= n; i++){
-            tmp = (a + b) % int(1e9+7);
+            c = a + b;
             a = b;
-            b = tmp;
+            b = c;
         }
-        return b;
+        return c;
     }
 };
 ```
 
 执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
 
-内存消耗：6.1 MB, 在所有 C++ 提交中击败了50.23%的用户
+内存消耗：5.9 MB, 在所有 C++ 提交中击败了56.23%的用户
 
 复杂度分析
 - 时间复杂度：循环执行 n 次，每次花费常数的时间代价，故渐进时间复杂度为 O(n)
