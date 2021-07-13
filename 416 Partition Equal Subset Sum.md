@@ -82,8 +82,7 @@ public:
         int target = accumulate(nums.begin(), nums.end(), 0);
         int maxElement = *max_element(nums.begin(), nums.end());
 
-        if (judge(size, target, maxElement))
-            return false;
+        if (judge(size, target, maxElement)) return false;
 
         target /= 2;
         vector<vector<bool>> dp(size, vector<bool>(target+1, false));
@@ -105,7 +104,7 @@ public:
             }
             // 自上向下的传递性
             if (dp[i][target] == true)
-                return true
+                return true;
         }
 
         return dp[size-1][target];
@@ -115,21 +114,19 @@ public:
 
 传递性优化前:
 
-- 执行用时：972 ms, 在所有 C++ 提交中击败了10.68%的用户
+执行用时：972 ms, 在所有 C++ 提交中击败了10.68%的用户
 
-- 内存消耗：11.9 MB, 在所有 C++ 提交中击败了30.89%的用户
+内存消耗：11.9 MB, 在所有 C++ 提交中击败了30.89%的用户
 
 传递性优化后:
 
-- 执行用时：584 ms, 在所有 C++ 提交中击败了39.69%的用户
+执行用时：128 ms, 在所有 C++ 提交中击败了83.88%的用户
 
-- 内存消耗：12.1 MB, 在所有 C++ 提交中击败了25.28%的用户
+内存消耗：11.6 MB, 在所有 C++ 提交中击败了35.18%的用户
 
 Attention:
 - accumulate(nums.begin(), nums.end(), 0);
 - *max_element(nums.begin(), nums.end());
-
-- vector<vector<bool>> dp(size, vector<bool>(target+1, false));
 
 ## Idea - Phase II
 
