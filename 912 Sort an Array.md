@@ -9,7 +9,7 @@ Output: [1,2,3,5]
 
 ## Solution
 
-### Quicksort
+### Quick Sort
 
 #### 前后双指针分割
 
@@ -96,7 +96,7 @@ public:
 
 内存消耗：27.8 MB, 在所有 C++ 提交中击败了30.24%的用户
 
-### HeapSort
+### Heap Sort
 
 ```c++
 class HeapSort {
@@ -167,7 +167,7 @@ public:
 
 内存消耗：31.2 MB, 在所有 C++ 提交中击败了8.01%的用户
 
-### MergeSort
+### Merge Sort
 
 ```c++
 class Solution {
@@ -207,7 +207,7 @@ public:
 };
 ```
 
-### CountSort
+### Count Sort
 
 仅限非负数组
 
