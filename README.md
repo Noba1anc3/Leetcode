@@ -783,7 +783,14 @@ void DFSVisit(int vertex){
 - [剑指Offer-24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
   - 前后双指针
 
+#### Diffuse
+
+- [005. 最长回文子串](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
+  - 从字符串每个位置开始，进行奇数长度和偶数长度回文串的双指针中心扩散查找
+
 ## Sort
+
+[912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 
 ![](http://r.photo.store.qq.com/psc?/fef49446-40e0-48c4-adcc-654c5015022c/TmEUgtj9EK6.7V8ajmQrEAc33.VcF06TJP6HI3KS6o*QBdymPx7ngVeDVYG0T3pssqi.1hGwseWXm11JhZdmvYmGUpfJ1ka2iCJrU2hiooU!/r)
 
@@ -815,7 +822,6 @@ void DFSVisit(int vertex){
     - 前后双指针
     - 首尾双指针
     - **随机快排**：`int pivotIndex = rand() % (right - left + 1) + left;`
-- [912. 排序数组](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
 - [**剑指Offer-40. 最小的K个数**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 
 ### Heap Sort
@@ -1190,34 +1196,47 @@ void DFSVisit(int vertex){
 ### Questions
 
 - [0-1背包](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%2001%20Knapsack.md)
+
   - 递推数组：`int V[i, w]`
   - 数组初始化：`V[0,w] = 0`
   - 递推公式：`V[i, w] = max(V[i-1,w], vi + V[i-1, w - wi])`
+
 - [切割钢条](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Rod%20Cutting.md)
+
   - 递推数组：`int r[n+1]`
   - 数组初始化：`r[0] = 0`
   - 递推公式：`r[j] = for i from 1 to j : max(p[i] + r[j - i])`
+
 - [矩阵乘积](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Matrix%20Multiplication.md)
+
   - 递推数组：`int m[n+1][n+1]`
   - 数组初始化：`m[i][i] = 0`
   - 递推公式：`m[i][j] = for k from i to j-1 : min(m[i][k] + m[k+1][j] + pi-1*pk*pj)`
   - 计算顺序：对`j-i`从1到n-1进行计算
+
 - [最长公共子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
+
   - 递推数组：`int dp[m+1][n+1]`
   - 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
   - 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = max(dp[i-1][j], dp[i][j-1])`
   - 计算顺序：先行后列
+
 - [最长公共子串](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Longest%20Common%20Substring.md)
+
   - 递推数组：`int dp[m+1][n+1]`
   - 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
   - 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = 0`
   - 计算顺序：先行后列
+
 - [最小编辑距离](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
+
   - 递推数组：`int dp[m+1][n+1]`
   - 数组初始化：`dp[i][0] = i; dp[0][j] = j`
   - 递推公式：`dp[i][j] = min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + c)`
   - 计算顺序：先行后列
+
 - [最优平衡二叉树](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Optimal%20BST.md)
+
   - 递推数组：`int e[n+1][n+1]`
   - 数组初始化：`e[i][i-1] = qi-1`
   - 递推公式：`e[i][j] = for r from i to j : min(e[i][r-1] + e[r+1][j] + w[i][j])`
@@ -1237,11 +1256,33 @@ void DFSVisit(int vertex){
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
       ```
 
+- [005. 最长回文子串](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
+
+  - 递推数组：`int dp[n][n]`
+  - 数组初始化：`dp[i][i] = 1; dp[i][i+1] = (s[i] == s[i+1])`
+  - 递推公式：`dp[i][j] = dp[i+1][j-1] && s[i] == s[j]`
+  - 计算顺序：对`j-i`从0到n-1，i从0进行计算
+
+- [032. 最长有效括号串长度](https://github.com/Noba1anc3/Leetcode/blob/master/032%20Longest%20Valid%20Parentheses.md)
+
+  - 递推数组：`int dp[n]`
+
+  - 数组初始化：`dp[i] = 0`
+
+  - 递推公式：
+
+    - ```c++
+      if s[i] = ')' && s[i-1] = '(':
+      	dp[i] = (i >= 2) ? dp[i-2] + 2 : 2;
+      if s[i] = ')' && s[i-1] = ')' && i - 1 - dp[i-1] >= 0 && s[i-1-dp[i-1]] = '('
+      	dp[i] = (i - dp[i-1] >= 2) ? dp[i-1] + 2 + dp[i-2-dp[i-1]] : dp[i-1] + 2
+      ```
+
 - [053. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
 
-  - ```c++
-    curAns = max(curAns + x, x)
-    ```
+  - 递推公式：`curAns = max(curAns + x, x)`
+
+- [070. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
 
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
