@@ -11,6 +11,8 @@ Output: [1,2,3,5]
 
 ### Quick Sort
 
+Lecture-04 Polynomial Multiplication & Quicksort - p75
+
 #### 前后双指针分割
 
 ```c++
@@ -97,6 +99,8 @@ public:
 内存消耗：27.8 MB, 在所有 C++ 提交中击败了30.24%的用户
 
 ### Heap Sort
+
+Lecture-05 Heapsort & Lower Bound - p6
 
 ```c++
 class HeapSort {
@@ -208,6 +212,8 @@ public:
 ```
 
 ### Count Sort
+
+Lecture-08 Midterm Review - p12
 
 仅限非负数组，非基于比较的排序算法
 
