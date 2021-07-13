@@ -1212,6 +1212,16 @@ void DFSVisit(int vertex){
   - 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
   - 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = 0`
   - 计算顺序：先行后列
+- [最小编辑距离](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
+  - 递推数组：`int dp[m+1][n+1]`
+  - 数组初始化：`dp[i][0] = i; dp[0][j] = j`
+  - 递推公式：`dp[i][j] = min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + c)`
+  - 计算顺序：先行后列
+- [最优平衡二叉树](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Optimal%20BST.md)
+  - 递推数组：`int e[n+1][n+1]`
+  - 数组初始化：`e[i][i-1] = qi-1`
+  - 递推公式：`e[i][j] = for r from i to j : min(e[i][r-1] + e[r+1][j] + w[i][j])`
+  - 计算顺序：对`j-i`从0到n-1，i从1到n进行计算
 
 - [加权活动选择](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Weighted%20Activity%20Selection.md)
 
