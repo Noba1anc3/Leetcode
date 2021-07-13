@@ -30,9 +30,9 @@ Output: "a"
 
 *P*(*i*, *i*+1) = (*S*i == *S*i + 1)
 
-## Solution - I
+## Solution
 
-c++
+### c++
 
 ```c++
 class Solution {
@@ -49,9 +49,9 @@ public:
                     dp[i][j] = 1;
                 else if (l == 2)
                     dp[i][j] = (s[i]==s[j]);
-                else{
+                else
                     dp[i][j] = (dp[i+1][j-1] && s[i]==s[j]); 
-                }
+
                 if (dp[i][j] && l > ans.size())
                     ans = s.substr(i, l);
             }
@@ -61,15 +61,15 @@ public:
     }
 };
 ```
-执行用时：536 ms, 在所有 C++ 提交中击败了32.05%的用户
 
-内存消耗：29 MB, 在所有 C++ 提交中击败了49.00%的用户
+执行用时：384 ms, 在所有 C++ 提交中击败了45.44%的用户
+
+内存消耗：28.7 MB, 在所有 C++ 提交中击败了57.83%的用户
 
 Attention
-
 - 由短到长的遍历
 
-java
+### java
 
 ```java
 class Solution {
@@ -98,7 +98,6 @@ class Solution {
 ```
 
 Attention
-
 - String.length()
 - boolean[] array = new boolean[n]
 - String.charAt(i)
