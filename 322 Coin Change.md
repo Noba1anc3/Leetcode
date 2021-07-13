@@ -50,33 +50,6 @@ public:
 
 内存消耗：14 MB, 在所有 C++ 提交中击败了81.93%的用户
 
-
-Change Vector to List can speed up time and cost lower space
-
-```c++
-class Solution {
-public:
-    int coinChange(vector<int>& coins, int amount) {
-        int dp[amount + 1];
-    
-        dp[0] = 0;
-        for (int i = 1; i <= amount; i++)
-            dp[i] = amount + 1;
-            
-        for (int i = 1; i <= amount; i++)
-            for (const int& coin : coins)
-                if (coin <= i)
-                    dp[i] = min(dp[i], dp[i - coin] + 1);
-
-        return dp[amount] > amount ? -1 : dp[amount];
-    }
-};
-```
-
-执行用时：44 ms, 在所有 C++ 提交中击败了92.44%的用户
-
-内存消耗：9.7 MB, 在所有 C++ 提交中击败了98.67%的用户
-
 **复杂度分析**
 
 - 时间复杂度：`O(Sn)`，其中 `S` 是金额，`n` 是面额数。我们一共需要计算 `O(S)` 个状态，`S` 为题目所给的总金额。对于每个状态，每次需要枚举 `n` 个面额来转移状态，所以一共需要 `O(Sn)` 的时间复杂度。
