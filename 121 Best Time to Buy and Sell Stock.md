@@ -33,24 +33,19 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        if (prices.empty())
-            return 0;
-
-        int minPrice = prices[0];
-        int maxProfit = 0;
-
+        int minPrice = prices[0], maxProfit = 0;
         for (const int& price : prices){
-            minPrice = min(minPrice, price);
             maxProfit = max(maxProfit, price - minPrice);
+            minPrice = min(minPrice, price);
         }
-
         return maxProfit;
     }
 };
 ```
-执行用时：112 ms, 在所有 C++ 提交中击败了19.51%的用户
 
-内存消耗：91.1 MB, 在所有 C++ 提交中击败了11.63%的用户
+执行用时：88 ms, 在所有 C++ 提交中击败了99.81%的用户
+
+内存消耗：91.1 MB, 在所有 C++ 提交中击败了75.20%的用户
 
 ### java
 
@@ -79,7 +74,6 @@ class Solution {
 内存消耗：38.4 MB, 在所有 Java 提交中击败了63.46%的用户
 
 Attention
-
 - list.length
 - Math.max(a, b)
 - Math.min(a, b)
