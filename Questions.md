@@ -269,6 +269,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ Matrix Multiplication ☆☆](DP%20-%20Matrix%20Multiplication.md)
 - [☆☆ Longest Common Subsequence ☆☆](1143%20Longest%20Common%20Subsequence.md)
 - [☆☆ Longest Common Substring ☆☆](DP%20-%20Longest%20Common%20Substring.md)
+- [☆☆ Edit Distance ☆☆](072%20Edit%20Distance.md)
 - [☆☆ Optimal Binary Search Tree ☆☆](DP%20-%20Optimal%20BST.md)
 - [☆☆ Weighted Activity Selection ☆☆](DP%20-%20Weighted%20Activity%20Selection.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
