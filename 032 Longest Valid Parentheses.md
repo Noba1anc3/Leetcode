@@ -40,10 +40,13 @@ Output: 0
 class Solution {
 public:
     int longestValidParentheses(string s) {
-        int len = s.size(), dpMax = 0;
-        vector<int> dp(len, 0);
+        if (s.size() == 0) return 0;
+        
+        int dpMax = 0;
+        int dp[s.size()];
+        memset(dp, 0, sizeof(dp));
 
-        for (int i = 1; i < len; i++)
+        for (int i = 1; i < s.size(); i++)
             if (s[i] == ')'){
                 if (s[i-1] == '(')
                     dp[i] = (i >= 2) ? dp[i-2] + 2 : 2;
