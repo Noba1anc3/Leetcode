@@ -33,9 +33,10 @@ Explanation: The array cannot be partitioned into equal sum subsets.
 
 在使用动态规划求解之前，首先需要进行以下判断.
 
-- 根据数组的长度 n 判断数组是否可以被划分。如果 n<2，则不可能将数组分割成元素和相等的两个子集，因此直接返回 false.
-
-- 计算整个数组的元素和 `sum` 以及最大元素 `maxNum`。如果 `sum` 是奇数，则不可能将数组分割成元素和相等的两个子集，因此直接返回 `false`。如果 `sum` 是偶数，则令 `target`=sum/2 ，需要判断是否可以从数组中选出一些数字，使得这些数字的和等于`target`。如果 `maxNum ` > `target` ，则除了 `maxNum `以外的所有元素之和一定小于 `target`，因此不可能将数组分割成元素和相等的两个子集，直接返回 `false`.
+- 根据数组的长度 n 判断数组是否可以被划分。如果 n<2，则不可能将数组分割成元素和相等的两个子集，因此直接返回 false
+- 计算整个数组的元素和 `sum` 以及最大元素 `maxNum`
+- 如果 `sum` 是奇数，则不可能将数组分割成元素和相等的两个子集，直接返回 `false`
+- 如果 `sum` 是偶数，则令 `target`=sum/2 ，如果 `maxNum ` > `target` ，则除 `maxNum `以外的所有元素之和一定小于 `target`，直接返回 `false`
 
 ### DP
 
