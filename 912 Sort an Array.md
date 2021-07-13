@@ -11,58 +11,95 @@ Output: [1,2,3,5]
 
 ### Quicksort
 
-c++
+#### 前后双指针分割
 
 ```c++
 class Solution {
 public:
-    vector<int> sortArray(vector<int>& nums) {
-        QuickSort(nums, 0, nums.size() - 1);
-        return nums;
-    }
+    int partition(vector<int>& nums, int p, int q) {
+        int pivotIndex = rand() % (q - p + 1) + p;
+        swap(nums[q], nums[pivotIndex]);
 
-    void QuickSort(vector<int>& nums, int p, int q){
-        if (p < q){
-            int r = Partition(nums, p, q);
-            QuickSort(nums, p, r-1);
-            QuickSort(nums, r+1, q);
-        }
-    }
-
-    int Partition(vector<int>& nums, int p, int q){
         int i = p - 1;
         int pivot = nums[q];
 
         for (int j = p; j < q; j++){
             if (nums[j] < pivot){
-                i += 1;
+                i++;
                 swap(nums[i], nums[j]);
             }
         }
 
         swap(nums[i+1], nums[q]);
 
-        return i + 1;
+        return i+1;
+    }
+
+    void QuickSort(vector<int>& nums, int p, int q) {
+        if (p < q) {
+            int r = partition(nums, p, q);
+            QuickSort(nums, p, r-1);
+            QuickSort(nums, r+1, q);
+        }
+    }
+
+    vector<int> sortArray(vector<int>& nums) {
+        QuickSort(nums, 0, nums.size() - 1);
+        return nums;
     }
 };
-
 ```
 
-执行用时：44 ms, 在所有 C++ 提交中击败了84.28%的用户
+执行用时：48 ms, 在所有 C++ 提交中击败了80.23%的用户
 
-内存消耗：15.6 MB, 在所有 C++ 提交中击败了30.92%的用户
+内存消耗：27.8 MB, 在所有 C++ 提交中击败了47.27%的用户
 
-Attention:
+#### 首尾双指针分割
 
-- 快排的退出条件不能忘记
-- &传地址
-- swap
+```c++
+class Solution {
+public:
+    int partition(vector<int>& nums, int p, int q) {
+        int pivotIndex = rand() % (q - p + 1) + p;
+        swap(nums[q], nums[pivotIndex]);
+
+        int pivot = nums[q];
+        int l = p, r = q-1;
+
+        while (true) {
+            while (l <= q && nums[l] < pivot) l++;
+            while (r >= p && nums[r] > pivot) r--;
+            if (l > r) break;
+            swap(nums[l++], nums[r--]);
+        }
+
+        swap(nums[l], nums[q]);
+        return l;
+    }
+
+    void QuickSort(vector<int>& nums, int p, int q) {
+        if (p < q) {
+            int r = partition(nums, p, q);
+            QuickSort(nums, p, r-1);
+            QuickSort(nums, r+1, q);
+        }
+    }
+
+    vector<int> sortArray(vector<int>& nums) {
+        QuickSort(nums, 0, nums.size() - 1);
+        return nums;
+    }
+};
+```
+
+执行用时：40 ms, 在所有 C++ 提交中击败了85.32%的用户
+
+内存消耗：27.8 MB, 在所有 C++ 提交中击败了30.24%的用户
 
 ### HeapSort
 
-c++
 ```c++
-class Solution {
+class HeapSort {
 private:
     vector<int> Heap;
 
@@ -89,7 +126,7 @@ public:
         Heap.push_back(num);
         while (Heap[_get_parent(curIndex)] > Heap[curIndex]){
             swap(Heap[_get_parent(curIndex)], Heap[curIndex]);
-                curIndex = _get_parent(curIndex);
+            curIndex = _get_parent(curIndex);
         }
     }
 
@@ -129,3 +166,70 @@ public:
 执行用时：80 ms, 在所有 C++ 提交中击败了44.28%的用户
 
 内存消耗：31.2 MB, 在所有 C++ 提交中击败了8.01%的用户
+
+### MergeSort
+
+```c++
+class Solution {
+public:
+    vector<int> MergeLists(vector<int>& left, vector<int>& right){
+        int i = 0, j = 0;
+        vector<int> rsp;
+
+        while (i < left.size() && j < right.size())
+            rsp.push_back((left[i] < right[j]) ? left[i++] : right[j++]);
+
+        if (i < left.size())
+            rsp.insert(rsp.end(), left.begin() + i, left.end());
+        else
+            rsp.insert(rsp.end(), right.begin() + j, right.end());
+        
+        return rsp;
+    }
+
+    vector<int> MergeSort(vector<int>& nums){
+        if (nums.size() == 1)
+            return nums;
+
+        int mid = nums.size() / 2;
+        vector<int> left(nums.begin(), nums.begin() + mid);
+        vector<int> right(nums.begin() + mid, nums.end());
+
+        left = MergeSort(left);
+        right = MergeSort(right);
+
+        return MergeLists(left, right);
+    }
+
+    vector<int> sortArray(vector<int>& nums) {
+        return MergeSort(nums);
+    }
+};
+```
+
+### CountSort
+
+仅限非负数组
+
+```c++
+vector<int> Count_Sort(vector<int>& nums) {
+    int K = INT_MIN, n = nums.size();
+    vector<int> sorted_nums(n, 0), C(K+1, 0);
+    
+    for (const int& num : nums)
+        K = max(K, num);
+        
+    for (int i = 0; i < n; i++)
+        C[nums[i]] += 1;
+
+    for (int i = 1; i <= K; i++)
+        C[i] += C[i-1];
+
+    for (int i = n-1; i >= 0; i--){
+        C[nums[i]] -= 1;
+        sorted_nums[C[nums[i]]] = nums[i];
+    }
+
+    return sorted_nums;
+}
+```
