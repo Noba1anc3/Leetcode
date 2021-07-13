@@ -71,25 +71,23 @@ c++
 ```c++
 class Solution {
 public:
-    bool judge(int size, int target, int maxElement){
-        if (target % 2 == 1 or 2*maxElement > target or size == 1)
+    bool judge(int size, int sum, int maxElement){
+        if (sum % 2 == 1 or maxElement > sum/2 or size == 1)
             return true;
         return false;
     }
 
     bool canPartition(vector<int>& nums) {
-        int size = nums.size();
-        int target = accumulate(nums.begin(), nums.end(), 0);
+        int sum = accumulate(nums.begin(), nums.end(), 0);
         int maxElement = *max_element(nums.begin(), nums.end());
+        int size = nums.size(), target = sum / 2;
+        
+        if (judge(size, sum, maxElement)) return false;
 
-        if (judge(size, target, maxElement)) return false;
-
-        target /= 2;
         vector<vector<bool>> dp(size, vector<bool>(target+1, false));
 
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++)
             dp[i][0] = true;
-        }
         dp[0][nums[0]] = true;
         
         for (int i = 1; i < size; i++){
