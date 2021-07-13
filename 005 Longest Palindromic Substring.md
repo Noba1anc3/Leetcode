@@ -139,12 +139,10 @@ public:
             auto [left1, right1] = expandAroundCenter(s, i, i);
             auto [left2, right2] = expandAroundCenter(s, i, i + 1);
             if (right1 - left1 > end - start) {
-                start = left1;
-                end = right1;
+                start = left1; end = right1;
             }
             if (right2 - left2 > end - start) {
-                start = left2;
-                end = right2;
+                start = left2; end = right2;
             }
         }
         return s.substr(start, end - start + 1);
@@ -152,9 +150,9 @@ public:
 };
 ```
 
-执行用时：132 ms, 在所有 C++ 提交中击败了62.20%的用户
+执行用时：80 ms, 在所有 C++ 提交中击败了68.02%的用户
 
-内存消耗：226.6 MB, 在所有 C++ 提交中击败了23.14%的用户
+内存消耗：226.2 MB, 在所有 C++ 提交中击败了34.90%的用户
 
 **复杂度分析**
 
@@ -163,6 +161,4 @@ public:
 - 空间复杂度：O(1)
 
 Attention
-
 - auto
-- pair<int, int>
