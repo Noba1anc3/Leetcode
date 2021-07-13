@@ -17,9 +17,9 @@ double optimalBST(double *p, double *q,int n){
     for (int i = 1; i <= n + 1; i++){
         w[i][i - 1] = q[i - 1];
         e[i][i - 1] = q[i - 1];
-	}
+    }
 
-	for (int len = 1; len <= n; len++){
+    for (int len = 1; len <= n; len++){
         for (int i = 1;i <= n - len + 1; i++){
             int j = i + len - 1;
             e[i][j] = INT_MAX;
@@ -30,10 +30,10 @@ double optimalBST(double *p, double *q,int n){
                 if (temp < e[i][j]){
                     e[i][j] = temp;
                     root[i][j] = k;
-				}
-			}
-		}
-	}
+                }
+            }
+        }
+    }
 
     return e[1][n];
 }
