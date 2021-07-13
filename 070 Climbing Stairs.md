@@ -2,8 +2,6 @@ You are climbing a staircase. It takes `n` steps to reach the top.
 
 Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
 
-
-
 **Example:**
 
 ```
@@ -33,10 +31,31 @@ f(x) = f(x - 1) + f(x - 2)
 
 我们不难通过转移方程和边界条件给出一个时间复杂度和空间复杂度都是 O(n) 的实现，但是由于这里的 f(x) 只和 f(x - 1) 与 f(x - 2) 有关，所以我们可以用「滚动数组思想」把空间复杂度优化成 O(1)。
 
-## Solution - I DP
+## Solution - I DP Based on List
 
 c++
 
+```c++
+class Solution {
+public:
+    int climbStairs(int n) {
+        int dp[n+1];
+        dp[0] = dp[1] = 1;
+        for (int i = 2; i <= n; i++)
+            dp[i] = dp[i-1] + dp[i-2];
+        
+        return dp[n];
+    }
+};
+```
+
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
+
+内存消耗：5.9 MB, 在所有 C++ 提交中击败了61.39%的用户
+
+## Solution - II DP Based on Integer
+
+### c++
 
 ```c++
 class Solution {
@@ -58,14 +77,13 @@ public:
 内存消耗：6.1 MB, 在所有 C++ 提交中击败了50.23%的用户
 
 复杂度分析
-
 - 时间复杂度：循环执行 n 次，每次花费常数的时间代价，故渐进时间复杂度为 O(n)
 - 空间复杂度：这里只用了常数个变量作为辅助空间，故渐进空间复杂度为 O(1)
 
 Attention:
 - 降低空间复杂度
 
-## Solution - II Matrix
+## Solution - III Matrix
 
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEJsCHKY1iEhfQKAr9fXM1PmVCetFcNCstJLcGHTD07rPaneWwT4enQlMcslUqLHcp.pGFS*Txpdm2exiuJR8EjQ!/r)
 
