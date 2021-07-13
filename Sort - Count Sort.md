@@ -1,13 +1,13 @@
 仅限非负数组
 
 ```c++
-vector<int> sortArray(vector<int>& nums) {
-    int K = nums[0], n = nums.size();
-    for (auto num : nums)
+vector<int> Count_Sort(vector<int>& nums) {
+    int K = INT_MIN, n = nums.size();
+    vector<int> sorted_nums(n, 0), C(K+1, 0);
+    
+    for (const int& num : nums)
         K = max(K, num);
-
-    vector<int> sorted(n, 0), C(K+1, 0);
-
+        
     for (int i = 0; i < n; i++)
         C[nums[i]] += 1;
 
@@ -16,9 +16,9 @@ vector<int> sortArray(vector<int>& nums) {
 
     for (int i = n-1; i >= 0; i--){
         C[nums[i]] -= 1;
-        sorted[C[nums[i]]] = nums[i];
+        sorted_nums[C[nums[i]]] = nums[i];
     }
 
-    return sorted;
+    return sorted_nums;
 }
 ```
