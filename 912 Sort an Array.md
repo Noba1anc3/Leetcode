@@ -103,7 +103,7 @@ public:
 Lecture-05 Heapsort & Lower Bound - p6
 
 ```c++
-class HeapSort {
+class Solution {
 private:
     vector<int> Heap;
 
@@ -112,6 +112,14 @@ public:
         if (i == 0) return 0;
         if (i % 2 == 0) return i / 2 - 1;
         else return i / 2;
+    }
+
+    int _get_lchild(int i){
+        return 2*i + 1;
+    }
+
+    int _get_rchild(int i){
+        return 2*i + 2;
     }
 
     void _build_heap(vector<int> nums){
@@ -141,16 +149,16 @@ public:
         Heap.pop_back();
 
         while (true){
-            int lchild = (2*root+1 < Heap.size()) ? Heap[2*root+1] : INT_MAX;
-            int rchild = (2*root+2 < Heap.size()) ? Heap[2*root+2] : INT_MAX;
+            int lchild = (_get_lchild(root) < Heap.size()) ? Heap[_get_lchild(root)] : INT_MAX;
+            int rchild = (_get_rchild(root) < Heap.size()) ? Heap[_get_rchild(root)] : INT_MAX;
             if (lchild == INT_MAX || Heap[root] <= min(lchild, rchild)) break;
             if (lchild <= min(Heap[root], rchild)){
-                swap(Heap[root], Heap[2*root+1]);
-                root = 2*root+1;
+                swap(Heap[root], Heap[_get_lchild(root)]);
+                root = _get_lchild(root);
             }
             else if (rchild < min(Heap[root], lchild)){
-                swap(Heap[root], Heap[2*root+2]);
-                root = 2*root+2;
+                swap(Heap[root], Heap[_get_rchild(root)]);
+                root = _get_rchild(root);
             }
         }
 
