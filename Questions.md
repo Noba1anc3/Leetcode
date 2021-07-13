@@ -282,7 +282,6 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 - [☆☆ 322. Coin Change ☆☆](322%20Coin%20Change.md)
-- [☆☆☆ 329. Longest Increasing Path in a Metrix ☆☆☆](329%20Longest%20Increasing%20Path%20in%20a%20Metrix.md)
 - [☆☆ 343. Integer Break ☆☆ (同剑指Offer 14-I)](%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 - [☆☆☆ 416. Partition Equal Subset Sum ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
 - [☆☆☆ 474. Ones and Zeroes ☆☆☆ (0-1 Knapsack)](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
