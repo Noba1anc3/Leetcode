@@ -277,7 +277,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) (同面试题 16.17) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 070. Climbing Stairs (同剑指Offer 10-II) ☆☆](070%20Climbing%20Stairs.md)
-- [☆☆☆ 072. Edit Distance ☆☆☆](072%20Edit%20Distance.md)
+- [☆☆ 072. Edit Distance ☆☆](072%20Edit%20Distance.md)
 - [☆☆ 121. Best Time to Buy and Sell Stock (剑指Offer 63) ☆☆](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 - [☆☆☆ 279. Perfect Squares ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
