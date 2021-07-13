@@ -3,8 +3,6 @@ You are given coins of different denominations and a total amount of money amoun
 You may assume that you have an infinite number of each kind of coin.
 
 
-
-
 Examples:
 
 ```
@@ -37,23 +35,20 @@ c++
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
-        vector<int> dp(amount + 1, amount + 1);
+        vector<int> dp(amount+1, amount+1);
         dp[0] = 0;
-        
         for (int i = 1; i <= amount; i++)
             for (const int& coin : coins)
-                if (coin <= i)
-                    dp[i] = min(dp[i], dp[i - coin] + 1);
+                if (i >= coin) dp[i] = min(dp[i], dp[i - coin] + 1);
 
-        return dp[amount] == amount + 1 ? -1 : dp[amount];
+        return (dp[amount] == amount + 1) ? -1 : dp[amount];
     }
 };
 ```
 
-执行用时：72 ms, 在所有 C++ 提交中击败了90.01%的用户
+执行用时：68 ms, 在所有 C++ 提交中击败了92.19%的用户
 
-内存消耗：13.6 MB, 在所有 C++ 提交中击败了82.66%的用户
-
+内存消耗：14 MB, 在所有 C++ 提交中击败了81.93%的用户
 
 
 Change Vector to List can speed up time and cost lower space
