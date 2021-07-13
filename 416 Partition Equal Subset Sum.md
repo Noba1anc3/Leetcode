@@ -92,19 +92,15 @@ public:
         
         for (int i = 1; i < size; i++){
             int num = nums[i];
-            for (int j = 1; j <= target; j++){
-                if (j >= num){
-                    dp[i][j] = dp[i-1][j] | dp[i-1][j - num];
-                }
-                else{
+            for (int j = 1; j <= target; j++)
+                if (j >= num)
+                    dp[i][j] = dp[i-1][j] || dp[i-1][j - num];
+                else
                     dp[i][j] = dp[i-1][j];
-                }
-            }
             // 自上向下的传递性
-            if (dp[i][target] == true)
-                return true;
+            if (dp[i][target] == true) return true;
         }
-
+        
         return dp[size-1][target];
     }
 };
@@ -112,15 +108,15 @@ public:
 
 传递性优化前:
 
-执行用时：972 ms, 在所有 C++ 提交中击败了10.68%的用户
+执行用时：168 ms, 在所有 C++ 提交中击败了75.88%的用户
 
-内存消耗：11.9 MB, 在所有 C++ 提交中击败了30.89%的用户
+内存消耗：11.6 MB, 在所有 C++ 提交中击败了42.47%的用户
 
 传递性优化后:
 
-执行用时：128 ms, 在所有 C++ 提交中击败了83.88%的用户
+执行用时：116 ms, 在所有 C++ 提交中击败了87.84%的用户
 
-内存消耗：11.6 MB, 在所有 C++ 提交中击败了35.18%的用户
+内存消耗：11.6 MB, 在所有 C++ 提交中击败了35.70%的用户
 
 Attention:
 - accumulate(nums.begin(), nums.end(), 0);
