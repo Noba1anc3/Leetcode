@@ -1282,7 +1282,24 @@ void DFSVisit(int vertex){
 
   - 递推公式：`curAns = max(curAns + x, x)`
 
-- [070. 求数组的最大和连续子数组](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+- [070. 求有几种爬楼梯的方法](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
+
+  - ```c++
+    c = a + b;
+    a = b;
+    b = c;
+    ```
+
+- [121. 一次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
+
+  - 遍历数组中的价格
+  - 如果当前价格与最低价格的差值大于现有最大收益，更新最大收益
+  - 更新最低价格
+  - `maxProfit = max(maxProfit, price - minPrice); minPrice = min(minPrice, price)`
+
+- [122. 多次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
+
+  - `profit = max(profit, profit + prices[i] - prices[i-1])`
 
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
@@ -1418,6 +1435,9 @@ std::string s = to_string(integer)
 
 ```c++
 memset(dp, 0, sizeof(dp));
+
+// 求列表长度
+sizeof(steps) / sizeof(int);
 ```
 
 ### vector
