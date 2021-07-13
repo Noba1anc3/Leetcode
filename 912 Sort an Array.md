@@ -209,27 +209,35 @@ public:
 
 ### Count Sort
 
-仅限非负数组
+仅限非负数组，非基于比较的排序算法
+
+![](http://r.photo.store.qq.com/psc?/fef49446-40e0-48c4-adcc-654c5015022c/TmEUgtj9EK6.7V8ajmQrEAc33.VcF06TJP6HI3KS6o*QBdymPx7ngVeDVYG0T3pssqi.1hGwseWXm11JhZdmvedKBd2KMjJ.7Y.mIXp8AVc!/r)
 
 ```c++
-vector<int> Count_Sort(vector<int>& nums) {
-    int K = INT_MIN, n = nums.size();
-    vector<int> sorted_nums(n, 0), C(K+1, 0);
-    
-    for (const int& num : nums)
-        K = max(K, num);
-        
-    for (int i = 0; i < n; i++)
-        C[nums[i]] += 1;
+class Solution {
+public:
+    vector<int> CountSort(vector<int>& nums) {
+        int K = INT_MIN, n = nums.size();
 
-    for (int i = 1; i <= K; i++)
-        C[i] += C[i-1];
+        for (const int& num : nums)
+            K = max(K, num);
+            
+        vector<int> sorted_nums(n, 0), C(K+1, 0);
+                    
+        for (int i = 0; i < n; i++)
+            C[nums[i]] += 1;
 
-    for (int i = n-1; i >= 0; i--){
-        C[nums[i]] -= 1;
-        sorted_nums[C[nums[i]]] = nums[i];
+        for (int i = 1; i <= K; i++)
+            C[i] += C[i-1];
+
+        for (int i = n-1; i >= 0; i--){
+            C[nums[i]] -= 1;
+            sorted_nums[C[nums[i]]] = nums[i];
+        }
+
+        return sorted_nums;
     }
-
-    return sorted_nums;
-}
+};
 ```
+
+Time Complexity : O(n + k)
