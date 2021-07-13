@@ -151,7 +151,7 @@
 #### Integer
 
 - [001. 返回列表中两下标，使对应元素之和等于指定target](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
-- 第一次遍历：**构建数字到下标的倒排映射**
+  - 第一次遍历：**构建数字到下标的倒排映射**
   - 第二次遍历：如果target - i是哈希表的key且value不等于i，则返回i，j
   - 如果是重复元素，加到哈希表时后一次出现的元素会覆盖前面的写入，因此不会有问题
 - [169. 求数组中出现次数超过一半的数字](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
@@ -163,9 +163,9 @@
 #### String
 
 - [017. 九键打字的字母组合](https://github.com/Noba1anc3/Leetcode/blob/master/017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
-- **构建从数字到字符串的映射**
+  - **构建从数字到字符串的映射**
 - [020. 判断是否为有效括号串](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
-- **构建从右括号到左括号的映射**
+  - **构建从右括号到左括号的映射**
 - [242. 判断两个字符串是否为字母异位词](https://github.com/Noba1anc3/Leetcode/blob/master/242%20Valid%20Anagram.md)
   - 如果长度不相等，直接返回
   - **构建字母与其出现次数的映射**
