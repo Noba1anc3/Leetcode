@@ -135,28 +135,25 @@ Attention:
 ```c++
 class Solution {
 public:
-    bool judge(int size, int target, int maxElement){
-        if (target % 2 == 1 or 2*maxElement > target or size == 1)
+    bool judge(int size, int sum, int maxElement){
+        if (sum % 2 == 1 or maxElement > sum/2 or size == 1)
             return true;
         return false;
     }
 
     bool canPartition(vector<int>& nums) {
-        int size = nums.size();
-        int target = accumulate(nums.begin(), nums.end(), 0);
+        int sum = accumulate(nums.begin(), nums.end(), 0);
         int maxElement = *max_element(nums.begin(), nums.end());
+        int size = nums.size(), target = sum / 2;
+        
+        if (judge(size, sum, maxElement)) return false;
 
-        if (judge(size, target, maxElement))
-            return false;
-
-        target /= 2;
         vector<bool> dp(target + 1, false);
-
         dp[0] = true;
-        for (int i = 0; i < size; i++) {
-            int num = nums[i];
-            for (int j = target; j >= num; j--) {
-                dp[j] |= dp[j - num];
+
+        for (const int& num : nums)
+            for (int j = target; j >= num; j--) 
+                dp[j] = dp[j] || dp[j - num];
             // before optimize
             // for (int j = target; j > 0; j--){
             //     if (j >= num){
@@ -166,17 +163,15 @@ public:
             //         dp[j] = dp[j];
             //     }
             // }
-        }
 
         return dp[target];
-
     }
 };
 ```
 
-执行用时：96 ms, 在所有 C++ 提交中击败了85.31%的用户
+执行用时：84 ms, 在所有 C++ 提交中击败了96.07%的用户
 
-内存消耗：10 MB, 在所有 C++ 提交中击败了52.08%的用户
+内存消耗：8.9 MB, 在所有 C++ 提交中击败了87.63%的用户
 
 **复杂度**
 
