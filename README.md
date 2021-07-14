@@ -1242,7 +1242,7 @@ void DFSVisit(int vertex){
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
       ```
 
-- [416. 判断能否分割等和子集](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
+- [**416. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
 
   - 如果数组和为奇数，最大值超过数组和的一半或数组长度为1，均返回false
   - Phase I
@@ -1275,6 +1275,39 @@ void DFSVisit(int vertex){
     - 备注
       - 计算顺序：与一阶段不同，此时的`j`从`target`逆序向当前`num`进行遍历
       - 如果提前使`target`得到了满足，可直接返回true
+
+- [**474. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
+
+  - 如果数组和为奇数，最大值超过数组和的一半或数组长度为1，均返回false
+  - Phase I
+    - 状态
+      - 选用前几个字符串
+      - 背包中装0的数量
+      - 背包中装1的数量
+    - 选择
+      - 是否将当前字符串装入背包
+    - 状态数组
+      - `int dp[n+1][m+1][n+1] = 0`
+      - `dp[i][j][k]` : 使用前`i`个字符串，背包容量为`j`个0和`k`个1时，可以容纳的最多字符串
+    - 状态初始化
+      - `dp[0][i][j] = 0; dp[i][0][0] = 0 `
+    - 状态转移
+      - `dp[i][j][k] = max(dp[i][j][k], 1 + dp[i-1][j - num_of_zero][k - num_of_one])`
+  - Phase II
+    - 状态
+      - 背包中装0的数量
+      - 背包中装1的数量
+    - 选择
+      - 是否将当前字符串装入背包
+    - 状态数组
+      - `int dp[m+1][n+1] = 0`
+      - `dp[j][k]` : 背包容量为`j`个0和`k`个1时，可以容纳的最多字符串
+    - 状态初始化
+      - `dp[j][k] = 0 `
+    - 状态转移
+      - `dp[j][k] = max(dp[j][k], 1 + dp[j - num_of_zero][k - num_of_one])`
+    - 备注
+      - 计算顺序：与一阶段不同，此时的`j`从`m`开始逆序向0迭代，`k`从`n`开始逆序向0迭代
 
 #### Rod Cutting
 
@@ -1530,7 +1563,7 @@ void DFSVisit(int vertex){
 
 #### Others
 
-- [032. 最长有效括号串长度](https://github.com/Noba1anc3/Leetcode/blob/master/032%20Longest%20Valid%20Parentheses.md)
+- [**032. 最长有效括号串长度**](https://github.com/Noba1anc3/Leetcode/blob/master/032%20Longest%20Valid%20Parentheses.md)
 
   - 状态
 
