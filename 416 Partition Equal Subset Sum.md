@@ -98,7 +98,7 @@ public:
                 else
                     dp[i][j] = dp[i-1][j];
             // 自上向下的传递性
-            if (dp[i][target] == true) return true;
+            if (dp[i][target]) return true;
         }
         
         return dp[size-1][target];
