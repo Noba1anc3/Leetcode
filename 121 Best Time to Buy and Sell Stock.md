@@ -33,7 +33,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int minPrice = prices[0], maxProfit = 0;
+        int minPrice = prices[0], maxProfit = INT_MIN;
         for (const int& price : prices){
             maxProfit = max(maxProfit, price - minPrice);
             minPrice = min(minPrice, price);
