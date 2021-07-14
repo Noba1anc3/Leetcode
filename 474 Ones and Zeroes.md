@@ -111,16 +111,12 @@ public:
 ```c++
 class Solution {
 public:
-
     vector<int> num_zero_one(string str){
         vector<int> zero_one(2,0);
 
-        for(auto& ch : str){
-            if (ch == '0')
-                zero_one[0] += 1;
-            else
-                zero_one[1] += 1;
-        }
+        for(const char& ch : str)
+            if (ch == '0') zero_one[0] += 1;
+            else zero_one[1] += 1;
 
         return zero_one;
     }
@@ -128,24 +124,16 @@ public:
     int findMaxForm(vector<string>& strs, int m, int n) {
         int dp[m+1][n+1];
         
-        for (int i = 0; i <= m; i++){
-            for (int j = 0; j <= n; j++){
+        for (int i = 0; i <= m; i++)
+            for (int j = 0; j <= n; j++)
                 dp[i][j] = 0;
-            }
-        }
         
         for (int i = 1; i <= strs.size(); i++){
             vector<int> zero_one = num_zero_one(strs[i-1]);
-
             for(int j = m; j >= 0; j--)
                 for (int k = n; k >= 0; k--)
-                    if (zero_one[0] <= j and zero_one[1] <= k)
+                    if (zero_one[0] <= j && zero_one[1] <= k)
                         dp[j][k] = max(dp[j][k], 1 + dp[j-zero_one[0]][k-zero_one[1]]); 
-                    // before optimize
-                    // if (zero_one[0] > j or zero_one[1] > k)
-                    //     dp[j][k] = dp[j][k];
-                    // else
-                    //     dp[j][k] = max(dp[j][k], 1 + dp[j-zero_one[0]][k-zero_one[1]]); 
         }
         
         return dp[m][n];
@@ -153,6 +141,6 @@ public:
 };
 ```
 
-执行用时：344 ms, 在所有 C++ 提交中击败了35.48%的用户
+执行用时：144 ms, 在所有 C++ 提交中击败了86.07%的用户
 
-内存消耗：9.1 MB, 在所有 C++ 提交中击败了84.39%的用户
+内存消耗：8.6 MB, 在所有 C++ 提交中击败了89.51%的用户
