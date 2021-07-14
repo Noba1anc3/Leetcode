@@ -1195,13 +1195,23 @@ void DFSVisit(int vertex){
 
 ### Questions
 
-#### 0-1 Knapsacks
+#### 0-1 Knapsack
 
 **Original :** [0-1背包](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%2001%20Knapsack.md)
 
-- 递推数组：`int V[i, w]`
-- 数组初始化：`V[0,w] = 0`
-- 递推公式：`V[i, w] = max(V[i-1,w], vi + V[i-1, w - wi])`
+- 状态
+  - 放入几个物品
+  - 背包容量大小
+- 选择
+  - 是否将当前物品装入背包
+
+- 状态数组
+  - `int V[n+1][w+1]`
+  - `V[i][w]` : 使用背包中前`i`个物品，在限制容量为`w`时，可以获得的最大价值
+- 状态初始化
+  - `V[0][w] = 0`
+- 状态转移
+  - `V[i][w] = max(V[i-1][w], vi + V[i-1][w - wi])`
 
 **Varieties**
 
@@ -1209,11 +1219,24 @@ void DFSVisit(int vertex){
 
   - 将活动按结束时间排序，构建结束时间早于当前活动开始时间的最晚活动列表`p`
 
-  - 递推数组：`int dp[n+1]`
+  - 状态
 
-  - 数组初始化：`dp[0] = 0`
+    - 参加前几个活动
 
-  - 递推公式
+  - 选择
+
+    - 是否参加当前活动
+
+  - 状态数组
+
+    - `int dp[n+1]`  
+    - `dp[i]` : 在前`i`个活动中进行参加可以获得的最大收益
+
+  - 状态初始化
+
+    - `dp[0] = 0`
+
+  - 状态转移
 
     - ```c++
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
@@ -1223,65 +1246,124 @@ void DFSVisit(int vertex){
 
   - 如果数组和为奇数，最大值超过数组和的一半或数组长度为1，均返回false
   - Phase I
-    - 递推数组：`vector<vector<bool>> dp(n, vector<bool>(sum_of_array/2 + 1, false)`
-    - 数组初始化：`dp[0][nums[0]] = true; dp[i][0] = true `
-    - 递推公式：`dp[i][j] = dp[i-1][j] || dp[i-1][j - num]`
-    - 如果提前使target得到了满足，可直接返回true
+    - 状态
+      - 选用前几个数字
+      - 可以获得的数字和
+    - 选择
+      - 是否选用当前数字
+    - 状态数组
+      - `vector<vector<bool>> dp(n, vector<bool>(sum_of_array/2 + 1, false)`
+      - `dp[i][j]` : 选用前`i`个数字，是否可以获得值为`j`的和
+    - 状态初始化
+      - `dp[0][nums[0]] = true; dp[i][0] = true `
+    - 状态转移
+      - `dp[i][j] = dp[i-1][j] || dp[i-1][j - num]`
+    - 备注
+      - 如果提前使`target`得到了满足，可直接返回true
   - Phase II
-    - 递推数组：`vector<bool> dp(sum_of_array/2 + 1, false)`
-    - 数组初始化：`dp[0] = true `
-    - 递推公式：`dp[j] = dp[j] || dp[j - num]`
-    - 计算顺序：与一阶段不同，此时的`j`从`target`逆序向当前`num`进行遍历
-    - 如果提前使target得到了满足，可直接返回true
+    - 状态
+      - 可以获得的数字和
+    - 选择
+      - 是否选用当前数字
+    - 状态数组
+      - `vector<bool> dp(sum_of_array/2 + 1, false)`
+      - `dp[j]` : 是否可以获得值为`j`的和
+    - 状态初始化
+      - `dp[0] = true `
+    - 状态转移
+      - `dp[j] |= dp[j - num]`
+    - 备注
+      - 计算顺序：与一阶段不同，此时的`j`从`target`逆序向当前`num`进行遍历
+      - 如果提前使`target`得到了满足，可直接返回true
 
 #### Rod Cutting
 
 **Original :** [切割钢条](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Rod%20Cutting.md)
 
-- 递推数组：`int r[n+1]`
-- 数组初始化：`r[0] = 0`
-- 递推公式：`r[j] = for i from 1 to j : max(p[i] + r[j - i])`
+- 状态
+  - 钢条被切割的长度
+- 选择
+  - 在哪个点进行钢条切割
+
+- 状态数组
+  - `int r[n+1] = 0`
+  - `r[i]` : 长度为i的钢条可以卖出的最大价格
+- 状态初始化
+  - `r[0] = 0`
+- 状态转移
+  - `r[j] = for i from 1 to j : max(p[i] + r[j - i])`
 
 **Varieties**
 
 - [343. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
 
-  - 变种切割钢条
+  - 状态
 
-  - 递推数组：`int dp[n+1]`
+    - 数字和的大小
 
-  - 数组初始化：`dp[i] = i`
+  - 选择
 
-  - 递推公式
+    - 当和固定时，在哪个点将和拆分成两个数字
+
+  - 状态数组
+
+    - `int dp[n+1]`
+    - `dp[i]` : 和为`i`时，可以获得的最大乘积 
+
+  - 状态初始化
+
+    - `dp[i] = i`
+
+  - 状态转移
 
     - ```c++
-      for (int i = 4; i <= n; i++)
-          for (int j = 2; j <= (int)i/2; j++)
-              dp[i] = max(dp[i], dp[j] * dp[i-j]);
+      for (int j = 2; j <= (int)i/2; j++)
+          dp[i] = max(dp[i], dp[j] * dp[i-j]);
       ```
 
 #### Matrix Multiplication
 
 **Original :** [矩阵乘积](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Matrix%20Multiplication.md)
 
-- 递推数组：`int m[n+1][n+1]`
-- 数组初始化：`m[i][i] = 0`
-- 递推公式：`m[i][j] = for k from i to j-1 : min(m[i][k] + m[k+1][j] + pi-1*pk*pj)`
-- 计算顺序：对`j-i`从1到n-1进行计算
+- 状态
+  - 连乘矩阵串的首尾矩阵下标
+- 选择
+  - 在哪个矩阵处将矩阵乘积串一分为二
+
+- 状态数组
+  - `int m[n+1][n+1]`
+  - `m[i][j]` : 从`i`开始到`j`为止的连乘矩阵串所需要的最少乘积次数
+- 状态初始化
+  - `m[i][i] = 0`
+- 状态转移
+  - `m[i][j] = for k from i to j-1 : min(m[i][k] + m[k+1][j] + pi-1*pk*pj)`
+- 备注
+  - 计算顺序：对`j-i`从`1`到`n-1`进行计算
 
 **Varieties**
 
 - [最优平衡二叉树](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Optimal%20BST.md)
-  - 递推数组：`int e[n+1][n+1]`
-  - 数组初始化：`e[i][i-1] = qi-1`
-  - 递推公式：`e[i][j] = for r from i to j : min(e[i][r-1] + e[r+1][j] + w[i][j])`
-  - 计算顺序：对`j-i`从0到n-1，i从1到n进行计算
+  - 状态
+    - 
+  - 状态数组：`int e[n+1][n+1]`
+  - 状态初始化：`e[i][i-1] = qi-1`
+  - 状态公式：`e[i][j] = for r from i to j : min(e[i][r-1] + e[r+1][j] + w[i][j])`
+  - 备注
+    - 计算顺序：对`j-i`从0到n-1，i从1到n进行计算
 - [**005. 最长回文子串**](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
-  - 变种最优平衡二叉树
-  - 递推数组：`int dp[n][n]`
-  - 数组初始化：`dp[i][i] = 1; dp[i][i+1] = (s[i] == s[i+1])`
-  - 递推公式：`dp[i][j] = dp[i+1][j-1] && s[i] == s[j]`
-  - 计算顺序：对`j-i`从0到n-1，i从0进行计算
+  - 状态
+    - 子串的开始与结束点下标
+  - 选择
+    - 无
+  - 状态数组
+    - `int dp[n][n]`
+    - `dp[i][j]` : 从`i`开始到`j`为止的子串是否是回文字符串
+  - 状态初始化
+    - `dp[i][i] = true; dp[i][i+1] = (s[i] == s[i+1])`
+  - 状态转移
+    - `dp[i][j] = dp[i+1][j-1] && s[i] == s[j]`
+  - 备注
+    - 计算顺序：对`j-i`从0到n-1，i从0进行计算
 
 #### Longest Common Subsequence
 
