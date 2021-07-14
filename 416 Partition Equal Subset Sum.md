@@ -151,27 +151,21 @@ public:
         vector<bool> dp(target + 1, false);
         dp[0] = true;
 
-        for (const int& num : nums)
+        for (const int& num : nums){
+            // 提前退出，可将计算时间缩少20ms
+            if (dp[target] || dp[target - num]) return true;
             for (int j = target; j >= num; j--) 
                 dp[j] = dp[j] || dp[j - num];
-            // before optimize
-            // for (int j = target; j > 0; j--){
-            //     if (j >= num){
-            //         dp[j] = dp[j] | dp[j - num];
-            //     }
-            //     else{
-            //         dp[j] = dp[j];
-            //     }
-            // }
-
+        }
+        
         return dp[target];
     }
 };
 ```
 
-执行用时：84 ms, 在所有 C++ 提交中击败了96.07%的用户
+执行用时：60 ms, 在所有 C++ 提交中击败了97.36%的用户
 
-内存消耗：8.9 MB, 在所有 C++ 提交中击败了87.63%的用户
+内存消耗：8.9 MB, 在所有 C++ 提交中击败了83.94%的用户
 
 **复杂度**
 
