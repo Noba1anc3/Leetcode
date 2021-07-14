@@ -86,13 +86,17 @@ Base ：北京、上海、深圳
 
 ## 猿辅导
 
-[招聘信息](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
+[招聘信息 - 官方](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
+
+[招聘信息 - 伯乐内推](https://mp.weixin.qq.com/s/YdW6iW5OJoY5ZyKU4aYmuA)
 
 [官方网站](https://app.mokahr.com/recommendation-apply/fenbi/1636?sharePageId=64524&recommenderId=279308#/jobs?keyword=2022&location=%E5%8C%97%E4%BA%AC%E5%B8%82&page=1&isCampusJob=1)
 
 ### 备注
 
 Base ：Beijing
+
+根据招聘信息，在7月底之前投递比较好
 
 ## SenseTime
 
@@ -149,7 +153,6 @@ Base ：Shanghai、Beijing
 ### 备注
 
 DDL ：08.01
-
 Base ：Shenzhen，Beijing，Shanghai，Singapore
 
 关注 ”Shopee虾皮招聘“ 公众号查询校招进度
@@ -165,6 +168,3 @@ Base ：Shenzhen，Beijing，Shanghai，Singapore
 ### 备注
 
 DDL ：08.15
-
-
-
