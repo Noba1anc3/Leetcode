@@ -39,14 +39,14 @@ class Solution {
 public:
     string longestPalindrome(string s) {
         int len = s.size();
-        int dp[len][len];
+        bool dp[len][len];
         string ans;
 
         for (int l = 1; l <= len; l++){
             for (int i = 0; i <= len - l; i++){
                 int j = i + l - 1;
                 if (l == 1)
-                    dp[i][j] = 1;
+                    dp[i][j] = true;
                 else if (l == 2)
                     dp[i][j] = (s[i]==s[j]);
                 else
@@ -60,11 +60,12 @@ public:
         return ans;
     }
 };
+
 ```
 
-执行用时：384 ms, 在所有 C++ 提交中击败了45.44%的用户
+执行用时：276 ms, 在所有 C++ 提交中击败了52.32%的用户
 
-内存消耗：28.7 MB, 在所有 C++ 提交中击败了57.83%的用户
+内存消耗：25.3 MB, 在所有 C++ 提交中击败了58.56%的用户
 
 Attention
 - 由短到长的遍历
