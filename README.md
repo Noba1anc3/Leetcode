@@ -1276,7 +1276,7 @@ void DFSVisit(int vertex){
       - 计算顺序：与一阶段不同，此时的`j`从`target`逆序向当前`num`进行遍历
       - 如果提前使`target`得到了满足，可直接返回true
 
-- [**474. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
+- [**474. 限制0和1个数时，可以装下的最多字符串数目**](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
 
   - 如果数组和为奇数，最大值超过数组和的一半或数组长度为1，均返回false
   - Phase I
