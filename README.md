@@ -1,4 +1,4 @@
-# Questions List
+# `Questions List
 
 [Questions](https://github.com/Noba1anc3/Leetcode/blob/master/Questions.md)
 
@@ -1206,7 +1206,7 @@ void DFSVisit(int vertex){
   - 是否将当前物品装入背包
 
 - 状态数组
-  - `int V[n+1][w+1]`
+  - `int V[n+1][w+1] = 0`
   - `V[i][w]` : 使用背包中前`i`个物品，在限制容量为`w`时，可以获得的最大价值
 - 状态初始化
   - `V[0][w] = 0`
@@ -1229,7 +1229,7 @@ void DFSVisit(int vertex){
 
   - 状态数组
 
-    - `int dp[n+1]`  
+    - `int dp[n+1] = 0`  
     - `dp[i]` : 在前`i`个活动中进行参加可以获得的最大收益
 
   - 状态初始化
@@ -1307,7 +1307,7 @@ void DFSVisit(int vertex){
 
   - 状态数组
 
-    - `int dp[n+1]`
+    - `int dp[n+1] = 0`
     - `dp[i]` : 和为`i`时，可以获得的最大乘积 
 
   - 状态初始化
@@ -1331,7 +1331,7 @@ void DFSVisit(int vertex){
   - 在哪个矩阵处将矩阵乘积串一分为二
 
 - 状态数组
-  - `int m[n+1][n+1]`
+  - `int m[n+1][n+1] = 0`
   - `m[i][j]` : 从`i`开始到`j`为止的连乘矩阵串所需要的最少乘积次数
 - 状态初始化
   - `m[i][i] = 0`
@@ -1348,7 +1348,7 @@ void DFSVisit(int vertex){
   - 选择
     - f
   - 状态数组
-    - `int e[n+1][n+1]`
+    - `int e[n+1][n+1] = INT_MAX`
   - 状态初始化
     - `e[i][i-1] = qi-1`
   - 状态转移
@@ -1361,7 +1361,7 @@ void DFSVisit(int vertex){
   - 选择
     - 无
   - 状态数组
-    - `int dp[n][n]`
+    - `bool dp[n][n] = false `
     - `dp[i][j]` : 从`i`开始到`j`为止的子串是否是回文字符串
   - 状态初始化
     - `dp[i][i] = true; dp[i][i+1] = (s[i] == s[i+1])`
@@ -1375,12 +1375,13 @@ void DFSVisit(int vertex){
 **Original :** [**最长公共子序列**](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 
 - 状态
-  - 子
+  - 两个子串的结束位置
 - 选择
-  - 无
+  - 如果两字母相同，长度加一；如果两字母不同，长度取两缺失尾字母子序列长度的最大值
 
 - 状态数组
-  - `int dp[m+1][n+1]`
+  - `int dp[m+1][n+1] = 0`
+  - `dp[i][j]` : 在`i`位置结束的A子串与在`j`位置结束的B子串的最长公共子序列长度 
 - 状态初始化
   - `dp[i][0] = 0; dp[0][j] = 0`
 - 状态转移
@@ -1392,11 +1393,12 @@ void DFSVisit(int vertex){
 
 - [最长公共子串](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Longest%20Common%20Substring.md)
   - 状态
-    - 子
+    - 两个子串的结束位置
   - 选择
-    - 无
+    - 如果两字母相同，长度加一；如果两字母不同，长度归零
   - 状态数组
-    - `int dp[m+1][n+1]`
+    - `int dp[m+1][n+1] = 0`
+    - `dp[i][j]` : 在`i`位置结束的A子串与在`j`位置结束的B子串的最长公共子串长度 
   - 状态初始化
     - `dp[i][0] = 0; dp[0][j] = 0`
   - 状态转移
@@ -1405,11 +1407,12 @@ void DFSVisit(int vertex){
     - 计算顺序：先行后列
 - [**最小编辑距离**](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
   - 状态
-    - 子
+    - 两个子串的结束位置
   - 选择
-    - 无
+    - 当前状态的编辑距离为三种子状态编辑距离的最小值
   - 状态数组
-    - `int dp[m+1][n+1]`
+    - `int dp[m+1][n+1] = 0`
+    - `dp[i][j]` : 在`i`位置结束的A子串与在`j`位置结束的B子串之间的编辑距离
   - 状态初始化
     - `dp[i][0] = i; dp[0][j] = j`
   - 状态转移
@@ -1421,53 +1424,109 @@ void DFSVisit(int vertex){
 
 **Original :** [剑指Offer-10-I. 求斐波那契数列的第n项](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-10-I%20Fibonacci.md)
 
-- 如果n小于2，直接返回n
-- 使用三个整型记录斐波那契的基项和结果项
-- 计算过程中不断根据计算结果调整基项
+- 状态
+  - 斐波那契项数
+- 选择
+  - 当前斐波那契项为前两位斐波那契项的和
+- 状态数组
+  - `int a, b, c`
+  - `c` : 当前的斐波那契项
+- 状态初始化
+  - `a = 0; b = 1`
+- 状态转移
+  - `c = a + b; a = b; b = c `
+- 备注
+  - 如果n小于2，直接返回n
 
 **Varieties**
 
-- [070. 求有几种爬楼梯的方法](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
-
-  - ```c++
-    c = a + b;
-    a = b;
-    b = c;
-    ```
+- [070. 求有几种爬楼梯的方法](https://github.com/Noba1anc3/Leetcode/blob/master/070%20Climbing%20Stairs.md)
+  - 状态
+    - 楼梯层数
+  - 选择
+    - 爬当前层数的方法数为爬上一层与上两层的方法数之和
+  - 状态数组
+    - `int a, b, c`
+    - `c` : 爬当前层可以有的方法数
+  - 状态初始化
+    - `a = 1; b = 1; c = 1`
+  - 状态转移
+    - `c = a + b; a = b; b = c `
+  - 备注
+    - 假设`a`为第0层，天然有一种方法
 
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
-
-  - 外层遍历数字，内层遍历平方数列表
-
-  - ```c++
-    dp[i] = min(dp[i], dp[i - square] + 1)
-    ```
-
-- [322. 硬币可重复使用，求组成金额需要的最少数量](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
-
   - 状态
-    - 子
+    - 待组成的数字
   - 选择
-    - 无
+    - 选择为了组成当前数字减去比当前数字小的完全平方数得到的数字所需要的完全平方数的最小值
   - 状态数组
-    - `int dp[amount+1]`
-  - 状态初始化（用INT_MAX则需要改为float数组）
-    - `dp[i] = amount+1`
+    - `int dp[n+1] = INT_MAX` 
+    - `dp[i]` : 组成`i`这一数字需要的最少完全平方数 
+  - 状态初始化
+    - `dp[0] = 0`
   - 状态转移
-    - ` dp[i] = min(dp[i], dp[i - coin] + 1)`
+    - `dp[i] = for square in squares : min(dp[i], dp[i - square] + 1) `
+  - 备注
+    - 外层遍历数字，内层遍历平方数列表
+- [322. 硬币可重复使用，求组成金额需要的最少数量](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
+  - 状态
+    - 待凑成的金额
+  - 选择
+    - 选择为了凑成当前金额减去比当前金额小的硬币得到的金额所需要的硬币数的最小值
+  - 状态数组
+    - `int dp[amount+1] = 0`
+    - `dp[i]` : 组成`i`金额需要的最少硬币数
+  - 状态初始化
+    - `dp[i] = amount+1`
+    - 用INT_MAX则需要改为float数组
+  - 状态转移
+    - ` dp[i] = for coin in coins : min(dp[i], dp[i - coin] + 1)`
 
 #### Numbers
 
 - [**053. 求数组的最大和连续子数组**](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
-  - 随时都可以选择重新开始
+  - 状态
+    - 数组的某个位置
+  - 选择
+    - 当前位置数字与当前最大和加当前位置数字的最大值
+    - 当前最大和与全局最大和的最大值
+  - 状态数组
+    - `int curAns, maxAns`
+    - `curAns` : 当前位置为止的连续子数组和
+    - `maxAns` : 当前位置为止的连续子数组最大和
+  - 状态初始化
+    - `curAns = 0; maxAns = INT_MIN `
   - 状态转移
     - `curAns = max(curAns + x, x); maxAns = max(curAns, maxAns)`
+  - 备注
+    - 人生亦是如此，随时都可以选择重新开始
 - [121. 一次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
-  - 遍历价格，如果当前价与最低价的差值大于最大收益，更新最大收益，而后更新最低价格
-  - `maxProfit = max(maxProfit, price - minPrice); minPrice = min(minPrice, price)`
+  - 状态
+    - 数组的某个位置
+  - 选择
+    - 当前位置价格减全局最低价与最大收益的最大值
+    - 当前位置价格与全局最低价的最小值
+  - 状态数组
+    - `int minPrice, maxProfit `
+    - `minPrice` : 当前位置为止的最低价格
+    - `maxProfit` : 当前位置为止的最大收益
+  - 状态初始化
+    - `minPrice = prices[0]; maxProfit = INT_MIN `
+  - 状态转移
+    - `maxProfit = max(maxProfit, price - minPrice); minPrice = min(minPrice, price)`
 - [122. 多次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
-  - 关注每一个小gap
-  - `profit = max(profit, profit + prices[i] - prices[i-1])`
+  - 状态
+    - 数组的某个位置
+  - 选择
+    - 每一个为正的gap
+  - 状态数组
+    - `int profit`
+    - `profit` : 当前位置为止的最大收益
+  - 状态初始化
+    - `profit = 0 `
+  - 状态转移
+    - `profit = max(profit, profit + prices[i] - prices[i-1])`
 
 #### Others
 
@@ -1475,15 +1534,19 @@ void DFSVisit(int vertex){
 
   - 状态
 
-    - 子
+    - 括号串的位置
 
   - 选择
 
-    - 无
+    - 如果是左右括号
+      - 则当前位置的最长有效长度更新为左括号前一个位置的最长有效长度+2
+    - 如果是右右括号且第一个右括号向前回退其有效括号长度的位置处为左括号
+      - 则当前位置的最长有效长度更新为第一个右括号的最长有效长度 + 回退到的左括号的上一个括号处的最长有效长度 + 2
 
   - 状态数组
 
-    - `int dp[n]`
+    - `int dp[n] = 0`
+    - `dp[i]` : 到`i`位置为止子串的最长有效括号串长度
 
   - 状态初始化
 
