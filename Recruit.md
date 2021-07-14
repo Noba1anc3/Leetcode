@@ -149,6 +149,7 @@ Base ：Shanghai、Beijing
 ### 备注
 
 DDL ：08.01
+
 Base ：Shenzhen，Beijing，Shanghai，Singapore
 
 关注 ”Shopee虾皮招聘“ 公众号查询校招进度
