@@ -1344,10 +1344,15 @@ void DFSVisit(int vertex){
 
 - [最优平衡二叉树](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Optimal%20BST.md)
   - 状态
-    - 
-  - 状态数组：`int e[n+1][n+1]`
-  - 状态初始化：`e[i][i-1] = qi-1`
-  - 状态公式：`e[i][j] = for r from i to j : min(e[i][r-1] + e[r+1][j] + w[i][j])`
+    - f
+  - 选择
+    - f
+  - 状态数组
+    - `int e[n+1][n+1]`
+  - 状态初始化
+    - `e[i][i-1] = qi-1`
+  - 状态转移
+    - `e[i][j] = for r from i to j : min(e[i][r-1] + e[r+1][j] + w[i][j])`
   - 备注
     - 计算顺序：对`j-i`从0到n-1，i从1到n进行计算
 - [**005. 最长回文子串**](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
@@ -1369,23 +1374,48 @@ void DFSVisit(int vertex){
 
 **Original :** [**最长公共子序列**](https://github.com/Noba1anc3/Leetcode/blob/master/1143%20Longest%20Common%20Subsequence.md)
 
-- 递推数组：`int dp[m+1][n+1]`
-- 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
-- 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = max(dp[i-1][j], dp[i][j-1])`
-- 计算顺序：先行后列
+- 状态
+  - 子
+- 选择
+  - 无
+
+- 状态数组
+  - `int dp[m+1][n+1]`
+- 状态初始化
+  - `dp[i][0] = 0; dp[0][j] = 0`
+- 状态转移
+  - `dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = max(dp[i-1][j], dp[i][j-1])`
+- 备注
+  - 计算顺序：先行后列
 
 **Varieties**
 
 - [最长公共子串](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Longest%20Common%20Substring.md)
-  - 递推数组：`int dp[m+1][n+1]`
-  - 数组初始化：`dp[i][0] = 0; dp[0][j] = 0`
-  - 递推公式：`dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = 0`
-  - 计算顺序：先行后列
+  - 状态
+    - 子
+  - 选择
+    - 无
+  - 状态数组
+    - `int dp[m+1][n+1]`
+  - 状态初始化
+    - `dp[i][0] = 0; dp[0][j] = 0`
+  - 状态转移
+    - `dp[i][j] = dp[i-1][j-1] + 1; dp[i][j] = 0`
+  - 备注
+    - 计算顺序：先行后列
 - [**最小编辑距离**](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
-  - 递推数组：`int dp[m+1][n+1]`
-  - 数组初始化：`dp[i][0] = i; dp[0][j] = j`
-  - 递推公式：`dp[i][j] = min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + c)`
-  - 计算顺序：先行后列
+  - 状态
+    - 子
+  - 选择
+    - 无
+  - 状态数组
+    - `int dp[m+1][n+1]`
+  - 状态初始化
+    - `dp[i][0] = i; dp[0][j] = j`
+  - 状态转移
+    - `dp[i][j] = min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + c)`
+  - 备注
+    - 计算顺序：先行后列
 
 #### Fibonacci
 
@@ -1407,8 +1437,6 @@ void DFSVisit(int vertex){
 
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
 
-  - 变种爬楼梯
-
   - 外层遍历数字，内层遍历平方数列表
 
   - ```c++
@@ -1417,16 +1445,23 @@ void DFSVisit(int vertex){
 
 - [322. 硬币可重复使用，求组成金额需要的最少数量](https://github.com/Noba1anc3/Leetcode/blob/master/322%20Coin%20Change.md)
 
-  - 变种爬楼梯
-  - 递推数组：`int dp[amount+1]`
-  - 数组初始化（用INT_MAX则需要改为float数组）：`dp[i] = amount+1`
-  - 递推公式：` dp[i] = min(dp[i], dp[i - coin] + 1)`
+  - 状态
+    - 子
+  - 选择
+    - 无
+  - 状态数组
+    - `int dp[amount+1]`
+  - 状态初始化（用INT_MAX则需要改为float数组）
+    - `dp[i] = amount+1`
+  - 状态转移
+    - ` dp[i] = min(dp[i], dp[i - coin] + 1)`
 
 #### Numbers
 
 - [**053. 求数组的最大和连续子数组**](https://github.com/Noba1anc3/Leetcode/blob/master/053%20Maximum%20Contiguous%20Subarray.md)
-  -  随时都可以选择重新开始
-  - 递推公式：`curAns = max(curAns + x, x); maxAns = max(curAns, maxAns)`
+  - 随时都可以选择重新开始
+  - 状态转移
+    - `curAns = max(curAns + x, x); maxAns = max(curAns, maxAns)`
 - [121. 一次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
   - 遍历价格，如果当前价与最低价的差值大于最大收益，更新最大收益，而后更新最低价格
   - `maxProfit = max(maxProfit, price - minPrice); minPrice = min(minPrice, price)`
@@ -1438,11 +1473,23 @@ void DFSVisit(int vertex){
 
 - [032. 最长有效括号串长度](https://github.com/Noba1anc3/Leetcode/blob/master/032%20Longest%20Valid%20Parentheses.md)
 
-  - 递推数组：`int dp[n]`
+  - 状态
 
-  - 数组初始化：`dp[i] = 0`
+    - 子
 
-  - 递推公式：
+  - 选择
+
+    - 无
+
+  - 状态数组
+
+    - `int dp[n]`
+
+  - 状态初始化
+
+    - `dp[i] = 0`
+
+  - 状态转移
 
     - ```c++
       if s[i] = ')' && s[i-1] = '(':
