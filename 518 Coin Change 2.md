@@ -56,15 +56,14 @@ if (j < coins[i - 1]) {
 
 ## Solution
 
-c++
-
+### c++
 
 ```c++
 class Solution {
 public:
     int change(int amount, vector<int>& coins) {
         int size = coins.size();
-		int dp[size+1][amount+1];
+        int dp[size+1][amount+1];
         
         for (int i = 0; i <= amount; i++)
             dp[0][i] = 0;
@@ -86,9 +85,9 @@ public:
 };
 ```
 
-执行用时：20 ms, 在所有 C++ 提交中击败了51.56%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了41.00%的用户
 
-内存消耗：12 MB, 在所有 C++ 提交中击败了33.02%的用户
+内存消耗：11.5 MB, 在所有 C++ 提交中击败了19.87%的用户
 
 **复杂度分析**
 
@@ -97,32 +96,30 @@ public:
 
 ## Idea - Low Space Complexity
 
+### c++
+
 ```c++
 class Solution {
 public:
     int change(int amount, vector<int>& coins) {
         int dp[amount+1];
-        memset(dp, 0, sizeof(dp)); //初始化数组为0
+        memset(dp, 0, sizeof(dp));
         dp[0] = 1;
         
-        for (int coin : coins){ //枚举硬币
-            for (int j = 1; j <= amount; j++){ //枚举金额
-                if (j < coin) continue; // coin不能大于amount
-                dp[j] += dp[j-coin];
-            }
-        }
+        for (const int& coin : coins)
+            for (int j = 0; j <= amount; j++)
+                if (j >= coin)
+                    dp[j] += dp[j - coin];
         
         return dp[amount];
     }
 };
 ```
 
-执行用时：4 ms, 在所有 C++ 提交中击败了99.91%的用户
+执行用时：4 ms, 在所有 C++ 提交中击败了99.66%的用户
 
-内存消耗：7.2 MB, 在所有 C++ 提交中击败了58.00%的用户
+内存消耗：6.6 MB, 在所有 C++ 提交中击败了99.25%的用户
 
 Attention:
-
 - 降低空间复杂度
-- memset(array, num, sizeof(array))
 - 先coin再amount是组合数，先amount再coin是排列数
