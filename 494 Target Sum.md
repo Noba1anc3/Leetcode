@@ -7,8 +7,8 @@ Find out how many ways to assign symbols to make sum of integers equal to target
 ```
 Input: nums is [1, 1, 1, 1, 1], S is 3. 
 Output: 5
-Explanation: 
 
+Explanation: 
 -1+1+1+1+1 = 3
 +1-1+1+1+1 = 3
 +1+1-1+1+1 = 3
@@ -16,10 +16,9 @@ Explanation:
 +1+1+1+1-1 = 3
 
 There are 5 ways to assign symbols to make the sum of nums be target 3.
-
 ```
 
-## Solution
+## Idea
 
 ### 定义状态
 
@@ -38,6 +37,15 @@ dp[ i ][ j ] = dp[ i - 1 ][ j - nums[ i ] ] + dp[ i - 1 ][ j + nums[ i ] ]
 
 ![](https://pic.leetcode-cn.com/05f8151bbb0f1818723710b2455695f01c33d75a38653eeee181ab61217e8f16-image.png)
 
+## Solution
+
+### c++
+
+```c++
+
+```
+
+### java
 
 ```java
 public static int findTargetSumWays(int[] nums, int s) {
