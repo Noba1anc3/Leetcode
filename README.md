@@ -1317,8 +1317,6 @@ void DFSVisit(int vertex){
       - `dp[j][k] = 0 `
     - 状态转移
       - `dp[j][k] = max(dp[j][k], 1 + dp[j - num_of_zero][k - num_of_one])`
-    - 备注
-      - 计算顺序：与一阶段不同，此时的`j`从`m`开始逆序向0迭代，`k`从`n`开始逆序向0迭代
 
 - [**494. 用正负数组内的数字组成目标和**](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 
@@ -1335,7 +1333,40 @@ void DFSVisit(int vertex){
   - 状态转移
     - ` dp[i][j] += (dp[i-1][j-nums[i]] + dp[i+1][j+nums[i]])`
   - 备注
-    - 返回值为`dp[n-1][sum+target]`, 原因在于，`sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
+    - 返回值为`dp[n-1][sum+target]`  原因在于: `sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
+
+- [518. 硬币可重复使用，求组成金额有多少种组合](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
+  - 此题应类比下方斐波那契系列[070爬楼梯问题](https://github.com/Noba1anc3/Leetcode/blob/master/070%20Climbing%20Stairs.md)
+  - Phase I
+    - 状态
+      - 选用前几个物品
+      - 待凑的金额大小
+    - 选择
+      - 当前硬币是否用来凑金额
+    - 状态数组
+      - `int dp[n+1][amount+1] = 0`
+      - `dp[i][j]` : 使用前`i`种硬币，待凑金额为`j`时的凑法个数
+    - 状态初始化
+      - `dp[0][i] = 0; dp[i][0] = 1 `
+    - 状态转移
+      - `dp[i][j] = dp[i-1][j] + dp[i][j - coin]`
+    - 备注
+      - 此题不同于其他0-1背包题目，在状态转移时不使用i-1而是i. 设想，如果要计算`dp[1][2]`, 按照此前题目的方法，`dp[1][2] = dp[0][2] + dp[0][2 - coin]`，显然并不合理。
+  - Phase II
+    - 状态
+      - 待凑的金额大小
+    - 选择
+      - 当前硬币是否用来凑金额
+    - 状态数组
+      - `int dp[amount+1] = 0`
+      - `dp[j]` : 待凑金额为`j`时的凑法个数
+    - 状态初始化
+      - `dp[i] = 0; dp[0] = 1 `
+    - 状态转移
+      - `dp[j] += dp[j - coin]`
+    - 备注
+      - 计算顺序：先coin再amount，计算组合数；先amount再coin计算的是排列数（爬楼梯问题） 
+      - 二维dp的组合数问题和排列数问题都可以交换嵌套的循环，因为子问题不会变化；一维的dp组合数问题和排列数问题不可以交换嵌套的循环，因为会改变子问题； 一维的dp组合数问题，交换嵌套的循环，子问题会变成排列数问题； 一维的dp排列数问题，交换嵌套的循环，子问题会变成组合数问题。
 
 #### Rod Cutting
 
@@ -1405,9 +1436,9 @@ void DFSVisit(int vertex){
 
 - [最优平衡二叉树](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%20Optimal%20BST.md)
   - 状态
-    - f
+    - zz
   - 选择
-    - f
+    - zz
   - 状态数组
     - `int e[n+1][n+1] = INT_MAX`
   - 状态初始化
@@ -1560,7 +1591,7 @@ void DFSVisit(int vertex){
   - 状态转移
     - `curAns = max(curAns + x, x); maxAns = max(curAns, maxAns)`
   - 备注
-    - 人生亦是如此，随时都可以选择重新开始
+    - 人生亦是如此，随时都可以选择重新开始hh
 - [121. 一次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
   - 状态
     - 数组的某个位置
