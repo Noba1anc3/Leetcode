@@ -37,12 +37,70 @@ dp[ i ][ j ] = dp[ i - 1 ][ j - nums[ i ] ] + dp[ i - 1 ][ j + nums[ i ] ]
 
 ![](https://pic.leetcode-cn.com/05f8151bbb0f1818723710b2455695f01c33d75a38653eeee181ab61217e8f16-image.png)
 
-## Solution
+## Solution - I Backtrack
 
 ### c++
 
 ```c++
+class Solution {
+public:
+    int ans = 0;
 
+    void backtrack(vector<int>& nums, int target, int index, int sum){
+        if (index == nums.size()){
+            if (sum == target){
+                ans++;
+            }
+        }
+        else{
+            backtrack(nums, target, index+1, sum + nums[index]);
+            backtrack(nums, target, index+1, sum - nums[index]);
+        }
+    }
+
+    int findTargetSumWays(vector<int>& nums, int target) {
+        backtrack(nums, target, 0, 0);
+        return ans;
+    }
+};
+```
+
+执行用时：1252 ms, 在所有 C++ 提交中击败了32.93%的用户
+
+内存消耗：8.8 MB, 在所有 C++ 提交中击败了73.11%的用户
+
+## Solution - II DP
+
+注意：此时的sum处代表0，而非总和
+
+### c++
+
+```c++
+class Solution {
+public:
+    int findTargetSumWays(vector<int>& nums, int target) {
+        int sum = accumulate(nums.begin(), nums.end(), 0);
+        int range = sum * 2 + 1;
+        if (abs(target) > abs(sum)) return 0;
+
+        int dp[nums.size()][range];
+        memset(dp, 0, sizeof(dp));
+
+        dp[0][sum + nums[0]] += 1;
+        dp[0][sum - nums[0]] += 1;
+
+        for (int i = 1; i < nums.size(); i++){
+            for (int j = 0; j < range; j++){
+                if (j + nums[i] < range)
+                    dp[i][j] += dp[i - 1][j + nums[i]];
+                if (j >= nums[i])
+                    dp[i][j] += dp[i - 1][j - nums[i]];
+            }
+        }
+
+        return dp[nums.size() - 1][sum + target];
+    }
+};
 ```
 
 ### java
