@@ -102,11 +102,9 @@ public:
         DP[0] = 1;
 
         for (int i = 1; i <= n; i++)
-            for (int j = 0; j < sizeof(steps) / sizeof(int); j++){
-                int step = steps[j];
+            for (const int& step : steps)
                 if (i >= step)
                     DP[i] += DP[i-step];
-            }
 
         return DP[n];
     }
