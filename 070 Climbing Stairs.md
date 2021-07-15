@@ -101,18 +101,18 @@ Attention:
 class Solution {
 public:
     int climbStairs(int n) {
-        int steps[2] = {1,2}, DP[n+1];
+        int steps[2] = {1,2};
+        
+        int DP[n+1];
         memset(DP, 0, sizeof(DP));
         DP[0] = 1;
-        int stepLen = sizeof(steps) / sizeof(int);
-        
-        for (int i = 1; i <= n; i++){
-            for (int j = 0; j < stepLen; j++){
+
+        for (int i = 1; i <= n; i++)
+            for (int j = 0; j < sizeof(steps) / sizeof(int); j++){
                 int step = steps[j];
-                if ( i < step ) continue; // 台阶少于跨越的步数
-                DP[i] += DP[i-step];
+                if (i >= step)
+                    DP[i] += DP[i-step];
             }
-        }
 
         return DP[n];
     }
