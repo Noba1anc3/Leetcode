@@ -113,6 +113,8 @@ public:
 
 ## Solution - III Matrix
 
+掌握前面的方法即可
+
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEJsCHKY1iEhfQKAr9fXM1PmVCetFcNCstJLcGHTD07rPaneWwT4enQlMcslUqLHcp.pGFS*Txpdm2exiuJR8EjQ!/r)
 
 ![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrELQQF0HdGbsd0E8oAa9Q*iU4UdUrGCdFBQKZ1ArI9S6Q90LqJwMbWMWHyPGyuQ4P3oyn9R6ToJ6kM5tUTHJcne4!/r)
