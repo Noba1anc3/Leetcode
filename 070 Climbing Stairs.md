@@ -83,12 +83,6 @@ public:
 Attention:
 - 降低空间复杂度
 
-## Solution - III Matrix
-
-![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEJsCHKY1iEhfQKAr9fXM1PmVCetFcNCstJLcGHTD07rPaneWwT4enQlMcslUqLHcp.pGFS*Txpdm2exiuJR8EjQ!/r)
-
-![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrELQQF0HdGbsd0E8oAa9Q*iU4UdUrGCdFBQKZ1ArI9S6Q90LqJwMbWMWHyPGyuQ4P3oyn9R6ToJ6kM5tUTHJcne4!/r)
-
 ## Extended Idea
 
 如果我们把问题泛化，不再是固定的1,2，而是任意给定台阶数，例如1,2,5呢？
@@ -119,3 +113,8 @@ public:
 };
 ```
 
+## Solution - III Matrix
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrEJsCHKY1iEhfQKAr9fXM1PmVCetFcNCstJLcGHTD07rPaneWwT4enQlMcslUqLHcp.pGFS*Txpdm2exiuJR8EjQ!/r)
+
+![](http://r.photo.store.qq.com/psc?/V50VqFfH2A6OlZ2gWBDL0uxzNK4WmFgm/TmEUgtj9EK6.7V8ajmQrELQQF0HdGbsd0E8oAa9Q*iU4UdUrGCdFBQKZ1ArI9S6Q90LqJwMbWMWHyPGyuQ4P3oyn9R6ToJ6kM5tUTHJcne4!/r)
