@@ -1,4 +1,4 @@
-# `Questions List
+# Questions List
 
 [Questions](https://github.com/Noba1anc3/Leetcode/blob/master/Questions.md)
 
@@ -1077,6 +1077,18 @@ void DFSVisit(int vertex){
       - 在当前解中加该子串，并添加一个`'.'`
       - 递归回溯，段数+1，index+位数
 
+- [494. 用正负数组内的数字组成目标和](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
+
+  - ```c++
+    void backtrack(vector<int>& nums, int target, int index, int sum)
+    ```
+
+  - 如果`index`遍历到`nums`长度则返回
+
+    - 如果`sum`与`target`相等，答案数+1
+
+  - 对下一位置的 `sum + nums[index]` 及 `sum + nums[index]` 进行回溯
+
 - [784. 字母与数字的大小写全排列](https://github.com/Noba1anc3/Leetcode/blob/master/784%20Letter%20Case%20Permutation.md)
 
   - ```c++
@@ -1278,7 +1290,6 @@ void DFSVisit(int vertex){
 
 - [**474. 限制0和1个数时，可以装下的最多字符串数目**](https://github.com/Noba1anc3/Leetcode/blob/master/474%20Ones%20and%20Zeroes.md)
 
-  - 如果数组和为奇数，最大值超过数组和的一半或数组长度为1，均返回false
   - Phase I
     - 状态
       - 选用前几个字符串
@@ -1308,6 +1319,23 @@ void DFSVisit(int vertex){
       - `dp[j][k] = max(dp[j][k], 1 + dp[j - num_of_zero][k - num_of_one])`
     - 备注
       - 计算顺序：与一阶段不同，此时的`j`从`m`开始逆序向0迭代，`k`从`n`开始逆序向0迭代
+
+- [**494. 用正负数组内的数字组成目标和**](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
+
+  - 状态
+    - 选用前几个数字
+    - 目标和的大小
+  - 选择
+    - 对当前数字加或是减
+  - 状态数组
+    - `int dp[n][2*sum+1] = 0`
+    - `dp[i][j]` : 用前`i`个数字组成`j`目标的方法数
+  - 状态初始化
+    - `dp[0][sum+nums[0]] += 1; dp[0][sum-nums[0]] += 1`
+  - 状态转移
+    - ` dp[i][j] += (dp[i-1][j-nums[i]] + dp[i+1][j+nums[i]])`
+  - 备注
+    - 返回值为`dp[n-1][sum+target]`, 原因在于，`sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
 
 #### Rod Cutting
 
@@ -1487,7 +1515,6 @@ void DFSVisit(int vertex){
     - `c = a + b; a = b; b = c `
   - 备注
     - 假设`a`为第0层，天然有一种方法
-
 - [279. 求组成数字需要的最少完全平方数](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
   - 状态
     - 待组成的数字
@@ -1637,6 +1664,9 @@ void DFSVisit(int vertex){
 
 // int -> string
 to_string(integer)
+    
+// 求绝对值
+abs(integer)
 ```
 
 ### struct
