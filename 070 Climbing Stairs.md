@@ -104,7 +104,7 @@ public:
         int steps[2] = {1,2}, DP[n+1];
         memset(DP, 0, sizeof(DP));
         DP[0] = 1;
-		int stepLen = sizeof(steps) / sizeof(int);
+        int stepLen = sizeof(steps) / sizeof(int);
         
         for (int i = 1; i <= n; i++){
             for (int j = 0; j < stepLen; j++){
