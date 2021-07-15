@@ -107,9 +107,8 @@ public:
         dp[0] = 1;
         
         for (const int& coin : coins)
-            for (int j = 0; j <= amount; j++)
-                if (j >= coin)
-                    dp[j] += dp[j - coin];
+            for (int j = coin; j <= amount; j++)
+                dp[j] += dp[j - coin];
         
         return dp[amount];
     }
