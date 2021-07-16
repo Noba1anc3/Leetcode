@@ -1335,7 +1335,7 @@ void DFSVisit(int vertex){
   - 备注
     - 返回值为`dp[n-1][sum+target]`  原因在于: `sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
 
-- [518. 硬币可重复使用，求组成金额有多少种组合](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
+- [**518. 硬币可重复使用，求组成金额有多少种组合**](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
 
   - 此题应类比下方斐波那契系列[070爬楼梯问题](https://github.com/Noba1anc3/Leetcode/blob/master/070%20Climbing%20Stairs.md)
 
@@ -1390,7 +1390,21 @@ void DFSVisit(int vertex){
         | 1    | 1    | 2    | 2    | 3    | 3    |
         | 1    | 1    | 2    | 2    | 3    | 4    |
 
-        
+- [面试题 17.16 只能做间隔选择时，怎样最大化收益](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.16%20The%20Masseuse.md)
+
+  - 状态
+    - 选择前几个活动
+  - 选择
+    - 是否选择当下的活动
+  - 状态数组
+    - `int dp[n+1] = 0`
+    - `dp[i]` : 从前`i`个活动中做间隔选择可以获得的最大收益
+  - 状态初始化
+    - `dp[0] = 0, dp[1] = nums[0] `
+  - 状态转移
+    - `dp[i] = max(dp[i-2] + nums[i-1], dp[i-1]`
+  - 备注
+    - 可以像爬楼梯一样用三个变量代替dp数组，降低空间复杂度
 
 #### Rod Cutting
 
@@ -1535,7 +1549,7 @@ void DFSVisit(int vertex){
     - `dp[i][j] = min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + c)`
   - 备注
     - 计算顺序：先行后列
-- [在矩阵上向右或向下走可以获得的最大价值]()
+- [在矩阵上向右或向下走可以获得的最大价值](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-47%20Maximum%20Value%20of%20Presents.md)
   - 状态
     - 当前坐标
   - 选择
@@ -1571,6 +1585,8 @@ void DFSVisit(int vertex){
 **Varieties**
 
 - [070. 求有几种爬楼梯的方法](https://github.com/Noba1anc3/Leetcode/blob/master/070%20Climbing%20Stairs.md)
+
+  - 与[面试题 08.01 爬楼梯问题](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2008.01%20Three%20Steps%20Problem.md)是同样的问题
 
   - 状态
 
@@ -1757,6 +1773,8 @@ to_string(integer)
     
 // 求绝对值
 abs(integer)
+    
+// 1e9+7这个数满足[0, 1e9+7)之内的数字相加不超int，相乘不超long long，是个质数
 ```
 
 ### struct
