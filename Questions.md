@@ -238,11 +238,20 @@ If u want to check out the questions belong to this category, please check the r
 
 -->
 
+## Divide & Conquer
+
+- [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+- [☆☆☆ 912. Sort an Array ☆☆☆](912%20Sort%20an%20Array.md)
+- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
+- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
+
 ## Greedy
 
 - [Prim Algorithm for MST](Graph%20-%20Prim.md)
 - [Dijkstra Algorithm for SSSP](Graph%20-%20Dijkstra.md)
 - [☆☆ Fractional Knapsack ☆☆](Greedy%20-%20Fractional%20Knapsack.md)
+- [☆ 014. Longest Common Prefix ☆](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [☆☆ 045. Jump Game II ☆☆](045%20Jump%20Game%20II.md)
 - [☆☆ 055. Jump Game ☆☆](055%20Jump%20Game.md)
 - [☆☆ 122. Best Time to Buy and Sell Stock II ☆☆](122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
@@ -255,14 +264,6 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks (Huffman + Priority Queue) ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
 - [☆ 1403. Minimum Subsequence in Non-Increasing Order ☆](1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [☆☆ 剑指Offer 14 - II. Rope Cutting II ☆☆](%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
-
-## Divide & Conquer
-
-- [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
-- [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
-- [☆☆☆ 912. Sort an Array ☆☆☆](912%20Sort%20an%20Array.md)
-- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
-- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆](%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Dynamic Programming
 
@@ -312,7 +313,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
-- [014. Longest Common Prefix](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
+- [☆ 014. Longest Common Prefix ☆](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆ 020. Valid Parentheses ☆](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
 - [☆☆ 021. Merge Two Sorted Lists （同剑指Offer 25）☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
