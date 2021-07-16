@@ -787,6 +787,19 @@ void DFSVisit(int vertex){
 
 - [005. 最长回文子串](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
   - 从字符串每个位置开始，进行奇数长度和偶数长度回文串的双指针中心扩散查找
+- [面试题 10.09 排序矩阵查找](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
+  - 初始化新矩阵行列指针位于矩阵的右下角
+  - 推进首列的行指针，直到大于target，更新新矩阵行指针
+  - 推进首行的列指针，直到大于target，更新新矩阵列指针
+  - 在新的子矩阵中进行寻找
+
+#### Centralized
+
+- [面试题 10.09 排序矩阵查找](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
+  - 初始化行列指针位于矩阵的右上角
+  - 如果该位置元素超过target，将列指针回退
+  - 如果该位置元素小于target，将行指针推进
+  - 直到找到目的元素
 
 ## Sort
 
