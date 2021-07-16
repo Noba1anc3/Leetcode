@@ -68,7 +68,7 @@ class Solution {
 
 **Space Complexity** : O(mn)
 
-## Solution - II Space Reduced DP
+## Solution - II Space Complexity Reduced DP
 
 利用原始数组作为dp数组
 
