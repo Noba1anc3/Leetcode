@@ -1536,6 +1536,7 @@ void DFSVisit(int vertex){
   - 备注
     - 计算顺序：先行后列
 - [**最小编辑距离**](https://github.com/Noba1anc3/Leetcode/blob/master/072%20Edit%20Distance.md)
+  - 题目：[面试题 01.05 是否编辑距离为1](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2001.05%20One%20Way.md)
   - 状态
     - 两个子串的结束位置
   - 选择
@@ -1563,6 +1564,18 @@ void DFSVisit(int vertex){
     - `dp[i][j] = max(dp[i][j-1], dp[i-1][j]) + grid[i-1][j-1]`
   - 备注
     - 利用原始数组降低空间复杂度
+- [在矩阵上绕开障碍物，抵达终点](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2008.02%20Robot%20in%20a%20Grid.md)
+  - 状态
+    - 当前坐标
+  - 选择
+    - 从左边过来还是上边过来
+  - 状态数组
+    - `vector<vector<bool>> dp(r+1, vector<bool>(c+1, false));`
+    - `dp[i][j]` : `[i,j]`位置是否可达
+  - 状态初始化
+    - `dp[1][1] = true`
+  - 状态转移
+    - `dp[i][j] = (obstacleGrid[i-1][j-1] == 0) && (dp[i][j-1] || dp[i-1][j])  `
 
 #### Fibonacci
 
