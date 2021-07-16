@@ -15,8 +15,8 @@
 ```
 
 ## Solution - I DP
-c++
-```python
+
+```c++
 class Solution {
 public:
     int maxValue(vector<vector<int>>& grid) {
@@ -76,26 +76,17 @@ class Solution {
 class Solution {
 public:
     int maxValue(vector<vector<int>>& grid) {
-        int m = grid.size(), n = grid[0].size();
+        if (grid.empty()) return 0;
 
-        for (int i = 0; i < m; i++){
-            for (int j = 0; j < n; j++){
-                if (i == 0 && j == 0){
-                    continue;
-                }
-                else if (i == 0){
-                    grid[0][j] += grid[0][j-1];
-                }
-                else if (j == 0 && ! i == 0){
-                    grid[i][0] += grid[i-1][0];
-                }
-                else{
-                	grid[i][j] += max(grid[i-1][j], grid[i][j-1]);
-                }
+        for (int i = 0; i < grid.size(); i++)
+            for (int j = 0; j < grid[0].size(); j++){
+                int up = i >= 1 ? grid[i-1][j] : 0;
+                int left = j >= 1 ? grid[i][j-1] : 0;
+                grid[i][j] = max(left, up) + grid[i][j];
             }
-        }
 
-        return grid[m-1][n-1];
+        return grid[grid.size()-1][grid[0].size()-1];
+
     }
 };
 ```
@@ -107,5 +98,4 @@ public:
 **Space Complexity** : O(1)
 
 Attention
-
 - 借用原始数组降低空间复杂度
