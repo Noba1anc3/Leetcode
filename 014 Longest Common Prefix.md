@@ -15,9 +15,8 @@ Explanation: There is no common prefix among the input strings.
 ```
 
 ## Solution
-c++
 
-```python
+```c++
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
@@ -28,12 +27,12 @@ public:
     }
 };
 ```
-执行用时：4 ms, 在所有 C++ 提交中击败了92.93%的用户
 
-内存消耗：9.7 MB, 在所有 C++ 提交中击败了11.07%的用户
+执行用时：0 ms, 在所有 C++ 提交中击败了100.00%的用户
+
+内存消耗：9.2 MB, 在所有 C++ 提交中击败了16.17%的用户
 
 Attention
-
 - string.find()
 - string.substr()
 - string.size()
