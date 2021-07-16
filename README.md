@@ -1161,6 +1161,9 @@ void DFSVisit(int vertex){
   - 每次贪心选择距离源点最近的结点，松弛与其相邻结点的距离
 - [部分背包](https://github.com/Noba1anc3/Leetcode/blob/master/Greedy%20-%20Fractional%20Knapsack.md)
   - 每次贪心选择单位重量价值最高的物品放入背包
+- [014. 最长公共前缀](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
+  - 起初设定最长前缀为第一个字符串
+  - 遍历所有字符串，只要找不到该前缀，就将前缀的尾巴砍掉一位
 - [**045. 最少几步能从起点跳到终点**](https://github.com/Noba1anc3/Leetcode/blob/master/045%20Jump%20Game%20II.md)
   - 初始化搜索区间的起点与终点，步数和最远距离为0（区间搜索）
   - 只要搜索区间终点尚未达到数组终点
@@ -1336,6 +1339,8 @@ void DFSVisit(int vertex){
     - 返回值为`dp[n-1][sum+target]`  原因在于: `sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
 
 - [**518. 硬币可重复使用，求组成金额有多少种组合**](https://github.com/Noba1anc3/Leetcode/blob/master/518%20Coin%20Change%202.md)
+
+  - 同[面试题08.11](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2008.11%20Coin.md)
 
   - 此题应类比下方斐波那契系列[070爬楼梯问题](https://github.com/Noba1anc3/Leetcode/blob/master/070%20Climbing%20Stairs.md)
 
@@ -1835,15 +1840,18 @@ std::string += std::string / char
 std::string.push_back(char)
 std::string.pop_back()
 std::string.substr(0, std::string.size()-1)
+
+// 查找子串
+std::string.find()
     
-std::string -> int
+// std::string -> int
 char* s = std::string.c_str()
 integer I = atoi(char*)
 
-std::string -> int
+// std::string -> int
 integer I = stoi(string)
     
-int -> std::string
+// int -> std::string
 std::string s = to_string(integer)
 ```
 
