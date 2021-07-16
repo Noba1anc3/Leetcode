@@ -6,6 +6,7 @@ Design a stack that supports push, pop, top, and retrieving the minimum element 
 - getMin() -- Retrieve the minimum element in the stack.
 
 **Example:**
+
 ```
 Input
 ["MinStack","push","push","push","getMin","pop","top","getMin"]
@@ -37,7 +38,8 @@ minStack.getMin(); // return -2
 
 - 在任意一个时刻，栈内元素的最小值就存储在辅助栈的栈顶元素中。
 
-python
+#### python
+
 ```python
 class MinStack:
     def __init__(self):
@@ -63,7 +65,7 @@ class MinStack:
 
 内存消耗：18.2 MB, 在所有 Python3 提交中击败了13.82%的用户
 
-c++
+#### c++
 
 ```c++
 class MinStack {
