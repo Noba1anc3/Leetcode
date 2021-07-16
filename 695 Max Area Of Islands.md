@@ -25,6 +25,43 @@ Note: The length of each dimension in the given grid does not exceed 50.
 
 ## Solution
 
+### c++
+
+```c++
+class Solution {
+private:
+    int row, col;
+    int max_area = 0;
+
+public:
+    bool inArea(std::vector<std::vector<int>>& grid, int i, int j) {
+        if (0 <= i && i < row && 0 <= j && j < col) return true;
+        return false;
+    }
+
+    int get_area(std::vector<std::vector<int>>& grid, int i, int j) {
+        if (!inArea(grid, i, j)) return 0;
+        if (grid[i][j] != 1) return 0;
+        grid[i][j] = 2;
+        return 1 + get_area(grid, i, j-1) + get_area(grid, i, j+1) + get_area(grid, i-1, j) + get_area(grid, i+1, j);
+    }
+
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        row = grid.size(), col = grid[0].size();
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (grid[i][j] == 1) {
+                    int area = get_area(grid, i, j);
+                    max_area = max(max_area, area);
+                }
+
+        return max_area;
+    }
+};
+```
+
+### java
+
 ```java
 public int maxAreaOfIsland(int[][] grid) {
     int max_area = 0;
