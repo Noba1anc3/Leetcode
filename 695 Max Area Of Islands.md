@@ -48,8 +48,8 @@ public:
 
     int maxAreaOfIsland(vector<vector<int>>& grid) {
         row = grid.size(), col = grid[0].size();
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++)
                 if (grid[i][j] == 1) {
                     int area = get_area(grid, i, j);
                     max_area = max(max_area, area);
@@ -59,6 +59,10 @@ public:
     }
 };
 ```
+
+执行用时：12 ms, 在所有 C++ 提交中击败了97.49%的用户
+
+内存消耗：22.3 MB, 在所有 C++ 提交中击败了83.75%的用户
 
 ### java
 
@@ -100,8 +104,4 @@ boolean inArea(int[][] grid, int r, int c) {
 ```
 
 Time : 2ms  
-Memory : 40.4MB  
-
-Attention:  
-- 在递归时使用```1 +```来计算面积
-
+Memory : 40.4MB
