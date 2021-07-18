@@ -594,8 +594,8 @@ void DFSVisit(int vertex){
 #### Implementation - Stack Based
 
 - 需要加入有环的判断，否则算法无法停止
-- 在完成对邻结点的遍历后，将源结点压入栈
-- 最后从栈顶到栈底的序列即为DFS序列
+- 在完成对邻结点的DFS遍历后，将源结点压入栈
+- 最后从栈顶到栈底的序列即为拓扑排序序列
 
 #### Questions
 
@@ -769,6 +769,11 @@ void DFSVisit(int vertex){
   - 跳出while循环，返回true
 - [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 内层`partition`可用首尾双指针
+- [面试题 10.09 排序矩阵查找](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
+  - 初始化行列指针位于矩阵的右上角
+  - 如果该位置元素超过target，将列指针回退
+  - 如果该位置元素小于target，将行指针推进
+  - 直到找到目的元素
 
 #### Fast-Low
 
@@ -792,14 +797,6 @@ void DFSVisit(int vertex){
   - 推进首列的行指针，直到大于target，更新新矩阵行指针
   - 推进首行的列指针，直到大于target，更新新矩阵列指针
   - 在新的子矩阵中进行寻找
-
-#### Centralized
-
-- [面试题 10.09 排序矩阵查找](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
-  - 初始化行列指针位于矩阵的右上角
-  - 如果该位置元素超过target，将列指针回退
-  - 如果该位置元素小于target，将行指针推进
-  - 直到找到目的元素
 
 ## Sort
 
@@ -1776,18 +1773,18 @@ void DFSVisit(int vertex){
 - [剑指Offer-14-I. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-I%20Rope%20Cutting%20I.md)
   - 根据算术几何均值不等式，各个因子相同时，乘积最大
   - 根据对函数求导结果，值为3的因子越多时，乘积越大
-  - 当 n ≤ 3 时，按规则应不拆分，由于题目要求必须拆分，必须拆出一个因子 1 ，即返回 n - 1
-  - 当 n > 3 时，求 n 除以 3 的 整数部分 a 和 余数部分 b （即 n = 3a + b ），并分为以下三种情况：
-    - 当 b = 0 时，直接返回 3 ^ a
-    - 当 b = 1 时，要将一个 1 + 3 转换为 2 + 2，因此返回 3 ^ (a - 1) x 4
-    - 当 b = 2 时，返回 3 ^ a x 2
+  - 当 `n ≤ 3` 时，按规则应不拆分，由于题目要求必须拆分，必须拆出一个因子 `1` ，即返回 `n - 1`
+  - 当 `n > 3` 时，求 `n` 除以 `3` 的 整数部分 `a` 和 余数部分 `b` （即 `n = 3a + b` ），并分为以下三种情况：
+    - 当 `b = 0` 时，直接返回 `3 ^ a`
+    - 当 `b = 1` 时，要将一个 1 + 3 转换为 2 + 2，因此返回 `3 ^ (a - 1) x 4`
+    - 当 `b = 2` 时，返回 `3 ^ a x 2`
 - [剑指Offer-14-II. 在和固定时，将乘积最大化](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-14-II%20Rope%20Cutting%20II.md)
-  - 只要n大于4，每次减3，每次将结果 × 3 并对1e9+7取余
-  - 将结果 × n，对1e9+7取余
+  - 只要`n`大于`4`，每次减`3`，每次将结果 `× 3` 并对`1e9+7`取余
+  - 将结果 `× n`，对`1e9+7`取余
 - [剑指Offer-56-I. 找出数组中唯二只出现了一次的数字，其他数字均出现两次](http://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
-  - 用0与数组所有元素逐一异或 ^
-  - 用1与异或结果求与 &，若结果不为1，则1向左移一位 << 1, 直到结果为1
-  - 按照这一位对数字进行分类，值为1的在一组，值为0的在一组
+  - 用`0`与数组所有元素逐一异或 `^`
+  - 用`1`与异或结果求与 `&`，若结果为`0`，则`1`向左移一位 `<< 1`, 直到结果为`1`
+  - 按照这一位对数字进行分类，值为`1`的在一组，值为`0`的在一组
   - 组内分别计算异或，两组异或的结果就是两个只出现了一次的数字
 
 # Language Specialty
