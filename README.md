@@ -1,10 +1,12 @@
 # Questions List
 
-[Questions](https://github.com/Noba1anc3/Leetcode/blob/master/Questions.md)
+- [Questions](https://github.com/Noba1anc3/Leetcode/blob/master/Questions.md)
 
 # Recruit Information
 
-[Recruit Information](https://github.com/Noba1anc3/Leetcode/blob/master/Recruit.md)
+- [Companies](https://github.com/Noba1anc3/Leetcode/blob/master/Recruit.md)
+
+- [Researches](https://github.com/Noba1anc3/Leetcode/blob/master/Researches.md)
 
 # Data Structure
 
