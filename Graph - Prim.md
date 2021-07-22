@@ -31,7 +31,7 @@ public:
         vector<int> color(n+1, WHITE), key(n+1, INT_MAX), pred(n+1, NULL);
         std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>>> Q;
         key[root] = 0;
-        Q.push(pair<int, int>(0, root));
+        Q.push(pair<int, int>(key[root], root));
 
         while (!Q.empty()){
             int curVertex = Q.top().second; Q.pop();
