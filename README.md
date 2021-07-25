@@ -664,7 +664,7 @@ void DFSVisit(int vertex){
 
 [DFS](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20DFS.md)
 
-要点：start，finish，pred，color
+要点：`start`，`finish`，`pred`，`color`
 
 - 刚访问时color改灰，访问完相邻结点后color改黑
 - start和finish的触发时间与color变灰及变黑的时间一致
