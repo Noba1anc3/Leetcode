@@ -1819,6 +1819,12 @@ abs(integer)
 ### struct
 
 ```c++
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+ 
 struct Edge{
     int vertex1;
     int vertex2;
