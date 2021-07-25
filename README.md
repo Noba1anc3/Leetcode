@@ -18,6 +18,8 @@
 
 #### Basics
 
+> 广度优先搜索
+
 - [**279. 求组成数字需要的最少完全平方数**](https://github.com/Noba1anc3/Leetcode/blob/master/279%20Perfect%20Squares.md)
   - 因要找到最少的完全平方数，根据贪心算法思想，遍历完同层元素后再遍历下一层是合理的做法
   - 只要队列不空，迭代其中的元素，检查其是否是完全平方数，是则直接返回，不是则减去完全平方数，得到新余数，添加到队列当中，以进行下一层遍历
@@ -30,12 +32,15 @@
 
 #### Tree
 
-- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
+> 层序遍历
 
+- [261. 判断一系列**无向边**能否组成一棵树](https://github.com/Noba1anc3/Leetcode/blob/master/261%20Graph%20Valid%20Tree.md)
 - [**662. 二叉树的最大宽度**](https://github.com/Noba1anc3/Leetcode/blob/master/662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [**剑指Offer-55. 二叉树的深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 #### Graph
+
+> 拓扑排序
 
 - [207. 给定课程学习先决条件，判断是否可行](https://github.com/Noba1anc3/Leetcode/blob/master/207%20Course%20Schedule.md)
 - [210. 给定课程学习先决条件，返回拓扑序列](https://github.com/Noba1anc3/Leetcode/blob/master/210%20Course%20Schedule%20II.md)
@@ -93,6 +98,8 @@
 
 #### Tree
 
+> 中序遍历
+
 - [**094. 二叉树中序遍历**](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
   - 将白色根结点压入栈中
   - 只要栈不空，每次弹出栈顶，如果是空指针则continue
@@ -102,6 +109,8 @@
 - [145, 二叉树后序遍历](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
 
 #### Graph
+
+> 深度优先搜索
 
 - [拓扑排序](https://github.com/Noba1anc3/Leetcode/blob/master/Graph%20-%20Topological%20Sort.md)
   - **基于DFS算法**
