@@ -917,7 +917,7 @@ void DFSVisit(int vertex){
 - [976. 三角形的最大周长](https://github.com/Noba1anc3/Leetcode/blob/master/976%20Largest%20Perimeter%20Triangle.md)
 - [1403. 元素和超过数组一半的最短最大子序列](https://github.com/Noba1anc3/Leetcode/blob/master/1403%20Minimum%20Subsequence%20in%20Non-Increasing%20Order.md)
 - [**剑指Offer-45. 数组元素能组成的最小数字串**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
-  -  重构比较函数，组合` s1` 和 `s2` ，如果 `s1 + s2 < s2 + s1`，那么 `s1` > `s2` 
+  -  重构比较函数，组合` s1` 和 `s2` ，如果 `s1 + s2 < s2 + s1`，那么 `s1` < `s2` 
 - [剑指Offer-51. 数组的逆序对数](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 
 ## Backtrack
@@ -1982,6 +1982,9 @@ std::unordered_map.find(key) != std::unordered_map.end()
 // 遍历map的所有key
 unordered_map<int, int>::iterator it = M.begin();
 while (it1 != M.end()) int key = it->first;
+
+// map 可以转化为 vector<pair>
+std::map -> std::vector<std::pair<>>
 ```
 
 ### pair
