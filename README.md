@@ -751,7 +751,7 @@ void DFSVisit(int vertex){
 
 ## Double Pointer
 
-> 对于vector，能用iterator就不用int型指针，会进一步加速算法耗时
+> 对于vector，遍历时能用iterator就不用int型指针，会进一步降低算法耗时
 
 ### Questions
 
@@ -778,9 +778,9 @@ void DFSVisit(int vertex){
   - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
   - 如果双指针对应的小写字母一样，`i++`，`j--`，否则返回错误
   - 跳出while循环，返回true
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+- [215. 第K大的数](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 内层`partition`可用首尾双指针
-- [面试题 10.09 排序矩阵查找](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
+- [**面试题 10.09 排序矩阵查找**](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
   - 初始化行列指针位于矩阵的右上角
   - 如果该位置元素超过target，将列指针回退
   - 如果该位置元素小于target，将行指针推进
@@ -793,7 +793,7 @@ void DFSVisit(int vertex){
 
 #### Cur-Pre
 
-- [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
+- [215. 第K大的数](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 内层`partition`可用前后双指针
 
 - [剑指Offer-24. 反转链表](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
@@ -801,8 +801,8 @@ void DFSVisit(int vertex){
 
 #### Diffuse
 
-- [005. 最长回文子串](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
-  - 从字符串每个位置开始，进行奇数长度和偶数长度回文串的双指针中心扩散查找
+- [**005. 最长回文子串**](https://github.com/Noba1anc3/Leetcode/blob/master/005%20Longest%20Palindromic%20Substring.md)
+  - 遍历字符串的每个位置，进行奇数长度和偶数长度回文串的双指针中心扩散查找
 - [面试题 10.09 排序矩阵查找](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
   - 初始化新矩阵行列指针位于矩阵的右下角
   - 推进首列的行指针，直到大于target，更新新矩阵行指针
@@ -819,16 +819,16 @@ void DFSVisit(int vertex){
 
 #### Algorithm
 
-- [**QuickSort**](https://github.com/Noba1anc3/Leetcode/blob/master/QuickSort.md)
+- [**快速排序**](https://github.com/Noba1anc3/Leetcode/blob/master/QuickSort.md)
 
 #### Questions
 
 - [**075. 将012的乱序数组恢复顺序**](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
   - 初始化零指针为-1，二指针为数组长度
   - 初始化遍历指针为0，只要其小于二指针
-    - 如果下标元素为0，交换下标元素与前移零指针元素，遍历指针前移
-    - 如果下标元素为1，遍历指针前移
-    - 如果下标元素为2，交换该元素与后移二指针元素
+    - 如果遍历指针元素为0，交换遍历指针元素与前移零指针元素，遍历指针前移
+    - 如果遍历指针元素为1，遍历指针前移
+    - 如果遍历指针元素为2，交换遍历指针元素与后移二指针元素
 
 - [**215. 第K大的数**](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 外层
@@ -849,7 +849,7 @@ void DFSVisit(int vertex){
 
 #### Algorithm
 
-- [**Heap Sort**](https://github.com/Noba1anc3/Leetcode/blob/master/HeapSort.md)
+- [**堆排序**](https://github.com/Noba1anc3/Leetcode/blob/master/HeapSort.md)
   - Based on List
 
 #### Questions
@@ -869,7 +869,7 @@ void DFSVisit(int vertex){
 
 #### Algorithm
 
-- [**Merge Sort**](https://github.com/Noba1anc3/Leetcode/blob/master/MergeSort.md)
+- [**分治排序**](https://github.com/Noba1anc3/Leetcode/blob/master/MergeSort.md)
 
 #### Questions
 
@@ -1069,7 +1069,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int index)
-    
     ```
 
   - 将回溯过程中所有尚未完成的解都加到解集中
@@ -1088,7 +1087,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& s, int piece, int index)
-    
     ```
 
     - 如果段数为4或下标到字符串长度则返回
@@ -1104,7 +1102,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int target, int index, int sum)
-    
     ```
 
   - 如果`index`遍历到`nums`长度则返回
@@ -1117,7 +1114,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(string& S, int i)
-    
     ```
 
   - 如果i遍历到了字符串长度则返回
@@ -1132,7 +1128,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int width)
-    
     ```
 
   - 如果width减到0，则返回
@@ -1281,7 +1276,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
-      
       ```
 
 - [**416. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -1481,7 +1475,6 @@ void DFSVisit(int vertex){
     - ```c++
       for (int j = 2; j <= (int)i/2; j++)
           dp[i] = max(dp[i], dp[j] * dp[i-j]);
-      
       ```
 
 #### Matrix Multiplication
@@ -1771,7 +1764,6 @@ void DFSVisit(int vertex){
       	dp[i] = (i >= 2) ? dp[i-2] + 2 : 2;
       if s[i] = ')' && s[i-1] = ')' && i - 1 - dp[i-1] >= 0 && s[i-1-dp[i-1]] = '('
       	dp[i] = (i - dp[i-1] >= 2) ? dp[i-1] + 2 + dp[i-2-dp[i-1]] : dp[i-1] + 2
-      
       ```
 
 ## Math
@@ -1822,7 +1814,6 @@ to_string(integer)
 abs(integer)
     
 // 1e9+7这个数满足[0, 1e9+7)之内的数字相加不超int，相乘不超long long，是个质数
-
 ```
 
 ### struct
@@ -1845,7 +1836,6 @@ struct Item items[n];
 
 // 对结构体数组进行排序
 sort(items, items + n)
-
 ```
 
 ### char
@@ -1868,7 +1858,6 @@ isalpha(char)
     
 // 转成小写字母
 tolower(char)
-
 ```
 
 ### string
@@ -1891,7 +1880,6 @@ integer I = stoi(string)
     
 // int -> std::string
 std::string s = to_string(integer)
-
 ```
 
 ### list
@@ -1901,7 +1889,6 @@ memset(dp, 0, sizeof(dp));
 
 // 求列表长度
 sizeof(steps) / sizeof(int);
-
 ```
 
 ### vector
@@ -1951,7 +1938,6 @@ accumulate(nums.begin(), nums.end(), 0)
 // 求vector最大元素
 // max_element本身返回的是迭代器
 *max_element(nums.begin(), nums.end())
-
 ```
 
 ### set & unordered_set
@@ -1973,8 +1959,8 @@ for (std::set<type>::iterator it = set.begin(); it != set.end(); it++)
     value = *it;
 
 // 查找set  两种方法时间复杂度相当
-if (std::set.find(element) == std::set.end())
-if (std::set.count(element))
+std::set.find(element) == std::set.end()
+std::set.count(element)
 
 // vector转set
 std::set(std::vector.begin(), std::vector.end())
@@ -1994,9 +1980,8 @@ std::unordered_map.at(key)
 std::unordered_map.find(key) != std::unordered_map.end()
     
 // 遍历map的所有key
-unordered_map<int, int>::iterator it1 = M.begin();
-while (it1 != M.end()){ int key = it1->first; }
-
+unordered_map<int, int>::iterator it = M.begin();
+while (it1 != M.end()) int key = it->first;
 ```
 
 ### pair
@@ -2005,14 +1990,12 @@ while (it1 != M.end()){ int key = it1->first; }
 std::pair.first
 std::pair.second
 make_pair(value1, value2)
-
 ```
 
 ### stack
 
 ```
 std::stack<type> S;
-
 ```
 
 ### queue
@@ -2023,7 +2006,6 @@ std::queue.empty()
 std::queue.front()
 std::queue.pop()
 std::queue.push()
-
 ```
 
 ### priority_queue
@@ -2036,7 +2018,6 @@ std::priority_queue.pop()
 std::priority_queue.push()
 std::priority_queue.size()
 std::priority_queue.empty()
-
 ```
 
 ### iterator
@@ -2060,7 +2041,6 @@ while (it != nums.begin() - 1)
 // 可以在取值的同时调整指针
 *it++
 *it--
-
 ```
 
 ### other
@@ -2084,7 +2064,6 @@ unsigned long long
     
 // 引用传递不需要调用构造函数去构造函数的局部变量
 &s
-
 ```
 
 ## python
@@ -2106,7 +2085,6 @@ list.index(value, index)
 
 # 求数组内元素和
 sum(list)
-
 ```
 
 ### dict
