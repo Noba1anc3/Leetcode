@@ -1236,7 +1236,7 @@ void DFSVisit(int vertex){
 **Original :** [0-1背包](https://github.com/Noba1anc3/Leetcode/blob/master/DP%20-%2001%20Knapsack.md)
 
 - 状态
-  - 放入几个物品
+  - 放入前几个物品
   - 背包容量大小
 - 选择
   - 是否将当前物品装入背包
@@ -1293,7 +1293,7 @@ void DFSVisit(int vertex){
     - 状态初始化
       - `dp[0][nums[0]] = true; dp[i][0] = true `
     - 状态转移
-      - `dp[i][j] = dp[i-1][j] || dp[i-1][j - num]`
+      - `dp[i][j] = dp[i-1][j] || dp[i-1][j - num_i]`
     - 备注
       - 如果提前使`target`得到了满足，可直接返回true
   - Phase II
@@ -1307,7 +1307,7 @@ void DFSVisit(int vertex){
     - 状态初始化
       - `dp[0] = true `
     - 状态转移
-      - `dp[j] |= dp[j - num]`
+      - `dp[j] |= dp[j - num_i]`
     - 备注
       - 计算顺序：与一阶段不同，此时的`j`从`target`逆序向当前`num`进行遍历
       - 如果提前使`target`得到了满足，可直接返回true
@@ -1322,12 +1322,12 @@ void DFSVisit(int vertex){
     - 选择
       - 是否将当前字符串装入背包
     - 状态数组
-      - `int dp[n+1][m+1][n+1] = 0`
+      - `int dp[n+1][p+1][q+1] = 0`
       - `dp[i][j][k]` : 使用前`i`个字符串，背包容量为`j`个0和`k`个1时，可以容纳的最多字符串
     - 状态初始化
       - `dp[0][i][j] = 0; dp[i][0][0] = 0 `
     - 状态转移
-      - `dp[i][j][k] = max(dp[i][j][k], 1 + dp[i-1][j - num_of_zero][k - num_of_one])`
+      - `dp[i][j][k] = max(dp[i-1][j][k], 1 + dp[i-1][j-num_of_zero][k-num_of_one])`
   - Phase II
     - 状态
       - 背包中装0的数量
@@ -1335,12 +1335,14 @@ void DFSVisit(int vertex){
     - 选择
       - 是否将当前字符串装入背包
     - 状态数组
-      - `int dp[m+1][n+1] = 0`
+      - `int dp[p+1][q+1] = 0`
       - `dp[j][k]` : 背包容量为`j`个0和`k`个1时，可以容纳的最多字符串
     - 状态初始化
       - `dp[j][k] = 0 `
     - 状态转移
-      - `dp[j][k] = max(dp[j][k], 1 + dp[j - num_of_zero][k - num_of_one])`
+      - `dp[j][k] = max(dp[j][k], 1 + dp[j-num_of_zero][k-num_of_one])`
+    - 备注
+      - 计算顺序：与一阶段不同，此时的`j`从`p`逆序向`num_of_zero`进行遍历，`k`逆序从`q`向`num_of_one`进行遍历
 
 - [**494. 用正负数组内的数字组成目标和**](https://github.com/Noba1anc3/Leetcode/blob/master/494%20Target%20Sum.md)
 
@@ -1355,7 +1357,7 @@ void DFSVisit(int vertex){
   - 状态初始化
     - `dp[0][sum+nums[0]] += 1; dp[0][sum-nums[0]] += 1`
   - 状态转移
-    - ` dp[i][j] += (dp[i-1][j-nums[i]] + dp[i+1][j+nums[i]])`
+    - ` dp[i][j] = dp[i-1][j-nums[i]] + dp[i+1][j+nums[i]]`
   - 备注
     - 返回值为`dp[n-1][sum+target]`  原因在于: `sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
 
@@ -1368,7 +1370,7 @@ void DFSVisit(int vertex){
   - Phase I
 
     - 状态
-      - 选用前几个物品
+      - 选用前几种硬币
       - 待凑的金额大小
     - 选择
       - 当前硬币是否用来凑金额
@@ -1399,7 +1401,7 @@ void DFSVisit(int vertex){
 
     - 状态初始化
 
-      - `dp[i] = 0; dp[0] = 1 `
+      - `dp[0] = 1 `
 
     - 状态转移
 
@@ -1428,9 +1430,9 @@ void DFSVisit(int vertex){
   - 状态初始化
     - `dp[0] = 0, dp[1] = nums[0] `
   - 状态转移
-    - `dp[i] = max(dp[i-2] + nums[i-1], dp[i-1]`
+    - `dp[i] = max(dp[i-1], nums[i-1] + dp[i-2]) `
   - 备注
-    - 可以像爬楼梯一样用三个变量代替dp数组，降低空间复杂度
+    - 可以像爬楼梯一样用三个变量代替`dp`数组，降低空间复杂度
 
 #### Rod Cutting
 
