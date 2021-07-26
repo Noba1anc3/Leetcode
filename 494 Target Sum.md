@@ -92,7 +92,7 @@ public:
         for (int i = 1; i < nums.size(); i++){
             for (int j = 0; j < range; j++){
                 if (j + nums[i] < range)
-                    dp[i][j] += dp[i - 1][j + nums[i]];
+                    dp[i][j] = dp[i - 1][j + nums[i]];
                 if (j >= nums[i])
                     dp[i][j] += dp[i - 1][j - nums[i]];
             }
@@ -102,6 +102,10 @@ public:
     }
 };
 ```
+
+执行用时：40 ms, 在所有 C++ 提交中击败了54.97%的用户
+
+内存消耗：8.9 MB, 在所有 C++ 提交中击败了58.03%的用户
 
 ### java
 
