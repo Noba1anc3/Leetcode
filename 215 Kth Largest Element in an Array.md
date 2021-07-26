@@ -38,8 +38,6 @@ public:
 
 #### Non-Randomized
 
-c++
-
 ```c++
 class Solution {
 public:
@@ -81,8 +79,6 @@ public:
 
 #### Randomized
 
-c++
-
 ```c++
 class Solution {
 public:
@@ -101,7 +97,7 @@ public:
             swap(arr[lt++], arr[rt--]);
         }
 
-        swap(arr[pivot], arr[lt]);
+        swap(arr[lt], arr[pivot]);
         return lt;
     }
 
@@ -128,8 +124,6 @@ public:
 ### Recursive Quicksort
 
 #### Non-Randomized
-
-c++
 
 ```c++
 class Solution {
@@ -176,8 +170,6 @@ public:
 内存消耗：9.8 MB, 在所有 C++ 提交中击败了46.25%的用户
 
 #### Randomized
-
-c++
 
 ```c++
 class Solution {
