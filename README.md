@@ -742,12 +742,12 @@ void DFSVisit(int vertex){
 
 - [**004. 寻找两个有序数组的中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [153. 寻找旋转后有序无重复元素数组的最小值](https://github.com/Noba1anc3/Leetcode/blob/master/153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
-  - 如果中间数小于右边的数，把mid赋给right下标（因为mid可能是答案）
-  - 反之，把mid+1赋给left下标
+  - 如果中间数小于右边的数，`right = mid`（因为mid可能是答案）
+  - 反之，`left = mid+1`
   - 最终返回`nums[right]`
 - [**154. 寻找旋转后有序有重复元素数组的最小值**](https://github.com/Noba1anc3/Leetcode/blob/master/154%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%20II.md)
-  - 在153的基础上，中间数大于右边的数时，把mid+1赋给left下标
-  - 如果中间数等于右边的数，right下标-1
+  - 在153的基础上，中间数大于右边的数时，`left = mid+1`
+  - 如果中间数等于右边的数，`right--`
 
 ## Double Pointer
 
@@ -1069,6 +1069,7 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int index)
+    
     ```
 
   - 将回溯过程中所有尚未完成的解都加到解集中
@@ -1087,6 +1088,7 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& s, int piece, int index)
+    
     ```
 
     - 如果段数为4或下标到字符串长度则返回
@@ -1102,6 +1104,7 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int target, int index, int sum)
+    
     ```
 
   - 如果`index`遍历到`nums`长度则返回
@@ -1114,6 +1117,7 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(string& S, int i)
+    
     ```
 
   - 如果i遍历到了字符串长度则返回
@@ -1128,6 +1132,7 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int width)
+    
     ```
 
   - 如果width减到0，则返回
@@ -1276,6 +1281,7 @@ void DFSVisit(int vertex){
 
     - ```c++
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
+      
       ```
 
 - [**416. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -1475,6 +1481,7 @@ void DFSVisit(int vertex){
     - ```c++
       for (int j = 2; j <= (int)i/2; j++)
           dp[i] = max(dp[i], dp[j] * dp[i-j]);
+      
       ```
 
 #### Matrix Multiplication
@@ -1764,6 +1771,7 @@ void DFSVisit(int vertex){
       	dp[i] = (i >= 2) ? dp[i-2] + 2 : 2;
       if s[i] = ')' && s[i-1] = ')' && i - 1 - dp[i-1] >= 0 && s[i-1-dp[i-1]] = '('
       	dp[i] = (i - dp[i-1] >= 2) ? dp[i-1] + 2 + dp[i-2-dp[i-1]] : dp[i-1] + 2
+      
       ```
 
 ## Math
@@ -1814,6 +1822,7 @@ to_string(integer)
 abs(integer)
     
 // 1e9+7这个数满足[0, 1e9+7)之内的数字相加不超int，相乘不超long long，是个质数
+
 ```
 
 ### struct
@@ -1836,6 +1845,7 @@ struct Item items[n];
 
 // 对结构体数组进行排序
 sort(items, items + n)
+
 ```
 
 ### char
@@ -1858,6 +1868,7 @@ isalpha(char)
     
 // 转成小写字母
 tolower(char)
+
 ```
 
 ### string
@@ -1880,6 +1891,7 @@ integer I = stoi(string)
     
 // int -> std::string
 std::string s = to_string(integer)
+
 ```
 
 ### list
@@ -1889,6 +1901,7 @@ memset(dp, 0, sizeof(dp));
 
 // 求列表长度
 sizeof(steps) / sizeof(int);
+
 ```
 
 ### vector
@@ -1938,6 +1951,7 @@ accumulate(nums.begin(), nums.end(), 0)
 // 求vector最大元素
 // max_element本身返回的是迭代器
 *max_element(nums.begin(), nums.end())
+
 ```
 
 ### set & unordered_set
@@ -1982,6 +1996,7 @@ std::unordered_map.find(key) != std::unordered_map.end()
 // 遍历map的所有key
 unordered_map<int, int>::iterator it1 = M.begin();
 while (it1 != M.end()){ int key = it1->first; }
+
 ```
 
 ### pair
@@ -1990,12 +2005,14 @@ while (it1 != M.end()){ int key = it1->first; }
 std::pair.first
 std::pair.second
 make_pair(value1, value2)
+
 ```
 
 ### stack
 
 ```
 std::stack<type> S;
+
 ```
 
 ### queue
@@ -2006,6 +2023,7 @@ std::queue.empty()
 std::queue.front()
 std::queue.pop()
 std::queue.push()
+
 ```
 
 ### priority_queue
@@ -2018,6 +2036,7 @@ std::priority_queue.pop()
 std::priority_queue.push()
 std::priority_queue.size()
 std::priority_queue.empty()
+
 ```
 
 ### iterator
@@ -2041,6 +2060,7 @@ while (it != nums.begin() - 1)
 // 可以在取值的同时调整指针
 *it++
 *it--
+
 ```
 
 ### other
@@ -2064,6 +2084,7 @@ unsigned long long
     
 // 引用传递不需要调用构造函数去构造函数的局部变量
 &s
+
 ```
 
 ## python
@@ -2085,6 +2106,7 @@ list.index(value, index)
 
 # 求数组内元素和
 sum(list)
+
 ```
 
 ### dict
