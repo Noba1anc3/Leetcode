@@ -53,7 +53,7 @@ public:
             swap(arr[lt++], arr[rt--]);
         }
 
-        swap(arr[pivot], arr[lt]);
+        swap(arr[lt], arr[pivot]);
         return lt;
     }
 
