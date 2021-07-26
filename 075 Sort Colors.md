@@ -107,7 +107,7 @@ public:
         
         while (i < two)
             if (nums[i] == 0)
-                swap(nums[++zero], nums[i++]);
+                swap(nums[i++], nums[++zero]);
             else if (nums[i] == 1)
                 i++;
             else
@@ -121,7 +121,6 @@ public:
 内存消耗：8.1 MB, 在所有 C++ 提交中击败了15.09%的用户
 
 Attention:
-
 - swap(a, b)
 - 边界条件
 - 快排的partition天然的创造了一次partition完成分割，0在左，1在中间，2在右边
