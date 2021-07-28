@@ -203,6 +203,11 @@
 
     - 递归构建右子树`（pre_left + left_subtree_size + 1, pre_right, in_root + 1, in_right)`
 
+#### Other
+
+- [**146 LRU缓存**](https://github.com/Noba1anc3/Leetcode/blob/master/146%20LRU%20Cache.md)
+  - **构建从内存页key到其在双向链表中迭代器的映射**
+
 ## Set
 
 > 一般使用基于哈希表的无序的unordered_set, 其作用在于
@@ -336,6 +341,17 @@ void Union(int x, int y) {
 - [021. 合并两个链表](https://github.com/Noba1anc3/Leetcode/blob/master/021%20Merge%20Two%20Sorted%20Lists.md)
   - 双指针向前推进
   - 双指针迭代结束后，如果`l1`为空，合并链表迭代器的后继指向`l2`，否则指向`l1`
+- [**146 LRU缓存**](https://github.com/Noba1anc3/Leetcode/blob/master/146%20LRU%20Cache.md)
+  - 更新内存页时
+    - 先通过哈希表查找**内存页在链表中的位置**
+    - 如果找到了该内存页
+      - 将该内存页置于链表表头处
+    - 如果没找到该内存页
+      - 如果哈希表长度尚未超过内存页上限，新建内存页，将该内存页插入到链表表头处，并将该内存页到链表表头的映射添加到哈希表当中。
+      - 如果哈希表长度达到了内存页上限。找到链表表尾内存页，将其从链表中去掉，并将以该内存页为键的映射从哈希表中删除。而后新建内存页，将该内存页插入到链表表头处，并将该内存页到链表表头的映射添加到哈希表当中。
+  - 查找内存页时
+    - 通过哈希表查找内存页在链表中的位置
+    - 如果找到了该内存页，将该内存页置于链表表头处，返回内存页信息；否则，返回错误。
 - [**148. 排序链表**](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
   - 自顶向下
     - 通过**快慢指针法**找到链表中点，并在中间断链，返回后半段链表的头指针
@@ -508,7 +524,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
-      
       ```
 
 ### Strongly Connected Components
@@ -699,7 +714,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
-      
       ```
 
 - [463. 岛屿周长](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
@@ -955,7 +969,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& digits, int start)
-    
     ```
 
   - 如果当前下标达到`digits` 长度，将解加入解集
@@ -970,7 +983,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       void backtrack(int length, int left, int right)
-      
       ```
 
     - 如果左括号个数少于length，生成左括号
@@ -985,7 +997,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::vector<std::vector<char>>& board)
-    
     ```
 
     1. 对行列进行遍历，找到每一个缺数的位置
@@ -998,7 +1009,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::vector<int>& candidates, int target, int index)
-    
     ```
 
   - 如果`target`小于0，返回
@@ -1018,13 +1028,11 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums)
-    
     ```
 
   - ```c++
     vector<int> newlist = nums;
     newlist.erase(newlist.begin() + i);
-    
     ```
 
   - 如果列表为空，将解加入解集
@@ -1037,7 +1045,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int row)
-    
     ```
 
   - 如果row与总行数相同，将解加入解集
@@ -1056,7 +1063,6 @@ void DFSVisit(int vertex){
       int x = factorial(n-1);
       int a = (k - 1) / x + 1;
       int b = k % x == 0 ? x : k % x;
-      
       ```
 
   - 对剩余数字回溯计算全排列
@@ -1067,7 +1073,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int max, int cur, int width)
-    
     ```
 
   - N为max，K为width，cur初始为1
@@ -1080,7 +1085,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int index)
-    
     ```
 
   - 将回溯过程中所有尚未完成的解都加到解集中
@@ -1099,7 +1103,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& s, int piece, int index)
-    
     ```
 
     - 如果段数为4或下标到字符串长度则返回
@@ -1115,7 +1118,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int target, int index, int sum)
-    
     ```
 
   - 如果`index`遍历到`nums`长度则返回
@@ -1128,7 +1130,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(string& S, int i)
-    
     ```
 
   - 如果i遍历到了字符串长度则返回
@@ -1143,7 +1144,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int width)
-    
     ```
 
   - 如果width减到0，则返回
@@ -1292,7 +1292,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
-      
       ```
 
 - [**416. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -1494,7 +1493,6 @@ void DFSVisit(int vertex){
     - ```c++
       for (int j = 2; j <= (int)i/2; j++)
           dp[i] = max(dp[i], dp[j] * dp[i-j]);
-      
       ```
 
 #### Matrix Multiplication
@@ -1784,7 +1782,6 @@ void DFSVisit(int vertex){
       	dp[i] = (i >= 2) ? dp[i-2] + 2 : 2;
       if s[i] = ')' && s[i-1] = ')' && i - 1 - dp[i-1] >= 0 && s[i-1-dp[i-1]] = '('
       	dp[i] = (i - dp[i-1] >= 2) ? dp[i-1] + 2 + dp[i-2-dp[i-1]] : dp[i-1] + 2
-      
       ```
 
 ## Math
@@ -1835,7 +1832,6 @@ to_string(integer)
 abs(integer)
     
 // 1e9+7这个数满足[0, 1e9+7)之内的数字相加不超int，相乘不超long long，是个质数
-
 ```
 
 ### struct
@@ -1858,7 +1854,6 @@ struct Item items[n];
 
 // 对结构体数组进行排序
 sort(items, items + n)
-
 ```
 
 ### char
@@ -1881,7 +1876,6 @@ isalpha(char)
     
 // 转成小写字母
 tolower(char)
-
 ```
 
 ### string
@@ -1904,17 +1898,39 @@ integer I = stoi(string)
     
 // int -> std::string
 std::string s = to_string(integer)
+```
 
+### array
+
+```c++
+// 数组
+memset(dp, 0, sizeof(dp));
+
+// 求列表长度
+sizeof(steps) / sizeof(int);
 ```
 
 ### list
 
 ```c++
-memset(dp, 0, sizeof(dp));
+// 双向链表
+std::list<int> list = {1,2,3};
 
-// 求列表长度
-sizeof(steps) / sizeof(int);
-
+std::list::push_front()
+std::list::push_back()
+std::list::pop_front()
+std::list::pop_back()
+    
+std::list::front()
+std::list::back()
+    
+// 跨list转移元素 （转移过程中，pos迭代器指向的元素保持不变）
+// 将x链表所有元素转移到调用splice方法的链表的pos迭代器位置
+std::list::splice(iterator pos, list& x);
+// 将x链表i迭代器所在元素转移到调用splice方法的链表的pos迭代器位置 （i迭代器会失效）
+std::list::splice(iterator pos, list& x, iterator i);
+// 将x链表[first, last)迭代器的元素转移到调用splice方法的链表的pos迭代器位置
+std::list::splice(iterator pos, list& x, iterator first, iterator last);
 ```
 
 ### vector
@@ -1964,7 +1980,6 @@ accumulate(nums.begin(), nums.end(), 0)
 // 求vector最大元素
 // max_element本身返回的是迭代器
 *max_element(nums.begin(), nums.end())
-
 ```
 
 ### set & unordered_set
@@ -1991,7 +2006,6 @@ std::set.count(element)
 
 // vector转set
 std::set(std::vector.begin(), std::vector.end())
-
 ```
 
 ### map & unordered_map
@@ -2003,6 +2017,12 @@ std::unordered_map<char, string> mapping = {
 
 // 根据key查找value
 std::unordered_map.at(key)
+
+// 添加键值对
+std::unordered_map.insert(make_pair(key, value))
+
+// 删除键值对
+std::unordered_map.erase(key)
     
 // 查找是否有某个key
 std::unordered_map.find(key) != std::unordered_map.end()
@@ -2013,7 +2033,6 @@ while (it1 != M.end()) int key = it->first;
 
 // map 可以转化为 vector<pair>
 std::map -> std::vector<std::pair<>>
-
 ```
 
 ### pair
@@ -2022,14 +2041,12 @@ std::map -> std::vector<std::pair<>>
 std::pair.first
 std::pair.second
 make_pair(value1, value2)
-
 ```
 
 ### stack
 
 ```
 std::stack<type> S;
-
 ```
 
 ### queue
@@ -2040,7 +2057,6 @@ std::queue.empty()
 std::queue.front()
 std::queue.pop()
 std::queue.push()
-
 ```
 
 ### priority_queue
@@ -2053,7 +2069,6 @@ std::priority_queue.pop()
 std::priority_queue.push()
 std::priority_queue.size()
 std::priority_queue.empty()
-
 ```
 
 ### iterator
@@ -2070,6 +2085,8 @@ while (iter != set.end())
 
 // 迭代器前移
 iter++  // 不能用iter+=1
+iter = std::next(iter)
+std::advance(it, num_of_steps)
  
 // 倒序遍历数组时
 while (it != nums.begin() - 1)
@@ -2077,7 +2094,6 @@ while (it != nums.begin() - 1)
 // 可以在取值的同时调整指针
 *it++
 *it--
-
 ```
 
 ### other
@@ -2101,7 +2117,6 @@ unsigned long long
     
 // 引用传递不需要调用构造函数去构造函数的局部变量
 &s
-
 ```
 
 ## python
@@ -2123,7 +2138,6 @@ list.index(value, index)
 
 # 求数组内元素和
 sum(list)
-
 ```
 
 ### dict
@@ -2138,7 +2152,6 @@ dicts = collections.defaultdict(int) # 括号内为value类型
 # 取key, value
 dict.keys()
 dict.values()
-
 ```
 
 ### set
@@ -2147,7 +2160,6 @@ dict.values()
 lookup = set()
 set.remove(element)
 set.add(element)
-
 ```
 
 ### priority_queue
