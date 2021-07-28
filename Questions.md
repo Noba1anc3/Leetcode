@@ -31,11 +31,11 @@
 
 - [Prim Algorithm for MST](Graph%20-%20Prim.md)
 - [Dijkstra Algorithm for SSSP](Graph%20-%20Dijkstra.md)
-- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 - [☆☆☆ 253. Meeting Rooms II ☆☆☆](253%20Meeting%20Rooms%20II.md)
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
 - [☆☆☆ 1094. Car Pooling ☆☆☆](1094%20Car%20Pooling.md)
 - [☆☆☆ 1167. Minimum Cost to Connect Sticks ☆☆☆](1167%20Minimum%20Cost%20to%20Connect%20Sticks.md)
+- [☆☆☆ 剑指Offer 40. Minimum K ☆☆☆](%E5%89%91%E6%8C%87offer-40%20Minimum%20K.md)
 
 ## Map
 
@@ -43,6 +43,7 @@
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆ 020. Valid Parentheses ☆](020%20Valid%20Parentheses.md)
 - [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆☆ 146 LRU Cache (同面试题16.25) ☆☆☆](146%20LRU%20Cache.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
 
@@ -70,6 +71,7 @@
 
 - [☆☆ 002. Add Two Numbers ☆☆](002%20Add%20Two%20Numbers.md)
 - [☆☆ 021. Merge Two Sorted Lists （同剑指Offer 25）☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
+- [☆☆☆ 146 LRU Cache (同面试题16.25) ☆☆☆](146%20LRU%20Cache.md)
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [☆☆☆ 206. Reverse LinkList (同剑指Offer 24) ☆☆☆](%E5%89%91%E6%8C%87offer-24%20Reverse%20LinkedList.md)
 - [☆ 剑指Offer 18. Delete Element in LinkList ☆](%E5%89%91%E6%8C%87offer-18%20Delete%20element%20in%20linkList.md)
@@ -348,6 +350,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 136. Single Number ☆☆](136%20Single%20Number.md)
 - [☆☆ 144. Binary Tree Preorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
 - [☆☆ 145. Binary Tree Postorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
+- [☆☆☆ 146 LRU Cache (同面试题16.25) ☆☆☆](146%20LRU%20Cache.md)
 - [☆☆☆ 148. Sort List ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/148%20Sort%20List.md)
 - [☆ 150. Evaluate Reverse Polish Notation ☆](https://github.com/Noba1anc3/Leetcode/blob/master/150%20Evaluate%20Reverse%20Polish%20Notation.md)
 - [☆☆ 153 Find Minimum in Rotated Sorted Array ☆☆](153%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)
@@ -424,5 +427,6 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 面试题 08.11. Coin ☆☆ (同518)](%E9%9D%A2%E8%AF%95%E9%A2%98%2008.11%20Coin.md)
 - [☆☆ 面试题 10.09. Sorted Matrix Search ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
 - [☆☆☆ 面试题 16.17. Contiguous Sequence ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
+- [☆☆☆ 面试题 16.25. LRU Cache ☆☆☆](146%20LRU%20Cache.md)
 - [☆☆☆ 面试题 17.14. Smallest K ☆☆☆ (同剑指offer-40)](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2017.14%20Smallest%20K%20LCCI.md)
 - [☆☆ 面试题 17.16. The Masseuse ☆☆](%E9%9D%A2%E8%AF%95%E9%A2%98%2017.16%20The%20Masseuse.md)
