@@ -47,19 +47,19 @@ private:
     int size;
 
 public:
-    MyCircularQueue(int k) {
-        data.resize(k);
-        head = -1;
-        tail = -1;
-        size = k;
-    }
+    MyCircularQueue(int k): 
+        head(-1),
+        tail(-1),
+        size(k),
+        data(k)
+    {}
     
     bool isEmpty() {
-	    return head == -1;
+        return head == -1;
     }
 
     bool isFull() {
-	    return ((tail + 1) % size) == head;
+        return ((tail + 1) % size) == head;
     }
     
     int Front() {
@@ -102,6 +102,6 @@ public:
 };
 ```
 
-执行用时：24 ms, 在所有 C++ 提交中击败了84.78%的用户
+执行用时：16 ms, 在所有 C++ 提交中击败了99.27%的用户
 
-内存消耗：16.5 MB, 在所有 C++ 提交中击败了13.97%的用户
+内存消耗：16.4 MB, 在所有 C++ 提交中击败了18.86%的用户
