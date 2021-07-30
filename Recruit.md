@@ -1,6 +1,6 @@
 # 民企
 
-## 京东
+## 京东 (面试通过)
 
 [招聘信息](https://mp.weixin.qq.com/s/lPy3KmESM6pWknlBwpN4vw)
 
@@ -10,7 +10,7 @@ DDL ：07.15
 
 无笔试，三轮面试
 
-## SenseTime
+## SenseTime (未投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/OQ7uxWnZ9U6DbRDSk9zcmQ)
 
@@ -34,7 +34,7 @@ DDL ：07.15
 
 未通过筛选，正式批申请其他岗位
 
-## 米哈游
+## 米哈游 (未投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/YgJU61_KFIG6gjLgC5ENbw)
 
@@ -42,7 +42,7 @@ DDL ：07.15
 
 DDL ：07.21
 
-## 虎牙
+## 虎牙 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/36NorBjxM4Wn0hbgNk6tCg)
 
@@ -50,7 +50,7 @@ DDL ：07.21
 
 DDL ：07月30日
 
-## BIGO
+## BIGO (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/XMv53dSfxjVCt8ki3UI3sw)
 
@@ -58,7 +58,7 @@ DDL ：07月30日
 
 根据招聘信息，在7月底之前投递比较好
 
-## 猿辅导
+## 猿辅导 (面试中)
 
 [招聘信息 - 官方](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
 
@@ -72,7 +72,7 @@ Base ：Beijing
 
 根据招聘信息，在7月底之前投递比较好
 
-## 网易游戏 - 互娱
+## 网易游戏 - 互娱 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/6l3DIdlMthho9CobRpZZHg)
 
@@ -80,7 +80,7 @@ Base ：Beijing
 
 DDL ：在7月底之前投比较好
 
-## 网易游戏 - 雷火
+## 网易游戏 - 雷火 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/XNoaqls2qfq5ixmxgNX8kg)
 
@@ -96,7 +96,7 @@ DDL ：提前批7月底，秋招9月中
 
 DDL ：07月31日
 
-## Shopee
+## Shopee (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/qBj-GLAfvs6C7iejeh_bYA)
 
@@ -108,6 +108,14 @@ Base ：Shenzhen，Beijing，Shanghai，Singapore
 关注 ”Shopee虾皮招聘“ 公众号查询校招进度
 
 提前批只能选择一个工作地点，投递一个岗位
+
+## iQiyi
+
+[招聘信息](https://mp.weixin.qq.com/s/r8OOT6fFwaaK6REddM8oRg)
+
+### 备注
+
+DDL : 08.04
 
 ## DJI
 
@@ -141,6 +149,14 @@ DDL ：08月15日
 
 DDL ：08.15
 
+## 网易
+
+[招聘信息](https://mp.weixin.qq.com/s/GD8tN-vnaQlsK512zFDJaQ)
+
+### 备注
+
+DDL : 08.19 (内推)
+
 ## 百度
 
 [招聘信息](https://mp.weixin.qq.com/s/aCxWsscE9QVBBCIF-QG3-Q)
@@ -148,6 +164,33 @@ DDL ：08.15
 ### 备注
 
 DDL ：08.27
+
+## 陌陌 & 探探
+
+[招聘信息](https://mp.weixin.qq.com/s/GYHZurg6nI3qo2f63f51kA)
+
+### 备注
+
+DDL ：08.31
+
+## 小米
+
+[招聘信息](https://mp.weixin.qq.com/s/xvNXeBKINI5agkRk46WBCw)
+[招聘信息](https://mp.weixin.qq.com/s/RvMkSYihE9Nf8Z6li_I1xQ)
+
+### 备注
+
+[小米星](https://mp.weixin.qq.com/s/sDZr_8ZMUyWvmHjjOI4omw)
+
+Base ：北京、上海、深圳
+
+秋招岗位于7月中旬发布
+
+秋招最多投递两个岗位，提前批两次机会用完后，无法投递其他秋招岗位
+
+内推投递不受岗位投递次数限制
+
+DDL : 八月底
 
 ## 美团 - 北斗
 
@@ -162,20 +205,6 @@ DDL ：10月14日
 宣讲会：7月16日  美团B站直播间
 
 如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
-
-## 小米
-
-[招聘信息](https://mp.weixin.qq.com/s/xvNXeBKINI5agkRk46WBCw)
-
-### 备注
-
-Base ：北京、上海、深圳
-
-秋招岗位于7月中旬发布
-
-秋招最多投递两个岗位，提前批两次机会用完后，无法投递其他秋招岗位
-
-内推投递不受岗位投递次数限制
 
 ## 360
 
