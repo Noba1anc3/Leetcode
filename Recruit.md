@@ -109,7 +109,7 @@ Base ：Shenzhen，Beijing，Shanghai，Singapore
 
 提前批只能选择一个工作地点，投递一个岗位
 
-## iQiyi
+## iQiyi (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/r8OOT6fFwaaK6REddM8oRg)
 
@@ -149,6 +149,14 @@ DDL ：08月15日
 
 DDL ：08.15
 
+## Agora声网
+
+[招聘信息](https://mp.weixin.qq.com/s/aTspFrnvnOJhBEW_mUX5_g)
+
+### 备注
+
+DDL ：08.15
+
 ## 网易
 
 [招聘信息](https://mp.weixin.qq.com/s/GD8tN-vnaQlsK512zFDJaQ)
@@ -156,6 +164,22 @@ DDL ：08.15
 ### 备注
 
 DDL : 08.19 (内推)
+
+## 网易有道
+
+[招聘信息](https://mp.weixin.qq.com/s/Ki0HqLxE8fH6gOVHCcag7g)
+
+### 备注
+
+DDL : 08.19 (内推)
+
+## 联想
+
+[招聘信息](https://mp.weixin.qq.com/s/8t0HGj1kN_VkjrFF0P8icg)
+
+### 备注
+
+DDL ：08.20
 
 ## 百度
 
