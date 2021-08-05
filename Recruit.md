@@ -58,7 +58,7 @@ DDL ：07月30日
 
 根据招聘信息，在7月底之前投递比较好
 
-## 猿辅导 (面试中)
+## 猿辅导 (没空笔试 咕咕咕)
 
 [招聘信息 - 官方](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
 
@@ -117,6 +117,16 @@ Base ：Shenzhen，Beijing，Shanghai，Singapore
 
 DDL : 08.04
 
+## 中科院空天信息创新研究院
+
+[招聘信息](https://mp.weixin.qq.com/s/j6fhZWyhbOzXSvxsCvHbHQ)
+
+### 备注
+
+[北京一部 - 深度学习算法工程师](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=1239&isDelivery=null)
+
+[苏州地理空间信息系统研究室 - 人工智能技术研究](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=syygw4&isDelivery=null)
+
 ## DJI
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
@@ -127,9 +137,17 @@ DDL : 08.04
 
 DDL ：8月11日
 
-宣讲会：7月20日
-
 Base : 深圳、上海、西安、北京
+
+## 微博
+
+[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
+
+### 备注
+
+正式批
+
+DDL : 08.15
 
 ## 明略科技
 
@@ -173,6 +191,30 @@ DDL : 08.19 (内推)
 
 DDL : 08.19 (内推)
 
+## 京东正式批
+
+[招聘信息](https://mp.weixin.qq.com/s/CTGs_725B-DwQfwsWAORWQ)
+
+### 备注
+
+DDL : 第一批 08.19
+
+## 美团 - 北斗
+
+[招聘信息](https://mp.weixin.qq.com/s/YSQWGBzr3CpNR-vbth29pQ)
+
+[招聘信息](https://mp.weixin.qq.com/s/RBW_L-pwmTspRgRKjhkrqg)
+
+[官方网站](campus.meituan.com/beidou)
+
+### 备注
+
+DDL ：10月14日  （笔试08.22）
+
+宣讲会：7月16日  美团B站直播间
+
+如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
+
 ## 联想
 
 [招聘信息](https://mp.weixin.qq.com/s/8t0HGj1kN_VkjrFF0P8icg)
@@ -180,6 +222,14 @@ DDL : 08.19 (内推)
 ### 备注
 
 DDL ：08.20
+
+## 度小满金融
+
+[招聘信息](https://mp.weixin.qq.com/s/ZJHRIppPfnMJ7V--QdhUUg)
+
+### 备注
+
+DDL ：08.25
 
 ## 百度
 
@@ -215,20 +265,6 @@ Base ：北京、上海、深圳
 内推投递不受岗位投递次数限制
 
 DDL : 八月底
-
-## 美团 - 北斗
-
-[招聘信息](https://mp.weixin.qq.com/s/YSQWGBzr3CpNR-vbth29pQ)
-
-[官方网站](campus.meituan.com/beidou)
-
-### 备注
-
-DDL ：10月14日
-
-宣讲会：7月16日  美团B站直播间
-
-如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
 
 ## 360
 
