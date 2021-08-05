@@ -117,7 +117,7 @@ Base ：Shenzhen，Beijing，Shanghai，Singapore
 
 DDL : 08.04
 
-## 中科院空天信息创新研究院
+## 中科院空天信息创新研究院 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/j6fhZWyhbOzXSvxsCvHbHQ)
 
@@ -157,6 +157,16 @@ DDL : 08.15
 
 DDL ：08月15日
 
+## 米哈游
+
+[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
+
+### 备注
+
+正式批
+
+DDL : 08.15
+
 ## Megvii
 
 [招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
@@ -174,6 +184,14 @@ DDL ：08.15
 ### 备注
 
 DDL ：08.15
+
+## 顺丰
+
+[招聘信息](https://mp.weixin.qq.com/s/DzeMOFB8II-dnjGTD7MBpA)
+
+### 备注
+
+DDL : 08.18 (免笔试)
 
 ## 网易
 
