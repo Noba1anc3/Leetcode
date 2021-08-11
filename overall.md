@@ -803,6 +803,9 @@ void DFSVisit(int vertex){
   - 跳出while循环，返回true
 - [215. 第K大的数](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 内层`partition`可用首尾双指针
+- [334. 递增的三元组](https://github.com/Noba1anc3/Leetcode/blob/master/334%20Increasing%20Triplet%20Subsequence.md)
+  - 正向遍历时如果当前数是最小数则其不可能成为j
+  - 反向遍历时如果当前数是最大数则亦不可能成为j
 - [**面试题 10.09 排序矩阵查找**](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
   - 初始化行列指针位于矩阵的右上角
   - 如果该位置元素超过target，将列指针回退
