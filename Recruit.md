@@ -96,7 +96,7 @@ DDL ：提前批7月底，秋招9月中
 
 DDL ：07月31日
 
-## Shopee (面试中)
+## Shopee (笔试未通过)
 
 [招聘信息](https://mp.weixin.qq.com/s/qBj-GLAfvs6C7iejeh_bYA)
 
@@ -127,7 +127,7 @@ DDL : 08.04
 
 [苏州地理空间信息系统研究室 - 人工智能技术研究](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=syygw4&isDelivery=null)
 
-## DJI
+## DJI (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
 
