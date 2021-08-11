@@ -803,9 +803,6 @@ void DFSVisit(int vertex){
   - 跳出while循环，返回true
 - [215. 第K大的数](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 内层`partition`可用首尾双指针
-- [334. 递增的三元组](https://github.com/Noba1anc3/Leetcode/blob/master/334%20Increasing%20Triplet%20Subsequence.md)
-  - 正向遍历时如果当前数是最小数则其不可能成为j
-  - 反向遍历时如果当前数是最大数则亦不可能成为j
 - [**面试题 10.09 排序矩阵查找**](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
   - 初始化行列指针位于矩阵的右上角
   - 如果该位置元素超过target，将列指针回退
@@ -1840,6 +1837,18 @@ to_string(integer)
     
 // 求绝对值
 abs(integer)
+
+// int 最大值
+INT_MAX
+
+// a和b两个整型的最大值
+max(integer a, integer b)
+
+// 求幂
+pow(integer, 2)
+
+// 无符号长长型
+unsigned long long
     
 // 1e9+7这个数满足[0, 1e9+7)之内的数字相加不超int，相乘不超long long，是个质数
 ```
@@ -1851,12 +1860,6 @@ struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
-};
- 
-struct Edge{
-    int vertex1;
-    int vertex2;
-    int weight;
 };
 
 // 创建结构体数组
@@ -1894,20 +1897,16 @@ tolower(char)
 std::string += std::string / char
 std::string.push_back(char)
 std::string.pop_back()
-std::string.substr(0, std::string.size()-1)
+std::string.substr(0, length)
 
 // 查找子串
-std::string.find()
+std::string.find() != std::string::npos
     
 // std::string -> int
 char* s = std::string.c_str()
 integer I = atoi(char*)
 
-// std::string -> int
 integer I = stoi(string)
-    
-// int -> std::string
-std::string s = to_string(integer)
 ```
 
 ### array
@@ -1958,7 +1957,7 @@ std::vector.erase(unique(std::vector.begin(), std::vector.end()), std::vector.en
 std::vector.empty()
     
 // 清除vector指定位置元素，一般用于回溯
-std::vector.erase(std::vector.begin() + i)
+std::vector.erase(std::vector::iterator)
 
 // vector进出元素
 std::vector.push_back()
@@ -1985,7 +1984,7 @@ swap(std::vector[i], std::vector[j])
 reverse(std::vector.begin(), std::vector.end())
     
 // 求vector元素和
-accumulate(nums.begin(), nums.end(), 0)
+accumulate(std::vector.begin(), std::vector.end(), 0)
     
 // 求vector最大元素
 // max_element本身返回的是迭代器
@@ -2037,9 +2036,9 @@ std::unordered_map.erase(key)
 // 查找是否有某个key
 std::unordered_map.find(key) != std::unordered_map.end()
     
-// 遍历map的所有key
-unordered_map<int, int>::iterator it = M.begin();
-while (it1 != M.end()) int key = it->first;
+// 遍历map
+key = unordered_map::iterator->first;
+val = unordered_map::iterator->second;
 
 // map 可以转化为 vector<pair>
 std::map -> std::vector<std::pair<>>
@@ -2106,25 +2105,13 @@ while (it != nums.begin() - 1)
 *it--
 ```
 
-### other
+### pointer
 
 ```c++
-// int 最大值
-INT_MAX
-
-// a和b两个整型的最大值
-max(integer a, integer b)
-
-// 求幂
-pow(integer, 2)
-
 // 空与空指针
 NULL
 nullptr
 
-// 无符号长长型
-unsigned long long
-    
 // 引用传递不需要调用构造函数去构造函数的局部变量
 &s
 ```
