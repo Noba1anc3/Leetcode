@@ -79,11 +79,12 @@
 
 ## Tree
 
-- [☆☆☆ 094. Binary Tree Inorder Traversal ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal.md)
-- [☆☆☆ 105 Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
-- [☆☆ 144. Binary Tree Preorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/144%20Binary%20Tree%20Preorder%20Traversal.md)
-- [☆☆ 145. Binary Tree Postorder Traversal ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/145%20Binary%20Tree%20Postorder%20Traversal.md)
-- [☆☆☆ 662 Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
+- [☆☆☆ 094. Binary Tree Inorder Traversal ☆☆☆](094%20Binary%20Tree%20Inorder%20Traversal.md)
+- [☆☆☆ 105. Construct Binary Tree from Preorder and Inorder (同剑指Offer 07) ☆☆☆](105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder.md)
+- [☆☆ 144. Binary Tree Preorder Traversal ☆☆](144%20Binary%20Tree%20Preorder%20Traversal.md)
+- [☆☆ 145. Binary Tree Postorder Traversal ☆☆](145%20Binary%20Tree%20Postorder%20Traversal.md)
+- [☆☆☆ 662. Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
+- [☆☆ 958. Check Completeness of a Binary Tree ☆☆](958%20Check%20Completeness%20of%20a%20Binary%20Tree.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
 ## Graph
@@ -396,6 +397,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ 784. Letter Case Permutation ☆☆](784%20Letter%20Case%20Permutation.md)
 - [☆☆☆ 827. Making A Large Island ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/827%20Making%20A%20Large%20Island.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/912%20Sort%20an%20Array.md)
+- [☆☆ 958. Check Completeness of a Binary Tree ☆☆](958%20Check%20Completeness%20of%20a%20Binary%20Tree.md)
 - [☆ 976. Largest Perimeter Triangle ☆](976%20Largest%20Perimeter%20Triangle.md)
 - [☆☆☆ 990. Satisfiability of Equality Equations ☆☆☆](990%20Satisfiability%20of%20Equality%20Equations.md)
 - [☆☆☆ 1094. Car Pooling ☆☆☆](1094%20Car%20Pooling.md)
