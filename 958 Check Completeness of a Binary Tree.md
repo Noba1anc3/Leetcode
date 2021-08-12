@@ -29,16 +29,15 @@ public:
 
         while (!Q.empty()){
             pair<TreeNode*, long> curNode = Q.front(); Q.pop();
+            maxNode = curNode.second;
 
             if (curNode.first->left){
                 node++;
-                maxNode = curNode.second*2;
-                Q.push(make_pair(curNode.first->left, curNode.second*2));
+                Q.push(make_pair(curNode.first->left, maxNode*2));
             }
             if (curNode.first->right){
                 node++;
-                maxNode = curNode.second*2+1;
-                Q.push(make_pair(curNode.first->right, curNode.second*2+1));
+                Q.push(make_pair(curNode.first->right, maxNode*2+1));
             }
         }
 
