@@ -177,6 +177,25 @@ DDL ：10月14日  （笔试08.22）
 
 DDL ：08.20
 
+## 360
+
+[招聘信息](https://mp.weixin.qq.com/s/wMZZmpZ_PygScWSfs7OzVg)
+[招聘信息](https://mp.weixin.qq.com/s/YMZ9l4edSknMwFDOvNNpXw)
+
+### 备注
+
+DDL：08.23
+
+扫描二维码投递
+
+## 招银网络科技
+
+[招聘信息](https://mp.weixin.qq.com/s/-4GeV993Z1eU4BK1lNdzYQ)
+
+### 备注
+
+DDL：08.23
+
 ## 度小满金融
 
 [招聘信息](https://mp.weixin.qq.com/s/ZJHRIppPfnMJ7V--QdhUUg)
@@ -228,13 +247,15 @@ Base ：北京、上海、深圳
 
 DDL : 八月底
 
-## 360
-
-[招聘信息](https://mp.weixin.qq.com/s/wMZZmpZ_PygScWSfs7OzVg)
-
-扫描二维码投递
-
 # 外企
+
+## Amazon
+
+[招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
+
+### 备注
+
+DDL：08.25
 
 ## Thoughtworks
 
@@ -261,3 +282,7 @@ Base ：Shanghai、Beijing
 ## 航天四院四部（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/3upu_ku0V821eSiYjR7KlQ)
+
+## 航天五院通信玉导航卫星总体部（已投递）
+
+[招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
