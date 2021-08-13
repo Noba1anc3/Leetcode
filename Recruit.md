@@ -209,13 +209,22 @@ DDL : 08.19 (内推)
 
 DDL : 08.19 (内推)
 
-## 京东正式批
+## 京东正式批（不必参加）
 
 [招聘信息](https://mp.weixin.qq.com/s/CTGs_725B-DwQfwsWAORWQ)
 
 ### 备注
 
 DDL : 第一批 08.19
+
+## 腾讯
+
+[招聘信息](https://mp.weixin.qq.com/s/tkI8xLmOXvmiG3qrQoocLA)
+
+### 备注
+
+DDL : 08.22
+赶第二批笔试
 
 ## 美团 - 北斗
 
@@ -265,6 +274,14 @@ DDL ：08.27
 
 DDL ：08.31
 
+## 携程
+
+[招聘信息](https://mp.weixin.qq.com/s/ynmGvgGR8v3Jak8CLqMGxQ)
+
+### 备注
+
+DDL ：08.31
+
 ## 小米
 
 [招聘信息](https://mp.weixin.qq.com/s/xvNXeBKINI5agkRk46WBCw)
@@ -291,6 +308,10 @@ DDL : 八月底
 扫描二维码投递
 
 # 外企
+
+## Thoughtworks
+
+[招聘信息](https://mp.weixin.qq.com/s/AYhmjmdpnNBu9fBf-3EOJA)
 
 ## Intel
 
