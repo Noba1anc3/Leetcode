@@ -88,7 +88,7 @@ DDL ：在7月底之前投比较好
 
 DDL ：提前批7月底，秋招9月中
 
-## 用友
+## 用友（未投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/CYMX44klYNEnjN4PA0a4uw)
 
@@ -139,7 +139,7 @@ DDL ：8月11日
 
 Base : 深圳、上海、西安、北京
 
-## 微博
+## 微博（下周）
 
 [招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
 
@@ -149,7 +149,7 @@ Base : 深圳、上海、西安、北京
 
 DDL : 08.15
 
-## 明略科技
+## 明略科技（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/gxM5ojahdyonAKcEf36wuA)
 
@@ -157,7 +157,7 @@ DDL : 08.15
 
 DDL ：08月15日
 
-## 米哈游
+## 米哈游（下周）
 
 [招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
 
@@ -167,23 +167,17 @@ DDL ：08月15日
 
 DDL : 08.15
 
-## Megvii
+## Megvii（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
 
 ### 备注
 
-免笔试
-
 DDL ：08.15
 
-## Agora声网
+## Agora声网（下周）
 
 [招聘信息](https://mp.weixin.qq.com/s/aTspFrnvnOJhBEW_mUX5_g)
-
-### 备注
-
-DDL ：08.15
 
 ## 顺丰
 
