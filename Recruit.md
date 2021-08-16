@@ -1,3 +1,45 @@
+# 外企
+
+## Amazon
+
+[招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
+
+### 备注
+
+DDL：08.25
+
+## Thoughtworks
+
+[招聘信息](https://mp.weixin.qq.com/s/AYhmjmdpnNBu9fBf-3EOJA)
+
+## Intel(已投递)
+
+[官方网站](https://chinacampus.jobs.intel.cn/intel/home/index)
+
+# 国企
+
+## 中国航天科技集团（已投递）
+
+[招聘信息](https://mp.weixin.qq.com/s/rSPdnxzlanVeDmR7doHUxQ)
+
+## 航天四院四部（已投递）
+
+[招聘信息](https://mp.weixin.qq.com/s/3upu_ku0V821eSiYjR7KlQ)
+
+## 航天五院通信玉导航卫星总体部（已投递）
+
+[招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
+
+# 银行
+
+## 工行总行
+
+[招聘信息](https://mp.weixin.qq.com/s/lPy3KmESM6pWknlBwpN4vw)
+
+### 备注
+
+DDL ：09.22
+
 # 民企
 
 ## 京东 (面试通过)
@@ -75,6 +117,10 @@
 ## 知乎 (面试中)
 
 ## 搜狐 (面试中)
+
+## 完美世界（面试中）
+
+![招聘信息](https://mp.weixin.qq.com/s/Lo_k1Tqbc27scGWM5iUdcw)
 
 # 08.17
 
@@ -175,7 +221,7 @@ DDL ：08.25
 
 ### 备注
 
-DDL ：08.25
+DDL ：08.25 （提前批） 09.02（正式）
 
 ## 美团 - 北斗
 
@@ -231,35 +277,3 @@ Base ：北京、上海、深圳
 内推投递不受岗位投递次数限制
 
 DDL : 八月底
-
-# 外企
-
-## Amazon
-
-[招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
-
-### 备注
-
-DDL：08.25
-
-## Thoughtworks
-
-[招聘信息](https://mp.weixin.qq.com/s/AYhmjmdpnNBu9fBf-3EOJA)
-
-## Intel(已投递)
-
-[官方网站](https://chinacampus.jobs.intel.cn/intel/home/index)
-
-# 国企
-
-## 中国航天科技集团（已投递）
-
-[招聘信息](https://mp.weixin.qq.com/s/rSPdnxzlanVeDmR7doHUxQ)
-
-## 航天四院四部（已投递）
-
-[招聘信息](https://mp.weixin.qq.com/s/3upu_ku0V821eSiYjR7KlQ)
-
-## 航天五院通信玉导航卫星总体部（已投递）
-
-[招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
