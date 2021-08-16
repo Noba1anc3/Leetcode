@@ -18,6 +18,16 @@ DDL：08.25
 
 # 国企
 
+## 中科院空天信息创新研究院 (面试中)
+
+[招聘信息](https://mp.weixin.qq.com/s/j6fhZWyhbOzXSvxsCvHbHQ)
+
+### 备注
+
+[北京一部 - 深度学习算法工程师](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=1239&isDelivery=null)
+
+[苏州地理空间信息系统研究室 - 人工智能技术研究](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=syygw4&isDelivery=null)
+
 ## 中国航天科技集团（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/rSPdnxzlanVeDmR7doHUxQ)
@@ -88,16 +98,6 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/r8OOT6fFwaaK6REddM8oRg)
 
-## 中科院空天信息创新研究院 (面试中)
-
-[招聘信息](https://mp.weixin.qq.com/s/j6fhZWyhbOzXSvxsCvHbHQ)
-
-### 备注
-
-[北京一部 - 深度学习算法工程师](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=1239&isDelivery=null)
-
-[苏州地理空间信息系统研究室 - 人工智能技术研究](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=syygw4&isDelivery=null)
-
 ## DJI (笔试完成)
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
@@ -120,7 +120,7 @@ DDL ：09.22
 
 ## 完美世界（面试中）
 
-![招聘信息](https://mp.weixin.qq.com/s/Lo_k1Tqbc27scGWM5iUdcw)
+[招聘信息](https://mp.weixin.qq.com/s/Lo_k1Tqbc27scGWM5iUdcw)
 
 # 08.17
 
