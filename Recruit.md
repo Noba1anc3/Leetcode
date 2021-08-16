@@ -242,17 +242,9 @@ DDL：08.25
 
 [招聘信息](https://mp.weixin.qq.com/s/AYhmjmdpnNBu9fBf-3EOJA)
 
-## Intel
-
-[招聘信息](https://mp.weixin.qq.com/s/tXLcLC6u8bOJJxaCqG1lfg)
+## Intel(已投递)
 
 [官方网站](https://chinacampus.jobs.intel.cn/intel/home/index)
-
-### 备注
-
-校招
-
-Base ：Shanghai、Beijing
 
 # 国企
 
