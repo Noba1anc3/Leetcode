@@ -12,11 +12,11 @@
 
 [招聘信息](https://mp.weixin.qq.com/s/YgJU61_KFIG6gjLgC5ENbw)
 
-## 虎牙 (面试中)
+## 虎牙 (一面中)
 
 [招聘信息](https://mp.weixin.qq.com/s/36NorBjxM4Wn0hbgNk6tCg)
 
-## BIGO (面试中)
+## BIGO (机试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/XMv53dSfxjVCt8ki3UI3sw)
 
@@ -36,7 +36,9 @@
 
 [招聘信息](https://mp.weixin.qq.com/s/CYMX44klYNEnjN4PA0a4uw)
 
-## Shopee (笔试未通过 算法题290大佬都没过，本260不那么难过了)
+## Shopee (笔试未通过)
+
+算法题290大佬都没过，本260不那么难过了(
 
 [招聘信息](https://mp.weixin.qq.com/s/qBj-GLAfvs6C7iejeh_bYA)
 
@@ -54,15 +56,15 @@
 
 [苏州地理空间信息系统研究室 - 人工智能技术研究](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=syygw4&isDelivery=null)
 
-## DJI (面试中)
+## DJI (笔试完成)
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
 
-## 明略科技（已投递）
+## 明略科技 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/gxM5ojahdyonAKcEf36wuA)
 
-## Megvii（已投递）
+## Megvii (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
 
