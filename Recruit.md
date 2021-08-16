@@ -24,10 +24,6 @@
 
 [招聘信息 - 官方](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
 
-[招聘信息 - 伯乐内推](https://mp.weixin.qq.com/s/YdW6iW5OJoY5ZyKU4aYmuA)
-
-[官方网站](https://app.mokahr.com/recommendation-apply/fenbi/1636?sharePageId=64524&recommenderId=279308#/jobs?keyword=2022&location=%E5%8C%97%E4%BA%AC%E5%B8%82&page=1&isCampusJob=1)
-
 ## 网易游戏 - 互娱 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/6l3DIdlMthho9CobRpZZHg)
@@ -35,10 +31,6 @@
 ## 网易游戏 - 雷火 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/XNoaqls2qfq5ixmxgNX8kg)
-
-### 备注
-
-DDL ：提前批7月底，秋招9月中
 
 ## 用友（未投递）
 
@@ -66,8 +58,6 @@ DDL ：提前批7月底，秋招9月中
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
 
-[官方网站](we.dji.com/zh-CN/campus)
-
 ## 明略科技（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/gxM5ojahdyonAKcEf36wuA)
@@ -76,37 +66,33 @@ DDL ：提前批7月底，秋招9月中
 
 [招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
 
+## 京东正式批（不必参加）
 
-# 最近
+[招聘信息](https://mp.weixin.qq.com/s/CTGs_725B-DwQfwsWAORWQ)
+
+# 08.17
 
 ## 微博
 
 [招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
 
-### 备注
-
-正式批
-
 ## 米哈游
 
 [招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
 
-### 备注
-
-正式批
-
-## Agora声网（下周）
+## Agora声网
 
 [招聘信息](https://mp.weixin.qq.com/s/aTspFrnvnOJhBEW_mUX5_g)
 
-# 
+# 本周
+
 ## 顺丰
 
 [招聘信息](https://mp.weixin.qq.com/s/DzeMOFB8II-dnjGTD7MBpA)
 
 ### 备注
 
-DDL : 08.18 (免笔试)
+DDL : 08.18
 
 ## 网易
 
@@ -124,13 +110,13 @@ DDL : 08.19 (内推)
 
 DDL : 08.19 (内推)
 
-## 京东正式批（不必参加）
+## 联想
 
-[招聘信息](https://mp.weixin.qq.com/s/CTGs_725B-DwQfwsWAORWQ)
+[招聘信息](https://mp.weixin.qq.com/s/8t0HGj1kN_VkjrFF0P8icg)
 
 ### 备注
 
-DDL : 第一批 08.19
+DDL ：08.20
 
 ## 腾讯
 
@@ -138,7 +124,7 @@ DDL : 第一批 08.19
 
 ### 备注
 
-DDL : 08.22
+DDL : 08.23投
 赶第二批笔试
 
 ## 美团 - 北斗
@@ -153,17 +139,9 @@ DDL : 08.22
 
 DDL ：10月14日  （笔试08.22）
 
-宣讲会：7月16日  美团B站直播间
-
 如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
 
-## 联想
 
-[招聘信息](https://mp.weixin.qq.com/s/8t0HGj1kN_VkjrFF0P8icg)
-
-### 备注
-
-DDL ：08.20
 
 ## 360
 
