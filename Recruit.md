@@ -118,6 +118,8 @@ DDL : 08.19 (内推)
 
 DDL ：08.20
 
+# 下周
+
 ## 腾讯
 
 [招聘信息](https://mp.weixin.qq.com/s/tkI8xLmOXvmiG3qrQoocLA)
@@ -126,21 +128,6 @@ DDL ：08.20
 
 DDL : 08.23投
 赶第二批笔试
-
-## 美团 - 北斗
-
-[招聘信息](https://mp.weixin.qq.com/s/YSQWGBzr3CpNR-vbth29pQ)
-
-[招聘信息](https://mp.weixin.qq.com/s/RBW_L-pwmTspRgRKjhkrqg)
-
-[官方网站](campus.meituan.com/beidou)
-
-### 备注
-
-DDL ：10月14日  （笔试08.22）
-
-如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
-
 
 
 ## 360
@@ -188,6 +175,22 @@ DDL ：08.25
 ### 备注
 
 DDL ：08.25
+
+## 美团 - 北斗
+
+[招聘信息](https://mp.weixin.qq.com/s/YSQWGBzr3CpNR-vbth29pQ)
+
+[招聘信息](https://mp.weixin.qq.com/s/RBW_L-pwmTspRgRKjhkrqg)
+
+[官方网站](campus.meituan.com/beidou)
+
+### 备注
+
+DDL ：10月14日  （笔试08.22）
+
+如未通过北斗计划，将根据简历匹配度推荐至秋季招聘流程
+
+# 以后
 
 ## 陌陌 & 探探
 
