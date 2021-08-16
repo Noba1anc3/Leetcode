@@ -16,6 +16,14 @@ DDL：08.25
 
 [官方网站](https://chinacampus.jobs.intel.cn/intel/home/index)
 
+## Microsoft
+
+[招聘信息](https://mp.weixin.qq.com/s/cJpEz0X6DBpfB12WlbOFRA)
+
+### 备注
+
+09.03之前投递，参加09.19的第一场笔试
+
 # 国企
 
 ## 中科院空天信息创新研究院 (面试中)
