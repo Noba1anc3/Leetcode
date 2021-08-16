@@ -189,6 +189,10 @@ DDL ：10月14日 （笔试08.22）
 
 # 08.28 以后
 
+## 小红书
+
+[招聘信息](https://mp.weixin.qq.com/s/1aYjDzrbJKxzmXdUNIH67A)
+
 ## 陌陌 & 探探
 
 [招聘信息](https://mp.weixin.qq.com/s/GYHZurg6nI3qo2f63f51kA)
