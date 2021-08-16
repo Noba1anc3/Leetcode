@@ -44,7 +44,7 @@ DDL ：提前批7月底，秋招9月中
 
 [招聘信息](https://mp.weixin.qq.com/s/CYMX44klYNEnjN4PA0a4uw)
 
-## Shopee (笔试未通过)
+## Shopee (笔试未通过 算法题290大佬都没过，本260不那么难过了)
 
 [招聘信息](https://mp.weixin.qq.com/s/qBj-GLAfvs6C7iejeh_bYA)
 
@@ -68,50 +68,38 @@ DDL ：提前批7月底，秋招9月中
 
 [官方网站](we.dji.com/zh-CN/campus)
 
-### 备注
-
-Base : 深圳、上海、西安、北京
-
-## 微博（下周）
-
-[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
-
-### 备注
-
-正式批
-
-DDL : 08.15
-
 ## 明略科技（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/gxM5ojahdyonAKcEf36wuA)
-
-### 备注
-
-DDL ：08月15日
-
-## 米哈游（下周）
-
-[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
-
-### 备注
-
-正式批
-
-DDL : 08.15
 
 ## Megvii（已投递）
 
 [招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
 
+
+# 最近
+
+## 微博
+
+[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
+
 ### 备注
 
-DDL ：08.15
+正式批
+
+## 米哈游
+
+[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
+
+### 备注
+
+正式批
 
 ## Agora声网（下周）
 
 [招聘信息](https://mp.weixin.qq.com/s/aTspFrnvnOJhBEW_mUX5_g)
 
+# 
 ## 顺丰
 
 [招聘信息](https://mp.weixin.qq.com/s/DzeMOFB8II-dnjGTD7MBpA)
@@ -187,6 +175,8 @@ DDL ：08.20
 DDL：08.23
 
 扫描二维码投递
+
+# 08.23+
 
 ## 招银网络科技
 
