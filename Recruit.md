@@ -196,6 +196,14 @@ DDL：08.23
 
 DDL：08.23
 
+## 快手
+
+[招聘信息](https://mp.weixin.qq.com/s/5ubWDcMfhScssBXyIS9TzA)
+
+### 备注
+
+DDL：08.23
+
 ## 度小满金融
 
 [招聘信息](https://mp.weixin.qq.com/s/ZJHRIppPfnMJ7V--QdhUUg)
@@ -207,10 +215,11 @@ DDL ：08.25
 ## 百度
 
 [招聘信息](https://mp.weixin.qq.com/s/aCxWsscE9QVBBCIF-QG3-Q)
+[招聘信息](https://mp.weixin.qq.com/s/l4eBcVG93mLgeW0aayhOLw)
 
 ### 备注
 
-DDL ：08.27
+DDL ：08.25
 
 ## 陌陌 & 探探
 
