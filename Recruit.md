@@ -12,7 +12,7 @@ DDL：08.25
 
 [招聘信息](https://mp.weixin.qq.com/s/AYhmjmdpnNBu9fBf-3EOJA)
 
-## Intel(已投递)
+## Intel (已投递)
 
 [官方网站](https://chinacampus.jobs.intel.cn/intel/home/index)
 
@@ -26,7 +26,7 @@ DDL：08.25
 
 # 国企
 
-## 中科院空天信息创新研究院 (面试中)
+## 中科院空天信息创新研究院 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/j6fhZWyhbOzXSvxsCvHbHQ)
 
@@ -36,15 +36,15 @@ DDL：08.25
 
 [苏州地理空间信息系统研究室 - 人工智能技术研究](https://zhaopin.aircas.ac.cn/system/userInfo/positionInfo?id=syygw4&isDelivery=null)
 
-## 中国航天科技集团（已投递）
+## 中国航天科技集团 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/rSPdnxzlanVeDmR7doHUxQ)
 
-## 航天四院四部（已投递）
+## 航天四院四部 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/3upu_ku0V821eSiYjR7KlQ)
 
-## 航天五院通信玉导航卫星总体部（已投递）
+## 航天五院通信玉导航卫星总体部 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/nAIHE1OsWxKbFgoUQGznbg)
 
@@ -84,15 +84,15 @@ DDL ：09.22
 
 [招聘信息 - 官方](https://mp.weixin.qq.com/s/hwr-FAsW6t-88Prvje4GQw)
 
-## 网易游戏 - 互娱 (面试中)
+## 网易游戏 - 互娱 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/6l3DIdlMthho9CobRpZZHg)
 
-## 网易游戏 - 雷火 (面试中)
+## 网易游戏 - 雷火 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/XNoaqls2qfq5ixmxgNX8kg)
 
-## 用友（未投递）
+## 用友 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/CYMX44klYNEnjN4PA0a4uw)
 
@@ -102,7 +102,7 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/qBj-GLAfvs6C7iejeh_bYA)
 
-## iQiyi (面试中)
+## iQiyi (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/r8OOT6fFwaaK6REddM8oRg)
 
@@ -110,11 +110,11 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
 
-## 明略科技 (面试中)
+## 明略科技 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/gxM5ojahdyonAKcEf36wuA)
 
-## Megvii (面试中)
+## Megvii (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/JLfk-xYsl78VRIrhzkNVKA)
 
@@ -122,21 +122,19 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/CTGs_725B-DwQfwsWAORWQ)
 
-## 知乎 (面试中)
+## 知乎 (已投递)
 
-## 搜狐 (面试中)
+## 搜狐 (已投递)
 
-## 完美世界（面试中）
+## 完美世界 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/Lo_k1Tqbc27scGWM5iUdcw)
 
-# 08.17
-
-## 微博 (面试中)
+## 微博 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
 
-## 米哈游 (面试中)
+## 米哈游 (已投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/vtp4rBR2f-hX5F4RU_8WUg)
 
