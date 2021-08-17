@@ -142,6 +142,14 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/aTspFrnvnOJhBEW_mUX5_g)
 
+## 网易 (已投递)
+
+[招聘信息](https://mp.weixin.qq.com/s/GD8tN-vnaQlsK512zFDJaQ)
+
+## 网易有道 (未投递)
+
+[招聘信息](https://mp.weixin.qq.com/s/Ki0HqLxE8fH6gOVHCcag7g)
+
 # 08.18 - 08.20
 
 ## 顺丰
@@ -151,22 +159,6 @@ DDL ：09.22
 ### 备注
 
 DDL : 08.18
-
-## 网易
-
-[招聘信息](https://mp.weixin.qq.com/s/GD8tN-vnaQlsK512zFDJaQ)
-
-### 备注
-
-DDL : 08.19 (内推)
-
-## 网易有道
-
-[招聘信息](https://mp.weixin.qq.com/s/Ki0HqLxE8fH6gOVHCcag7g)
-
-### 备注
-
-DDL : 08.19 (内推)
 
 ## 联想
 
