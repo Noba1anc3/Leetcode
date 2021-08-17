@@ -155,6 +155,7 @@
 ## Double Pointer
 
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
+- [☆☆ 015. Three Sum ☆☆](015%20ThreeSum.md)
 - [☆☆ 021. Merge Two Sorted Lists ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 125. Valid Palindrome ☆☆](125%20Valid%20Palindrome.md)
 - [☆☆☆ 148. Sort List ☆☆☆](148%20Sort%20List.md)
@@ -318,6 +319,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
 - [☆☆☆ 004. Median of Two Sorted Arrays ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/004%20Median%20of%20Two%20Sorted%20Arrays.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
+- [☆☆ 015. Three Sum ☆☆](015%20ThreeSum.md)
 - [☆ 014. Longest Common Prefix ☆](https://github.com/Noba1anc3/Leetcode/blob/master/014%20Longest%20Common%20Prefix.md)
 - [☆☆ 017. Letter Combination of a Phone Number ☆☆](017%20Letter%20Combination%20of%20a%20Phone%20Number.md)
 - [☆ 020. Valid Parentheses ☆](https://github.com/Noba1anc3/Leetcode/blob/master/020%20Valid%20Parentheses.md)
