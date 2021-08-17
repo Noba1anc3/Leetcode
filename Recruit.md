@@ -132,15 +132,15 @@ DDL ：09.22
 
 # 08.17
 
-## 微博
+## 微博 (面试中)
 
 [招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
 
-## 米哈游
+## 米哈游 (面试中)
 
-[招聘信息](https://mp.weixin.qq.com/s/SCCe88Vj8fmW71YuRGXcBg)
+[招聘信息](https://mp.weixin.qq.com/s/vtp4rBR2f-hX5F4RU_8WUg)
 
-## Agora声网
+## Agora声网 (未投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/aTspFrnvnOJhBEW_mUX5_g)
 
