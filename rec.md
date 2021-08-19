@@ -1,3 +1,27 @@
+# TimeLine
+- 07.22
+  - 京东提前批 - 一面
+- 07.26
+  - 京东提前批 - 二面
+- 07.27
+  - 京东提前批 - HR面
+- 08.02
+  - Shopee提前批 - 笔试
+- 08.03
+  - 字节提前批 - 跨部门交叉面
+- 08.12
+  - 京东提前批 - 意向函
+  - 字节提前批 - 意向函
+- 08.14
+  - 大疆提前批 - 笔试
+- 08.17
+  - Bigo提前批 - 笔试
+  - 
+- 08.18
+  - 中科院空天院苏州 - 电话面
+  - 明略科技 - 笔试
+  - 虎牙 - 一面
+
 # 外企
 
 ## Amazon
@@ -72,11 +96,11 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/YgJU61_KFIG6gjLgC5ENbw)
 
-## 虎牙 (一面中)
+## 虎牙 (一面完成)
 
 [招聘信息](https://mp.weixin.qq.com/s/36NorBjxM4Wn0hbgNk6tCg)
 
-## BIGO (机试中)
+## BIGO (笔试完成)
 
 [招聘信息](https://mp.weixin.qq.com/s/XMv53dSfxjVCt8ki3UI3sw)
 
@@ -92,7 +116,7 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/XNoaqls2qfq5ixmxgNX8kg)
 
-## 用友 (已投递)
+## 用友 (未投递)
 
 [招聘信息](https://mp.weixin.qq.com/s/CYMX44klYNEnjN4PA0a4uw)
 
@@ -110,7 +134,7 @@ DDL ：09.22
 
 [招聘信息](https://mp.weixin.qq.com/s/8oo3_XLY3rZuhJqaDG0WRw)
 
-## 明略科技 (已投递)
+## 明略科技 (笔试完成)
 
 [招聘信息](https://mp.weixin.qq.com/s/gxM5ojahdyonAKcEf36wuA)
 
