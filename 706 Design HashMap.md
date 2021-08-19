@@ -35,7 +35,7 @@ myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
 class MyHashMap {
 private:
     vector<list<pair<int, int>>> data;
-    static const int mapSize = 1000;
+    static const int mapSize = 769; // 素数
     static int hash(int key) {
         return key % mapSize;
     }
