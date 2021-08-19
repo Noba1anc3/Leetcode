@@ -47,6 +47,7 @@
 - [☆☆☆ 146 LRU Cache (同面试题16.25) ☆☆☆](146%20LRU%20Cache.md)
 - [☆☆☆ 169. Majority Element ☆☆☆ (同剑指offer 39)](%E5%89%91%E6%8C%87offer-39%20Majority%20Element.md)
 - [☆☆ 242. Valid Anagram ☆☆](242%20Valid%20Anagram.md)
+- [☆☆☆ 706. Design Hashmap ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/706%20Design%20HashMap.md)
 
 ## Set
 
@@ -392,6 +393,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 662 Maximum Width of Binary Tree ☆☆☆](662%20Maximum%20Width%20of%20Binary%20Tree.md)
 - [☆☆☆ 684. Redundant Connection ☆☆☆](684%20Redundant%20Connection.md)
 - [☆☆ 695. Max Area Of Islands ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/695%20Max%20Area%20Of%20Islands.md)
+- [☆☆☆ 706. Design Hashmap ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/706%20Design%20HashMap.md)
 - [☆☆ 721. Accounts Merge ☆☆](721%20Accounts%20Merge.md)
 - [☆☆☆ 739. Daily Temperatures ☆☆☆](739%20Daily%20Temperatures.md)
 - [☆☆ 743. Network Delay Time ☆☆](743%20Network%20Delay%20Time.md)
@@ -423,7 +425,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 剑指Offer 42. Maximum Contiguous Subarray ☆☆☆ (同053)](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆ 剑指Offer 45. Min Num of Array Str ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-45%20MinNumofArrayStr.md)
 - [☆☆ 剑指Offer 47. Maximum Value of Presents ☆☆](%E5%89%91%E6%8C%87offer-47%20Maximum%20Value%20of%20Presents.md)
-- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)\
+- [☆☆☆ 剑指Offer 51. Reverse Num ☆☆☆ (Merge Sort)](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-51%20Reverse%20Num.md)
 - [☆☆ 剑指Offer 55. Depth of Binary Tree ☆☆](%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 - [☆☆☆ 剑指Offer-56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 - [☆☆☆ 剑指Offer 63. Maximum Profit of Stock ☆☆☆ (同121)](121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
