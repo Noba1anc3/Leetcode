@@ -1,7 +1,7 @@
 链接：https://www.nowcoder.com/questionTerminal/24c2045f2cce40a5bf410a369a001da8?f=discussion
 来源：牛客网
 
-将整数 n 分成 kk 份，且每份不能为空，任意两个方案不能相同(不考虑顺序)。
+将整数 n 分成 k 份，且每份不能为空，任意两个方案不能相同(不考虑顺序)。
 
 例如： n=7, k=3 下面三种分法被认为是相同的。
 
