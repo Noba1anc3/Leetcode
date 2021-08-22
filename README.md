@@ -282,6 +282,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆ Edit Distance ☆☆](072%20Edit%20Distance.md)
 - [☆☆ Optimal Binary Search Tree ☆☆](DP%20-%20Optimal%20BST.md)
 - [☆☆ Weighted Activity Selection ☆☆](DP%20-%20Weighted%20Activity%20Selection.md)
+- [☆☆ NC. Num Split ☆☆](Num%20Split.md)
 - [☆☆☆ 005. Longest Palindromic Substring ☆☆☆](005%20Longest%20Palindromic%20Substring.md)
 - [☆☆☆ 032. Longest Valid Parentheses ☆☆☆](032%20Longest%20Valid%20Parentheses.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) (同面试题 16.17) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
@@ -316,7 +317,7 @@ If u want to check out the questions belong to this category, please check the r
 - [☆☆☆ 剑指Offer 56-I. The number of occurrences of a number in an array ☆☆☆](%E5%89%91%E6%8C%87offer-56-I%20The%20number%20of%20occurrences%20of%20a%20number%20in%20an%20array.md)
 
 # Questions
-
+- [☆☆ NC. Num Split ☆☆](Num%20Split.md)
 - [☆☆ 001. Two Sum ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/001%20Two%20Sum.md)
 - [☆☆ 002. Add Two Numbers ☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/002%20Add%20Two%20Numbers.md)
 - [☆☆☆ 003. Longest Substring ☆☆☆](https://github.com/Noba1anc3/Leetcode/blob/master/003%20Longest%20Substring.md)
