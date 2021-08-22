@@ -4,8 +4,6 @@
 
 # Recruit Information
 
-- [Companies](https://github.com/Noba1anc3/Leetcode/blob/master/Recruit.md)
-
 - [Researches](https://github.com/Noba1anc3/Leetcode/blob/master/Researches.md)
 
 # Data Structure
@@ -177,6 +175,8 @@
     - 数组长度为偶数：半长
     - 数组长度为奇数：半长+1
   - **构建数字到出现个数的映射**
+- [706. 实现哈希表](https://github.com/Noba1anc3/Leetcode/blob/master/706%20Design%20HashMap.md)
+  - `vector<list<pair<int, int>>>`
 
 #### String
 
@@ -398,6 +398,12 @@ void Union(int x, int y) {
   - 若左右儿子不空，则将左右儿子压入队列，层数+1，id分别为父结点的2倍, 2倍+1
 
   - **每次进入下一层的时候，更新left的id，用于计算宽度**
+
+- [958. 判断是否是完全二叉树](https://github.com/Noba1anc3/Leetcode/blob/master/958%20Check%20Completeness%20of%20a%20Binary%20Tree.md)
+
+  - 构建结点到其编号映射的树结点队列
+  - 对二叉树进行层序遍历，对左右子结点编号分别设为当前结点的2倍和2倍+1
+  - 判断处理过的结点个数是否等于最大的结点编号
 
 - [**剑指Offer-55. 求二叉树深度**](https://github.com/Noba1anc3/Leetcode/blob/master/%E5%89%91%E6%8C%87offer-55%20Depth%20of%20Binary%20Tree.md)
 
@@ -796,6 +802,14 @@ void DFSVisit(int vertex){
 
 #### Head-Tail
 
+- [015. 三数之和](https://github.com/Noba1anc3/Leetcode/blob/master/015%20ThreeSum.md)
+  - 排序数组
+  - 遍历元素，如果为正则返回结果；如果和上一个元素相同，进行剪枝跳过
+  - 用下一个元素和最后一个元素作为首尾指针，只要首尾指针不逆序
+    - 如果和为0则添加结果，如果首尾指针下一元素与当前元素相同，进行剪枝跳过
+    - 如果和为正，回退尾指针
+    - 如果和为负，推进首指针
+
 - [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
   - 两指针分别位于字符串的首尾  `while(i < j)`
   - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
@@ -803,6 +817,9 @@ void DFSVisit(int vertex){
   - 跳出while循环，返回true
 - [215. 第K大的数](https://github.com/Noba1anc3/Leetcode/blob/master/215%20Kth%20Largest%20Element%20in%20an%20Array.md)
   - 内层`partition`可用首尾双指针
+- [334. 递增的三元组](https://github.com/Noba1anc3/Leetcode/blob/master/334%20Increasing%20Triplet%20Subsequence.md)
+  - 正向遍历时如果当前数是最小数则其不可能成为`j`
+  - 反向遍历时如果当前数是最大数则亦不可能成为`j`
 - [**面试题 10.09 排序矩阵查找**](https://github.com/Noba1anc3/Leetcode/blob/master/%E9%9D%A2%E8%AF%95%E9%A2%98%2010.09%20Sorted%20Matrix%20Search%20LCCI.md)
   - 初始化行列指针位于矩阵的右上角
   - 如果该位置元素超过target，将列指针回退
@@ -1380,7 +1397,7 @@ void DFSVisit(int vertex){
   - 状态初始化
     - `dp[0][sum+nums[0]] += 1; dp[0][sum-nums[0]] += 1`
   - 状态转移
-    - ` dp[i][j] = dp[i-1][j-nums[i]] + dp[i+1][j+nums[i]]`
+    - ` dp[i][j] = dp[i-1][j-nums[i]] + dp[i-1][j+nums[i]]`
   - 备注
     - 返回值为`dp[n-1][sum+target]`  原因在于: `sum`的左半部为负，右半部为正，初始化`sum`而不是0也是同理
 
@@ -1730,7 +1747,7 @@ void DFSVisit(int vertex){
   - 状态转移
     - `curAns = max(curAns + x, x); maxAns = max(curAns, maxAns)`
   - 备注
-    - 人生亦是如此，随时都可以选择重新开始hh
+    - 人生亦是如此，随时都可以选择重新开始
 - [121. 一次买卖股票可以得到的最大收益](https://github.com/Noba1anc3/Leetcode/blob/master/121%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
   - 状态
     - 数组的某个位置
@@ -1757,6 +1774,32 @@ void DFSVisit(int vertex){
     - `profit = 0 `
   - 状态转移
     - `profit = max(profit, profit + prices[i] - prices[i-1])`
+- [135. 分发糖果](https://github.com/Noba1anc3/Leetcode/blob/master/135%20Candy.md)
+  - 状态
+    - 数组的某个位置
+  - 选择
+    - 正向遍历：如果大于前一个数，则当前数为前一个数+1
+    - 反向遍历：如果大于后一个数，则更新当前数为其与后一个数+1的最大值
+  - 状态数组
+    - `int dp[n]`
+    - `dp[i]` : 当前小孩被分配的糖果数
+  - 状态初始化
+    - ` dp[i] = 1`
+  - 状态转移
+    - `dp[i] = dp[i-1] + 1 (num_i > num_i-1)`
+    - `dp[i] = max(dp[i], dp[i+1] + 1)  (num_i > num_i+1) `
+- [300. 最长递增子序列](https://github.com/Noba1anc3/Leetcode/blob/master/300%20Longest%20Increasing%20Subsequence.md)
+  - 状态
+    - 数组的某个位置
+  - 选择
+    - 如果大于之前的数，则选择之前的数与当前数LIS的最大值
+  - 状态数组
+    - `int dp[n]`
+    - `dp[i]` : 当前位置为止的最长递增子序列
+  - 状态初始化
+    - ` dp[i] = 1`
+  - 状态转移
+    - `dp[i] = for j from 0 to i-1 : max(dp[i], dp[j] + 1) (num_i > num_j)`
 
 #### Others
 
@@ -1846,6 +1889,9 @@ max(integer a, integer b)
 
 // 求幂
 pow(integer, 2)
+    
+// e次方
+exp(integer)
 
 // 无符号长长型
 unsigned long long
@@ -1988,7 +2034,7 @@ accumulate(std::vector.begin(), std::vector.end(), 0)
     
 // 求vector最大元素
 // max_element本身返回的是迭代器
-*max_element(nums.begin(), nums.end())
+*max_element(std::vector.begin(), std::vector.end())
 ```
 
 ### set & unordered_set
@@ -2061,7 +2107,6 @@ std::stack<type> S;
 ### queue
 
 ```c++
-std::queue<type> Q;
 std::queue.empty()
 std::queue.front()
 std::queue.pop()
@@ -2114,6 +2159,17 @@ nullptr
 
 // 引用传递不需要调用构造函数去构造函数的局部变量
 &s
+```
+
+### io
+
+```c++
+#include <iomanip>
+cout<<setprecision(n)<<num<<endl; // 保留n位有效数字
+
+cout<<setiosflags(ios::fixed)
+cout<<setprecision(n)<<num<<endl; // 保留小数点后n位有效数字
+
 ```
 
 ## python
