@@ -169,6 +169,7 @@
 
 - [Count Sort](Sort%20-%20Count%20Sort.md)
 - [Sort Dict by Value](Sort%20dict%20by%20value.md)
+- [☆☆ Get Median of List ☆☆](getMedian.md)
 - [☆☆ 021. Merge Two Sorted Lists (同剑指Offer 25) ☆☆](021%20Merge%20Two%20Sorted%20Lists.md)
 - [☆☆ 056. Merge Intervals ☆☆](056%20Merge%20Intervals.md)
 - [☆ 057. Insert Intervals ☆](057%20Insert%20Interval.md)
@@ -247,6 +248,7 @@ If u want to check out the questions belong to this category, please check the r
 
 ## Divide & Conquer
 
+- [☆☆ Get Median of List ☆☆](getMedian.md)
 - [☆☆☆ 053. Maximum Contiguous Subarray (同剑指Offer 42) ☆☆☆](053%20Maximum%20Contiguous%20Subarray.md)
 - [☆☆☆ 215. Kth Largest Element in an Array ☆☆☆](215%20Kth%20Largest%20Element%20in%20an%20Array.md)
 - [☆☆☆ 912. Sort an Array ☆☆☆](912%20Sort%20an%20Array.md)
