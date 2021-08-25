@@ -73,14 +73,13 @@ private:
     vector<vector<int>> ans_list;
 
 public:
-    void backtrack(vector<int> &nums){
+    void backtrack(vector<int>& nums){
         if (nums.empty()){
             ans_list.push_back(ans);
             return;
         }
         for (int i = 0; i < nums.size(); i++){
-            int num = nums[i];
-            ans.push_back(num);
+            ans.push_back(nums[i]);
             vector<int> newlist = nums;
             newlist.erase(newlist.begin() + i);
             backtrack(newlist);
