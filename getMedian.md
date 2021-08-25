@@ -21,12 +21,9 @@ private:
         if (p < q){
             int r = partition(p, q);
             int num = q - r + 1;
-            if (num < k)
-                Quicksort(p, r - 1, k - num);
-            else if (num > k)
-                Quicksort(r + 1, q, k);
-            else
-                return;
+            if (num < k) Quicksort(p, r - 1, k - num);
+            else if (num > k) Quicksort(r + 1, q, k);
+            else return;
         }
     }
 
@@ -40,8 +37,8 @@ public:
 
     float getMedian(){
         if (size % 2 == 1){
-        	int k = size / 2 + 1;
-        	median = getKth(k);
+       	    int k = size / 2 + 1;
+            median = getKth(k);
         }
         else{
             int k = size / 2;
