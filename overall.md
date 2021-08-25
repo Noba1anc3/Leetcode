@@ -4,8 +4,6 @@
 
 # Recruit Information
 
-- [Companies](https://github.com/Noba1anc3/Leetcode/blob/master/Recruit.md)
-
 - [Researches](https://github.com/Noba1anc3/Leetcode/blob/master/Researches.md)
 
 # Data Structure
@@ -539,7 +537,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
-      
       ```
 
 ### Strongly Connected Components
@@ -730,7 +727,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
-      
       ```
 
 - [463. 岛屿周长](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
@@ -867,6 +863,10 @@ void DFSVisit(int vertex){
 
 #### Questions
 
+- [**求数组中位数**](https://github.com/Noba1anc3/Leetcode/blob/master/getMedian.md)
+  - 判断数组长度，如果为奇数，直接返回数组第 size / 2 + 1 大的数
+  - 如果为偶数，首先返回数组第 size / 2 大的数，而后对前一半数组查找第1大的数，求两数的平均  
+
 - [**075. 将012的乱序数组恢复顺序**](https://github.com/Noba1anc3/Leetcode/blob/master/075%20Sort%20Colors.md)
   - 初始化零指针为-1，二指针为数组长度
   - 初始化遍历指针为0，只要其小于二指针
@@ -997,7 +997,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& digits, int start)
-    
     ```
 
   - 如果当前下标达到`digits` 长度，将解加入解集
@@ -1012,7 +1011,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       void backtrack(int length, int left, int right)
-      
       ```
 
     - 如果左括号个数少于length，生成左括号
@@ -1027,7 +1025,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::vector<std::vector<char>>& board)
-    
     ```
 
     1. 对行列进行遍历，找到每一个缺数的位置
@@ -1040,7 +1037,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::vector<int>& candidates, int target, int index)
-    
     ```
 
   - 如果`target`小于0，返回
@@ -1060,13 +1056,11 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums)
-    
     ```
 
   - ```c++
     vector<int> newlist = nums;
     newlist.erase(newlist.begin() + i);
-    
     ```
 
   - 如果列表为空，将解加入解集
@@ -1079,7 +1073,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int row)
-    
     ```
 
   - 如果row与总行数相同，将解加入解集
@@ -1098,7 +1091,6 @@ void DFSVisit(int vertex){
       int x = factorial(n-1);
       int a = (k - 1) / x + 1;
       int b = k % x == 0 ? x : k % x;
-      
       ```
 
   - 对剩余数字回溯计算全排列
@@ -1109,7 +1101,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int max, int cur, int width)
-    
     ```
 
   - N为max，K为width，cur初始为1
@@ -1122,7 +1113,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int index)
-    
     ```
 
   - 将回溯过程中所有尚未完成的解都加到解集中
@@ -1141,7 +1131,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& s, int piece, int index)
-    
     ```
 
     - 如果段数为4或下标到字符串长度则返回
@@ -1157,7 +1146,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int target, int index, int sum)
-    
     ```
 
   - 如果`index`遍历到`nums`长度则返回
@@ -1170,7 +1158,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(string& S, int i)
-    
     ```
 
   - 如果i遍历到了字符串长度则返回
@@ -1185,7 +1172,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int width)
-    
     ```
 
   - 如果width减到0，则返回
@@ -1336,7 +1322,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
-      
       ```
 
 - [**416. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -1538,7 +1523,6 @@ void DFSVisit(int vertex){
     - ```c++
       for (int j = 2; j <= (int)i/2; j++)
           dp[i] = max(dp[i], dp[j] * dp[i-j]);
-      
       ```
 
 #### Matrix Multiplication
@@ -1952,7 +1936,6 @@ struct Item items[n];
 
 // 对结构体数组进行排序
 sort(items, items + n)
-
 ```
 
 ### char
@@ -1975,7 +1958,6 @@ isalpha(char)
     
 // 转成小写字母
 tolower(char)
-
 ```
 
 ### string
@@ -2076,7 +2058,6 @@ accumulate(std::vector.begin(), std::vector.end(), 0)
 // 求vector最大元素
 // max_element本身返回的是迭代器
 *max_element(std::vector.begin(), std::vector.end())
-
 ```
 
 ### set & unordered_set
@@ -2103,7 +2084,6 @@ std::set.count(element)
 
 // vector转set
 std::set(std::vector.begin(), std::vector.end())
-
 ```
 
 ### map & unordered_map
@@ -2131,7 +2111,6 @@ val = unordered_map::iterator->second;
 
 // map 可以转化为 vector<pair>
 std::map -> std::vector<std::pair<>>
-
 ```
 
 ### pair
@@ -2140,7 +2119,6 @@ std::map -> std::vector<std::pair<>>
 std::pair.first
 std::pair.second
 make_pair(value1, value2)
-
 ```
 
 ### stack
