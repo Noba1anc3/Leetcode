@@ -21,7 +21,7 @@ class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
         string prefix = strs.empty() ? "" : strs[0];
-        for (string str : strs)
+        for (const string& str : strs)
             while (str.find(prefix) != 0) prefix = prefix.substr(0, prefix.size()-1);
         return prefix;
     }
