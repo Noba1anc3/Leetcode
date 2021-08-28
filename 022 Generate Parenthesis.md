@@ -1,7 +1,5 @@
 Given `n` pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
-
-
 **Example:**
 
 ```
@@ -27,7 +25,6 @@ Output: ["()"]
 ## Solution - I
 
 c++
-
 
 ```c++
 #include <iostream>
@@ -99,15 +96,11 @@ Attention
 
 - 判断括号是否匹配时用左括号数量减去右括号数量即可，不需要使用栈，内存消耗过高
 
-- 能用指针就用指针传值，速度快
-
 ## Idea - II 回溯剪枝
 
 第一个方法是每次生成完整的串之后再判断是不是正确的串，修改为只在序列有效时才添加括号。这就需要再递归时将左右括号的个数传进去。如果左括号数量不大于 n，我们可以放一个左括号。如果右括号数量小于左括号的数量，我们可以放一个右括号。(下面有图)
 
 ![](https://pic.leetcode-cn.com/7ec04f84e936e95782aba26c4663c5fe7aaf94a2a80986a97d81574467b0c513-LeetCode%20%E7%AC%AC%2022%20%E9%A2%98%EF%BC%9A%E2%80%9C%E6%8B%AC%E5%8F%B7%E7%94%9F%E5%87%BA%E2%80%9D%E9%A2%98%E8%A7%A3%E9%85%8D%E5%9B%BE.png)
-
-
 
 ## Solution - II
 
@@ -124,29 +117,17 @@ private:
     vector<string> ans;
 
 public:
-    bool check(string& ans){
-        int balance = 0;
-        for (char c : ans){
-            if (c == '(') balance++;
-            else balance--;
-            if (balance < 0) return false;
-        }
-        return balance == 0;
-    }
-
     void parenthesis(int length, int left, int right){
         if (tmp_ans.size() == 2*length)
             ans.push_back(tmp_ans);
         else{
             if (left < length){
-                char bracket = '(';
-                tmp_ans.push_back(bracket);
+                tmp_ans.push_back('(');
                 parenthesis(length, left+1, right);
                 tmp_ans.pop_back();
             }
             if (right < left){
-                char bracket = ')';
-                tmp_ans.push_back(bracket);
+                tmp_ans.push_back(')');
                 parenthesis(length, left, right+1);
                 tmp_ans.pop_back();
             }
