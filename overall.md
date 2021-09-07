@@ -540,7 +540,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
-      
       ```
 
 ### Strongly Connected Components
@@ -731,7 +730,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       memo[row][col] = max(memo[row][col], dfs(matrix, newRow, newColumn, memo) + 1);
-      
       ```
 
 - [463. 岛屿周长](https://github.com/Noba1anc3/Leetcode/blob/master/463%20Island%20Perimeter.md)
@@ -814,7 +812,6 @@ void DFSVisit(int vertex){
     - 如果和为0则添加结果，如果首尾指针下一元素与当前元素相同，进行剪枝跳过
     - 如果和为正，回退尾指针
     - 如果和为负，推进首指针
-
 - [125. 判断是否是回文字符串](https://github.com/Noba1anc3/Leetcode/blob/master/125%20Valid%20Palindrome.md)
   - 两指针分别位于字符串的首尾  `while(i < j)`
   - 如果`i`和`j`不是字母数字，且不会发生错位，则向中间靠拢
@@ -830,6 +827,11 @@ void DFSVisit(int vertex){
   - 如果该位置元素超过target，将列指针回退
   - 如果该位置元素小于target，将行指针推进
   - 直到找到目的元素
+- [**1099. 小于K的两数之和**](https://github.com/Noba1anc3/Leetcode/blob/master/1099.%20Two%20Sum%20Less%20Than%20K.md)
+  - 初始化首尾指针
+  - 只要首尾指针不错位
+  - 计算当前和，如果和大于k，回退尾指针
+  - 否则，前进首指针，前进过程中不断更新最大值
 
 #### Fast-Low
 
@@ -1002,7 +1004,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& digits, int start)
-    
     ```
 
   - 如果当前下标达到`digits` 长度，将解加入解集
@@ -1017,7 +1018,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       void backtrack(int length, int left, int right)
-      
       ```
 
     - 如果左括号个数少于length，生成左括号
@@ -1032,7 +1032,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::vector<std::vector<char>>& board)
-    
     ```
 
     1. 对行列进行遍历，找到每一个缺数的位置
@@ -1045,7 +1044,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::vector<int>& candidates, int target, int index)
-    
     ```
 
   - 如果`target`小于0，返回
@@ -1065,13 +1063,11 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums)
-    
     ```
 
   - ```c++
     vector<int> newlist = nums;
     newlist.erase(newlist.begin() + i);
-    
     ```
 
   - 如果列表为空，将解加入解集
@@ -1084,7 +1080,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int row)
-    
     ```
 
   - 如果row与总行数相同，将解加入解集
@@ -1103,7 +1098,6 @@ void DFSVisit(int vertex){
       int x = factorial(n-1);
       int a = (k - 1) / x + 1;
       int b = k % x == 0 ? x : k % x;
-      
       ```
 
   - 对剩余数字回溯计算全排列
@@ -1114,7 +1108,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int max, int cur, int width)
-    
     ```
 
   - N为max，K为width，cur初始为1
@@ -1127,7 +1120,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int index)
-    
     ```
 
   - 将回溯过程中所有尚未完成的解都加到解集中
@@ -1146,7 +1138,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(std::string& s, int piece, int index)
-    
     ```
 
     - 如果段数为4或下标到字符串长度则返回
@@ -1162,7 +1153,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(vector<int>& nums, int target, int index, int sum)
-    
     ```
 
   - 如果`index`遍历到`nums`长度则返回
@@ -1175,7 +1165,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(string& S, int i)
-    
     ```
 
   - 如果i遍历到了字符串长度则返回
@@ -1190,7 +1179,6 @@ void DFSVisit(int vertex){
 
   - ```c++
     void backtrack(int width)
-    
     ```
 
   - 如果width减到0，则返回
@@ -1341,7 +1329,6 @@ void DFSVisit(int vertex){
 
     - ```c++
       dp[i] = max(dp[i-1], Activity_i.weight + dp[p[i]])
-      
       ```
 
 - [**416. 判断能否分割等和子集**](https://github.com/Noba1anc3/Leetcode/blob/master/416%20Partition%20Equal%20Subset%20Sum.md)
@@ -1543,7 +1530,6 @@ void DFSVisit(int vertex){
     - ```c++
       for (int j = 2; j <= (int)i/2; j++)
           dp[i] = max(dp[i], dp[j] * dp[i-j]);
-      
       ```
 
 #### Matrix Multiplication
@@ -1876,7 +1862,6 @@ void DFSVisit(int vertex){
       	dp[i] = (i >= 2) ? dp[i-2] + 2 : 2;
       if s[i] = ')' && s[i-1] = ')' && i - 1 - dp[i-1] >= 0 && s[i-1-dp[i-1]] = '('
       	dp[i] = (i - dp[i-1] >= 2) ? dp[i-1] + 2 + dp[i-2-dp[i-1]] : dp[i-1] + 2
-      
       ```
 
 ## Math
@@ -1942,7 +1927,6 @@ exp(integer)
 unsigned long long
     
 // 1e9+7这个数满足[0, 1e9+7)之内的数字相加不超int，相乘不超long long，是个质数
-
 ```
 
 ### struct
@@ -1959,7 +1943,6 @@ struct Item items[n];
 
 // 对结构体数组进行排序
 sort(items, items + n)
-
 ```
 
 ### char
@@ -1982,7 +1965,6 @@ isalpha(char)
     
 // 转成小写字母
 tolower(char)
-
 ```
 
 ### string
@@ -2001,7 +1983,6 @@ char* s = std::string.c_str()
 integer I = atoi(char*)
 
 integer I = stoi(string)
-
 ```
 
 ### array
@@ -2012,7 +1993,6 @@ memset(dp, 0, sizeof(dp));
 
 // 求列表长度
 sizeof(steps) / sizeof(int);
-
 ```
 
 ### list
@@ -2036,7 +2016,6 @@ std::list::splice(iterator pos, list& x);
 std::list::splice(iterator pos, list& x, iterator i);
 // 将x链表[first, last)迭代器的元素转移到调用splice方法的链表的pos迭代器位置
 std::list::splice(iterator pos, list& x, iterator first, iterator last);
-
 ```
 
 ### vector
@@ -2086,7 +2065,6 @@ accumulate(std::vector.begin(), std::vector.end(), 0)
 // 求vector最大元素
 // max_element本身返回的是迭代器
 *max_element(std::vector.begin(), std::vector.end())
-
 ```
 
 ### set & unordered_set
@@ -2113,7 +2091,6 @@ std::set.count(element)
 
 // vector转set
 std::set(std::vector.begin(), std::vector.end())
-
 ```
 
 ### map & unordered_map
@@ -2141,7 +2118,6 @@ val = unordered_map::iterator->second;
 
 // map 可以转化为 vector<pair>
 std::map -> std::vector<std::pair<>>
-
 ```
 
 ### pair
@@ -2150,14 +2126,12 @@ std::map -> std::vector<std::pair<>>
 std::pair.first
 std::pair.second
 make_pair(value1, value2)
-
 ```
 
 ### stack
 
 ```
 std::stack<type> S;
-
 ```
 
 ### queue
@@ -2167,7 +2141,6 @@ std::queue.empty()
 std::queue.front()
 std::queue.pop()
 std::queue.push()
-
 ```
 
 ### priority_queue
@@ -2180,7 +2153,6 @@ std::priority_queue.pop()
 std::priority_queue.push()
 std::priority_queue.size()
 std::priority_queue.empty()
-
 ```
 
 ### iterator
@@ -2206,7 +2178,6 @@ while (it != nums.begin() - 1)
 // 可以在取值的同时调整指针
 *it++
 *it--
-
 ```
 
 ### pointer
@@ -2218,7 +2189,6 @@ nullptr
 
 // 引用传递不需要调用构造函数去构造函数的局部变量
 &s
-
 ```
 
 ### io
@@ -2238,7 +2208,6 @@ cout<<setprecision(n)<<num<<endl; // 保留n位有效数字
 
 cout<<setiosflags(ios::fixed)
 cout<<setprecision(n)<<num<<endl; // 保留小数点后n位有效数字
-
 
 ```
 
@@ -2261,7 +2230,6 @@ list.index(value, index)
 
 # 求数组内元素和
 sum(list)
-
 ```
 
 ### dict
@@ -2276,7 +2244,6 @@ dicts = collections.defaultdict(int) # 括号内为value类型
 # 取key, value
 dict.keys()
 dict.values()
-
 ```
 
 ### set
@@ -2285,7 +2252,6 @@ dict.values()
 lookup = set()
 set.remove(element)
 set.add(element)
-
 ```
 
 ### priority_queue
@@ -2293,7 +2259,6 @@ set.add(element)
 ```python
 heapq.heappush(list, element)
 heapq.heappop(list)
-
 ```
 
 ### other
@@ -2317,4 +2282,3 @@ bool check(std::string& ans){
     return balance == 0;
 }
 ```
-
