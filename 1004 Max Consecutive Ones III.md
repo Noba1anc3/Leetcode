@@ -16,7 +16,49 @@ Output: 10
 
 Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
 Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
- ```
+```
+
+## Solution - I Backtrack
+
+时间复杂度过高
+
+```c++
+class Solution {
+public:
+    int rsp = 0;
+    
+    int calc(vector<int>& nums){
+        int max_ans = 0, cur_ans = 0;
+        for (const int& num : nums){
+            if (num)
+                cur_ans++;
+            else
+                cur_ans = 0;
+            max_ans = max(max_ans, cur_ans);
+        }
+        return max_ans;
+    }
+
+    void backtrack(vector<int>& nums, int k){
+        if (k == 0 || calc(nums) == nums.size()){
+            rsp = max(rsp, calc(nums));
+            return;
+        }
+        for (int i = 0; i < nums.size(); i++){
+            if (nums[i] == 0){
+                nums[i] = 1;
+                backtrack(nums, k - 1);
+                nums[i] = 0;
+            }
+        }
+    }
+
+    int longestOnes(vector<int>& nums, int k) {
+        backtrack(nums, k);
+        return rsp;
+    }
+};
+```
 
 ## Solution - Slide Window
 
