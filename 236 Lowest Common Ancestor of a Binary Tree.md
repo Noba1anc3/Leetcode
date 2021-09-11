@@ -67,6 +67,10 @@ public:
 };
 ```
 
+执行用时：24 ms, 在所有 C++ 提交中击败了23.06%的用户
+
+内存消耗：16.9 MB, 在所有 C++ 提交中击败了9.64%的用户
+
 ## Solution
 
 递归法
@@ -76,11 +80,17 @@ class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if(root == nullptr || root == p || root == q) return root;
-        TreeNode *left = lowestCommonAncestor(root->left, p, q);
-        TreeNode *right = lowestCommonAncestor(root->right, p, q);
+        
+        TreeNode* left = lowestCommonAncestor(root->left, p, q);
+        TreeNode* right = lowestCommonAncestor(root->right, p, q);
+        
         if(left == nullptr) return right;
         if(right == nullptr) return left;
         return root;
     }
 };
 ```
+
+执行用时：8 ms, 在所有 C++ 提交中击败了99.50%的用户
+
+内存消耗：14 MB, 在所有 C++ 提交中击败了32.04%的用户
