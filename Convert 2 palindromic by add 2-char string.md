@@ -1,3 +1,7 @@
+## Solution
+
+首尾双指针向中间迭代，如果字母不同判断两个子串是否有一个是回文串
+
 ```python
 class Solution:
     def check(self, str1):
@@ -17,9 +21,7 @@ class Solution:
                     return False
                 i += 1
 
-            
-    def canBePalindromicString(self , str1 ):
-        # write code here
+    def canBePalindromicString(self, str1):
         if not str1: return 0
         if self.check(str1): return 1
         l, r = 0, len(str1) - 1
