@@ -44,6 +44,8 @@ SUCCESS
 
 ## Solution
 
+- 注意点：为了防止判断邻居时越界，在矩阵外添加一圈1
+
 ```c++
 class Solution{
 public:
@@ -60,11 +62,10 @@ public:
     }
 
     void solution(int C, vector<vector<int>>& nums){
-        if (C == 0){
+        if (C == 0)
             return;
-        }
-        for (int i = 1; i < nums.size() - 1; i++){
-            for (int j = 1; j < 8; j++){
+        for (int i = 1; i < nums.size() - 1; i++)
+            for (int j = 1; j < 8; j++)
                 if (nums[i][j] == 0 && can_insert(nums, i, j)){
                     nums[i][j] = 2;
                     rsp.push_back(make_pair(i, j - 1));
@@ -74,11 +75,8 @@ public:
                     nums[i][j] = 0;
                     rsp.pop_back();
                 }
-            }
-        }
     }
 };
-
 
 
 int main(){
@@ -91,14 +89,12 @@ int main(){
     
     for (int i = 0; i < N; i++){
         getline(cin, line);
-        for (int j = 0; j < 3; j++){
+        for (int j = 0; j < 3; j++)
             if (line[j] == '.')
                 nums[i+1][j+1] = 0;
-        }
-        for (int j = 6; j < 9; j++){
+        for (int j = 6; j < 9; j++)
             if (line[j] == '.')
                 nums[i+1][j-1] = 0;
-        }
     }
 
     Solution s = Solution();
@@ -109,9 +105,8 @@ int main(){
         cout<<"FAILED";
     else{
         cout<<"SUCCESS"<<"\n";
-        for(const pair<int, int>& p : s.rsp){
+        for(const pair<int, int>& p : s.rsp)
             cout << p.first << dict[p.second] << '\n';
-        }
     }
     return 0;
 }
