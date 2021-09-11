@@ -18,49 +18,11 @@ Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
 Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 ```
 
-## Solution - I Backtrack
-
-时间复杂度过高
-
-```c++
-class Solution {
-public:
-    int rsp = 0;
-    
-    int calc(vector<int>& nums){
-        int max_ans = 0, cur_ans = 0;
-        for (const int& num : nums){
-            if (num)
-                cur_ans++;
-            else
-                cur_ans = 0;
-            max_ans = max(max_ans, cur_ans);
-        }
-        return max_ans;
-    }
-
-    void backtrack(vector<int>& nums, int k){
-        if (k == 0 || calc(nums) == nums.size()){
-            rsp = max(rsp, calc(nums));
-            return;
-        }
-        for (int i = 0; i < nums.size(); i++){
-            if (nums[i] == 0){
-                nums[i] = 1;
-                backtrack(nums, k - 1);
-                nums[i] = 0;
-            }
-        }
-    }
-
-    int longestOnes(vector<int>& nums, int k) {
-        backtrack(nums, k);
-        return rsp;
-    }
-};
-```
-
 ## Solution - Slide Window
+
+右指针主动右移，如果右指针元素为0，则窗口内为0的元素加一，每次循环都计算窗口长度以更新最大值
+
+左指针被动右移，只要窗口内0元素个数超过k，则不断前移左指针，遇到1则无视，遇到0则减少0元素的个数
 
 ```c++
 class Solution {
