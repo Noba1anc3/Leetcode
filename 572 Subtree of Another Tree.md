@@ -23,7 +23,6 @@ public:
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
         if (root == nullptr && subRoot == nullptr) return true;
         if (root == nullptr || subRoot == nullptr) return false;
-        if (root->val != subRoot->val) return isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
         return isSameTree(root, subRoot) || isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
     }
 
