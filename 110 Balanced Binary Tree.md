@@ -43,5 +43,25 @@ public:
 Optimize:
 
 ```c++
+class Solution{
+public:
+    bool rsp = true;
 
+    bool isBalanced(TreeNode* root){
+        height(root);
+        return rsp;
+    }
+
+    int height(TreeNode* root){
+        if (root == nullptr) return 0;
+        int l_height = height(root->left);
+        int r_height = height(root->right);
+        if (abs(l_height - r_height) > 1) rsp = false;
+        return max(l_height, r_height) + 1;
+    }
+};
 ```
+
+执行用时：12 ms, 在所有 C++ 提交中击败了71.41%的用户
+
+内存消耗：20.5 MB, 在所有 C++ 提交中击败了33.95%的用户
