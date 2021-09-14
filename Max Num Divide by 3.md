@@ -56,7 +56,7 @@ int main(){
         }
         num = cal_num(nums);
     }
-    else if (num % 3 == 1){
+    else if (num % 3 == 2){
         if (two_0 != INT_MAX){
             erase_num(nums, two_0);
         }
