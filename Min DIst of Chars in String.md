@@ -15,7 +15,7 @@ int get_min_dist(string s, char x, char y){
             min_dist = min(min_dist, abs(i - nearest_x));
             nearest_y = i;
         }
-		}
+    }
     return min_dist;
 }    
 ```
