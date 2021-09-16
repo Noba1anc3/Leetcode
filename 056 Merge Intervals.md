@@ -34,16 +34,14 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end());
-
         vector<vector<int>> merged;
-
-        for (const vector<int>& interval : intervals){
-            if (merged.empty() || merged[merged.size() - 1][1] < interval[0])
+        
+        sort(intervals.begin(), intervals.end());
+        for (const vector<int>& interval : intervals)
+            if (merged.empty() || merged.back()[1] < interval[0])
                 merged.push_back(interval);
             else
-                merged[merged.size() - 1][1] = max(interval[1], merged[merged.size() - 1][1]);
-        }
+                merged.back()[1] = max(merged.back()[1], interval[1]);
 
         return merged;
     }
