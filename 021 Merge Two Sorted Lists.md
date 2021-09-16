@@ -54,7 +54,7 @@ public:
             iter_rsp = iter_rsp->next;
         }
 
-        iter_rsp->next = l1 == NULL ? l2 : l1;
+        iter_rsp->next = l1? l1 : l2;
         
         return rsp->next;
     }
