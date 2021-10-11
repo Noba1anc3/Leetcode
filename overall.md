@@ -2239,11 +2239,22 @@ sum(list)
 value = dict.get(key)
 
 # 解决key不存在时的异常
+import collections
 dicts = collections.defaultdict(int) # 括号内为value类型
 
 # 取key, value
 dict.keys()
 dict.values()
+
+# 取 key-value 对
+dict.items()
+
+# 排序dict(按值)
+dict(sorted(dict.items(), key = lambda x : x[1]))
+
+# 元组列表 -> 字典
+# [(a1, b1), (a2, b2)] -> {a1:b1, a2:b2}
+# dict(list)
 ```
 
 ### set
@@ -2265,7 +2276,70 @@ heapq.heappop(list)
 
 ```python
 maximum: float('inf') / math.inf
+zip(listA, listB) # 将listA和listB中的元素一一对应为元组列表
 ```
+
+### sklearn
+
+```python
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(features, target, test_size)
+# features : (sample, feature_num)
+# target : (sample, 1)
+# test_size : float
+
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors = k) # k : int
+knn.fit(x_train, y_train)
+knn.score(x_train, y_train)
+knn.predict(ndarray) # ndarray: [samples]   samples: [features]
+
+## 类别列表转为数字列表
+from sklearn import preprocessing
+numpy.ndarray = preprocessing.LabelEncoder().fit_transform(list)
+```
+
+### matplotlib
+
+```python
+import matplotlib.pyplot as plt
+
+plt.title('title_name')
+plt.plot(x_ndarray, y_ndarray, label='line_name')
+plt.plot(x_int, y_int, color_str)
+plt.legend() # add line_name to specific line
+plt.xlabel('x_label_name')
+plt.ylabel('y_label_name')
+plt.show()
+```
+
+### numpy
+
+```python
+np.arrange(a, b) # 内容为 [a, b) 的 ndarray
+np.empty(size) # (size,) 的空 ndarray
+np.array(list) # list -> np.ndarray
+np.mat(np.ndarray)
+np.zeros((2,2))
+np.ones((2,2))
+np.eye(2,2) # 2x2 单位矩阵
+np.random.randn(2,2) # 2x2 随机数矩阵
+np.diag(list) # list元素组成的对角矩阵
+np.mat * np.mat # 矩阵乘法
+multiply(np.mat, np.mat) # 对应元素相乘
+np.mat.I # 矩阵求逆
+np.mat.T # 矩阵转置
+np.mat.sum(axis=0) # 对列求和，变成(,col)矩阵
+np.mat.sum(axis=1) # 对行求和，变成(row,)矩阵
+np.mat.max() # 矩阵最大值
+np.max(np.mat) # 矩阵最大值的矩阵
+np.mat.tolist()
+np.ndarray.tolist()
+np.inf # 正无穷
+np.mean(np.ndarray, axis = 0) # (, col) 对列求平均
+```
+
+
 
 # Useful method
 
